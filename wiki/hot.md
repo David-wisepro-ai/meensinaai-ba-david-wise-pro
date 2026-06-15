@@ -4,8 +4,11 @@
 > Powered by Me Ensina AI
 
 ## Prioridades
-- 🔴 Carregar o banco de ~600 questões CSL verificadas no portal (`/carregar-questoes`)
-- 🟡 Definir objetivos de 90 dias com o David (captação + ativação do portal)
+- 🟢 ✅ Site no ar: https://meensinaai-ba-david-wise-pro.vercel.app (Vercel Hobby grátis)
+- 🟢 ✅ Supabase com 598 questões carregadas
+- 🔴 Colar env vars do Supabase na Vercel + redeploy (liga login/leads/portal)
+- 🟡 Conectar Stripe (cobrança dos 3 produtos)
+- 🟡 Definir objetivos de 90 dias com o David
 
 ## Números-Chave
 - 3 produtos: Project Manager (~US$ 250) · Curso de Construtor (US$ 597) · Wise Day (US$ 497)

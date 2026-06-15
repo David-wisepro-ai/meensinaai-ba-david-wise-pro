@@ -10,8 +10,10 @@
 > Mapa completo passo a passo em [[meu-negocio/SETUP-CREDENCIAIS]]. Enquanto vazias, a escola roda em "modo seguro" (não cobra/não loga/não dispara).
 
 - [x] ✅ **Supabase** — projeto criado (`grjqedhjbsvkqruylqom`), 5 tabelas criadas com RLS, **598 questões carregadas** (2026-06-15, via PostgREST). URL: `https://grjqedhjbsvkqruylqom.supabase.co`
-- [ ] **Deploy na Vercel** — conectar repo (root = `frontend/`) + colar env vars (publishable + secret key do Supabase). Sem isso: site não fica no ar. — dono: David + Zuck (próximo passo)
+- [x] ✅ **Deploy na Vercel** — site NO AR em https://meensinaai-ba-david-wise-pro.vercel.app (2026-06-15, plano Hobby grátis, repo público, root `frontend/`, Next.js). Build compilou OK.
+- [ ] **Env vars do Supabase na Vercel** — colar NEXT_PUBLIC_SUPABASE_URL + NEXT_PUBLIC_SUPABASE_ANON_KEY (publishable) + SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY (secret) + redeploy. Sem isso: site no ar mas login/leads/portal em "modo seguro". — próximo passo
 - [ ] **Stripe** — criar 3 produtos/preços + chaves + webhook. Sem isso: checkout não cobra (trava em `checkout_iniciado`). — dono: David
+- [ ] **Cron de recuperação** rebaixado pra 1x/dia (limite do plano Hobby; era 15 min). Revisitar se subir pro Pro. — Zuck
 
 ### 🟡 Médias
 
