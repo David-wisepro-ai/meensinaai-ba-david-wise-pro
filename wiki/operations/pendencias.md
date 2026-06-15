@@ -24,6 +24,8 @@
 
 ### 🟢 Baixas
 
+- [ ] **Acentuação pt-BR no portal + copy de recuperação de carrinho** — a landing já foi corrigida; falta o mesmo nas telas do portal (`app/portal/`, `Portal*`) e na copy de e-mail/WhatsApp da recuperação (`app/api/recuperacao/copy.ts`). — Zuck
+
 - [ ] **Gravar os 4 VSLs** (3 landings + apresentação). Slots prontos no código. — dono: David
 - [ ] **Reviews reais do Google** — popular os cards placeholder (squad gbp-escola). — dono: David
 - [ ] **Confirmar dados oficiais** (endereço/telefone) pro schema EducationalOrganization + EIN da empresa. — dono: David
