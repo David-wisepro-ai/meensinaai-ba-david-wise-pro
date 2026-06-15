@@ -20,9 +20,8 @@ export const BRAND = {
   domain: 'wiseproacademy.io',
 };
 
-// Link do WhatsApp — David troca pelo número real depois.
-// WHATSAPP: David sobe o número oficial depois (formato https://wa.me/1XXXXXXXXXX).
-export const WHATSAPP_URL = 'https://wa.me/SEUNUMERO';
+// Link do WhatsApp da escola: +1 (774) 777-8510.
+export const WHATSAPP_URL = 'https://wa.me/17747778510';
 
 export const PRODUCTS = {
   project_manager: { name: 'Project Manager', price: 'US$ 250', slug: 'project-manager' },
