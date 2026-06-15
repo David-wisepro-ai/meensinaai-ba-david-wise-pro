@@ -124,7 +124,7 @@ POTENCIAL: [estimativa de mercado]
 
 ---
 
-## FASE 6 — RELATÓRIO EXECUTIVO PARA [NOME_CEO]
+## FASE 6 — RELATÓRIO EXECUTIVO PARA Zuck
 
 [CEO_ORQUESTRADOR] consolida e apresenta ao [CEO]:
 - Público recomendado para o novo produto

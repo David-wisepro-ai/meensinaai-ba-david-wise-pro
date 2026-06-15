@@ -561,7 +561,7 @@ if (total_semanas <= 12) {
 }
 ```
 
-[NOME_CEO] dispara `/victor` separadamente pra implementar isso. Skill aqui só gera dados corretos.
+Zuck dispara `/victor` separadamente pra implementar isso. Skill aqui só gera dados corretos.
 
 ---
 

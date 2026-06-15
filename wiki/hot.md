@@ -1,25 +1,18 @@
-# HOT CACHE — Empresa AI
+# HOT CACHE — Wise Pro Academy
 
-> Status: **ONBOARDING PENDENTE**
+> Status: **ONBOARDING CONCLUIDO em 2026-06-15** (CEO IA nomeado: Zuck)
 > Powered by Me Ensina AI
 
-## Bem-vindo à sua Empresa AI!
-
-Este é o primeiro acesso. O CEO vai se apresentar e fazer 12 perguntas pra conhecer seu negócio.
-
-Depois do onboarding:
-- Todos os seus agentes vão saber tudo sobre sua empresa
-- Este arquivo vai ser atualizado automaticamente com suas prioridades do dia
-- O CEO vai se apresentar com o nome que você escolher
-
 ## Prioridades
-(vazio — será preenchido pelo onboarding)
+- 🔴 Carregar o banco de ~600 questões CSL verificadas no portal (`/carregar-questoes`)
+- 🟡 Definir objetivos de 90 dias com o David (captação + ativação do portal)
 
 ## Números-Chave
-(vazio — será preenchido conforme o negócio avançar)
+- 3 produtos: Project Manager (~US$ 250) · Curso de Construtor (US$ 597) · Wise Day (US$ 497)
+- Banco de questões: ~600 verificadas (consolidado em 2026-06-15)
 
 ## Alertas
-- ⚠️ Onboarding pendente — responder as 12 perguntas do CEO
+- (nenhum)
 
 ---
 Parte de: [[clients/overview|Dashboard de Clientes]]

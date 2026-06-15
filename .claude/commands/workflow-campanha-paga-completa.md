@@ -27,7 +27,7 @@ Você orquestra a criação e operação de campanha paga multi-plataforma (Meta
 4. **Pixel & tracking (dia 4):** bruno valida pixel funcionando, conversões rastreando
 5. **Go-live (dia 5):** campanhas ativas com budget inicial conservador
 6. **Otimização diária (semana 1-4):** aline (B2C) e/ou henrique (B2B) monitoram e ajustam
-7. **Relatório semanal:** fernando consolida KPIs, [NOME_CEO] decide escala ou ajuste
+7. **Relatório semanal:** fernando consolida KPIs, Zuck decide escala ou ajuste
 
 ## KPIs universais
 

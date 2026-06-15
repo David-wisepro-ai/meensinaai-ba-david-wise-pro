@@ -11,7 +11,7 @@ Histórico cronológico de cada sessão de trabalho. Um arquivo por dia: `sessao
 ```markdown
 # Sessão YYYY-MM-DD
 
-> Duração aproximada: [X horas] | CEO: [NOME_CEO]
+> Duração aproximada: [X horas] | CEO: Zuck
 
 ## O que rodou hoje
 - [bullet 1 — ação concreta + resultado]
