@@ -41,7 +41,7 @@ export default function Vsl({ titulo, legenda }: { titulo: string; legenda?: str
         </div>
         <div style={{ fontSize: 19, fontWeight: 800 }}>{titulo}</div>
         <div style={{ fontSize: 13, opacity: 0.85, marginTop: 6, maxWidth: 360 }}>
-          {legenda ?? 'O video de apresentacao do David entra aqui em breve.'}
+          {legenda ?? 'O vídeo de apresentação do David entra aqui em breve.'}
         </div>
       </div>
     </div>

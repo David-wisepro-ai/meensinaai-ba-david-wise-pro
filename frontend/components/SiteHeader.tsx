@@ -8,7 +8,7 @@ const MENU = [
   { label: 'ACESSO', href: '#acesso' },
   { label: 'CRONOGRAMA', href: '#cronograma' },
   { label: 'PROFESSOR', href: '#professor' },
-  { label: 'INSCRICAO', href: '#inscricao' },
+  { label: 'INSCRIÇÃO', href: '#inscricao' },
 ];
 
 // Logo escudo (placeholder). IMAGEM: David sobe o logo escudo dourado depois.
@@ -50,7 +50,7 @@ export default function SiteHeader() {
       {/* TOPBAR fina preta */}
       <div style={{ background: '#000', color: '#fff', fontSize: 13, padding: '8px 0', textAlign: 'center' }}>
         <div style={wrap}>
-          Curso Preparatorio para Project Manager{'  '}
+          Curso Preparatório para Project Manager{'  '}
           <span style={{ opacity: 0.5 }}>&bull;</span>{'  '}
           Nova turma ao vivo em{' '}
           <strong style={{ color: BRAND.gold }}>03 de junho de 2026</strong>

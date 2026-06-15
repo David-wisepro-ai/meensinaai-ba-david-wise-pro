@@ -40,7 +40,7 @@ export default function LeadForm({
       // Modo seguro (Stripe ainda não conectado): lead foi gravado, confirmamos o cadastro.
       setDone(true);
     } catch {
-      setError('Nao conseguimos enviar agora. Tente novamente em instantes.');
+      setError('Não conseguimos enviar agora. Tente novamente em instantes.');
     } finally {
       setSending(false);
     }
@@ -70,7 +70,7 @@ export default function LeadForm({
         <strong style={{ color: BRAND.navy }}>Cadastro recebido!</strong>
         <p style={{ margin: '8px 0 0', color: BRAND.navyLight }}>
           Reservamos seu interesse. Em breve nossa equipe entra em contato pelo WhatsApp pra
-          confirmar sua vaga e os proximos passos.
+          confirmar sua vaga e os próximos passos.
         </p>
       </div>
     );
@@ -103,7 +103,7 @@ export default function LeadForm({
       </button>
       {error && <p style={{ color: '#b00020', fontSize: 14, marginTop: 8 }}>{error}</p>}
       <p style={{ fontSize: 12.5, color: BRAND.navyLight, marginTop: 10, lineHeight: 1.5 }}>
-        Seus dados ficam seguros. Usamos apenas pra confirmar sua vaga e te enviar as informacoes da
+        Seus dados ficam seguros. Usamos apenas pra confirmar sua vaga e te enviar as informações da
         turma.
       </p>
     </form>

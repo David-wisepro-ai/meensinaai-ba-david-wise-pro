@@ -10,9 +10,9 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: 'Wise Pro Academy | Curso Preparatorio para Project Manager nos EUA',
+  title: 'Wise Pro Academy | Curso Preparatório para Project Manager nos EUA',
   description:
-    'Treinamento online e ao vivo para brasileiros que querem sair da execucao pesada da obra e se tornar Project Manager valorizado na construcao civil dos EUA. Aulas ao vivo, gravacoes disponiveis e cronograma pratico.',
+    'Treinamento online e ao vivo para brasileiros que querem sair da execução pesada da obra e se tornar Project Manager valorizado na construção civil dos EUA. Aulas ao vivo, gravações disponíveis e cronograma prático.',
 };
 
 // Estilos globais: marquee, reset e tipografia arredondada (Poppins).

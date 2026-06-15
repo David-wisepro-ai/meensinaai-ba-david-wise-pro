@@ -103,7 +103,7 @@ export default function Landing(props: LandingProps) {
           </h1>
           <p style={{ fontSize: 19, opacity: 0.93, maxWidth: 700, lineHeight: 1.55 }}>{subheadline}</p>
 
-          <Vsl titulo={`Apresentacao - ${nome}`} legenda={vslLegenda} />
+          <Vsl titulo={`Apresentação - ${nome}`} legenda={vslLegenda} />
 
           <a
             href="#inscricao"
@@ -132,7 +132,7 @@ export default function Landing(props: LandingProps) {
       {/* DORES — isto é pra você se */}
       <section style={{ background: '#fff', padding: '56px 0' }}>
         <div style={wrap}>
-          <h2 style={{ fontSize: 28, marginTop: 0, fontWeight: 800 }}>Isto e pra voce se...</h2>
+          <h2 style={{ fontSize: 28, marginTop: 0, fontWeight: 800 }}>Isto é pra você se...</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 14 }}>
             {dores.map((d, i) => (
               <div key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', fontSize: 17, color: BRAND.navyLight, lineHeight: 1.5 }}>
@@ -147,7 +147,7 @@ export default function Landing(props: LandingProps) {
       {/* BENEFÍCIOS / TRANSFORMAÇÃO */}
       <section style={{ background: BRAND.cream, padding: '56px 0' }}>
         <div style={wrap}>
-          <h2 style={{ fontSize: 28, marginTop: 0, fontWeight: 800 }}>O que voce ganha</h2>
+          <h2 style={{ fontSize: 28, marginTop: 0, fontWeight: 800 }}>O que você ganha</h2>
           <div
             style={{
               display: 'grid',
@@ -206,7 +206,7 @@ export default function Landing(props: LandingProps) {
               >
                 <div style={{ color: BRAND.gold, fontSize: 18 }}>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 <p style={{ color: BRAND.navyLight, lineHeight: 1.55, fontStyle: 'italic' }}>
-                  &ldquo;Espaco reservado para a avaliacao real de um aluno (Google Reviews).&rdquo;
+                  &ldquo;Espaço reservado para a avaliação real de um aluno (Google Reviews).&rdquo;
                 </p>
                 <div style={{ fontWeight: 700, fontSize: 14 }}>Aluno Wise Pro &middot; CSL aprovado</div>
               </div>
@@ -234,7 +234,7 @@ export default function Landing(props: LandingProps) {
             }}
           >
             <div>
-              <h2 style={{ fontSize: 28, marginTop: 0, fontWeight: 800 }}>O que esta incluso</h2>
+              <h2 style={{ fontSize: 28, marginTop: 0, fontWeight: 800 }}>O que está incluso</h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 8 }}>
                 {incluso.map((item, i) => (
                   <div key={i} style={{ display: 'flex', gap: 11, alignItems: 'flex-start', fontSize: 16.5, lineHeight: 1.5 }}>
@@ -258,7 +258,7 @@ export default function Landing(props: LandingProps) {
             >
               <h3 style={{ marginTop: 0, fontSize: 22, fontWeight: 800 }}>Garanta sua vaga</h3>
               <p style={{ color: BRAND.navyLight, marginTop: 0, fontSize: 14.5 }}>
-                Preencha seus dados. Voce recebe a confirmacao e as instrucoes da turma.
+                Preencha seus dados. Você recebe a confirmação e as instruções da turma.
               </p>
               <LeadForm product={product} cta={ctaForm} />
             </div>

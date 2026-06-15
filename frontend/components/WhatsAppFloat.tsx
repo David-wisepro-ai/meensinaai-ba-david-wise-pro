@@ -1,8 +1,8 @@
 'use client';
 import { BRAND, WHATSAPP_URL } from '../lib/brand';
 
-// Botao flutuante fixo de WhatsApp (canto inferior direito).
-// WHATSAPP: David troca o numero em lib/brand.ts (WHATSAPP_URL).
+// Botão flutuante fixo de WhatsApp (canto inferior direito).
+// WHATSAPP: David troca o número em lib/brand.ts (WHATSAPP_URL).
 export default function WhatsAppFloat() {
   return (
     <a

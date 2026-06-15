@@ -1,6 +1,6 @@
 import { BRAND } from '../lib/brand';
 
-// Ticker horizontal rolando (CSS puro, sem JS). Duplica os itens pra loop continuo.
+// Ticker horizontal rolando (CSS puro, sem JS). Duplica os itens pra loop contínuo.
 export default function Marquee({ items }: { items: string[] }) {
   const row = (key: string) => (
     <span key={key} style={{ display: 'inline-flex', alignItems: 'center' }}>

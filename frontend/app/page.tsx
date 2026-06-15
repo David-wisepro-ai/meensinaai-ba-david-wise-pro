@@ -4,19 +4,19 @@ import WhatsAppFloat from '../components/WhatsAppFloat';
 import { BRAND, WHATSAPP_URL } from '../lib/brand';
 
 export const metadata = {
-  title: 'Curso Preparatorio para Project Manager nos EUA | Wise Pro Academy',
+  title: 'Curso Preparatório para Project Manager nos EUA | Wise Pro Academy',
   description:
-    'Saia da execucao pesada da obra e se torne um Project Manager valorizado na construcao civil dos EUA. Treinamento online e ao vivo, gravacoes disponiveis e cronograma pratico. Em portugues, para brasileiros nos EUA.',
+    'Saia da execução pesada da obra e se torne um Project Manager valorizado na construção civil dos EUA. Treinamento online e ao vivo, gravações disponíveis e cronograma prático. Em português, para brasileiros nos EUA.',
 };
 
-// SEO: schema EducationalOrganization + Course. Endereco/telefone ficam fora ate o David confirmar.
+// SEO: schema EducationalOrganization + Course. Endereço/telefone ficam fora até o David confirmar.
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'EducationalOrganization',
   name: 'Wise Pro Academy',
   url: 'https://wiseproacademy.io',
   description:
-    'Curso preparatorio para Project Manager na construcao civil dos Estados Unidos, em portugues, para brasileiros.',
+    'Curso preparatório para Project Manager na construção civil dos Estados Unidos, em português, para brasileiros.',
   areaServed: 'United States',
   knowsLanguage: ['pt-BR', 'en-US'],
 };
@@ -24,7 +24,7 @@ const schema = {
 const wrap: React.CSSProperties = { maxWidth: 1140, margin: '0 auto', padding: '0 20px' };
 const wrapNarrow: React.CSSProperties = { maxWidth: 960, margin: '0 auto', padding: '0 20px' };
 
-// ---------- atomos visuais ----------
+// ---------- átomos visuais ----------
 
 function GoldPill({ children, dark }: { children: React.ReactNode; dark?: boolean }) {
   return (
@@ -84,73 +84,73 @@ function SectionTitle({ children, center }: { children: React.ReactNode; center?
 // ---------- dados ----------
 
 const MARQUEE_ITEMS = [
-  'Curso Preparatorio',
+  'Curso Preparatório',
   'Project Manager',
-  'Construcao nos EUA',
+  'Construção nos EUA',
   'Aulas ao vivo',
-  'Gestao de obras',
-  'Comunicacao com cliente',
+  'Gestão de obras',
+  'Comunicação com cliente',
 ];
 
 const ACESSO_CARDS = [
-  { n: '01', t: 'Aulas ao vivo e gravadas', d: 'Participe ao vivo e revise depois para fixar o conteudo.' },
-  { n: '02', t: 'Rotina real de obra nos EUA', d: 'Aprenda com situacoes praticas da construcao residencial americana.' },
-  { n: '03', t: 'Comunicacao profissional', d: 'Saiba como falar com clientes, equipe e subcontratados.' },
-  { n: '04', t: 'Visao de crescimento', d: 'Desenvolva postura e clareza para buscar melhores oportunidades.' },
+  { n: '01', t: 'Aulas ao vivo e gravadas', d: 'Participe ao vivo e revise depois para fixar o conteúdo.' },
+  { n: '02', t: 'Rotina real de obra nos EUA', d: 'Aprenda com situações práticas da construção residencial americana.' },
+  { n: '03', t: 'Comunicação profissional', d: 'Saiba como falar com clientes, equipe e subcontratados.' },
+  { n: '04', t: 'Visão de crescimento', d: 'Desenvolva postura e clareza para buscar melhores oportunidades.' },
 ];
 
 const CONTEUDO = [
-  { t: 'Papel do PM e Mentalidade Profissional', d: 'Funcao do project manager, postura profissional e visao estrategica na obra.' },
-  { t: 'Comunicacao com Cliente e Time', d: 'Alinhamento, clareza na comunicacao e gestao do relacionamento com equipe e cliente.' },
-  { t: 'Sequencia da Obra e Planejamento', d: 'Etapas corretas da execucao, organizacao da obra e planejamento pratico.' },
-  { t: 'Leitura de Plantas e Controle de Escopo', d: 'Interpretacao de plantas, definicao do escopo e prevencao de erros de execucao.' },
-  { t: 'Aplicacao de Permits na Prefeitura', d: 'Processo de aplicacao de permits junto a prefeitura e atencao aos detalhes.' },
-  { t: 'Subcontratos e Qualidade', d: 'Gestao de subcontractors, acompanhamento da entrega e controle de qualidade.' },
-  { t: 'Ingles Basico na Construcao', d: 'Vocabulario essencial para conversacao profissional no dia a dia da construcao.' },
+  { t: 'Papel do PM e Mentalidade Profissional', d: 'Função do project manager, postura profissional e visão estratégica na obra.' },
+  { t: 'Comunicação com Cliente e Time', d: 'Alinhamento, clareza na comunicação e gestão do relacionamento com equipe e cliente.' },
+  { t: 'Sequência da Obra e Planejamento', d: 'Etapas corretas da execução, organização da obra e planejamento prático.' },
+  { t: 'Leitura de Plantas e Controle de Escopo', d: 'Interpretação de plantas, definição do escopo e prevenção de erros de execução.' },
+  { t: 'Aplicação de Permits na Prefeitura', d: 'Processo de aplicação de permits junto à prefeitura e atenção aos detalhes.' },
+  { t: 'Subcontratos e Qualidade', d: 'Gestão de subcontractors, acompanhamento da entrega e controle de qualidade.' },
+  { t: 'Inglês Básico na Construção', d: 'Vocabulário essencial para conversação profissional no dia a dia da construção.' },
   { t: 'Perfil Forte para Emprego', d: 'Como se posicionar melhor e montar um perfil mais forte para buscar oportunidades.' },
-  { t: 'IA no seu negocio com Fabio Borges', d: 'Aplicacoes praticas de inteligencia artificial para potencializar seu negocio, com Fabio Borges.' },
+  { t: 'IA no seu negócio com Fábio Borges', d: 'Aplicações práticas de inteligência artificial para potencializar seu negócio, com Fábio Borges.' },
 ];
 
 const NAO_E = [
-  'Nao e promessa de dinheiro facil',
-  'Nao e enriquecimento rapido',
-  'Nao promete emprego garantido',
-  'Nao promete visto ou imigracao',
-  'Nao substitui documentacao ou licencas exigidas',
+  'Não é promessa de dinheiro fácil',
+  'Não é enriquecimento rápido',
+  'Não promete emprego garantido',
+  'Não promete visto ou imigração',
+  'Não substitui documentação ou licenças exigidas',
 ];
 
 const O_QUE_E = [
-  'Preparacao pratica para entender a funcao de PM',
-  'Clareza sobre a rotina da construcao nos EUA',
-  'Conteudo voltado a construcao nos EUA',
-  'Visao profissional para organizacao e lideranca',
-  'Direcao para se posicionar melhor no mercado',
+  'Preparação prática para entender a função de PM',
+  'Clareza sobre a rotina da construção nos EUA',
+  'Conteúdo voltado à construção nos EUA',
+  'Visão profissional para organização e liderança',
+  'Direção para se posicionar melhor no mercado',
 ];
 
 const FAQ = [
   {
-    q: 'O curso e uma formacao ou um curso preparatorio?',
-    a: 'E um curso preparatorio. Ele te prepara para entender a funcao de Project Manager e a rotina da construcao nos EUA. Nao emite diploma nem licenca oficial.',
+    q: 'O curso é uma formação ou um curso preparatório?',
+    a: 'É um curso preparatório. Ele te prepara para entender a função de Project Manager e a rotina da construção nos EUA. Não emite diploma nem licença oficial.',
   },
   {
-    q: 'Quem serao os professores?',
-    a: 'As aulas sao conduzidas por David Piazzarollo, com mais de 10 anos no mercado americano da construcao. Fabio Borges entra como professor convidado para mostrar aplicacoes praticas de IA nos negocios.',
+    q: 'Quem serão os professores?',
+    a: 'As aulas são conduzidas por David Piazzarollo, com mais de 10 anos no mercado americano da construção. Fábio Borges entra como professor convidado para mostrar aplicações práticas de IA nos negócios.',
   },
   {
     q: 'As aulas ficam gravadas?',
-    a: 'Sim. Voce participa ao vivo e tem as gravacoes disponiveis na plataforma para revisar quando quiser e fixar o conteudo.',
+    a: 'Sim. Você participa ao vivo e tem as gravações disponíveis na plataforma para revisar quando quiser e fixar o conteúdo.',
   },
   {
     q: 'Preciso morar nos Estados Unidos?',
-    a: 'O conteudo e voltado a realidade da construcao nos EUA. Morar nos Estados Unidos ajuda a aplicar tudo na pratica, mas o curso e online e ao vivo, entao voce acompanha de onde estiver.',
+    a: 'O conteúdo é voltado à realidade da construção nos EUA. Morar nos Estados Unidos ajuda a aplicar tudo na prática, mas o curso é online e ao vivo, então você acompanha de onde estiver.',
   },
   {
     q: 'O curso garante emprego?',
-    a: 'Nao. O curso prepara voce com clareza, postura profissional e visao de gestao para buscar melhores oportunidades. Conquistar a vaga depende do seu esforco e do mercado.',
+    a: 'Não. O curso prepara você com clareza, postura profissional e visão de gestão para buscar melhores oportunidades. Conquistar a vaga depende do seu esforço e do mercado.',
   },
 ];
 
-// ---------- pagina ----------
+// ---------- página ----------
 
 export default function Home() {
   return (
@@ -175,20 +175,20 @@ export default function Home() {
               <span className="wpa-dot-pulse" aria-hidden style={{ width: 9, height: 9, borderRadius: '50%', background: '#ff4d4f', display: 'inline-block' }} />
               AO VIVO
             </GoldPill>
-            <GoldPill dark>Preparatorio profissional nos EUA</GoldPill>
+            <GoldPill dark>Preparatório profissional nos EUA</GoldPill>
           </div>
 
           <h1 style={{ fontSize: 46, lineHeight: 1.1, margin: '0 0 18px', maxWidth: 880, fontWeight: 800 }}>
-            Saia da execucao pesada da obra e se torne um{' '}
+            Saia da execução pesada da obra e se torne um{' '}
             <span style={{ color: BRAND.gold }}>Project Manager</span> valorizado e bem remunerado na
-            construcao civil dos EUA.
+            construção civil dos EUA.
           </h1>
 
           <p style={{ fontSize: 18.5, lineHeight: 1.6, maxWidth: 720, opacity: 0.94, margin: 0 }}>
-            O Wise Project Manager e um treinamento online e ao vivo criado para brasileiros que
-            querem parar de depender apenas da forca fisica, aprender como funciona a gestao de obras
+            O Wise Project Manager é um treinamento online e ao vivo criado para brasileiros que
+            querem parar de depender apenas da força física, aprender como funciona a gestão de obras
             no mercado americano e conquistar oportunidades maiores, mais valorizadas e que remuneram
-            muito bem na construcao civil.
+            muito bem na construção civil.
           </p>
 
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 30 }}>
@@ -228,7 +228,7 @@ export default function Home() {
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 26, fontSize: 14.5, opacity: 0.92 }}>
             <span aria-hidden style={{ color: BRAND.gold }}>&#9679;</span>
-            Aulas ao vivo &middot; Gravacoes disponiveis &middot; Cronograma pratico
+            Aulas ao vivo &middot; Gravações disponíveis &middot; Cronograma prático
           </div>
 
           {/* Badge flutuante */}
@@ -254,7 +254,7 @@ export default function Home() {
       {/* SOBRE O CRIADOR — David Piazzarollo */}
       <section id="professor" style={{ background: '#fff', padding: '72px 0' }}>
         <div style={wrap}>
-          <GoldPill>Criador do metodo</GoldPill>
+          <GoldPill>Criador do método</GoldPill>
           <div
             style={{
               display: 'grid',
@@ -288,11 +288,11 @@ export default function Home() {
             <div>
               <h2 style={{ fontSize: 30, margin: '0 0 18px', fontWeight: 800 }}>David Piazzarollo</h2>
               <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight }}>
-                David comecou na construcao civil dos Estados Unidos do jeito mais dificil: como
-                imigrante, sem experiencia e trabalhando como ajudante de obra.
+                David começou na construção civil dos Estados Unidos do jeito mais difícil: como
+                imigrante, sem experiência e trabalhando como ajudante de obra.
               </p>
               <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight }}>
-                Aprendeu tudo na pratica, se especializou em instalacao de ceramica e depois expandiu
+                Aprendeu tudo na prática, se especializou em instalação de cerâmica e depois expandiu
                 para reformas completas de banheiros, cozinhas, basements, decks e additions.
               </p>
 
@@ -314,29 +314,29 @@ export default function Home() {
                 </span>
                 <div>
                   <div style={{ fontWeight: 800, fontSize: 16.5, lineHeight: 1.4 }}>
-                    +10 anos no mercado americano e mais de US$ 1 milhao em faturamento no ultimo ano.
+                    +10 anos no mercado americano e mais de US$ 1 milhão em faturamento no último ano.
                   </div>
                   <div style={{ color: BRAND.navyLight, marginTop: 6, fontSize: 14.5 }}>
-                    Empresa de construcao com mais de 86 avaliacoes 5 estrelas no Google.
+                    Empresa de construção com mais de 86 avaliações 5 estrelas no Google.
                   </div>
                 </div>
               </div>
 
               <div style={{ display: 'flex', gap: 9, flexWrap: 'wrap', marginBottom: 18 }}>
-                {['OSHA', 'CSL License', 'Construcao nos EUA', 'Gestao de obras'].map((t) => (
+                {['OSHA', 'CSL License', 'Construção nos EUA', 'Gestão de obras'].map((t) => (
                   <TagPill key={t}>{t}</TagPill>
                 ))}
               </div>
 
               <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight }}>
                 Com o tempo, David deixou de depender de contratos de outras empresas e construiu sua
-                propria carteira de clientes diretos.
+                própria carteira de clientes diretos.
               </p>
               <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight }}>
-                Foi dessa experiencia real que nasceu o{' '}
+                Foi dessa experiência real que nasceu o{' '}
                 <strong style={{ color: BRAND.navy }}>Wise Project Manager</strong>: uma metodologia
-                pratica para ajudar brasileiros a sairem apenas da execucao da obra e entenderem como
-                funciona a gestao de obras nos EUA.
+                prática para ajudar brasileiros a saírem apenas da execução da obra e entenderem como
+                funciona a gestão de obras nos EUA.
               </p>
 
               <div
@@ -350,29 +350,29 @@ export default function Home() {
                   marginTop: 8,
                 }}
               >
-                Sem teoria vazia. Conteudo baseado na vida real da construcao civil americana.
+                Sem teoria vazia. Conteúdo baseado na vida real da construção civil americana.
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* PROFESSOR CONVIDADO — Fabio Borges */}
+      {/* PROFESSOR CONVIDADO — Fábio Borges */}
       <section style={{ background: BRAND.cream, padding: '64px 0' }}>
         <div style={wrapNarrow}>
           <GoldPill>Professor convidado</GoldPill>
           <h2 style={{ fontSize: 30, margin: '16px 0 8px', fontWeight: 800 }}>
-            Fabio Borges &middot; IA para Negocios nos EUA
+            Fábio Borges &middot; IA para Negócios nos EUA
           </h2>
           <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight }}>
-            Fabio entra como convidado para mostrar aplicacoes praticas de IA no contexto profissional
+            Fábio entra como convidado para mostrar aplicações práticas de IA no contexto profissional
             e empresarial.
           </p>
           <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight }}>
-            Fabio Borges atua com inteligencia artificial aplicada a negocios nos Estados Unidos.
+            Fábio Borges atua com inteligência artificial aplicada a negócios nos Estados Unidos.
           </p>
           <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight }}>
-            No curso, ele mostra formas praticas de usar IA para ganhar produtividade, organizar
+            No curso, ele mostra formas práticas de usar IA para ganhar produtividade, organizar
             processos e apoiar o crescimento profissional.
           </p>
           <div
@@ -386,22 +386,22 @@ export default function Home() {
               marginTop: 8,
             }}
           >
-            Quem aprende a usar IA com inteligencia sai na frente.
+            Quem aprende a usar IA com inteligência sai na frente.
           </div>
         </div>
       </section>
 
-      {/* A VERDADE E SIMPLES */}
+      {/* A VERDADE É SIMPLES */}
       <section style={{ background: '#fff', padding: '72px 0' }}>
         <div style={wrap}>
           <div style={{ textAlign: 'center', maxWidth: 800, margin: '0 auto' }}>
             <SectionTitle center>
-              Voce nao precisa trabalhar mais pesado. Precisa se preparar melhor.
+              Você não precisa trabalhar mais pesado. Precisa se preparar melhor.
             </SectionTitle>
             <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight, marginTop: 16 }}>
-              Inspirado na realidade da construcao americana: quem aprende a se posicionar, organizar e
-              liderar deixa de ser apenas mao de obra e comeca a ser visto como profissional
-              estrategico.
+              Inspirado na realidade da construção americana: quem aprende a se posicionar, organizar e
+              liderar deixa de ser apenas mão de obra e começa a ser visto como profissional
+              estratégico.
             </p>
           </div>
 
@@ -414,8 +414,8 @@ export default function Home() {
             }}
           >
             <div style={{ background: '#fbf3f3', border: '1px solid #f0d4d4', borderRadius: 16, padding: 26 }}>
-              <div style={{ fontWeight: 800, color: '#b8474a', marginBottom: 14 }}>Preso na execucao</div>
-              {['Continua limitado a execucao', 'Continua sem visao de gestao', 'Continua sem saber se posicionar'].map((t) => (
+              <div style={{ fontWeight: 800, color: '#b8474a', marginBottom: 14 }}>Preso na execução</div>
+              {['Continua limitado à execução', 'Continua sem visão de gestão', 'Continua sem saber se posicionar'].map((t) => (
                 <div key={t} style={{ display: 'flex', gap: 10, padding: '7px 0', color: BRAND.navyLight }}>
                   <span aria-hidden style={{ color: '#b8474a' }}>&#10007;</span>
                   {t}
@@ -424,7 +424,7 @@ export default function Home() {
             </div>
             <div style={{ background: BRAND.cream, border: `1px solid ${BRAND.gold}`, borderRadius: 16, padding: 26 }}>
               <div style={{ fontWeight: 800, color: '#1f7a4d', marginBottom: 14 }}>Preparado para crescer</div>
-              {['Mais clareza profissional', 'Mais seguranca para conversar com clientes', 'Mais preparo para buscar oportunidades melhores'].map((t) => (
+              {['Mais clareza profissional', 'Mais segurança para conversar com clientes', 'Mais preparo para buscar oportunidades melhores'].map((t) => (
                 <div key={t} style={{ display: 'flex', gap: 10, padding: '7px 0', color: BRAND.navyLight }}>
                   <span aria-hidden style={{ color: '#1f7a4d' }}>&#10003;</span>
                   {t}
@@ -438,14 +438,14 @@ export default function Home() {
       {/* MARQUEE */}
       <Marquee items={MARQUEE_ITEMS} />
 
-      {/* O QUE VOCE TERA ACESSO */}
+      {/* O QUE VOCÊ TERÁ ACESSO */}
       <section id="acesso" style={{ background: '#fff', padding: '72px 0' }}>
         <div style={wrap}>
-          <SectionTitle>O que voce tera acesso</SectionTitle>
+          <SectionTitle>O que você terá acesso</SectionTitle>
           <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight, maxWidth: 760, marginTop: 14 }}>
-            Uma preparacao direta ao ponto, sem enrolacao. Conteudo focado no que voce precisa
-            entender para comecar a pensar e agir como Project Manager no mercado americano da
-            construcao.
+            Uma preparação direta ao ponto, sem enrolação. Conteúdo focado no que você precisa
+            entender para começar a pensar e agir como Project Manager no mercado americano da
+            construção.
           </p>
           <div
             style={{
@@ -474,12 +474,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTEUDO DO CURSO */}
+      {/* CONTEÚDO DO CURSO */}
       <section id="curso" style={{ background: BRAND.cream, padding: '72px 0' }}>
         <div style={wrap}>
-          <SectionTitle>Conteudo do curso</SectionTitle>
+          <SectionTitle>Conteúdo do curso</SectionTitle>
           <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight, maxWidth: 760, marginTop: 14 }}>
-            Uma trilha pratica para preparar sua comunicacao, leitura de obra, gestao e uso de
+            Uma trilha prática para preparar sua comunicação, leitura de obra, gestão e uso de
             tecnologia no mercado americano.
           </p>
           <div
@@ -537,7 +537,7 @@ export default function Home() {
               textAlign: 'center',
             }}
           >
-            Apos a matricula, o aluno recebera o cronograma das aulas ao vivo e o acesso a plataforma
+            Após a matrícula, o aluno receberá o cronograma das aulas ao vivo e o acesso à plataforma
             com as aulas gravadas.
           </p>
         </div>
@@ -548,7 +548,7 @@ export default function Home() {
         <div style={wrap}>
           <div style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto' }}>
             <SectionTitle center>Clareza antes de entrar</SectionTitle>
-            <p style={{ fontSize: 17, color: BRAND.navyLight, marginTop: 12 }}>O que isso e, e o que nao e.</p>
+            <p style={{ fontSize: 17, color: BRAND.navyLight, marginTop: 12 }}>O que isso é, e o que não é.</p>
           </div>
           <div
             style={{
@@ -559,7 +559,7 @@ export default function Home() {
             }}
           >
             <div style={{ background: '#fbf3f3', border: '1px solid #f0d4d4', borderRadius: 16, padding: 26 }}>
-              <div style={{ fontWeight: 800, color: '#b8474a', marginBottom: 14, fontSize: 17 }}>O que NAO e</div>
+              <div style={{ fontWeight: 800, color: '#b8474a', marginBottom: 14, fontSize: 17 }}>O que NÃO é</div>
               {NAO_E.map((t) => (
                 <div key={t} style={{ display: 'flex', gap: 10, padding: '7px 0', color: BRAND.navyLight }}>
                   <span aria-hidden style={{ color: '#b8474a' }}>&#10007;</span>
@@ -568,7 +568,7 @@ export default function Home() {
               ))}
             </div>
             <div style={{ background: BRAND.cream, border: `1px solid ${BRAND.gold}`, borderRadius: 16, padding: 26 }}>
-              <div style={{ fontWeight: 800, color: '#1f7a4d', marginBottom: 14, fontSize: 17 }}>O que E</div>
+              <div style={{ fontWeight: 800, color: '#1f7a4d', marginBottom: 14, fontSize: 17 }}>O que É</div>
               {O_QUE_E.map((t) => (
                 <div key={t} style={{ display: 'flex', gap: 10, padding: '7px 0', color: BRAND.navyLight }}>
                   <span aria-hidden style={{ color: '#1f7a4d' }}>&#10003;</span>
@@ -580,7 +580,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* OFERTA / INSCRICAO */}
+      {/* OFERTA / INSCRIÇÃO */}
       <section
         id="inscricao"
         style={{
@@ -591,12 +591,12 @@ export default function Home() {
       >
         <div style={wrapNarrow}>
           <div style={{ textAlign: 'center' }}>
-            <GoldPill dark>Inscricoes abertas</GoldPill>
+            <GoldPill dark>Inscrições abertas</GoldPill>
             <h2 style={{ fontSize: 34, margin: '18px 0 12px', fontWeight: 800 }}>
-              Condicao diferenciada membro fundador
+              Condição diferenciada membro fundador
             </h2>
             <p style={{ fontSize: 17.5, opacity: 0.94, maxWidth: 620, margin: '0 auto', lineHeight: 1.6 }}>
-              Fale pelo WhatsApp para garantir sua vaga e receber as orientacoes de matricula.
+              Fale pelo WhatsApp para garantir sua vaga e receber as orientações de matrícula.
             </p>
           </div>
 
@@ -613,13 +613,13 @@ export default function Home() {
             }}
           >
             <div style={{ color: BRAND.gold, fontWeight: 800, fontSize: 13, letterSpacing: 1, textTransform: 'uppercase' }}>
-              Condicao membro fundador
+              Condição membro fundador
             </div>
-            <h3 style={{ fontSize: 26, margin: '12px 0 8px', fontWeight: 800 }}>Faca sua matricula</h3>
+            <h3 style={{ fontSize: 26, margin: '12px 0 8px', fontWeight: 800 }}>Faça sua matrícula</h3>
             <p style={{ color: BRAND.navyLight, fontSize: 15.5, lineHeight: 1.6, margin: '0 0 22px' }}>
-              Garanta sua vaga e receba as orientacoes de matricula direto pelo WhatsApp.
+              Garanta sua vaga e receba as orientações de matrícula direto pelo WhatsApp.
             </p>
-            {/* WHATSAPP: David troca o numero em lib/brand.ts (WHATSAPP_URL). */}
+            {/* WHATSAPP: David troca o número em lib/brand.ts (WHATSAPP_URL). */}
             <a
               href={WHATSAPP_URL}
               target="_blank"
@@ -640,7 +640,7 @@ export default function Home() {
               GARANTIR VAGA
             </a>
             <p id="cronograma" style={{ color: BRAND.navyLight, fontSize: 13.5, marginTop: 18, marginBottom: 0 }}>
-              Aulas ao vivo toda quarta, com gravacoes disponiveis na plataforma.
+              Aulas ao vivo toda quarta, com gravações disponíveis na plataforma.
             </p>
           </div>
         </div>
