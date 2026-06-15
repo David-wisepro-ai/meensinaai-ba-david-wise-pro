@@ -5,20 +5,38 @@
     "slug": "david-wise-pro",
     "idioma_ui": "pt-BR"
   },
-
   "conectores_requeridos": [
-    { "nome": "Supabase", "porque": "guardar leads, alunos, matriculas e o banco de questoes do portal" },
-    { "nome": "GitHub", "porque": "versionar e publicar seu site e portal" },
-    { "nome": "Vercel", "porque": "colocar no ar o site, as landing pages e o portal do aluno" },
-    { "nome": "Stripe", "porque": "receber os pagamentos dos 3 cursos em dolar" },
-    { "nome": "Resend", "porque": "mandar e-mail de recuperacao pra quem comecou e nao pagou" },
-    { "nome": "WhatsApp (Stevo ou Z-API)", "porque": "mandar a mensagem de recuperacao pelo numero da atendente" }
+    {
+      "nome": "Supabase",
+      "porque": "guardar leads, alunos, matriculas e o banco de questoes do portal"
+    },
+    {
+      "nome": "GitHub",
+      "porque": "versionar e publicar seu site e portal"
+    },
+    {
+      "nome": "Vercel",
+      "porque": "colocar no ar o site, as landing pages e o portal do aluno"
+    },
+    {
+      "nome": "Stripe",
+      "porque": "receber os pagamentos dos 3 cursos em dolar"
+    },
+    {
+      "nome": "Resend",
+      "porque": "mandar e-mail de recuperacao pra quem comecou e nao pagou"
+    },
+    {
+      "nome": "WhatsApp (Stevo ou Z-API)",
+      "porque": "mandar a mensagem de recuperacao pelo numero da atendente"
+    }
   ],
-
   "plugins_requeridos": [
-    { "nome": "escola-csl", "oque": "te da os agentes da escola: motor de simulado, portal do aluno, funil de checkout, recuperacao de carrinho, CRM da escola e autoridade no Google" }
+    {
+      "nome": "escola-csl",
+      "oque": "te da os agentes da escola: motor de simulado, portal do aluno, funil de checkout, recuperacao de carrinho, CRM da escola e autoridade no Google"
+    }
   ],
-
   "steps": [
     {
       "id": "step-1-conectores",
@@ -81,9 +99,9 @@
       "tipo": "TAREFA",
       "titulo": "Carregar o banco de questoes CSL (em ondas)",
       "agente": "gerador-questoes-csl",
-      "licao": "O banco de questoes ORIGINAIS, ancoradas no codigo oficial, e carregado em ondas (IRC, IBC, IECC, OSHA, provas completas). Cada questao e verificada contra a secao do codigo antes de ir pro aluno. O que nao for verificado fica na fila de revisao, nunca chega no aluno.",
+      "licao": "O banco de questoes ORIGINAIS, ancoradas no codigo oficial, e carregado em ondas (IRC, IBC, IECC, OSHA, provas completas). Quando a Me Ensina AI te manda um lote novo, voce so larga o arquivo .json na pasta meu-negocio/portal-aluno/recebimento/ (veja o LEIA-ME.md de la) e roda /carregar-questoes — o CEO IA confere, carrega so as questoes verificadas e elas aparecem no portal NA HORA, sem republicar nada. O que nao for verificado fica na fila de revisao e nunca chega no aluno.",
       "comando": "/carregar-questoes",
-      "criterio": "As primeiras questoes verificadas aparecem no portal por categoria."
+      "criterio": "Voce larga um .json em recebimento/, roda /carregar-questoes e as questoes verificadas aparecem no portal por categoria (sem redeploy)."
     },
     {
       "id": "step-9-seo-trafego",

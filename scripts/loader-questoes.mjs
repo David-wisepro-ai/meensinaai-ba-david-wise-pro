@@ -6,15 +6,17 @@
 //
 // Fontes de seed (ordem):
 //   1) raw/question-bank/<category>.json   (continuidade das ondas no repo do aluno)
-//   2) caminho passado por --dir <pasta>    (ex: pra carregar o seed inicial da outra frente)
+//   2) caminho passado por --dir <pasta>    (ex: pasta recebimento/ do drop do David, ou seed inicial)
 //
 // Regra de ouro: questao verified !== true NAO e importada como publicavel.
 //   - Por padrao SO importa verified=true (o que vai pro aluno).
 //   - Com --include-unverified, importa tudo (verified fica como veio) pra fila de revisao.
 //
+// Idempotencia: upsert por id (on_conflict=id, merge-duplicates). Rodar 2x com o mesmo id NAO duplica.
+//
 // Uso:
 //   node scripts/loader-questoes.mjs                       # importa raw/question-bank/*.json (so verified=true)
-//   node scripts/loader-questoes.mjs --dir /caminho/seed   # importa de outra pasta
+//   node scripts/loader-questoes.mjs --dir /caminho/seed   # importa de outra pasta (ex: recebimento/)
 //   node scripts/loader-questoes.mjs --include-unverified  # importa tambem nao-verificadas (revisao)
 //   node scripts/loader-questoes.mjs --dry-run             # so valida, nao escreve
 
@@ -39,14 +41,14 @@ const CORRECT = new Set(['A', 'B', 'C', 'D']);
 function validate(q, file) {
   const errs = [];
   if (!q.id) errs.push('id ausente');
-  if (!CATEGORIES.has(q.category)) errs.push(`category invalida: ${q.category}`);
+  if (!CATEGORIES.has(q.category)) errs.push(`category invalida: ${q.category} (use IRC|IBC|IECC|OSHA|AAB)`);
   if (!q.question) errs.push('question ausente');
   if (!q.options || !['A','B','C','D'].every(k => k in q.options)) errs.push('options A-D ausentes');
-  if (!CORRECT.has(q.correct)) errs.push(`correct invalido: ${q.correct}`);
+  if (!CORRECT.has(q.correct)) errs.push(`correct invalido: ${q.correct} (use A|B|C|D)`);
   if (!q.explanation) errs.push('explanation ausente');
   if (!q.code_reference) errs.push('code_reference ausente');
-  if (!DIFFS.has(q.difficulty)) errs.push(`difficulty invalida: ${q.difficulty}`);
-  if (typeof q.verified !== 'boolean') errs.push('verified nao-booleano');
+  if (!DIFFS.has(q.difficulty)) errs.push(`difficulty invalida: ${q.difficulty} (use iniciante|intermediario|avancado)`);
+  if (typeof q.verified !== 'boolean') errs.push('verified nao-booleano (use true ou false)');
   if (errs.length) console.warn(`  [SKIP] ${file} :: ${q.id || '(sem id)'} -> ${errs.join('; ')}`);
   return errs.length === 0;
 }
@@ -55,22 +57,33 @@ function loadSeeds(dir) {
   if (!existsSync(dir)) { console.error(`Pasta de seeds nao existe: ${dir}`); return []; }
   const files = readdirSync(dir).filter(f => f.endsWith('.json'));
   const out = [];
+  const seenIds = new Set();
   for (const f of files) {
     const full = join(dir, f);
     let data;
     try { data = JSON.parse(readFileSync(full, 'utf8')); }
     catch (e) { console.warn(`  [SKIP] ${f} -> JSON invalido: ${e.message}`); continue; }
     const arr = Array.isArray(data) ? data : (Array.isArray(data.questions) ? data.questions : []);
-    for (const q of arr) if (validate(q, f)) out.push(q);
+    for (const q of arr) {
+      if (!validate(q, f)) continue;
+      if (seenIds.has(q.id)) { console.warn(`  [DEDUPE] id repetido no lote: ${q.id} (mantida a 1a)`); continue; }
+      seenIds.add(q.id);
+      out.push(q);
+    }
   }
   return out;
 }
 
-async function upsert(rows) {
+function requireKeys() {
   if (!SUPABASE_URL || !SERVICE_KEY) {
     console.error('SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY ausentes no .env. Conecte na call (STEP 1 do dashboard).');
     process.exit(1);
   }
+}
+
+async function upsert(rows) {
+  requireKeys();
+  // on_conflict=id + merge-duplicates => idempotente: rodar 2x com o mesmo id NAO duplica, ATUALIZA.
   const res = await fetch(`${SUPABASE_URL}/rest/v1/quiz_questions?on_conflict=id`, {
     method: 'POST',
     headers: {
@@ -84,21 +97,53 @@ async function upsert(rows) {
   if (!res.ok) { console.error(`Supabase erro ${res.status}: ${await res.text()}`); process.exit(1); }
 }
 
+// Conta total de questoes VERIFICADAS no banco (o que o aluno ve no portal).
+async function countVerified() {
+  requireKeys();
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/quiz_questions?verified=eq.true&select=id`, {
+    method: 'GET',
+    headers: {
+      'apikey': SERVICE_KEY,
+      'Authorization': `Bearer ${SERVICE_KEY}`,
+      'Prefer': 'count=exact',
+      'Range-Unit': 'items',
+      'Range': '0-0',
+    },
+  });
+  const cr = res.headers.get('content-range'); // ex: "0-0/123"
+  const total = cr && cr.includes('/') ? cr.split('/')[1] : null;
+  return total === '*' || total == null ? null : Number(total);
+}
+
 (async () => {
   console.log(`Loader de questoes CSL — pasta: ${DIR}`);
   let rows = loadSeeds(DIR);
   console.log(`  validadas: ${rows.length}`);
+  let descartadas = 0;
   if (!INCLUDE_UNVERIFIED) {
     const before = rows.length;
     rows = rows.filter(q => q.verified === true);
-    console.log(`  so verified=true: ${rows.length} (descartadas ${before - rows.length} nao-verificadas -> fila de revisao)`);
+    descartadas = before - rows.length;
+    console.log(`  so verified=true: ${rows.length} (descartadas ${descartadas} nao-verificadas -> fila de revisao)`);
   }
-  if (DRY) { console.log('  --dry-run: nada escrito.'); return; }
-  if (!rows.length) { console.log('  nada a importar.'); return; }
-  // chunk de 500
+  if (DRY) {
+    console.log('  --dry-run: nada escrito.');
+    console.log(`RESUMO :: lote=${rows.length} revisao=${descartadas} (dry-run, banco nao tocado)`);
+    return;
+  }
+  if (!rows.length) {
+    console.log('  nada a importar.');
+    const totalVazio = await countVerified().catch(() => null);
+    console.log(`RESUMO :: novas=0 revisao=${descartadas} portal_total=${totalVazio ?? '?'}`);
+    return;
+  }
+  // chunk de 500 (idempotente por id)
   for (let i = 0; i < rows.length; i += 500) {
     await upsert(rows.slice(i, i + 500));
     console.log(`  upsert ${Math.min(i + 500, rows.length)}/${rows.length}`);
   }
+  const totalPortal = await countVerified().catch(() => null);
   console.log('OK — questoes importadas pro quiz_questions.');
+  // Linha que o /carregar-questoes le pra montar o resumo leigo:
+  console.log(`RESUMO :: carregadas=${rows.length} revisao=${descartadas} portal_total=${totalPortal ?? '?'}`);
 })();
