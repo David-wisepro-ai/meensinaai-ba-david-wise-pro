@@ -1,7 +1,9 @@
+import Link from 'next/link';
 import SiteHeader from '../components/SiteHeader';
+import SiteFooter from '../components/SiteFooter';
 import Marquee from '../components/Marquee';
 import WhatsAppFloat from '../components/WhatsAppFloat';
-import { BRAND, WHATSAPP_URL } from '../lib/brand';
+import { BRAND, WHATSAPP_URL, PRODUCTS } from '../lib/brand';
 
 export const metadata = {
   title: 'Curso Preparatório para Project Manager nos EUA | Wise Pro Academy',
@@ -125,6 +127,31 @@ const O_QUE_E = [
   'Conteúdo voltado à construção nos EUA',
   'Visão profissional para organização e liderança',
   'Direção para se posicionar melhor no mercado',
+];
+
+// Cards da seção "Conheça também" — os 3 caminhos da escola.
+const OUTROS_CAMINHOS = [
+  {
+    nome: PRODUCTS.project_manager.name,
+    preco: PRODUCTS.project_manager.price,
+    selo: 'Porta de entrada',
+    desc: 'O primeiro passo para entender a função de Project Manager na construção dos EUA.',
+    href: `/${PRODUCTS.project_manager.slug}`,
+  },
+  {
+    nome: PRODUCTS.construtor.name,
+    preco: PRODUCTS.construtor.price,
+    selo: 'Principal',
+    desc: 'Formação presencial de 6 dias que destrava o portal de simulados para a prova de CSL.',
+    href: `/${PRODUCTS.construtor.slug}`,
+  },
+  {
+    nome: PRODUCTS.wise_day.name,
+    preco: PRODUCTS.wise_day.price,
+    selo: 'Premium',
+    desc: 'Um dia presencial intensivo ao lado do David, focado na prática real de obra.',
+    href: `/${PRODUCTS.wise_day.slug}`,
+  },
 ];
 
 const FAQ = [
@@ -672,15 +699,69 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer style={{ background: BRAND.navy, color: '#fff', padding: '40px 0', textAlign: 'center' }}>
+      {/* CONHEÇA TAMBÉM — os 3 caminhos da escola */}
+      <section style={{ background: BRAND.cream, padding: '72px 0' }}>
         <div style={wrap}>
-          <div style={{ fontWeight: 800, fontSize: 18, letterSpacing: 0.5 }}>
-            WISE PRO <span style={{ color: BRAND.gold }}>ACADEMY</span>
+          <div style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto' }}>
+            <SectionTitle center>Conheça também os outros caminhos</SectionTitle>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight, marginTop: 14 }}>
+              Cada formação da Wise Pro Academy te leva um passo mais perto de crescer na construção
+              civil dos Estados Unidos. Escolha por onde começar.
+            </p>
           </div>
-          <div style={{ opacity: 0.7, fontSize: 13.5, marginTop: 8 }}>{BRAND.domain}</div>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: 22,
+              marginTop: 36,
+            }}
+          >
+            {OUTROS_CAMINHOS.map((c) => (
+              <Link
+                key={c.href}
+                href={c.href}
+                className="wpa-btn"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  background: '#fff',
+                  border: `1px solid ${BRAND.gold}`,
+                  borderRadius: 18,
+                  padding: 26,
+                  textDecoration: 'none',
+                  color: BRAND.navy,
+                  boxShadow: '0 2px 12px rgba(10,31,68,0.06)',
+                }}
+              >
+                <span
+                  style={{
+                    alignSelf: 'flex-start',
+                    background: BRAND.lilac,
+                    color: BRAND.navy,
+                    fontSize: 12.5,
+                    fontWeight: 700,
+                    padding: '5px 12px',
+                    borderRadius: 999,
+                    marginBottom: 14,
+                  }}
+                >
+                  {c.selo}
+                </span>
+                <h3 style={{ margin: '0 0 6px', fontSize: 21, fontWeight: 800 }}>{c.nome}</h3>
+                <div style={{ color: BRAND.gold, fontWeight: 800, fontSize: 22, marginBottom: 12 }}>{c.preco}</div>
+                <p style={{ margin: '0 0 20px', color: BRAND.navyLight, lineHeight: 1.55, fontSize: 15, flexGrow: 1 }}>
+                  {c.desc}
+                </p>
+                <span style={{ color: BRAND.royal, fontWeight: 800, fontSize: 15 }}>Saiba mais &rarr;</span>
+              </Link>
+            ))}
+          </div>
         </div>
-      </footer>
+      </section>
+
+      <SiteFooter />
 
       <WhatsAppFloat />
     </main>

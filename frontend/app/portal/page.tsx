@@ -1,12 +1,14 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { BRAND } from '../../lib/brand';
 import { portalSupabase, authedFetch } from '../../lib/portal-client';
 import { Level } from '../../components/portal-types';
 import PortalAuth from '../../components/PortalAuth';
 import PortalDashboard from '../../components/PortalDashboard';
 import PortalQuiz from '../../components/PortalQuiz';
+import SiteFooter from '../../components/SiteFooter';
 
 // Portal do aluno — orquestra: sessao (Supabase Auth) -> gate de enrollment 'construtor'
 // (checado server-side via /api/quiz/stats) -> painel / quiz / prova.
@@ -65,70 +67,25 @@ export default function Portal() {
   }
 
   return (
-    <main style={{ maxWidth: 920, margin: '0 auto', padding: 24 }}>
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
-        <h1 style={{ color: BRAND.navy, margin: 0, fontSize: 26 }}>Portal do Aluno — Simulados CSL</h1>
-        {sessao === 'dentro' && (
-          <button
-            type="button"
-            onClick={sair}
-            style={{
-              padding: '8px 16px',
-              borderRadius: 8,
-              border: `1.5px solid ${BRAND.navy}`,
-              background: '#fff',
-              color: BRAND.navy,
-              fontWeight: 600,
-              cursor: 'pointer',
-            }}
-          >
-            Sair
-          </button>
-        )}
-      </header>
-
-      {sessao === 'verificando' && <p style={{ opacity: 0.7 }}>Carregando...</p>}
-
-      {sessao === 'deslogado' && <PortalAuth onAuthed={revalidar} />}
-
-      {sessao === 'sem_acesso' && (
-        <section
-          style={{
-            background: '#fff',
-            border: `1px solid ${BRAND.gold}`,
-            borderRadius: 14,
-            padding: 28,
-            marginTop: 16,
-          }}
+    <>
+      <main style={{ maxWidth: 920, margin: '0 auto', padding: 24 }}>
+        {/* Logo clicável volta pra home */}
+        <Link
+          href="/"
+          style={{ display: 'inline-block', color: BRAND.navy, fontWeight: 800, fontSize: 17, letterSpacing: 0.5, textDecoration: 'none', marginBottom: 16 }}
         >
-          <h2 style={{ marginTop: 0, color: BRAND.navy }}>Acesso exclusivo do Curso de Construtor</h2>
-          <p style={{ opacity: 0.85 }}>
-            O portal de simulados libera so pra quem comprou o Curso de Construtor. Sua conta esta
-            logada, mas ainda nao encontramos a matricula ativa.
-          </p>
-          <p style={{ fontSize: 14, opacity: 0.8 }}>
-            Se voce ja comprou, confirme que usou o mesmo e-mail da compra. Em caso de duvida, fale com a equipe.
-          </p>
-          <div style={{ display: 'flex', gap: 10, marginTop: 12, flexWrap: 'wrap' }}>
-            <a
-              href="/curso-construtor"
-              style={{
-                padding: '11px 20px',
-                borderRadius: 10,
-                background: BRAND.navy,
-                color: BRAND.gold,
-                fontWeight: 600,
-                textDecoration: 'none',
-              }}
-            >
-              Conhecer o Curso de Construtor
-            </a>
+          WISE PRO <span style={{ color: BRAND.gold }}>ACADEMY</span>
+        </Link>
+
+        <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+          <h1 style={{ color: BRAND.navy, margin: 0, fontSize: 26 }}>Portal do Aluno — Simulados CSL</h1>
+          {sessao === 'dentro' && (
             <button
               type="button"
               onClick={sair}
               style={{
-                padding: '11px 20px',
-                borderRadius: 10,
+                padding: '8px 16px',
+                borderRadius: 8,
                 border: `1.5px solid ${BRAND.navy}`,
                 background: '#fff',
                 color: BRAND.navy,
@@ -138,42 +95,95 @@ export default function Portal() {
             >
               Sair
             </button>
-          </div>
-        </section>
-      )}
+          )}
+        </header>
 
-      {sessao === 'dentro' && view.tela === 'painel' && (
-        <PortalDashboard
-          level={level}
-          onChangeLevel={setLevel}
-          onIniciarCategoria={(category, label) => setView({ tela: 'quiz', category, label })}
-          onIniciarProva={() => setView({ tela: 'prova' })}
-        />
-      )}
+        {sessao === 'verificando' && <p style={{ opacity: 0.7 }}>Carregando...</p>}
 
-      {sessao === 'dentro' && view.tela === 'quiz' && (
-        <PortalQuiz
-          mode="category"
-          category={view.category}
-          level={level}
-          titulo={view.label}
-          onSair={() => setView({ tela: 'painel' })}
-        />
-      )}
+        {sessao === 'deslogado' && <PortalAuth onAuthed={revalidar} />}
 
-      {sessao === 'dentro' && view.tela === 'prova' && (
-        <PortalQuiz
-          mode="exam"
-          level={level}
-          titulo="Prova completa"
-          examSize={75}
-          onSair={() => setView({ tela: 'painel' })}
-        />
-      )}
+        {sessao === 'sem_acesso' && (
+          <section
+            style={{
+              background: '#fff',
+              border: `1px solid ${BRAND.gold}`,
+              borderRadius: 14,
+              padding: 28,
+              marginTop: 16,
+            }}
+          >
+            <h2 style={{ marginTop: 0, color: BRAND.navy }}>Acesso exclusivo do Curso de Construtor</h2>
+            <p style={{ opacity: 0.85 }}>
+              O portal de simulados libera só pra quem comprou o Curso de Construtor. Sua conta está
+              logada, mas ainda não encontramos a matrícula ativa.
+            </p>
+            <p style={{ fontSize: 14, opacity: 0.8 }}>
+              Se você já comprou, confirme que usou o mesmo e-mail da compra. Em caso de dúvida, fale com a equipe.
+            </p>
+            <div style={{ display: 'flex', gap: 10, marginTop: 12, flexWrap: 'wrap' }}>
+              <Link
+                href="/curso-construtor"
+                style={{
+                  padding: '11px 20px',
+                  borderRadius: 10,
+                  background: BRAND.navy,
+                  color: BRAND.gold,
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                }}
+              >
+                Conhecer o Curso de Construtor
+              </Link>
+              <button
+                type="button"
+                onClick={sair}
+                style={{
+                  padding: '11px 20px',
+                  borderRadius: 10,
+                  border: `1.5px solid ${BRAND.navy}`,
+                  background: '#fff',
+                  color: BRAND.navy,
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                }}
+              >
+                Sair
+              </button>
+            </div>
+          </section>
+        )}
 
-      <footer style={{ marginTop: 48, color: BRAND.navyLight, fontSize: 13 }}>
-        {BRAND.name} — {BRAND.domain}
-      </footer>
-    </main>
+        {sessao === 'dentro' && view.tela === 'painel' && (
+          <PortalDashboard
+            level={level}
+            onChangeLevel={setLevel}
+            onIniciarCategoria={(category, label) => setView({ tela: 'quiz', category, label })}
+            onIniciarProva={() => setView({ tela: 'prova' })}
+          />
+        )}
+
+        {sessao === 'dentro' && view.tela === 'quiz' && (
+          <PortalQuiz
+            mode="category"
+            category={view.category}
+            level={level}
+            titulo={view.label}
+            onSair={() => setView({ tela: 'painel' })}
+          />
+        )}
+
+        {sessao === 'dentro' && view.tela === 'prova' && (
+          <PortalQuiz
+            mode="exam"
+            level={level}
+            titulo="Prova completa"
+            examSize={75}
+            onSair={() => setView({ tela: 'painel' })}
+          />
+        )}
+      </main>
+
+      <SiteFooter />
+    </>
   );
 }

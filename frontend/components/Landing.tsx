@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Vsl from './Vsl';
 import LeadForm from './LeadForm';
 import WhatsAppFloat from './WhatsAppFloat';
+import SiteFooter from './SiteFooter';
 import { BRAND } from '../lib/brand';
 
 export type Beneficio = { titulo: string; texto: string };
@@ -62,24 +63,34 @@ export default function Landing(props: LandingProps) {
               justifyContent: 'space-between',
               alignItems: 'center',
               padding: '8px 0 32px',
+              gap: 16,
+              flexWrap: 'wrap',
             }}
           >
             <Link href="/" style={{ color: '#fff', fontWeight: 800, textDecoration: 'none', letterSpacing: 0.5 }}>
               WISE PRO <span style={{ color: BRAND.gold }}>ACADEMY</span>
             </Link>
-            <span
-              style={{
-                background: 'rgba(255,255,255,0.12)',
-                border: '1px solid rgba(255,255,255,0.24)',
-                color: '#fff',
-                fontSize: 12.5,
-                fontWeight: 600,
-                padding: '6px 13px',
-                borderRadius: 999,
-              }}
-            >
-              {selo}
-            </span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
+              <Link
+                href="/portal"
+                style={{ color: BRAND.gold, fontWeight: 700, textDecoration: 'none', fontSize: 13.5, letterSpacing: 0.4 }}
+              >
+                PORTAL DO ALUNO
+              </Link>
+              <span
+                style={{
+                  background: 'rgba(255,255,255,0.12)',
+                  border: '1px solid rgba(255,255,255,0.24)',
+                  color: '#fff',
+                  fontSize: 12.5,
+                  fontWeight: 600,
+                  padding: '6px 13px',
+                  borderRadius: 999,
+                }}
+              >
+                {selo}
+              </span>
+            </div>
           </nav>
 
           <div
@@ -304,14 +315,7 @@ export default function Landing(props: LandingProps) {
         </section>
       )}
 
-      <footer style={{ background: BRAND.navy, color: '#fff', padding: '36px 0', textAlign: 'center' }}>
-        <div style={wrap}>
-          <div style={{ fontWeight: 800, fontSize: 17, letterSpacing: 0.5 }}>
-            WISE PRO <span style={{ color: BRAND.gold }}>ACADEMY</span>
-          </div>
-          <div style={{ opacity: 0.7, fontSize: 13, marginTop: 6 }}>{BRAND.domain}</div>
-        </div>
-      </footer>
+      <SiteFooter />
 
       <WhatsAppFloat />
     </main>

@@ -85,6 +85,7 @@ export default function SiteHeader() {
               gap: 22,
               flexWrap: 'wrap',
               justifyContent: 'center',
+              alignItems: 'center',
             }}
           >
             {MENU.map((m) => (
@@ -96,6 +97,13 @@ export default function SiteHeader() {
                 {m.label}
               </a>
             ))}
+            {/* Rota interna real: usa next/link (as âncoras acima são da própria home). */}
+            <Link
+              href="/portal"
+              style={{ color: BRAND.gold, textDecoration: 'none', fontSize: 13.5, fontWeight: 700, letterSpacing: 0.4 }}
+            >
+              PORTAL DO ALUNO
+            </Link>
           </nav>
 
           <a
