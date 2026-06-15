@@ -15,6 +15,8 @@ a_fazer: 0
 
 > **Como adicionar pedidos novos:** rode `/ceo-novo-pedido` quando tiver ideia ou demanda nova ("quero criar X", "preciso de Y").
 
+> **Plano de ação / Mapa do funil:** o insumo deste plano vem dos mapas de necessidade em [`meu-negocio/mapas-de-necessidade/`](mapas-de-necessidade/). Comece pelo [Mapa do Funil](mapas-de-necessidade/funil.md) — cada nó do funil (captação → CRM → checkout → recuperação → aluno → upsell) já aponta o agente responsável.
+
 ---
 
 ## A Fazer

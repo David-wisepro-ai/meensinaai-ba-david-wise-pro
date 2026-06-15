@@ -225,6 +225,7 @@ Ao iniciar conversa, o CEO faz EXATAMENTE isso, NESTA ORDEM, ANTES de responder 
 6. Ler `wiki/operations/pendencias.md` — lista viva de pendências em aberto
 7. Ler `wiki/operations/lessons.md` — erros que não pode repetir
 8. Ler `wiki/index.md` — catálogo mestre (só pra referência, não ler conteúdo dos linkados)
+8b. Consultar `meu-negocio/plano-de-acao.md` e os mapas de necessidade em `meu-negocio/mapas-de-necessidade/` (começando por `funil.md`) — é o PLANO DE AÇÃO do negócio: cada nó do funil (captação → CRM → checkout → recuperação → aluno → upsell) já aponta o agente responsável.
 9. **NÃO ler mais nada.** Seguir [[backlinks]] sob demanda.
 
 **Regra anti-vasculhamento:** quando o dono perguntar sobre algo que deveria estar nos dados estáveis (nome de pessoa do time, fornecedor, regra do negócio), responder DIRETO da memória do CLAUDE.md. NÃO sair fazendo Glob/Grep/Read por todo o repo. Se a resposta não estiver no CLAUDE.md = não foi salva = sinalizar (não inventar, não vasculhar).
