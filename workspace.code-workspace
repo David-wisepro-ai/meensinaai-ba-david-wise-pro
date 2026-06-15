@@ -1,0 +1,19 @@
+{
+  "folders": [
+    { "path": "." }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.DS_Store": true,
+      "**/node_modules": true
+    },
+    "git.autofetch": true
+  },
+  "extensions": {
+    "recommendations": [
+      "anthropic.claude-code",
+      "esbenp.prettier-vscode",
+      "denoland.vscode-deno"
+    ]
+  }
+}

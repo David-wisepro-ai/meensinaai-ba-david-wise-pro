@@ -1,0 +1,37 @@
+template_name: meensinaai-ba-template
+version: 12.0.0
+release_date: 2026-06-08
+total_skills: 1604  # + 25 skills SEO (seo*) costuradas no .claude/skills/
+total_agents: 73  # 43 base + 11 Meta Ads + 19 SEO (regenerate-wiki-team conta 81 paginas com subdiretorios)
+total_squads: 13
+total_slash_commands: 19  # 17 base + /salva + /boa-noite
+
+changelog:
+  v12.0.0:
+    - "Departamento Meta Ads costurado: 10 agentes meta-ads-* (chief + strategist, campaign-builder, pixel-tracker, audience-architect, competitor-spy, creative-director, optimizer, analyst, knowledge-curator) + manager + KB em wiki/marketing/meta-ads/knowledge-base/"
+    - "Departamento SEO costurado: 19 agentes seo-* (chief + technical, local, content, schema, sitemap, geo, dataforseo, google, backlinks, cluster, drift, ecommerce, flow, image-gen, maps, performance, sxo, visual) + 25 skills seo*"
+    - "ceo.md: meta-ads-chief e seo-chief registrados como Chiefs delegaveis"
+    - "regenerate-wiki-team.py: novas categorias Meta Ads e SEO + chiefs + DEPARTMENTS + DEPT_DESC (descricoes de departamento)"
+    - "references/seo-report-template.html adicionado (generalizado, sem branding Nova Era/Me Ensina; placeholders {{BRAND_NAME}}/{{BRAND_TAGLINE}})"
+  v11.0.0:
+    - "Adicionado /salva e /boa-noite no template oficial (slash commands de fechamento)"
+    - "Fix vazamentos: email hardcoded e git clone hardcoded removidos"
+    - "Bloco deny em settings.json (cobertura .env, rm -rf, force push)"
+    - "Criado template-README, template-gitignore, template-env-example"
+    - "Arquitetura _atualizacoes/ pra patches modulares"
+    - "Lock por repo (REPO_NAME na lockdir) — sessoes paralelas em multiplos clientes nao colidem"
+    - "Header 'Agentes (26 funcionários)' corrigido pra 'Agentes (43 funcionários)' (a tabela ja listava 43)"
+
+  v10.2.0:
+    - "Etapa 0 do PROTOCOLO DE FECHAMENTO captura dados estaveis no CLAUDE.md"
+    - "PROTOCOLO DE ABERTURA verifica consistencia agentes vs .claude/agents/ (fantasmas/orfaos)"
+    - "Novas secoes: REGRAS INEGOCIAVEIS DO NEGOCIO, CONTAS E FERRAMENTAS, CLIENTES E CAMPANHAS"
+    - "Regra anti-vasculhamento: dados estaveis vem do CLAUDE.md, nao de Glob/Grep no repo"
+
+  v10.1.0:
+    - "Adicionado pendencias.md + sessoes/ultima.md + sessoes/README.md (continuidade entre sessoes)"
+    - "CLAUDE.md reescreve abertura/fechamento"
+
+  v10.0.0:
+    - "Pull completo do template apos consolidacao 11 clientes BA"
+    - "43 agentes / 1604 skills / 13 squads consolidados"

@@ -1,0 +1,23 @@
+{
+  "name": "escola-csl",
+  "version": "0.1.0",
+  "description": "Plugin do nicho escola de licenca de construtor (CSL Massachusetts) — agentes do portal de simulados, funil de checkout, recuperacao de carrinho, CRM-escola e autoridade no Google.",
+  "agents": [
+    ".claude/agents/nicho-escola-csl/motor-quiz-csl.md",
+    ".claude/agents/nicho-escola-csl/gerador-questoes-csl.md",
+    ".claude/agents/nicho-escola-csl/portal-aluno-builder.md",
+    ".claude/agents/nicho-escola-csl/builder-landing-escola.md",
+    ".claude/agents/nicho-escola-csl/funil-checkout-escola.md",
+    ".claude/agents/nicho-escola-csl/recuperacao-carrinho.md",
+    ".claude/agents/nicho-escola-csl/crm-escola-coordenador.md",
+    ".claude/agents/nicho-escola-csl/gbp-escola.md"
+  ],
+  "mcp": ".claude/mcp/wisepro-mcp",
+  "linhas_vermelhas": [
+    "Questoes ORIGINAIS ancoradas no codigo oficial — NUNCA copiar concorrente/Quizlet/Prometric.",
+    "So questao verified=true vai pro aluno.",
+    "NUNCA construir colinha pra burlar regra do exame.",
+    "NUNCA entregar SQL pro cliente — agente faz tudo via MCP/CLI/API.",
+    ".env gitignored + chaves escrubadas de tudo que for salvo/commitado."
+  ]
+}

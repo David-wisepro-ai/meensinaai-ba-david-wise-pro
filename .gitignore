@@ -1,0 +1,44 @@
+# Secrets e credenciais
+.env
+.env.*
+.env.local
+!.env.example
+.claude/settings.local.json
+.credentials/
+*.key
+*.pem
+*.p12
+*.session-key
+
+# Dependências e build
+node_modules/
+dist/
+build/
+.next/
+.turbo/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+.idea/
+*.swp
+*.swo
+
+# Temporários
+/tmp/
+.cache/
+
+# Claude
+.claude/cache/
+.claude/.tmp/

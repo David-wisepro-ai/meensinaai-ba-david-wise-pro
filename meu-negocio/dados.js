@@ -1,0 +1,159 @@
+/**
+ * dados.js — Estado machine-readable do negócio (schema v2.0.0)
+ *
+ * Lido pelo painel.html (Quartel General). Atualizado pelas skills do template
+ * e por todos os agentes ao concluir tarefa.
+ *
+ * NÃO EDITE MANUALMENTE este arquivo. Use as skills apropriadas:
+ *   - /gerar-perfil-do-negocio   → atualiza empresa.* + publico_alvo.* + marca.* + atividade_recente
+ *   - /plano-de-acao-90-dias     → cria plano-001-discovery/, atualiza planos.lista[*] + agentes.* + metricas
+ *   - /novo-plano-de-acao        → cria plano-NNN-<slug>/, atualiza planos.lista[*] (não sobrescreve outros)
+ *   - /concluir-plano            → planos.lista[ativo].status = "concluido", _ativo.txt limpa
+ *   - /pausar-plano              → planos.lista[ativo].status = "pausado"
+ *   - /retomar-plano             → planos.ativo = <slug>, status volta pra em_andamento
+ *   - qualquer agente do time    → agentes.<seu-nome>.* + entregas[]
+ *
+ * SCHEMA: 2.0.0
+ *
+ * Mudanças versus v1.0.x:
+ *   - perfil.md monolítico → empresa.md + publico-alvo.md + marca/ (4 arquivos)
+ *   - plano único → planos.ativo + planos.lista[<slug>] (multi-plano)
+ *   - chave de plano = pasta no disco (ex: "plano-002-campanha-memorial-day")
+ *
+ * Migration v1.x → v2.0.0: scripts/migrations/v1-to-v2.py
+ */
+
+window.DADOS_NEGOCIO = {
+  versao: "2.0.0",
+  ultima_atualizacao: "2026-05-08T00:00:00Z",
+
+  /**
+   * Identificação básica da empresa. Preenchida por /gerar-perfil-do-negocio.
+   * Reflete os dados estruturados de meu-negocio/empresa.md.
+   */
+  empresa: {
+    nome: null,
+    cnpj_taxid: null,
+    fundacao: null,
+    geografia: null,
+    idioma: "pt-BR",
+    site: null,
+    instagram: null,
+    linkedin: null,
+    produto_principal: null,
+    ticket_medio: null,
+    margem_aproximada: null,
+    canais_aquisicao: [],
+    cac: null,
+    ltv: null,
+    meta_faturamento_90d: null,
+    maior_gargalo: null
+  },
+
+  /**
+   * Cliente ideal e voz autêntica do cliente. Preenchido por /gerar-perfil-do-negocio.
+   * Reflete dados de meu-negocio/publico-alvo.md.
+   */
+  publico_alvo: {
+    faixa_etaria: null,
+    renda: null,
+    profissao: null,
+    geografia: null,
+    dor_principal: null,
+    top_3_dores: [],
+    top_3_objecoes: [],
+    voz_autentica: null
+  },
+
+  /**
+   * Marca do cliente. Gerado pelo brand-squad automaticamente ao final do /gerar-perfil-do-negocio.
+   * Reflete dados de meu-negocio/marca/* (brand-voice, visual-guidelines, padroes-site, padroes-postagem).
+   */
+  marca: {
+    tom: null,
+    palavras_evitar: [],
+    palavras_preferir: [],
+    paleta_cores: [],
+    tipografia: null,
+    status_geracao: "pendente"
+  },
+
+  /**
+   * Estado de cada agente do time. Preenchido por /plano-de-acao-90-dias e /novo-plano-de-acao
+   * (inicializa todos os agentes mencionados nas tarefas) e atualizado por cada agente
+   * ao iniciar/concluir tarefa.
+   *
+   * Status possíveis: "ocioso" | "trabalhando" | "concluido" | "bloqueado"
+   *
+   * CHAVE OBRIGATÓRIA = nome próprio em minúsculo (marina, pedro, ana-paula...).
+   * Nunca usar role-based (marketing, vendas).
+   *
+   * Exemplo:
+   *   marina: {
+   *     status: "trabalhando",
+   *     plano: "plano-002-campanha-memorial-day",
+   *     task_atual: "task-002",
+   *     inicio: "2026-05-08T10:30:00Z",
+   *     ultima_entrega: null,
+   *     cargo: "Social Media Strategist"
+   *   }
+   */
+  agentes: {},
+
+  /**
+   * Multi-planos de ação. Cada plano é uma pasta em planos-de-acao/<slug>/.
+   *
+   * planos.ativo aponta pra chave do plano em execução agora (string ou null).
+   * planos.lista é um dicionário de todos os planos do cliente.
+   *
+   * Cada plano segue schema:
+   *   {
+   *     titulo: "Plano de Discovery 90 Dias",
+   *     slug: "discovery",
+   *     pasta: "plano-001-discovery",
+   *     objetivo: "Melhorar Conversão",
+   *     status: "rascunho" | "em_andamento" | "pausado" | "concluido",
+   *     data_inicio: "2026-05-08T10:00:00Z",
+   *     data_conclusao: null,
+   *     total_semanas: 12,
+   *     semana_atual: 1,
+   *     prd_path: "meu-negocio/planos-de-acao/plano-001-discovery/prd.md",
+   *     tarefas_path: "meu-negocio/planos-de-acao/plano-001-discovery/tarefas.md",
+   *     tarefas: { a_fazer: [], em_andamento: [], concluidas: [] }
+   *   }
+   */
+  planos: {
+    ativo: null,
+    total: 0,
+    lista: {}
+  },
+
+  /**
+   * Últimas 50 entregas produzidas por agentes. Agregado de TODOS os planos.
+   * Cada entrada:
+   *   {
+   *     id, tipo, titulo, caminho, agente, plano (slug), task_id, criado_em
+   *   }
+   */
+  entregas: [],
+
+  /**
+   * Métricas agregadas do plano ATIVO. Recalculadas a cada update.
+   * (Métricas de planos passados ficam dentro de planos.lista[<slug>].)
+   */
+  metricas: {
+    plano_ativo: null,
+    total_tarefas: 0,
+    concluidas: 0,
+    em_andamento: 0,
+    a_fazer: 0,
+    progresso_pct: 0,
+    total_entregas: 0
+  },
+
+  /**
+   * Últimas 20 atividades pro painel. Agregado de todos os planos.
+   * Cada entrada: { timestamp, agente, plano (slug), acao_resumida }
+   */
+  atividade_recente: []
+};

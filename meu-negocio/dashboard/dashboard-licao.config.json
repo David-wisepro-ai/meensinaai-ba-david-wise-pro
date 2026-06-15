@@ -1,0 +1,98 @@
+{
+  "aluno": {
+    "empresa": "Wise Pro Academy",
+    "ceo_ia": "CEO",
+    "slug": "david-wise-pro",
+    "idioma_ui": "pt-BR"
+  },
+
+  "conectores_requeridos": [
+    { "nome": "Supabase", "porque": "guardar leads, alunos, matriculas e o banco de questoes do portal" },
+    { "nome": "GitHub", "porque": "versionar e publicar seu site e portal" },
+    { "nome": "Vercel", "porque": "colocar no ar o site, as landing pages e o portal do aluno" },
+    { "nome": "Stripe", "porque": "receber os pagamentos dos 3 cursos em dolar" },
+    { "nome": "Resend", "porque": "mandar e-mail de recuperacao pra quem comecou e nao pagou" },
+    { "nome": "WhatsApp (Stevo ou Z-API)", "porque": "mandar a mensagem de recuperacao pelo numero da atendente" }
+  ],
+
+  "plugins_requeridos": [
+    { "nome": "escola-csl", "oque": "te da os agentes da escola: motor de simulado, portal do aluno, funil de checkout, recuperacao de carrinho, CRM da escola e autoridade no Google" }
+  ],
+
+  "steps": [
+    {
+      "id": "step-1-conectores",
+      "tipo": "TAREFA",
+      "titulo": "Conectar suas contas e checar os plugins",
+      "agente": "CEO",
+      "licao": "Antes de tudo, vamos ligar suas contas (Supabase, GitHub, Vercel, Stripe, Resend e WhatsApp) e confirmar que o plugin da escola esta ativo. Voce so cola as chaves no chat; o agente guarda em lugar seguro e faz o resto sozinho.",
+      "criterio": "Todos os conectores aparecem ligados e o plugin escola-csl esta ativo."
+    },
+    {
+      "id": "step-2-crm-escola",
+      "tipo": "PRONTO",
+      "titulo": "Seu CRM da escola ja esta montado",
+      "agente": "crm-escola-coordenador",
+      "licao": "O funil dos seus 3 produtos ja esta desenhado no CRM: lead novo, atendimento, checkout iniciado, nao pagou, aluno e upsell. Nenhum lead se perde mais no WhatsApp.",
+      "criterio": "Voce abre o CRM e ve o pipeline dos 3 produtos."
+    },
+    {
+      "id": "step-3-site",
+      "tipo": "PRONTO",
+      "titulo": "Seu site institucional v1",
+      "agente": "builder-landing-escola",
+      "licao": "Seu site ja esta pronto (azul-marinho + dourado) apresentando os 3 cursos. Falta so conectar a Vercel e apontar o dominio wiseproacademy.io.",
+      "criterio": "O site abre localmente e esta pronto pra publicar na Vercel."
+    },
+    {
+      "id": "step-4-landings",
+      "tipo": "PRONTO",
+      "titulo": "Suas 3 paginas de venda (com espaco pro seu video)",
+      "agente": "builder-landing-escola",
+      "licao": "As landing pages de Project Manager, Construtor e Wise Day estao prontas, cada uma com um espaco reservado pro seu video de vendas (VSL). Quando voce gravar, e so trocar.",
+      "criterio": "As 3 landings abrem com o espaco do VSL e o formulario de inscricao."
+    },
+    {
+      "id": "step-5-checkout",
+      "tipo": "PRONTO",
+      "titulo": "Funil de checkout: captura antes do pagamento",
+      "agente": "funil-checkout-escola",
+      "licao": "Agora o nome, e-mail e telefone do aluno sao capturados ANTES do Stripe. Mesmo quem nao paga, voce ja tem o contato. O Stripe processa o pagamento e avisa o sistema.",
+      "criterio": "Voce ve um lead de teste gravado antes do pagamento."
+    },
+    {
+      "id": "step-6-recuperacao",
+      "tipo": "PRONTO",
+      "titulo": "Recuperacao de carrinho automatica",
+      "agente": "recuperacao-carrinho",
+      "licao": "Quem comeca e nao paga recebe um e-mail na hora e um WhatsApp umas 3 horas depois. Depois sua atendente entra na conversa. Voce para de perder venda no meio do caminho.",
+      "criterio": "Uma sequencia de recuperacao dispara pra um lead abandonado de teste."
+    },
+    {
+      "id": "step-7-portal",
+      "tipo": "PRONTO",
+      "titulo": "Portal do aluno: o motor de simulados no ar",
+      "agente": "portal-aluno-builder",
+      "licao": "Seu maior diferencial. O portal com login restrito (so quem comprou o Construtor) e o motor de quiz por categoria com feedback, explicacao e referencia ao codigo ja estao montados.",
+      "criterio": "Voce entra no portal e ve as categorias de simulado."
+    },
+    {
+      "id": "step-8-banco-questoes",
+      "tipo": "TAREFA",
+      "titulo": "Carregar o banco de questoes CSL (em ondas)",
+      "agente": "gerador-questoes-csl",
+      "licao": "O banco de questoes ORIGINAIS, ancoradas no codigo oficial, e carregado em ondas (IRC, IBC, IECC, OSHA, provas completas). Cada questao e verificada contra a secao do codigo antes de ir pro aluno. O que nao for verificado fica na fila de revisao, nunca chega no aluno.",
+      "comando": "/carregar-questoes",
+      "criterio": "As primeiras questoes verificadas aparecem no portal por categoria."
+    },
+    {
+      "id": "step-9-seo-trafego",
+      "tipo": "TAREFA",
+      "titulo": "Autoridade no Google + trafego",
+      "agente": "gbp-escola",
+      "licao": "Vamos otimizar seu Google Business Profile, montar o fluxo de reviews dos alunos aprovados e preparar o trafego (Facebook hoje, Google depois).",
+      "comando": "/otimizar-google",
+      "criterio": "Seu perfil no Google esta otimizado e o fluxo de reviews esta ativo."
+    }
+  ]
+}

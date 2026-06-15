@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wise Pro Academy — Painel da Escola</title>
+<style>
+  :root { --navy:#0A1F44; --gold:#C9A227; --cream:#FAF7EF; }
+  body { font-family: system-ui, sans-serif; margin:0; background:var(--cream); color:var(--navy); }
+  header { background:var(--navy); color:#fff; padding:28px 32px; }
+  header h1 { margin:0; } header .gold { color:var(--gold); }
+  .wrap { max-width:1040px; margin:0 auto; padding:24px; }
+  .cards { display:flex; gap:16px; flex-wrap:wrap; }
+  .card { flex:1; min-width:220px; background:#fff; border:1px solid var(--gold); border-radius:14px; padding:20px; }
+  .num { font-size:34px; font-weight:800; color:var(--navy); }
+  .lbl { color:#555; font-size:13px; }
+  h2 { margin-top:36px; }
+  table { width:100%; border-collapse:collapse; background:#fff; border-radius:12px; overflow:hidden; }
+  th,td { padding:10px 12px; text-align:left; border-bottom:1px solid #eee; }
+  th { background:var(--navy); color:#fff; }
+  .badge { padding:2px 8px; border-radius:999px; font-size:12px; font-weight:700; }
+  .ok { background:#e6f4ea; color:#137333; } .rev { background:#fef7e0; color:#a06400; }
+</style>
+</head>
+<body>
+<header><h1>Wise Pro Academy <span class="gold">— Painel da Escola</span></h1>
+<div style="opacity:.85">Funil dos 3 produtos + banco de questoes CSL</div></header>
+<div class="wrap">
+  <div class="cards">
+    <div class="card"><div class="num" id="leads">--</div><div class="lbl">Leads no funil</div></div>
+    <div class="card"><div class="num" id="aband">--</div><div class="lbl">Abandonaram checkout</div></div>
+    <div class="card"><div class="num" id="alunos">--</div><div class="lbl">Alunos pagantes</div></div>
+    <div class="card"><div class="num" id="qverif">--</div><div class="lbl">Questoes verificadas</div></div>
+  </div>
+
+  <h2>Banco de questoes por categoria</h2>
+  <table>
+    <thead><tr><th>Categoria</th><th>Verificadas</th><th>Em revisao</th><th>Status</th></tr></thead>
+    <tbody id="cats">
+      <tr><td>IRC (residencial)</td><td>0</td><td>0</td><td><span class="badge rev">aguardando ondas</span></td></tr>
+      <tr><td>IBC (comercial)</td><td>0</td><td>0</td><td><span class="badge rev">aguardando ondas</span></td></tr>
+      <tr><td>IECC (energia)</td><td>0</td><td>0</td><td><span class="badge rev">aguardando ondas</span></td></tr>
+      <tr><td>OSHA (seguranca)</td><td>0</td><td>0</td><td><span class="badge rev">aguardando ondas</span></td></tr>
+      <tr><td>AAB (acessibilidade)</td><td>0</td><td>0</td><td><span class="badge rev">aguardando ondas</span></td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px;color:#555;margin-top:18px">
+    Numeros zerados ate conectar o Supabase (STEP 1 do dashboard) e carregar o seed de questoes (STEP 8).
+    O motor so usa questoes <strong>verificadas</strong>. Questao em revisao NUNCA vai pro aluno.
+  </p>
+</div>
+</body>
+</html>

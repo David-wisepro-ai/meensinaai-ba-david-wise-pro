@@ -1,0 +1,66 @@
+{
+  "$schema": "Schema do dashboard-licao.config.json (exemplo comentado). NUNCA copiar credencial pra cá — este arquivo é VERSIONADO no Git. Gerado pelo /meu-dashboard a partir da transcrição + ADR-manifesto + mapas de necessidade. O HTML em references/dashboard-licao-template.html consome este config.",
+
+  "_REGRAS_DO_GERADOR": [
+    "1. campo 'comando' = WHITELIST validada por REGEX DURA: tem que casar ^/[a-z0-9][a-z0-9-]{0,48}( .{0,150})?$ (começa com '/', kebab-case, sem newline, <=200 chars). E a fonte: o nome do comando tem que constar do ADR-manifesto do aluno OU existir em .claude/commands (UNIÃO dos dois, não interseção). NUNCA texto livre da transcrição. Falhou regex ou fonte = não grava o 'comando' (step vira só licao+criterio).",
+    "2. ZERO credencial em qualquer valor (PASSO de varredura recursiva antes de gravar). Rejeitar se casar prefixo 'sk-', 'Bearer ', 'meai_', 'pfm_live_', 'AIza', 'ghp_', 'eyJ' (JWT) OU heurística de token [A-Za-z0-9_-]{41,}. Chaves só em .env gitignored — o config diz QUAL conector/chave é preciso, nunca o valor.",
+    "3. tipo = 'PRONTO' (já construído, aluno só usa — derivado do ADR-manifesto como entregue) ou 'TAREFA' (aluno executa com o agente guiando). Todo 'TAREFA' precisa de 'comando' + 'criterio'.",
+    "4. Texto pt-BR acentuado. Horário de exemplo pra operação US em AM/PM (nunca 24h). Zero nome do fornecedor / 'Me Ensina AI' — usar o nome do CEO IA do aluno. Zero menção a outros clientes.",
+    "5. XSS PARSE-TIME: o config é injetado em <script id='dashboard-config' type='application/json'>. O GERADOR escapa a string serializada: '<'->'\\u003c', '>'->'\\u003e', '&'->'\\u0026', U+2028->'\\u2028', U+2029->'\\u2029'. esc() do template é RUNTIME e NAO protege o ponto de injeção. Defesa em profundidade (Regra 5 do comando): rejeitar/limpar qualquer campo de texto que contenha '</', '<script', U+2028, U+2029 antes de gravar.",
+    "6. aluno.slug entra na LS_KEY do template: validar ^[a-z0-9-]{1,64}$ antes de gravar; normalizar se não casar."
+  ],
+
+  "aluno": {
+    "empresa": "Master Brush",
+    "ceo_ia": "Atlas",
+    "slug": "master-brush",
+    "idioma_ui": "pt-BR"
+  },
+
+  "conectores_requeridos": [
+    {
+      "nome": "Google Calendar",
+      "porque": "puxar a agenda dos seus jobs da semana"
+    },
+    {
+      "nome": "Gmail",
+      "porque": "ler os pedidos de orçamento que chegam por email"
+    }
+  ],
+
+  "plugins_requeridos": [
+    {
+      "nome": "painting-us-plugin",
+      "oque": "te dá os agentes especializados em pintura (orçamento, resposta rápida a lead, relatório semanal)"
+    }
+  ],
+
+  "steps": [
+    {
+      "id": "build-estimate-1",
+      "tipo": "TAREFA",
+      "titulo": "Gerar seu primeiro orçamento com o agente",
+      "agente": "estimate-builder",
+      "licao": "Descreva o serviço em uma frase e o agente monta o orçamento profissional pra você. É assim que você vai fechar mais rápido daqui pra frente.",
+      "comando": "/estimate",
+      "criterio": "Você recebeu um PDF de orçamento na pasta meu-negocio/orcamentos/."
+    },
+    {
+      "id": "pipeline-pronto",
+      "tipo": "PRONTO",
+      "titulo": "Seu funil de leads já está montado",
+      "agente": "Pedro CRM",
+      "licao": "Seu CRM já está conectado e organizando os contatos. Toda lead nova cai aqui automaticamente — você só acompanha.",
+      "criterio": "Já está pronto — abra e veja seus contatos organizados."
+    },
+    {
+      "id": "relatorio-semanal",
+      "tipo": "TAREFA",
+      "titulo": "Pedir o relatório da sua semana",
+      "agente": "weekly-reporter",
+      "licao": "Toda segunda você pode pedir um resumo da semana: agenda, quem está devendo, o que precisa de atenção. Depois de rodar uma vez, dá pra agendar.",
+      "comando": "/relatorio-semanal",
+      "criterio": "Você recebeu um relatório com a agenda e o financeiro da semana."
+    }
+  ]
+}

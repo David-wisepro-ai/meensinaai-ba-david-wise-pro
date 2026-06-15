@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard-Lição</title>
+<!--
+  ============================================================================
+  TEMPLATE HARDENED do "Dashboard-Lição" (cowork) — BLOCO CARIMBÁVEL.
+  Spec: wiki/operations/templates/dashboard-licao-cowork.md
+  Doutrina: wiki/operations/decisions.md — "DOUTRINA 'ENTREGA MASTIGADA'".
+
+  Como vira o dashboard de um aluno:
+  o slash command /meu-dashboard lê o dashboard-licao.config.json daquele aluno
+  (gerado da transcrição + ADR-manifesto + mapas de necessidade) e SUBSTITUI
+  o conteúdo entre os marcadores CONFIG_INJECTION pelo JSON dele dentro de uma
+  tag <script type="application/json">. O HTML/CSS/JS NÃO muda por aluno.
+
+  SEGURANÇA (manter ao mexer) — DUAS CAMADAS, parse-time E runtime:
+
+  1) PARSE-TIME (furo de segurança identificado em auditoria): o config NÃO é mais concatenado
+     como literal JS dentro de <script> (window.DASHBOARD_CONFIG = {...};).
+     Aquilo permitia breakout: JSON.stringify NÃO escapa a sequência </script>,
+     então um campo com "</script><script>x()</script>" fechava a tag e o
+     navegador executava o segundo <script> ANTES de qualquer esc() runtime.
+     Agora o JSON vai num <script id="dashboard-config" type="application/json">
+     e é lido com JSON.parse(textContent). Conteúdo de application/json NÃO é
+     executado pelo parser; é tratado como data block. PORÉM continua sendo
+     "raw text" pro fim-de-tag, então o gerador AINDA precisa escapar "<" (e por
+     simetria ">", "&", U+2028, U+2029) no JSON serializado pra impedir que
+     "</script" feche o bloco. Esse escape é responsabilidade do GERADOR
+     (/meu-dashboard, Regra 3 + Regra 5), não deste template.
+
+  2) RUNTIME: todo texto entra no HTML via esc(). O comando colável vai pro
+     <code> via textContent (nunca innerHTML) e o botão Copiar usa data-i +
+     listener delegado (o comando crua NUNCA aparece em onclick/atributo/HTML).
+     esc() é defesa de RENDER — NÃO protege o ponto de injeção parse-time acima.
+
+  Outras invariantes:
+  - Todo campo do config vem da transcrição = input externo NÃO confiável.
+  - O config é VERSIONADO: zero credencial dentro. Chaves só em .env gitignored.
+  - O comando colável é WHITELIST (regex dura no gerador, Regra 1).
+  ============================================================================
+-->
+<style>
+  :root{
+    --bg:#0f1117; --card:#181b25; --card2:#1f2330; --border:#2a2f3e;
+    --txt:#e8eaf0; --muted:#9aa1b2; --accent:#7c5cff;
+    --pronto:#2ecc71; --pronto-bg:rgba(46,204,113,.10); --pronto-bd:rgba(46,204,113,.4);
+    --tarefa:#f5a623; --tarefa-bg:rgba(245,166,35,.10); --tarefa-bd:rgba(245,166,35,.4);
+    --lock:#5b6275;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,'Inter',Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt);line-height:1.5;padding:28px 18px 60px}
+  .wrap{max-width:760px;margin:0 auto}
+
+  /* Cabeçalho */
+  header{margin-bottom:24px}
+  .eyebrow{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+  h1{font-size:26px;font-weight:800;margin:4px 0 6px;letter-spacing:-.02em}
+  .sub{color:var(--muted);font-size:15px;max-width:560px}
+  .progress-wrap{margin-top:18px;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 18px}
+  .progress-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+  .progress-top b{font-size:15px}
+  .progress-top span{color:var(--muted);font-size:13px}
+  .bar{height:10px;background:#11131b;border-radius:99px;overflow:hidden}
+  .bar > i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),#a78bff);transition:width .4s ease}
+
+  /* Steps */
+  .step{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px 18px;margin-top:14px;position:relative;transition:opacity .25s,border-color .2s}
+  .step.done{opacity:.7}
+  .step.step1{border-color:var(--accent)}
+  .step-head{display:flex;align-items:flex-start;gap:12px}
+  .badge{flex:none;font-size:11px;font-weight:800;letter-spacing:.05em;padding:4px 9px;border-radius:7px;text-transform:uppercase;border:1px solid}
+  .badge.pronto{color:var(--pronto);background:var(--pronto-bg);border-color:var(--pronto-bd)}
+  .badge.tarefa{color:var(--tarefa);background:var(--tarefa-bg);border-color:var(--tarefa-bd)}
+  .step h3{font-size:17px;font-weight:700;margin-bottom:2px}
+  .agente{color:var(--muted);font-size:13px}
+  .agente b{color:var(--accent)}
+  .licao{margin:10px 0 0;color:#cfd3de;font-size:14.5px}
+  .crit{margin-top:10px;font-size:13px;color:var(--muted)}
+  .crit b{color:var(--pronto)}
+
+  /* comando colável */
+  .cmd{margin-top:12px;background:#0b0d13;border:1px solid var(--border);border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:10px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px}
+  .cmd code{color:#a78bff;flex:1;overflow-x:auto;white-space:nowrap}
+  .cmd button{flex:none;background:var(--accent);color:#fff;border:0;border-radius:7px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer}
+  .cmd button:active{transform:translateY(1px)}
+
+  /* checkbox concluir */
+  .conclui{margin-top:14px;display:flex;align-items:center;gap:9px;cursor:pointer;user-select:none}
+  .conclui input{width:20px;height:20px;accent-color:var(--accent);cursor:pointer}
+  .conclui label{font-size:14px;font-weight:600;cursor:pointer}
+  .feedback{margin-top:8px;font-size:13px;color:var(--pronto);display:none}
+  .step.done .feedback{display:block}
+
+  /* sub-blocos STEP 1 */
+  .sublist{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+  .subitem{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:11px 12px;display:flex;align-items:flex-start;gap:10px}
+  .subitem input{width:19px;height:19px;accent-color:var(--accent);margin-top:1px;cursor:pointer}
+  .subitem .t{font-size:14px;font-weight:600}
+  .subitem .p{font-size:13px;color:var(--muted)}
+  .sub-h{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-top:14px}
+  .hint{font-size:12.5px;color:var(--lock);margin-top:6px;font-style:italic}
+
+  footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px}
+  .reset{margin-top:14px;background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:8px;padding:7px 14px;font-size:12px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow" id="eyebrow">Comando central</div>
+    <h1 id="title">Carregando…</h1>
+    <p class="sub" id="welcome"></p>
+    <div class="progress-wrap">
+      <div class="progress-top"><b id="pcount">0 de 0 passos</b><span id="ppct">0%</span></div>
+      <div class="bar"><i id="pbar"></i></div>
+    </div>
+  </header>
+  <div id="steps"></div>
+  <footer>
+    <div id="team-summary"></div>
+    <div style="margin-top:8px">Quer rever depois? Peça ao seu CEO IA <b style="color:#a78bff">"abre o meu painel"</b> ou dê dois cliques no arquivo do painel.</div>
+    <button class="reset" onclick="resetAll()">Recomeçar do zero</button>
+  </footer>
+</div>
+
+<!-- ───────────────────────────────────────────────────────────────
+     >>> CONFIG_INJECTION_START <<<
+     O /meu-dashboard SUBSTITUI tudo entre estes dois marcadores pelo
+     conteúdo do dashboard-licao.config.json daquele aluno, mantendo a
+     tag <script type="application/json"> abaixo. O JSON serializado DEVE
+     vir já com "<" ">" "&" U+2028 U+2029 escapados (Regra 3/5 do gerador) —
+     application/json é raw-text só pro fim de tag </script. O bloco abaixo
+     é só um EXEMPLO genérico (placeholder do template).
+     ─────────────────────────────────────────────────────────────── -->
+<script id="dashboard-config" type="application/json">
+{
+  "aluno": { "empresa": "Sua Empresa", "ceo_ia": "Seu CEO IA", "slug": "sua-empresa", "idioma_ui": "pt-BR" },
+  "conectores_requeridos": [
+    { "nome": "Google Calendar", "porque": "puxar a agenda dos seus compromissos da semana" },
+    { "nome": "Gmail", "porque": "ler os pedidos que chegam por email" }
+  ],
+  "plugins_requeridos": [
+    { "nome": "Plugin do seu nicho", "oque": "te dá os agentes especializados no seu negócio" }
+  ],
+  "steps": [
+    { "id": "exemplo-tarefa", "tipo": "TAREFA", "titulo": "Rodar seu primeiro comando com o agente",
+      "agente": "seu-agente",
+      "licao": "Descreva o que precisa em uma frase e o agente faz pra você. É assim que você opera o time daqui pra frente.",
+      "comando": "/seu-comando",
+      "criterio": "Você recebeu o resultado na pasta do seu negócio." },
+    { "id": "exemplo-pronto", "tipo": "PRONTO", "titulo": "Algo que já foi construído pra você",
+      "agente": "seu-agente",
+      "licao": "Isso já está pronto e rodando. Você só usa.",
+      "criterio": "Já está pronto — abra e confira." }
+  ]
+}
+</script>
+<!-- >>> CONFIG_INJECTION_END <<< -->
+
+<script>
+/* Lê o config do bloco application/json acima. JSON.parse trata o conteúdo
+   como DADO (não executa). O bloco nunca é interpretado como markup/JS, então
+   um campo com "</script><script>x()</script>" entra inerte como string —
+   desde que o gerador tenha escapado "<" (senão o "</script" fecharia o bloco
+   no parse-time, antes daqui). Defesa em profundidade: gerador (Regra 3/5)
+   escapa no serializar; este parse + esc() no render são as outras camadas. */
+const CFG = JSON.parse(document.getElementById("dashboard-config").textContent);
+const LS_KEY = "dashboard-licao::" + CFG.aluno.slug;
+let state = JSON.parse(localStorage.getItem(LS_KEY) || "{}");
+
+function save(){ localStorage.setItem(LS_KEY, JSON.stringify(state)); }
+
+/* ───────────────────────────────────────────────────────────────
+   SEGURANÇA — escape de TODO campo do config antes de entrar no HTML.
+   O config é gerado da transcrição (input externo): nunca confiar.
+   Onde dá, preferimos createElement + textContent (sem HTML).
+   ─────────────────────────────────────────────────────────────── */
+function esc(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+/* STEP 1 está concluído quando todos os conectores + plugins foram marcados */
+function step1Done(){
+  const need = CFG.conectores_requeridos.map((_,i)=>"conn"+i)
+    .concat(CFG.plugins_requeridos.map((_,i)=>"plug"+i));
+  return need.length>0 && need.every(k=>state[k]);
+}
+
+function render(){
+  // cabeçalho
+  document.getElementById("eyebrow").textContent = "Comando central — " + CFG.aluno.empresa;
+  document.getElementById("title").textContent = "Operado por " + CFG.aluno.ceo_ia;
+  document.getElementById("welcome").textContent =
+    "Seu time de agentes já sabe tudo que precisa ser feito. Siga os passos — cada um te deixa mais no controle.";
+  document.getElementById("team-summary").innerHTML =
+    "Seu time: <b style='color:#a78bff'>"+esc(CFG.aluno.ceo_ia)+"</b> + "+CFG.steps.length+" agentes especializados no seu negócio.";
+
+  const host = document.getElementById("steps");
+  host.innerHTML = "";
+
+  // STEP 1 — conectores + plugins (sempre primeiro)
+  host.appendChild(buildStep1());
+
+  // STEPS 2..N — todos acessíveis desde o início (sem cadeado/gating).
+  // STEP 1 continua sendo o primeiro/recomendado visualmente, mas não trava os demais.
+  CFG.steps.forEach((s, idx)=>{
+    const done = !!state[s.id];
+    const el = document.createElement("div");
+    el.className = "step" + (done ? " done" : "");
+    const badge = s.tipo==="PRONTO"
+      ? '<span class="badge pronto">✓ Pronto</span>'
+      : '<span class="badge tarefa">▶ Tarefa</span>';
+    const help = s.tipo==="PRONTO" ? "Já está pronto — é só usar." : "Sua vez — o agente te guia.";
+    const sid = esc(s.id);
+    // Todo campo de texto do config passa por esc(). O bloco de comando NÃO entra
+    // como string crua em HTML nem em onclick: o <code> recebe o valor via
+    // textContent e o botão usa data-i + listener delegado (ver abaixo).
+    el.innerHTML = `
+      <div class="step-head">
+        ${badge}
+        <div style="flex:1">
+          <h3>${esc(s.titulo)}</h3>
+          <div class="agente">${esc(help)} · agente: <b>${esc(s.agente)}</b></div>
+          <p class="licao">${esc(s.licao)}</p>
+          ${s.comando ? `<div class="cmd"><code class="cmd-code"></code><button class="cmd-copy" data-i="${idx}">Copiar</button></div>` : ""}
+          <div class="crit">Você concluiu quando: <b>${esc(String(s.criterio).replace(/^[^—]*—?\s*/,''))}</b></div>
+          <div class="conclui">
+            <input type="checkbox" id="ck_${sid}" ${done?"checked":""} data-toggle="${esc(s.id)}">
+            <label for="ck_${sid}">${done?"Concluído":"Marcar como concluído"}</label>
+          </div>
+          <div class="feedback">Boa. Você acabou de operar o <b>${esc(s.agente)}</b> sozinho.</div>
+        </div>
+      </div>`;
+    // comando: vai pro <code> via textContent (nunca innerHTML) — neutraliza qualquer markup
+    if(s.comando){ el.querySelector(".cmd-code").textContent = s.comando; }
+    host.appendChild(el);
+  });
+
+  // Listeners delegados: o comando crua nunca aparece em atributo onclick/HTML.
+  host.querySelectorAll(".cmd-copy").forEach(b=>{
+    b.addEventListener("click", ()=> copyCmd(b, CFG.steps[+b.dataset.i].comando));
+  });
+  host.querySelectorAll("[data-toggle]").forEach(c=>{
+    c.addEventListener("change", ()=> toggle(c.dataset.toggle, c.checked));
+  });
+
+  updateProgress();
+}
+
+function buildStep1(){
+  const el = document.createElement("div");
+  const done = step1Done();
+  el.className = "step step1" + (done?" done":"");
+  let conn = CFG.conectores_requeridos.map((c,i)=>`
+    <div class="subitem">
+      <input type="checkbox" id="conn${i}" ${state["conn"+i]?"checked":""} data-toggle="conn${i}">
+      <div><div class="t">${esc(c.nome)}</div><div class="p">Pra que serve: ${esc(c.porque)}.</div></div>
+    </div>`).join("");
+  let plug = CFG.plugins_requeridos.map((p,i)=>`
+    <div class="subitem">
+      <input type="checkbox" id="plug${i}" ${state["plug"+i]?"checked":""} data-toggle="plug${i}">
+      <div><div class="t">${esc(p.nome)}</div><div class="p">O que te dá: ${esc(p.oque)}.</div></div>
+    </div>`).join("");
+  el.innerHTML = `
+    <div class="step-head">
+      ${done?'<span class="badge pronto">✓ Pronto</span>':'<span class="badge tarefa">▶ Comece aqui</span>'}
+      <div style="flex:1">
+        <h3>Passo 1 — Conectar suas ferramentas e ativar seus agentes</h3>
+        <div class="agente">Recomendado começar por aqui: valide o ambiente. Mas você pode fazer os passos em qualquer ordem.</div>
+        <div class="sub-h">Conectores</div>
+        <div class="hint">No Claude Desktop: Customize → Conectores → "+" → Navegar por Conectores. Conecte cada um e marque abaixo.</div>
+        <div class="sublist">${conn}</div>
+        <div class="sub-h">Plugins</div>
+        <div class="hint">Mesma tela dos conectores (Customize → Conectores → "+" → Navegar por Conectores) — os Plugins ficam à ESQUERDA.</div>
+        <div class="sublist">${plug}</div>
+        <div class="feedback" style="margin-top:14px">Ambiente pronto. Seus agentes estão no ar.</div>
+      </div>
+    </div>`;
+  return el;
+}
+
+function toggle(key, val){
+  state[key]=val; save();
+  render(); // re-render: atualiza badges, feedback e barra de progresso
+}
+function updateProgress(){
+  const total = CFG.steps.length + 1; // +1 = STEP 1
+  let done = step1Done() ? 1 : 0;
+  CFG.steps.forEach(s=>{ if(state[s.id]) done++; });
+  const pct = Math.round(done/total*100);
+  document.getElementById("pcount").textContent = done+" de "+total+" passos";
+  document.getElementById("ppct").textContent = pct+"%";
+  document.getElementById("pbar").style.width = pct+"%";
+}
+function copyCmd(btn, txt){
+  navigator.clipboard.writeText(txt).then(()=>{
+    const o=btn.textContent; btn.textContent="Copiado!";
+    setTimeout(()=>btn.textContent=o,1400);
+  });
+}
+function resetAll(){
+  if(confirm("Recomeçar do zero? Isso limpa seu progresso desta lição.")){
+    state={}; save(); render();
+  }
+}
+render();
+</script>
+</body>
+</html>

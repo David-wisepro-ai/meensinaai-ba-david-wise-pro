@@ -1,0 +1,10 @@
+{
+  "name": "wisepro-mcp",
+  "version": "0.1.0",
+  "description": "MCP server da Wise Pro Academy — acesso ao Supabase do aluno (quiz_questions, leads, enrollments, checkout) pros agentes do nicho escola/CSL.",
+  "type": "module",
+  "bin": { "wisepro-mcp": "./index.mjs" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}
