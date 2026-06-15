@@ -8,16 +8,17 @@ export default function Vsl({ titulo, legenda }: { titulo: string; legenda?: str
     <div
       style={{
         aspectRatio: '16 / 9',
-        background: `linear-gradient(135deg, ${BRAND.navy} 0%, ${BRAND.navyLight} 100%)`,
-        color: BRAND.gold,
+        background: `linear-gradient(135deg, ${BRAND.navy} 0%, ${BRAND.royal} 100%)`,
+        color: '#fff',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 14,
+        borderRadius: 18,
         border: `2px solid ${BRAND.gold}`,
         margin: '28px 0',
         position: 'relative',
         overflow: 'hidden',
+        maxWidth: 760,
       }}
     >
       {/* VSL: David grava depois — substituir este bloco pelo player do vídeo (YouTube/Vimeo/Mux). */}
@@ -25,21 +26,22 @@ export default function Vsl({ titulo, legenda }: { titulo: string; legenda?: str
         <div
           aria-hidden
           style={{
-            width: 72,
-            height: 72,
+            width: 76,
+            height: 76,
             borderRadius: '50%',
-            border: `2px solid ${BRAND.gold}`,
+            background: BRAND.gold,
+            color: BRAND.navy,
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
-            marginBottom: 12,
+            marginBottom: 14,
           }}
         >
-          <span style={{ fontSize: 26, marginLeft: 6 }}>&#9654;</span>
+          <span style={{ fontSize: 28, marginLeft: 6 }}>&#9654;</span>
         </div>
         <div style={{ fontSize: 19, fontWeight: 800 }}>{titulo}</div>
         <div style={{ fontSize: 13, opacity: 0.85, marginTop: 6, maxWidth: 360 }}>
-          {legenda ?? 'O vídeo de apresentação do David entra aqui em breve.'}
+          {legenda ?? 'O video de apresentacao do David entra aqui em breve.'}
         </div>
       </div>
     </div>

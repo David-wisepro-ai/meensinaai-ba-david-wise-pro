@@ -40,7 +40,7 @@ export default function LeadForm({
       // Modo seguro (Stripe ainda não conectado): lead foi gravado, confirmamos o cadastro.
       setDone(true);
     } catch {
-      setError('Não conseguimos enviar agora. Tente novamente em instantes.');
+      setError('Nao conseguimos enviar agora. Tente novamente em instantes.');
     } finally {
       setSending(false);
     }
@@ -48,12 +48,13 @@ export default function LeadForm({
 
   const input: React.CSSProperties = {
     width: '100%',
-    padding: 13,
+    padding: 14,
     margin: '8px 0',
-    borderRadius: 8,
-    border: `1px solid ${BRAND.navyLight}`,
+    borderRadius: 12,
+    border: `1px solid #d9dcea`,
     fontSize: 16,
     boxSizing: 'border-box',
+    fontFamily: 'inherit',
   };
 
   if (done) {
@@ -62,14 +63,14 @@ export default function LeadForm({
         style={{
           background: BRAND.cream,
           border: `1px solid ${BRAND.gold}`,
-          borderRadius: 10,
+          borderRadius: 14,
           padding: 20,
         }}
       >
         <strong style={{ color: BRAND.navy }}>Cadastro recebido!</strong>
         <p style={{ margin: '8px 0 0', color: BRAND.navyLight }}>
           Reservamos seu interesse. Em breve nossa equipe entra em contato pelo WhatsApp pra
-          confirmar sua vaga e os próximos passos.
+          confirmar sua vaga e os proximos passos.
         </p>
       </div>
     );
@@ -82,24 +83,27 @@ export default function LeadForm({
       <input name="phone" placeholder="Seu WhatsApp (com DDD)" required style={input} />
       <button
         disabled={sending}
+        className="wpa-btn"
         style={{
           width: '100%',
-          padding: 15,
+          padding: 16,
           marginTop: 12,
-          borderRadius: 8,
+          borderRadius: 999,
           border: 'none',
-          background: BRAND.gold,
-          color: BRAND.navy,
+          background: BRAND.gradient,
+          color: '#fff',
           fontWeight: 800,
           fontSize: 17,
           cursor: sending ? 'wait' : 'pointer',
+          fontFamily: 'inherit',
+          boxShadow: '0 8px 22px rgba(75,63,228,0.32)',
         }}
       >
         {sending ? 'Enviando...' : cta}
       </button>
       {error && <p style={{ color: '#b00020', fontSize: 14, marginTop: 8 }}>{error}</p>}
       <p style={{ fontSize: 12.5, color: BRAND.navyLight, marginTop: 10, lineHeight: 1.5 }}>
-        Seus dados ficam seguros. Usamos apenas pra confirmar sua vaga e te enviar as informações da
+        Seus dados ficam seguros. Usamos apenas pra confirmar sua vaga e te enviar as informacoes da
         turma.
       </p>
     </form>
