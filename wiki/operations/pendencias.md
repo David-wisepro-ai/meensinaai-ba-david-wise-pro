@@ -11,8 +11,11 @@
 
 - [x] ✅ **Supabase** — projeto criado (`grjqedhjbsvkqruylqom`), 5 tabelas criadas com RLS, **598 questões carregadas** (2026-06-15, via PostgREST). URL: `https://grjqedhjbsvkqruylqom.supabase.co`
 - [x] ✅ **Deploy na Vercel** — site NO AR em https://meensinaai-ba-david-wise-pro.vercel.app (2026-06-15, plano Hobby grátis, repo público, root `frontend/`, Next.js). Build compilou OK.
-- [ ] **Env vars do Supabase na Vercel** — colar NEXT_PUBLIC_SUPABASE_URL + NEXT_PUBLIC_SUPABASE_ANON_KEY (publishable) + SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY (secret) + redeploy. Sem isso: site no ar mas login/leads/portal em "modo seguro". — próximo passo
-- [ ] **Stripe** — criar 3 produtos/preços + chaves + webhook. Sem isso: checkout não cobra (trava em `checkout_iniciado`). — dono: David
+- [x] ✅ **Env vars do Supabase na Vercel** — as 4 variáveis (NEXT_PUBLIC_SUPABASE_URL, SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY publishable, SUPABASE_SERVICE_ROLE_KEY secret) gravadas em Production+Preview (2026-06-15). Acordam login/leads/portal no próximo deploy.
+- [ ] 🔐 **Rotacionar a chave secreta do Supabase** — durante o setup a secret apareceu em texto numa tela da sessão. Boa prática: gerar nova secret no Supabase, atualizar a env var, apagar a antiga. — dono: David + Zuck
+- [ ] **Stripe (POR ÚLTIMO)** — criar 3 produtos/preços + chaves + webhook. Sem isso: checkout não cobra (trava em `checkout_iniciado`). — dono: David
+- [ ] **IDs de rastreamento na Vercel** — colar `NEXT_PUBLIC_GTM_ID`, `NEXT_PUBLIC_GA_ID`, `NEXT_PUBLIC_META_PIXEL_ID`, `META_PIXEL_ID`, `META_CAPI_TOKEN` (código já provisionado; degrada vazio). — dono: David
+- [ ] **Vídeos do Panda Video** — VSLs das 3 landings + 8 aulas PM + aulas Construtor. David manda link + título de cada → Zuck preenche descrição em `PortalLessons.tsx` e o embed nas landings. — dono: David + Zuck
 - [ ] **Cron de recuperação** rebaixado pra 1x/dia (limite do plano Hobby; era 15 min). Revisitar se subir pro Pro. — Zuck
 
 ### 🟡 Médias
