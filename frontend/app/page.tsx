@@ -6,19 +6,19 @@ import WhatsAppFloat from '../components/WhatsAppFloat';
 import { BRAND, WHATSAPP_URL, PRODUCTS } from '../lib/brand';
 
 export const metadata = {
-  title: 'Curso Preparatório para Project Manager nos EUA | Wise Pro Academy',
+  title: 'Wise Pro Academy | Cursos de Construção e CSL para Brasileiros nos EUA',
   description:
-    'Saia da execução pesada da obra e se torne um Project Manager valorizado na construção civil dos EUA. Treinamento online e ao vivo, gravações disponíveis e cronograma prático. Em português, para brasileiros nos EUA.',
+    'A escola que prepara brasileiros para crescer na construção civil dos Estados Unidos. Curso de Project Manager, Curso de Construtor (CSL) e Wise Day. Em português, com quem já fez acontecer no mercado americano.',
 };
 
-// SEO: schema EducationalOrganization + Course. Endereço/telefone ficam fora até o David confirmar.
+// SEO: schema EducationalOrganization. Endereço/telefone ficam fora até o David confirmar.
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'EducationalOrganization',
   name: 'Wise Pro Academy',
   url: 'https://wiseproacademy.io',
   description:
-    'Curso preparatório para Project Manager na construção civil dos Estados Unidos, em português, para brasileiros.',
+    'Escola de preparação para a construção civil dos Estados Unidos, em português, para brasileiros. Cursos de Project Manager, Construtor (CSL) e a imersão Wise Day.',
   areaServed: 'United States',
   knowsLanguage: ['pt-BR', 'en-US'],
 };
@@ -86,31 +86,32 @@ function SectionTitle({ children, center }: { children: React.ReactNode; center?
 // ---------- dados ----------
 
 const MARQUEE_ITEMS = [
-  'Curso Preparatório',
   'Project Manager',
+  'Curso de Construtor',
+  'CSL em Massachusetts',
+  'Portal de simulados',
   'Construção nos EUA',
-  'Aulas ao vivo',
-  'Gestão de obras',
-  'Comunicação com cliente',
+  'Em português',
 ];
 
-const ACESSO_CARDS = [
-  { n: '01', t: 'Aulas ao vivo e gravadas', d: 'Participe ao vivo e revise depois para fixar o conteúdo.' },
-  { n: '02', t: 'Rotina real de obra nos EUA', d: 'Aprenda com situações práticas da construção residencial americana.' },
-  { n: '03', t: 'Comunicação profissional', d: 'Saiba como falar com clientes, equipe e subcontratados.' },
-  { n: '04', t: 'Visão de crescimento', d: 'Desenvolva postura e clareza para buscar melhores oportunidades.' },
-];
-
-const CONTEUDO = [
-  { t: 'Papel do PM e Mentalidade Profissional', d: 'Função do project manager, postura profissional e visão estratégica na obra.' },
-  { t: 'Comunicação com Cliente e Time', d: 'Alinhamento, clareza na comunicação e gestão do relacionamento com equipe e cliente.' },
-  { t: 'Sequência da Obra e Planejamento', d: 'Etapas corretas da execução, organização da obra e planejamento prático.' },
-  { t: 'Leitura de Plantas e Controle de Escopo', d: 'Interpretação de plantas, definição do escopo e prevenção de erros de execução.' },
-  { t: 'Aplicação de Permits na Prefeitura', d: 'Processo de aplicação de permits junto à prefeitura e atenção aos detalhes.' },
-  { t: 'Subcontratos e Qualidade', d: 'Gestão de subcontractors, acompanhamento da entrega e controle de qualidade.' },
-  { t: 'Inglês Básico na Construção', d: 'Vocabulário essencial para conversação profissional no dia a dia da construção.' },
-  { t: 'Perfil Forte para Emprego', d: 'Como se posicionar melhor e montar um perfil mais forte para buscar oportunidades.' },
-  { t: 'IA no seu negócio com Fábio Borges', d: 'Aplicações práticas de inteligência artificial para potencializar seu negócio, com Fábio Borges.' },
+// Os 2 cursos em destaque na vitrine da home (seção #curso). Wise Day fica em "Conheça também".
+const VITRINE = [
+  {
+    nome: PRODUCTS.project_manager.name,
+    preco: PRODUCTS.project_manager.price,
+    selo: 'Porta de entrada',
+    chamada:
+      'O primeiro passo pra sair da execução pesada e entender a gestão de obras nos EUA. 8 aulas ao vivo, em português, com acesso por 1 ano.',
+    href: `/${PRODUCTS.project_manager.slug}`,
+  },
+  {
+    nome: PRODUCTS.construtor.name,
+    preco: PRODUCTS.construtor.price,
+    selo: 'Curso principal',
+    chamada:
+      '6 dias presenciais mais o portal de simulados que treina você até passar na prova de CSL. A aula te ensina; o portal te aprova.',
+    href: `/${PRODUCTS.construtor.slug}`,
+  },
 ];
 
 const NAO_E = [
@@ -122,9 +123,9 @@ const NAO_E = [
 ];
 
 const O_QUE_E = [
-  'Preparação prática para entender a função de PM',
-  'Clareza sobre a rotina da construção nos EUA',
-  'Conteúdo voltado à construção nos EUA',
+  'Preparação prática para a construção nos EUA',
+  'Clareza sobre a rotina e a gestão de obras',
+  'Caminho organizado até a sua licença de CSL',
   'Visão profissional para organização e liderança',
   'Direção para se posicionar melhor no mercado',
 ];
@@ -156,24 +157,20 @@ const OUTROS_CAMINHOS = [
 
 const FAQ = [
   {
-    q: 'O curso é uma formação ou um curso preparatório?',
-    a: 'É um curso preparatório. Ele te prepara para entender a função de Project Manager e a rotina da construção nos EUA. Não emite diploma nem licença oficial.',
+    q: 'A Wise Pro Academy emite a licença de CSL?',
+    a: 'Não. Somos uma escola preparatória. Preparamos você para a prova de Construction Supervisor License e para a rotina da construção nos EUA. A licença é emitida pelo órgão oficial de Massachusetts.',
   },
   {
-    q: 'Quem serão os professores?',
+    q: 'Quem dá as aulas?',
     a: 'As aulas são conduzidas por David Piazzarollo, com mais de 10 anos no mercado americano da construção. Fábio Borges entra como professor convidado para mostrar aplicações práticas de IA nos negócios.',
   },
   {
-    q: 'As aulas ficam gravadas?',
-    a: 'Sim. Você participa ao vivo e tem as gravações disponíveis na plataforma para revisar quando quiser e fixar o conteúdo.',
+    q: 'Por qual curso eu começo?',
+    a: 'Se você está começando, o Project Manager é a porta de entrada. Se o seu objetivo é a licença, o Curso de Construtor com o portal de simulados é o caminho. O Wise Day é a imersão presencial premium com o David.',
   },
   {
     q: 'Preciso morar nos Estados Unidos?',
-    a: 'O conteúdo é voltado à realidade da construção nos EUA. Morar nos Estados Unidos ajuda a aplicar tudo na prática, mas o curso é online e ao vivo, então você acompanha de onde estiver.',
-  },
-  {
-    q: 'O curso garante emprego?',
-    a: 'Não. O curso prepara você com clareza, postura profissional e visão de gestão para buscar melhores oportunidades. Conquistar a vaga depende do seu esforço e do mercado.',
+    a: 'O conteúdo é voltado à realidade da construção nos EUA. O Project Manager é ao vivo e online; o Curso de Construtor e o Wise Day têm parte presencial em Massachusetts.',
   },
 ];
 
@@ -186,7 +183,7 @@ export default function Home() {
 
       <SiteHeader />
 
-      {/* HERO escuro com foto de obra + bandeira EUA (placeholder) */}
+      {/* HERO escuro */}
       {/* IMAGEM: David sobe a foto de fundo (obra nos EUA + bandeira americana) — trocar o background abaixo. */}
       <section
         style={{
@@ -200,27 +197,24 @@ export default function Home() {
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 22 }}>
             <GoldPill dark>
               <span className="wpa-dot-pulse" aria-hidden style={{ width: 9, height: 9, borderRadius: '50%', background: '#ff4d4f', display: 'inline-block' }} />
-              AO VIVO
+              ESCOLA EM OPERAÇÃO
             </GoldPill>
-            <GoldPill dark>Preparatório profissional nos EUA</GoldPill>
+            <GoldPill dark>Construção nos EUA &middot; em português</GoldPill>
           </div>
 
           <h1 style={{ fontSize: 46, lineHeight: 1.1, margin: '0 0 18px', maxWidth: 880, fontWeight: 800 }}>
-            Saia da execução pesada da obra e se torne um{' '}
-            <span style={{ color: BRAND.gold }}>Project Manager</span> valorizado e bem remunerado na
-            construção civil dos EUA.
+            A escola que prepara brasileiros para crescer na{' '}
+            <span style={{ color: BRAND.gold }}>construção civil dos EUA</span>.
           </h1>
 
           <p style={{ fontSize: 18.5, lineHeight: 1.6, maxWidth: 720, opacity: 0.94, margin: 0 }}>
-            O Wise Project Manager é um treinamento online e ao vivo criado para brasileiros que
-            querem parar de depender apenas da força física, aprender como funciona a gestão de obras
-            no mercado americano e conquistar oportunidades maiores, mais valorizadas e que remuneram
-            muito bem na construção civil.
+            Da gestão de obras à conquista da sua licença de CSL em Massachusetts. Três cursos, um
+            caminho claro, tudo em português e com quem já faz acontecer no mercado americano.
           </p>
 
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 30 }}>
-            <a
-              href="#inscricao"
+            <Link
+              href={`/${PRODUCTS.project_manager.slug}`}
               className="wpa-btn"
               style={{
                 background: BRAND.gradient,
@@ -234,9 +228,9 @@ export default function Home() {
               }}
             >
               GARANTIR VAGA
-            </a>
+            </Link>
             <a
-              href="#acesso"
+              href="#curso"
               className="wpa-btn"
               style={{
                 background: '#fff',
@@ -249,37 +243,107 @@ export default function Home() {
                 border: `1px solid ${BRAND.gold}`,
               }}
             >
-              VER O QUE VOU APRENDER
+              VER OS CURSOS
             </a>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 26, fontSize: 14.5, opacity: 0.92 }}>
             <span aria-hidden style={{ color: BRAND.gold }}>&#9679;</span>
-            Aulas ao vivo &middot; Gravações disponíveis &middot; Cronograma prático
-          </div>
-
-          {/* Badge flutuante */}
-          <div
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 9,
-              marginTop: 30,
-              background: 'rgba(255,255,255,0.12)',
-              border: '1px solid rgba(255,255,255,0.22)',
-              padding: '9px 16px',
-              borderRadius: 999,
-              fontSize: 13.5,
-            }}
-          >
-            <span className="wpa-dot-pulse" aria-hidden style={{ width: 9, height: 9, borderRadius: '50%', background: '#3ddc6b', display: 'inline-block' }} />
-            26 pessoas olhando o site agora
+            Aulas em português &middot; Portal de simulados &middot; Presencial em Massachusetts
           </div>
         </div>
       </section>
 
+      {/* VITRINE DE CURSOS — 2 cards que direcionam (id=curso) */}
+      <section id="curso" style={{ background: '#fff', padding: '72px 0' }}>
+        <div style={wrap}>
+          <div style={{ textAlign: 'center', maxWidth: 760, margin: '0 auto' }}>
+            <GoldPill>Nossos cursos</GoldPill>
+            <h2 style={{ fontSize: 32, lineHeight: 1.15, margin: '16px 0 0', fontWeight: 800 }}>
+              Escolha o seu ponto de partida
+            </h2>
+            <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight, marginTop: 14 }}>
+              Cada curso te leva um passo mais perto de crescer na construção dos Estados Unidos.
+            </p>
+          </div>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+              gap: 24,
+              marginTop: 40,
+              maxWidth: 820,
+              marginLeft: 'auto',
+              marginRight: 'auto',
+            }}
+          >
+            {VITRINE.map((c) => (
+              <div
+                key={c.href}
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  background: BRAND.cream,
+                  border: `1px solid ${BRAND.gold}`,
+                  borderRadius: 20,
+                  padding: 30,
+                  boxShadow: '0 2px 14px rgba(10,31,68,0.06)',
+                }}
+              >
+                <span
+                  style={{
+                    alignSelf: 'flex-start',
+                    background: BRAND.lilac,
+                    color: BRAND.navy,
+                    fontSize: 12.5,
+                    fontWeight: 700,
+                    padding: '5px 12px',
+                    borderRadius: 999,
+                    marginBottom: 16,
+                  }}
+                >
+                  {c.selo}
+                </span>
+                <h3 style={{ margin: '0 0 6px', fontSize: 23, fontWeight: 800 }}>{c.nome}</h3>
+                <div style={{ color: BRAND.gold, fontWeight: 800, fontSize: 26, marginBottom: 14 }}>{c.preco}</div>
+                <p style={{ margin: '0 0 24px', color: BRAND.navyLight, lineHeight: 1.6, fontSize: 15.5, flexGrow: 1 }}>
+                  {c.chamada}
+                </p>
+                <Link
+                  href={c.href}
+                  className="wpa-btn"
+                  style={{
+                    display: 'inline-block',
+                    textAlign: 'center',
+                    background: BRAND.gradient,
+                    color: '#fff',
+                    fontWeight: 800,
+                    fontSize: 16,
+                    padding: '14px 28px',
+                    borderRadius: 999,
+                    textDecoration: 'none',
+                    boxShadow: '0 8px 22px rgba(75,63,228,0.3)',
+                  }}
+                >
+                  Saber mais
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <p style={{ textAlign: 'center', color: BRAND.navyLight, fontSize: 15, marginTop: 26 }}>
+            Quer a imersão presencial premium com o David? Conheça o{' '}
+            <Link href={`/${PRODUCTS.wise_day.slug}`} style={{ color: BRAND.royal, fontWeight: 700, textDecoration: 'none' }}>
+              Wise Day
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+
       {/* SOBRE O CRIADOR — David Piazzarollo */}
-      <section id="professor" style={{ background: '#fff', padding: '72px 0' }}>
+      <section id="professor" style={{ background: BRAND.cream, padding: '72px 0' }}>
         <div style={wrap}>
           <GoldPill>Criador do método</GoldPill>
           <div
@@ -326,7 +390,7 @@ export default function Home() {
               {/* Card de review (creme + Google) */}
               <div
                 style={{
-                  background: BRAND.cream,
+                  background: '#fff',
                   border: `1px solid ${BRAND.gold}`,
                   borderRadius: 16,
                   padding: 22,
@@ -360,15 +424,15 @@ export default function Home() {
                 própria carteira de clientes diretos.
               </p>
               <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight }}>
-                Foi dessa experiência real que nasceu o{' '}
-                <strong style={{ color: BRAND.navy }}>Wise Project Manager</strong>: uma metodologia
-                prática para ajudar brasileiros a saírem apenas da execução da obra e entenderem como
-                funciona a gestão de obras nos EUA.
+                Foi dessa experiência real que nasceu a{' '}
+                <strong style={{ color: BRAND.navy }}>Wise Pro Academy</strong>: uma escola prática
+                para ajudar brasileiros a saírem apenas da execução da obra e crescerem na construção
+                dos EUA.
               </p>
 
               <div
                 style={{
-                  background: BRAND.cream,
+                  background: '#fff',
                   borderLeft: `4px solid ${BRAND.gold}`,
                   borderRadius: 10,
                   padding: '16px 18px',
@@ -385,7 +449,7 @@ export default function Home() {
       </section>
 
       {/* PROFESSOR CONVIDADO — Fábio Borges */}
-      <section style={{ background: BRAND.cream, padding: '64px 0' }}>
+      <section style={{ background: '#fff', padding: '64px 0' }}>
         <div style={wrapNarrow}>
           <GoldPill>Professor convidado</GoldPill>
           <h2 style={{ fontSize: 30, margin: '16px 0 8px', fontWeight: 800 }}>
@@ -404,7 +468,7 @@ export default function Home() {
           </p>
           <div
             style={{
-              background: '#fff',
+              background: BRAND.cream,
               borderLeft: `4px solid ${BRAND.gold}`,
               borderRadius: 10,
               padding: '16px 18px',
@@ -419,7 +483,7 @@ export default function Home() {
       </section>
 
       {/* A VERDADE É SIMPLES */}
-      <section style={{ background: '#fff', padding: '72px 0' }}>
+      <section style={{ background: BRAND.cream, padding: '72px 0' }}>
         <div style={wrap}>
           <div style={{ textAlign: 'center', maxWidth: 800, margin: '0 auto' }}>
             <SectionTitle center>
@@ -449,7 +513,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div style={{ background: BRAND.cream, border: `1px solid ${BRAND.gold}`, borderRadius: 16, padding: 26 }}>
+            <div style={{ background: '#fff', border: `1px solid ${BRAND.gold}`, borderRadius: 16, padding: 26 }}>
               <div style={{ fontWeight: 800, color: '#1f7a4d', marginBottom: 14 }}>Preparado para crescer</div>
               {['Mais clareza profissional', 'Mais segurança para conversar com clientes', 'Mais preparo para buscar oportunidades melhores'].map((t) => (
                 <div key={t} style={{ display: 'flex', gap: 10, padding: '7px 0', color: BRAND.navyLight }}>
@@ -465,117 +529,12 @@ export default function Home() {
       {/* MARQUEE */}
       <Marquee items={MARQUEE_ITEMS} />
 
-      {/* O QUE VOCÊ TERÁ ACESSO */}
-      <section id="acesso" style={{ background: '#fff', padding: '72px 0' }}>
-        <div style={wrap}>
-          <SectionTitle>O que você terá acesso</SectionTitle>
-          <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight, maxWidth: 760, marginTop: 14 }}>
-            Uma preparação direta ao ponto, sem enrolação. Conteúdo focado no que você precisa
-            entender para começar a pensar e agir como Project Manager no mercado americano da
-            construção.
-          </p>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-              gap: 20,
-              marginTop: 30,
-            }}
-          >
-            {ACESSO_CARDS.map((c) => (
-              <div
-                key={c.n}
-                style={{
-                  background: BRAND.cream,
-                  border: `1px solid ${BRAND.gold}`,
-                  borderRadius: 16,
-                  padding: 24,
-                }}
-              >
-                <div style={{ color: BRAND.gold, fontWeight: 800, fontSize: 30, lineHeight: 1 }}>{c.n}</div>
-                <h3 style={{ margin: '12px 0 8px', fontSize: 18.5, fontWeight: 700 }}>{c.t}</h3>
-                <p style={{ margin: 0, color: BRAND.navyLight, lineHeight: 1.55, fontSize: 15 }}>{c.d}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CONTEÚDO DO CURSO */}
-      <section id="curso" style={{ background: BRAND.cream, padding: '72px 0' }}>
-        <div style={wrap}>
-          <SectionTitle>Conteúdo do curso</SectionTitle>
-          <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight, maxWidth: 760, marginTop: 14 }}>
-            Uma trilha prática para preparar sua comunicação, leitura de obra, gestão e uso de
-            tecnologia no mercado americano.
-          </p>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-              gap: 18,
-              marginTop: 30,
-            }}
-          >
-            {CONTEUDO.map((c, i) => (
-              <div
-                key={i}
-                style={{
-                  background: '#fff',
-                  borderRadius: 14,
-                  padding: '20px 22px',
-                  display: 'flex',
-                  gap: 14,
-                  alignItems: 'flex-start',
-                  boxShadow: '0 2px 10px rgba(10,31,68,0.05)',
-                }}
-              >
-                <span
-                  aria-hidden
-                  style={{
-                    flexShrink: 0,
-                    width: 30,
-                    height: 30,
-                    borderRadius: '50%',
-                    background: BRAND.gradient,
-                    color: '#fff',
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontWeight: 800,
-                    fontSize: 14,
-                  }}
-                >
-                  {i + 1}
-                </span>
-                <div>
-                  <h3 style={{ margin: '0 0 6px', fontSize: 16.5, fontWeight: 700 }}>{c.t}</h3>
-                  <p style={{ margin: 0, color: BRAND.navyLight, lineHeight: 1.5, fontSize: 14.5 }}>{c.d}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p
-            style={{
-              marginTop: 26,
-              fontSize: 15,
-              color: BRAND.navyLight,
-              fontStyle: 'italic',
-              textAlign: 'center',
-            }}
-          >
-            Após a matrícula, o aluno receberá o cronograma das aulas ao vivo e o acesso à plataforma
-            com as aulas gravadas.
-          </p>
-        </div>
-      </section>
-
       {/* CLAREZA ANTES DE ENTRAR */}
       <section style={{ background: '#fff', padding: '72px 0' }}>
         <div style={wrap}>
           <div style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto' }}>
             <SectionTitle center>Clareza antes de entrar</SectionTitle>
-            <p style={{ fontSize: 17, color: BRAND.navyLight, marginTop: 12 }}>O que isso é, e o que não é.</p>
+            <p style={{ fontSize: 17, color: BRAND.navyLight, marginTop: 12 }}>O que a escola é, e o que não é.</p>
           </div>
           <div
             style={{
@@ -607,74 +566,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* OFERTA / INSCRIÇÃO */}
-      <section
-        id="inscricao"
-        style={{
-          background: `linear-gradient(135deg, ${BRAND.navy} 0%, ${BRAND.royal} 100%)`,
-          color: '#fff',
-          padding: '76px 0',
-        }}
-      >
-        <div style={wrapNarrow}>
-          <div style={{ textAlign: 'center' }}>
-            <GoldPill dark>Inscrições abertas</GoldPill>
-            <h2 style={{ fontSize: 34, margin: '18px 0 12px', fontWeight: 800 }}>
-              Condição diferenciada membro fundador
-            </h2>
-            <p style={{ fontSize: 17.5, opacity: 0.94, maxWidth: 620, margin: '0 auto', lineHeight: 1.6 }}>
-              Fale pelo WhatsApp para garantir sua vaga e receber as orientações de matrícula.
-            </p>
-          </div>
-
-          <div
-            style={{
-              background: '#fff',
-              color: BRAND.navy,
-              borderRadius: 20,
-              padding: 36,
-              margin: '34px auto 0',
-              maxWidth: 560,
-              border: `2px solid ${BRAND.gold}`,
-              textAlign: 'center',
-            }}
-          >
-            <div style={{ color: BRAND.gold, fontWeight: 800, fontSize: 13, letterSpacing: 1, textTransform: 'uppercase' }}>
-              Condição membro fundador
-            </div>
-            <h3 style={{ fontSize: 26, margin: '12px 0 8px', fontWeight: 800 }}>Faça sua matrícula</h3>
-            <p style={{ color: BRAND.navyLight, fontSize: 15.5, lineHeight: 1.6, margin: '0 0 22px' }}>
-              Garanta sua vaga e receba as orientações de matrícula direto pelo WhatsApp.
-            </p>
-            {/* WHATSAPP: David troca o número em lib/brand.ts (WHATSAPP_URL). */}
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="wpa-btn"
-              style={{
-                display: 'inline-block',
-                background: BRAND.gradient,
-                color: '#fff',
-                fontWeight: 800,
-                fontSize: 17,
-                padding: '16px 38px',
-                borderRadius: 999,
-                textDecoration: 'none',
-                boxShadow: '0 10px 26px rgba(75,63,228,0.35)',
-              }}
-            >
-              GARANTIR VAGA
-            </a>
-            <p id="cronograma" style={{ color: BRAND.navyLight, fontSize: 13.5, marginTop: 18, marginBottom: 0 }}>
-              Aulas ao vivo toda quarta, com gravações disponíveis na plataforma.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ */}
-      <section style={{ background: '#fff', padding: '72px 0' }}>
+      <section style={{ background: BRAND.cream, padding: '72px 0' }}>
         <div style={wrapNarrow}>
           <SectionTitle center>Perguntas frequentes</SectionTitle>
           <div style={{ marginTop: 30, display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -682,7 +575,7 @@ export default function Home() {
               <details
                 key={i}
                 style={{
-                  background: BRAND.cream,
+                  background: '#fff',
                   border: `1px solid ${BRAND.gold}`,
                   borderRadius: 14,
                   padding: '18px 22px',
@@ -700,7 +593,7 @@ export default function Home() {
       </section>
 
       {/* CONHEÇA TAMBÉM — os 3 caminhos da escola */}
-      <section style={{ background: BRAND.cream, padding: '72px 0' }}>
+      <section style={{ background: '#fff', padding: '72px 0' }}>
         <div style={wrap}>
           <div style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto' }}>
             <SectionTitle center>Conheça também os outros caminhos</SectionTitle>
@@ -726,7 +619,7 @@ export default function Home() {
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
-                  background: '#fff',
+                  background: BRAND.cream,
                   border: `1px solid ${BRAND.gold}`,
                   borderRadius: 18,
                   padding: 26,

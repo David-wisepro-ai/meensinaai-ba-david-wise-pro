@@ -1,6 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { supabaseAdmin } from '../../../lib/supabase';
+import { sendCapiEvent } from '../../../lib/meta-capi';
 import Stripe from 'stripe';
+
+// Valores em USD por produto (batem com as landings) — usados no evento Lead do CAPI.
+const PRODUCT_VALUE: Record<string, number> = {
+  project_manager: 250,
+  construtor: 597,
+  wise_day: 497,
+};
 
 // Captura nome/email/telefone ANTES do Stripe -> grava lead -> cria sessao Stripe.
 // Se Stripe nao configurado ainda, grava o lead e devolve sem checkoutUrl (David conecta na call).
@@ -11,7 +19,7 @@ const PRICE_IDS: Record<string, string | undefined> = {
 };
 
 export async function POST(req: NextRequest) {
-  const { name, email, phone, product } = await req.json();
+  const { name, email, phone, product, event_id } = await req.json();
   if (!name || !email || !product) {
     return NextResponse.json({ error: 'dados incompletos' }, { status: 400 });
   }
@@ -23,6 +31,18 @@ export async function POST(req: NextRequest) {
     { onConflict: 'email' },
   );
   await sb.from('checkout_events').insert({ lead_email: email, product, event: 'checkout_iniciado' });
+
+  // 1b. CAPI server-side: evento Lead com o mesmo event_id do Pixel client-side (dedup).
+  // No-op silencioso se META_PIXEL_ID / META_CAPI_TOKEN nao estiverem configurados.
+  if (event_id) {
+    await sendCapiEvent({
+      eventName: 'Lead',
+      eventId: event_id,
+      user: { email, phone },
+      eventSourceUrl: req.headers.get('referer'),
+      customData: { value: PRODUCT_VALUE[product] ?? 0, currency: 'USD', content_ids: [product] },
+    });
+  }
 
   // 2. cria sessao Stripe (se configurado)
   const secret = process.env.STRIPE_SECRET_KEY;

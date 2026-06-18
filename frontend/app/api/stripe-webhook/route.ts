@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { supabaseAdmin } from '../../../lib/supabase';
+import { sendCapiEvent } from '../../../lib/meta-capi';
 import Stripe from 'stripe';
 
 // Webhook Stripe: pago -> enrollment + status pago; expirado -> abandonado (dispara recuperacao).
@@ -26,6 +27,22 @@ export async function POST(req: NextRequest) {
     await sb.from('leads').update({ status: 'pago', updated_at: new Date().toISOString() }).eq('email', email);
     await sb.from('checkout_events').insert({ lead_email: email, product, event: 'pago', stripe_session_id: s.id });
     await sb.from('enrollments').upsert({ email, product, active: true });
+
+    // CAPI server-side: Purchase com value/currency USD.
+    // event_id derivado do session.id -> deduplica em retries do webhook.
+    // No-op silencioso se META_PIXEL_ID / META_CAPI_TOKEN nao estiverem configurados.
+    const value = typeof s.amount_total === 'number' ? s.amount_total / 100 : undefined;
+    const currency = (s.currency || 'usd').toUpperCase();
+    await sendCapiEvent({
+      eventName: 'Purchase',
+      eventId: `purchase_${s.id}`,
+      user: { email },
+      customData: {
+        ...(value !== undefined ? { value } : {}),
+        currency,
+        ...(product ? { content_ids: [product] } : {}),
+      },
+    });
   }
   if (event.type === 'checkout.session.expired') {
     const s = event.data.object as Stripe.Checkout.Session;

@@ -1,14 +1,15 @@
 import Link from 'next/link';
-import { BRAND } from '../lib/brand';
+import { BRAND, PRODUCTS } from '../lib/brand';
 
 const wrap: React.CSSProperties = { maxWidth: 1140, margin: '0 auto', padding: '0 20px' };
 
+// Menu institucional. Os cursos levam às páginas de venda (next/link); âncoras existem na home.
 const MENU = [
-  { label: 'CURSO', href: '#curso' },
-  { label: 'ACESSO', href: '#acesso' },
-  { label: 'CRONOGRAMA', href: '#cronograma' },
-  { label: 'PROFESSOR', href: '#professor' },
-  { label: 'INSCRIÇÃO', href: '#inscricao' },
+  { label: 'CURSOS', href: '#curso', internal: false },
+  { label: 'PROJECT MANAGER', href: `/${PRODUCTS.project_manager.slug}`, internal: true },
+  { label: 'CONSTRUTOR', href: `/${PRODUCTS.construtor.slug}`, internal: true },
+  { label: 'WISE DAY', href: `/${PRODUCTS.wise_day.slug}`, internal: true },
+  { label: 'PROFESSOR', href: '#professor', internal: false },
 ];
 
 // Logo escudo (placeholder). IMAGEM: David sobe o logo escudo dourado depois.
@@ -50,10 +51,10 @@ export default function SiteHeader() {
       {/* TOPBAR fina preta */}
       <div style={{ background: '#000', color: '#fff', fontSize: 13, padding: '8px 0', textAlign: 'center' }}>
         <div style={wrap}>
-          Curso Preparatório para Project Manager{'  '}
+          Construção nos EUA, em português{'  '}
           <span style={{ opacity: 0.5 }}>&bull;</span>{'  '}
-          Nova turma ao vivo em{' '}
-          <strong style={{ color: BRAND.gold }}>03 de junho de 2026</strong>
+          Do Project Manager à sua{' '}
+          <strong style={{ color: BRAND.gold }}>licença de CSL</strong>
         </div>
       </div>
 
@@ -82,32 +83,42 @@ export default function SiteHeader() {
           <nav
             style={{
               display: 'flex',
-              gap: 22,
+              gap: 20,
               flexWrap: 'wrap',
               justifyContent: 'center',
               alignItems: 'center',
             }}
           >
-            {MENU.map((m) => (
-              <a
-                key={m.label}
-                href={m.href}
-                style={{ color: '#fff', textDecoration: 'none', fontSize: 13.5, fontWeight: 600, letterSpacing: 0.4 }}
-              >
-                {m.label}
-              </a>
-            ))}
-            {/* Rota interna real: usa next/link (as âncoras acima são da própria home). */}
+            {MENU.map((m) =>
+              m.internal ? (
+                <Link
+                  key={m.label}
+                  href={m.href}
+                  style={{ color: '#fff', textDecoration: 'none', fontSize: 13, fontWeight: 600, letterSpacing: 0.4 }}
+                >
+                  {m.label}
+                </Link>
+              ) : (
+                <a
+                  key={m.label}
+                  href={m.href}
+                  style={{ color: '#fff', textDecoration: 'none', fontSize: 13, fontWeight: 600, letterSpacing: 0.4 }}
+                >
+                  {m.label}
+                </a>
+              ),
+            )}
             <Link
               href="/portal"
-              style={{ color: BRAND.gold, textDecoration: 'none', fontSize: 13.5, fontWeight: 700, letterSpacing: 0.4 }}
+              style={{ color: BRAND.gold, textDecoration: 'none', fontSize: 13, fontWeight: 700, letterSpacing: 0.4 }}
             >
               PORTAL DO ALUNO
             </Link>
           </nav>
 
-          <a
-            href="#inscricao"
+          {/* CTA do header: leva ao curso de entrada (funciona em qualquer página). */}
+          <Link
+            href={`/${PRODUCTS.project_manager.slug}`}
             className="wpa-btn"
             style={{
               background: '#fff',
@@ -121,7 +132,7 @@ export default function SiteHeader() {
             }}
           >
             GARANTIR VAGA
-          </a>
+          </Link>
         </div>
       </header>
     </>

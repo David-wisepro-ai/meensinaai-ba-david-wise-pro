@@ -2,8 +2,9 @@ import { createClient } from '@supabase/supabase-js';
 import { supabaseAdmin } from './supabase';
 
 // Acesso restrito do portal (server-side).
-// Regra de negocio: SO entra quem tem enrollment de 'construtor' ativo.
+// Regra de negocio: SO entra quem tem enrollment de 'construtor' ativo (quiz/simulados).
 // Project Manager e Wise Day NAO dao acesso ao portal de simulados.
+// Para o roteamento entre os DOIS portais (PM x Construtor) use getPortalProducts.
 
 export type AccessResult =
   | { ok: true; email: string }
@@ -66,4 +67,55 @@ export async function checkPortalAccess(req: Request): Promise<AccessResult> {
 export function accessDeniedStatus(reason: Exclude<AccessResult, { ok: true }>['reason']): number {
   if (reason === 'sem_supabase') return 503;
   return 403;
+}
+
+// ----------------------------------------------------------------------------
+// Acesso multi-portal (por produto comprado).
+// O portal do aluno tem DOIS portais distintos, conforme enrollments.product:
+//   - 'project_manager' -> Portal Project Manager (so aulas Netflix; sem quiz).
+//   - 'construtor'       -> Portal Construtor (aulas Netflix + simulados CSL + desempenho).
+// 'wise_day' e evento presencial de 1 dia: NAO abre portal.
+// Quem comprou os dois ve um seletor/abas e cada portal so mostra o que comprou.
+// ----------------------------------------------------------------------------
+
+export type PortalProduct = 'project_manager' | 'construtor';
+
+export type PortalProductsResult =
+  | { ok: true; email: string; products: PortalProduct[] }
+  | { ok: false; reason: 'sem_supabase' | 'sem_token' | 'token_invalido' | 'sem_enrollment' };
+
+// Produtos que abrem portal (Wise Day fica de fora — sem area de membros).
+const PORTAL_PRODUCTS: PortalProduct[] = ['project_manager', 'construtor'];
+
+// Descobre TODOS os portais que o aluno logado pode acessar (server-side).
+// Mesma validacao de token do checkPortalAccess, mas devolve a lista de produtos
+// pra rotear o aluno pro portal certo (ou mostrar seletor se tiver mais de um).
+export async function getPortalProducts(req: Request): Promise<PortalProductsResult> {
+  if (!supabaseConfigured()) return { ok: false, reason: 'sem_supabase' };
+
+  const token = bearer(req);
+  if (!token) return { ok: false, reason: 'sem_token' };
+
+  const email = await emailFromToken(token);
+  if (!email) return { ok: false, reason: 'token_invalido' };
+
+  const sb = supabaseAdmin();
+  const { data, error } = await sb
+    .from('enrollments')
+    .select('product')
+    .eq('email', email)
+    .eq('active', true);
+
+  if (error) return { ok: false, reason: 'sem_enrollment' };
+
+  const products = Array.from(
+    new Set(
+      (data ?? [])
+        .map((r: any) => String(r.product))
+        .filter((p: string): p is PortalProduct => (PORTAL_PRODUCTS as string[]).includes(p)),
+    ),
+  ) as PortalProduct[];
+
+  if (products.length === 0) return { ok: false, reason: 'sem_enrollment' };
+  return { ok: true, email, products };
 }

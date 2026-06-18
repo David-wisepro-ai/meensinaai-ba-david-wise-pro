@@ -1,49 +1,35 @@
-import { BRAND } from '../lib/brand';
+import PandaVideo from './PandaVideo';
 
-// Slot de VSL — placeholder até o David gravar o vídeo.
-// Quando o vídeo existir, trocar o bloco interno por <video> ou <iframe>
-// (ex.: YouTube/Vimeo/Mux) mantendo o mesmo aspect-ratio 16/9.
-export default function Vsl({ titulo, legenda }: { titulo: string; legenda?: string }) {
+// Slot de VSL da página de vendas. Hoje é placeholder do Panda Video.
+// Quando o David subir o vídeo no Panda, basta passar a prop `embedUrl`
+// (ex.: https://player-vz-XXXX.tv.pandavideo.com.br/embed/?v=UUID).
+// <!-- VSL: David grava depois -->
+export default function Vsl({
+  titulo,
+  legenda,
+  embedUrl,
+}: {
+  titulo: string;
+  legenda?: string;
+  embedUrl?: string;
+}) {
   return (
-    <div
-      style={{
-        aspectRatio: '16 / 9',
-        background: `linear-gradient(135deg, ${BRAND.navy} 0%, ${BRAND.royal} 100%)`,
-        color: '#fff',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 18,
-        border: `2px solid ${BRAND.gold}`,
-        margin: '28px 0',
-        position: 'relative',
-        overflow: 'hidden',
-        maxWidth: 760,
-      }}
-    >
-      {/* VSL: David grava depois — substituir este bloco pelo player do vídeo (YouTube/Vimeo/Mux). */}
-      <div style={{ textAlign: 'center', padding: 24 }}>
-        <div
-          aria-hidden
+    <div style={{ maxWidth: 820, margin: '28px auto' }}>
+      <PandaVideo embedUrl={embedUrl} titulo={titulo} />
+      {legenda && (
+        <p
           style={{
-            width: 76,
-            height: 76,
-            borderRadius: '50%',
-            background: BRAND.gold,
-            color: BRAND.navy,
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginBottom: 14,
+            textAlign: 'center',
+            fontSize: 13.5,
+            opacity: 0.82,
+            marginTop: 12,
+            marginBottom: 0,
+            lineHeight: 1.5,
           }}
         >
-          <span style={{ fontSize: 28, marginLeft: 6 }}>&#9654;</span>
-        </div>
-        <div style={{ fontSize: 19, fontWeight: 800 }}>{titulo}</div>
-        <div style={{ fontSize: 13, opacity: 0.85, marginTop: 6, maxWidth: 360 }}>
-          {legenda ?? 'O vídeo de apresentação do David entra aqui em breve.'}
-        </div>
-      </div>
+          {legenda}
+        </p>
+      )}
     </div>
   );
 }

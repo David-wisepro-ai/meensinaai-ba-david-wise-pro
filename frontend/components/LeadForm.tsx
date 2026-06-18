@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { BRAND } from '../lib/brand';
+import { gerarEventId, trackLead, trackInitiateCheckout } from '../lib/tracking';
 
 // Captura nome/email/telefone ANTES do Stripe. Grava o lead -> habilita recuperação de carrinho.
 // Modo seguro: se o Stripe ainda não estiver conectado, a API grava o lead e devolve checkoutUrl = null.
@@ -21,6 +22,8 @@ export default function LeadForm({
     setSending(true);
     setError(null);
     const f = new FormData(e.currentTarget);
+    // event_id único compartilhado com o CAPI server-side (deduplicação Pixel x CAPI).
+    const eventId = gerarEventId();
     try {
       const res = await fetch('/api/lead', {
         method: 'POST',
@@ -30,10 +33,15 @@ export default function LeadForm({
           email: f.get('email'),
           phone: f.get('phone'),
           product,
+          event_id: eventId, // <- casa com o Lead disparado pelo CAPI
         }),
       });
       const data = await res.json();
+      // Lead disparado client-side (Pixel + dataLayer) com o mesmo event_id do servidor.
+      trackLead(product, eventId);
       if (data.checkoutUrl) {
+        // Vai pro Stripe: marca InitiateCheckout antes do redirect.
+        trackInitiateCheckout(product, eventId);
         window.location.href = data.checkoutUrl; // -> Stripe
         return;
       }
