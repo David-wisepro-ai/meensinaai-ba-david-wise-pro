@@ -1,0 +1,277 @@
+<!-- ============================================================
+     DP Custom Homes & Renovations — Bathroom Estimate Calculator
+     Arquivo unico, sem dependencias. Cola num bloco "Custom HTML"
+     do WordPress OU hospeda e poe num iframe.
+
+     >>> EDITE APENAS O BLOCO "CONFIG" ABAIXO <<<
+     - Troque os numeros placeholder pelos SEUS precos reais.
+     - Cole a URL do Inbound Webhook do GoHighLevel (INOVAP).
+     - Confirme o numero de SMS do vendedor.
+     ============================================================ -->
+<div id="dp-estimator-root"></div>
+
+<style>
+  #dp-estimator-root *{box-sizing:border-box;margin:0;padding:0}
+  #dp-estimator-root{
+    --ink:#14161a; --muted:#6b7280; --line:#e6e7eb; --bg:#ffffff;
+    --soft:#f6f7f8; --accent:#b88746; --accent-ink:#8a6431;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); max-width:640px; margin:0 auto; padding:8px;
+  }
+  .dp-card{background:var(--bg);border:1px solid var(--line);border-radius:18px;
+    padding:28px 24px;box-shadow:0 10px 40px rgba(20,22,26,.06)}
+  .dp-eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:700}
+  .dp-h{font-size:23px;font-weight:700;margin:6px 0 4px;line-height:1.2}
+  .dp-sub{color:var(--muted);font-size:14px;margin-bottom:22px}
+  .dp-bar{height:5px;background:var(--soft);border-radius:99px;overflow:hidden;margin-bottom:24px}
+  .dp-bar>i{display:block;height:100%;background:var(--accent);width:20%;transition:width .35s ease}
+  .dp-q{font-size:17px;font-weight:650;margin-bottom:14px}
+  .dp-opts{display:grid;gap:10px}
+  .dp-opt{border:1.5px solid var(--line);border-radius:13px;padding:15px 16px;cursor:pointer;
+    display:flex;justify-content:space-between;align-items:center;gap:10px;transition:.15s}
+  .dp-opt:hover{border-color:var(--accent)}
+  .dp-opt.sel{border-color:var(--accent);background:rgba(184,135,70,.07)}
+  .dp-opt b{font-size:15px;font-weight:650}
+  .dp-opt span{font-size:13px;color:var(--muted);display:block;margin-top:2px}
+  .dp-opt .pill{font-size:12px;color:var(--accent-ink);font-weight:700;white-space:nowrap}
+  .dp-check{width:22px;height:22px;border-radius:7px;border:1.5px solid var(--line);flex:0 0 auto}
+  .dp-opt.sel .dp-check{background:var(--accent);border-color:var(--accent);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:center}
+  .dp-slider{width:100%;margin:18px 0 6px;accent-color:var(--accent)}
+  .dp-sqft{font-size:34px;font-weight:750;text-align:center}
+  .dp-sqft small{font-size:15px;color:var(--muted);font-weight:500}
+  .dp-row{display:flex;gap:10px;margin-top:24px}
+  .dp-btn{flex:1;border:0;border-radius:12px;padding:15px;font-size:15px;font-weight:700;cursor:pointer;transition:.15s}
+  .dp-next{background:var(--ink);color:#fff}
+  .dp-next:hover{opacity:.9}
+  .dp-next:disabled{opacity:.35;cursor:not-allowed}
+  .dp-back{background:var(--soft);color:var(--ink);flex:0 0 90px}
+  .dp-field{margin-bottom:14px}
+  .dp-field label{font-size:13px;font-weight:650;display:block;margin-bottom:6px}
+  .dp-field input{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:14px;font-size:15px;font-family:inherit}
+  .dp-field input:focus{outline:0;border-color:var(--accent)}
+  .dp-fine{font-size:11px;color:var(--muted);margin-top:10px;line-height:1.5}
+  /* result */
+  .dp-result{text-align:center}
+  .dp-range{font-size:40px;font-weight:800;letter-spacing:-.02em;margin:6px 0}
+  .dp-range small{display:block;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+  .dp-recap{background:var(--soft);border-radius:13px;padding:16px;text-align:left;font-size:14px;margin:20px 0}
+  .dp-recap div{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line)}
+  .dp-recap div:last-child{border:0}
+  .dp-recap span:last-child{font-weight:650}
+  .dp-sms{display:block;width:100%;background:var(--accent);color:#fff;border:0;border-radius:13px;
+    padding:18px;font-size:16px;font-weight:750;text-decoration:none;cursor:pointer;margin-top:6px}
+  .dp-sms:hover{background:var(--accent-ink)}
+  .dp-note{font-size:12px;color:var(--muted);margin-top:12px}
+</style>
+
+<script>
+(function(){
+  "use strict";
+
+  /* =========================================================
+     CONFIG  —  EDITE AQUI (e so aqui)
+     ========================================================= */
+  var CONFIG = {
+    // (1) Numero do vendedor pro SMS final (formato E.164, EUA: +1...)
+    salesPhone: "+15083080396",
+
+    // (2) URL do Inbound Webhook do GoHighLevel / INOVAP.
+    //     No GHL: Automation > Workflows > novo > trigger "Inbound Webhook"
+    //     > copie a URL e cole aqui. Deixe "" pra desligar enquanto testa.
+    ghlWebhookUrl: "",
+
+    // (3) PRECOS — placeholders de mercado MA. TROQUE pelos seus numeros.
+    //     Formula: base = sqft * tierRate * scopeMult ; + add-ons ;
+    //              faixa = base*low ate base*high
+    pricePerSqft: { essential: 350, premium: 550, luxury: 850 },
+    scopeMult:    { gut: 1.0, refresh: 0.7, cosmetic: 0.45 },
+    addOns: {                       // valor fixo em USD por item marcado
+      heated:   { label: "Piso aquecido",            usd: 2500 },
+      vanity:   { label: "Bancada dupla",            usd: 3500 },
+      tile:     { label: "Revestimento/box custom",  usd: 4000 },
+      plumbing: { label: "Mudar a hidraulica",       usd: 3500 },
+      tub:      { label: "Banheira solta (freestanding)", usd: 3000 }
+    },
+    rangeLow: 0.90,   // piso da faixa (-10%)
+    rangeHigh: 1.15   // teto da faixa (+15%)
+  };
+  /* ===================== fim do CONFIG ===================== */
+
+  var S = { step:0, sqft:60, scope:null, tier:null, addons:{}, name:"", phone:"", email:"" };
+  var TOTAL_STEPS = 5; // size, scope, tier, addons, contact -> result
+  var root = document.getElementById("dp-estimator-root");
+
+  function fmtK(n){
+    n = Math.round(n/500)*500;
+    if(n>=1000) return "$" + (n/1000).toFixed(n%1000===0?0:1) + "k";
+    return "$" + n;
+  }
+
+  function calc(){
+    var rate = CONFIG.pricePerSqft[S.tier] || 0;
+    var mult = CONFIG.scopeMult[S.scope] || 0;
+    var base = S.sqft * rate * mult;
+    var add = 0;
+    Object.keys(S.addons).forEach(function(k){ if(S.addons[k]) add += CONFIG.addOns[k].usd; });
+    var subtotal = base + add;
+    return { low: subtotal*CONFIG.rangeLow, high: subtotal*CONFIG.rangeHigh, subtotal:subtotal };
+  }
+
+  function scopeLabel(){ return {gut:"Reforma completa",refresh:"Renovacao parcial",cosmetic:"Cosmetico"}[S.scope]||""; }
+  function tierLabel(){ return {essential:"Essential",premium:"Premium",luxury:"Luxury"}[S.tier]||""; }
+  function addonsLabel(){
+    var a=Object.keys(S.addons).filter(function(k){return S.addons[k]}).map(function(k){return CONFIG.addOns[k].label});
+    return a.length? a.join(", ") : "Nenhum";
+  }
+
+  function pushToGHL(est){
+    if(!CONFIG.ghlWebhookUrl) return;
+    var payload = {
+      firstName: S.name, phone: S.phone, email: S.email,
+      source: "Calculadora de Banheiro - Site",
+      project_type: "Bathroom remodel",
+      bathroom_sqft: S.sqft, scope: scopeLabel(), finish_tier: tierLabel(),
+      add_ons: addonsLabel(),
+      estimate_low: Math.round(est.low), estimate_high: Math.round(est.high)
+    };
+    try{
+      fetch(CONFIG.ghlWebhookUrl, {
+        method:"POST", headers:{"Content-Type":"application/json"},
+        body: JSON.stringify(payload), keepalive:true
+      });
+    }catch(e){}
+  }
+
+  function smsHref(est){
+    var body = "Hi DP Custom Homes! I just finished your bathroom estimator.\n"
+      + "Name: " + S.name + "\n"
+      + "Project: Bathroom remodel, ~" + S.sqft + " sqft, " + tierLabel() + " finish, " + scopeLabel() + "\n"
+      + "Add-ons: " + addonsLabel() + "\n"
+      + "My estimate: " + fmtK(est.low) + " - " + fmtK(est.high) + "\n"
+      + "I'd like to lock this in and talk to a project manager.";
+    // ?body= funciona em iOS e Android modernos
+    return "sms:" + CONFIG.salesPhone + "?&body=" + encodeURIComponent(body);
+  }
+
+  /* ---------- render ---------- */
+  function progress(){ return Math.min(100, (S.step)/TOTAL_STEPS*100 + 20); }
+
+  function render(){
+    var html = '<div class="dp-card">'
+      + '<div class="dp-eyebrow">DP Custom Homes &amp; Renovations</div>'
+      + '<div class="dp-h">Bathroom Estimate</div>'
+      + '<div class="dp-sub">Stop guessing. Get a real range in 60 seconds.</div>'
+      + '<div class="dp-bar"><i style="width:'+progress()+'%"></i></div>';
+
+    if(S.step===0){ // size
+      html += '<div class="dp-q">How large is your bathroom?</div>'
+        + '<div class="dp-sqft">'+S.sqft+' <small>sq ft</small></div>'
+        + '<input class="dp-slider" type="range" min="30" max="160" step="5" value="'+S.sqft+'" oninput="DPE.size(this.value)">'
+        + '<div class="dp-fine">Most half-baths are ~30-45 sq ft, full baths ~50-90, master baths 90-160.</div>'
+        + nav(true, true);
+    }
+    else if(S.step===1){ // scope
+      html += '<div class="dp-q">What is the scope?</div><div class="dp-opts">'
+        + opt("scope","gut","Full gut renovation","Down to the studs, new layout possible")
+        + opt("scope","refresh","Partial renovation","Keep the layout, replace finishes &amp; fixtures")
+        + opt("scope","cosmetic","Cosmetic refresh","Surfaces only — vanity, paint, fixtures")
+        + '</div>' + nav(true, !!S.scope);
+    }
+    else if(S.step===2){ // tier
+      html += '<div class="dp-q">Finish level?</div><div class="dp-opts">'
+        + opt("tier","essential","Essential","Clean, durable, builder-grade plus","pill")
+        + opt("tier","premium","Premium","Designer tile, quality fixtures","pill")
+        + opt("tier","luxury","Luxury","High-end materials, custom millwork","pill")
+        + '</div>' + nav(true, !!S.tier);
+    }
+    else if(S.step===3){ // addons
+      html += '<div class="dp-q">Add anything? (optional)</div><div class="dp-opts">';
+      Object.keys(CONFIG.addOns).forEach(function(k){
+        var on = !!S.addons[k];
+        html += '<div class="dp-opt'+(on?' sel':'')+'" onclick="DPE.toggle(\''+k+'\')">'
+          + '<div><b>'+CONFIG.addOns[k].label+'</b></div>'
+          + '<div class="dp-check"></div></div>';
+      });
+      html += '</div>' + nav(true, true);
+    }
+    else if(S.step===4){ // contact
+      html += '<div class="dp-q">Where do we send your estimate?</div>'
+        + field("name","Full name","text",S.name)
+        + field("phone","Mobile phone","tel",S.phone)
+        + field("email","Email","email",S.email)
+        + '<div class="dp-fine">By continuing you agree to be contacted about your project. No spam.</div>'
+        + nav(true, validContact(), "See my estimate");
+    }
+    else if(S.step===5){ // result
+      var est = calc();
+      pushToGHL(est);
+      html += '<div class="dp-result">'
+        + '<div class="dp-range"><small>Estimated project range</small>'+fmtK(est.low)+' &ndash; '+fmtK(est.high)+'</div>'
+        + '<div class="dp-recap">'
+        +   row("Bathroom size", S.sqft+" sq ft")
+        +   row("Scope", scopeLabel())
+        +   row("Finish", tierLabel())
+        +   row("Add-ons", addonsLabel())
+        + '</div>'
+        + '<a class="dp-sms" href="'+smsHref(est)+'">Text us to lock in your estimate &rarr;</a>'
+        + '<div class="dp-note">Tap to open a pre-written text to our team. A project manager replies fast.</div>'
+        + '</div>';
+    }
+
+    html += '</div>';
+    root.innerHTML = html;
+  }
+
+  function opt(group,val,title,desc,pillFlag){
+    var sel = S[group]===val;
+    var pill = "";
+    if(pillFlag){
+      // mostra faixa estimada do tier pra ancorar valor (igual Crowned)
+      pill = '<span class="pill">'+pillForTier(val)+'</span>';
+    }
+    return '<div class="dp-opt'+(sel?' sel':'')+'" onclick="DPE.pick(\''+group+'\',\''+val+'\')">'
+      + '<div><b>'+title+'</b><span>'+desc+'</span></div>'
+      + (pill || '<div class="dp-check"></div>')
+      + '</div>';
+  }
+  function pillForTier(tier){
+    // estimativa rapida pra ancorar (usa sqft e scope atuais, scope default gut se nao escolhido)
+    var mult = CONFIG.scopeMult[S.scope] || CONFIG.scopeMult.gut;
+    var base = S.sqft * CONFIG.pricePerSqft[tier] * mult;
+    return fmtK(base*CONFIG.rangeLow)+"–"+fmtK(base*CONFIG.rangeHigh);
+  }
+  function field(k,label,type,val){
+    return '<div class="dp-field"><label>'+label+'</label>'
+      + '<input type="'+type+'" value="'+(val||"")+'" oninput="DPE.input(\''+k+'\',this.value)" '
+      + (type==="tel"?'inputmode="tel"':'')+(type==="email"?'inputmode="email"':'')+'></div>';
+  }
+  function row(k,v){ return '<div><span>'+k+'</span><span>'+v+'</span></div>'; }
+
+  function nav(showBack, canNext, nextLabel){
+    var back = showBack && S.step>0 ? '<button class="dp-btn dp-back" onclick="DPE.back()">Back</button>' : '';
+    var lbl = nextLabel || (S.step===TOTAL_STEPS-1 ? "See my estimate" : "Next");
+    return '<div class="dp-row">'+back
+      + '<button class="dp-btn dp-next" '+(canNext?'':'disabled')+' onclick="DPE.next()">'+lbl+'</button></div>';
+  }
+
+  function validContact(){
+    return S.name.trim().length>1
+      && S.phone.replace(/\D/g,"").length>=10
+      && /\S+@\S+\.\S+/.test(S.email);
+  }
+
+  /* ---------- public handlers ---------- */
+  window.DPE = {
+    size:function(v){ S.sqft=+v; var el=root.querySelector(".dp-sqft"); if(el) el.innerHTML=v+' <small>sq ft</small>'; },
+    pick:function(g,v){ S[g]=v; render(); },
+    toggle:function(k){ S.addons[k]=!S.addons[k]; render(); },
+    input:function(k,v){ S[k]=v; var btn=root.querySelector(".dp-next"); if(btn) btn.disabled=!validContact(); },
+    next:function(){ if(S.step<TOTAL_STEPS) S.step++; render(); },
+    back:function(){ if(S.step>0) S.step--; render(); }
+  };
+
+  render();
+})();
+</script>
