@@ -25,7 +25,7 @@
 
 window.DADOS_NEGOCIO = {
   versao: "2.0.0",
-  ultima_atualizacao: "2026-05-08T00:00:00Z",
+  ultima_atualizacao: "2026-06-20T00:00:00Z",
 
   /**
    * Identificação básica da empresa. Preenchida por /gerar-perfil-do-negocio.
@@ -135,7 +135,18 @@ window.DADOS_NEGOCIO = {
    *     id, tipo, titulo, caminho, agente, plano (slug), task_id, criado_em
    *   }
    */
-  entregas: [],
+  entregas: [
+    {
+      id: "ent-victor-2026-06-20-cursos",
+      tipo: "frontend",
+      titulo: "Home #cursos reestruturada em 2 categorias (Project Manager + CSL) e horarios corrigidos pro padrao EUA (AM/PM, Massachusetts)",
+      caminho: "frontend/app/page.tsx, frontend/app/curso-construtor/page.tsx",
+      agente: "victor",
+      plano: null,
+      task_id: null,
+      criado_em: "2026-06-20T00:00:00Z"
+    }
+  ],
 
   /**
    * Métricas agregadas do plano ATIVO. Recalculadas a cada update.
@@ -155,5 +166,12 @@ window.DADOS_NEGOCIO = {
    * Últimas 20 atividades pro painel. Agregado de todos os planos.
    * Cada entrada: { timestamp, agente, plano (slug), acao_resumida }
    */
-  atividade_recente: []
+  atividade_recente: [
+    {
+      timestamp: "2026-06-20T00:00:00Z",
+      agente: "victor",
+      plano: null,
+      acao_resumida: "Reestruturou a secao Nossos cursos da home em 2 categorias (Construction Project Manager e Construction Supervisor License) e corrigiu os horarios do Construtor pro padrao EUA (6 PM as 9 PM online, 7:30 AM as 12 PM presencial, horario de Massachusetts)."
+    }
+  ]
 };

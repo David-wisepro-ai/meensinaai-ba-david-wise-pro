@@ -131,27 +131,53 @@ const MARQUEE_ITEMS = [
   'Em português',
 ];
 
-// Os 2 cursos da escola. Cards grandes na seção #cursos.
-const CURSOS = [
+// As 2 categorias de oferta da escola (cada uma com suas opções). Cards grandes na seção #cursos.
+const CATEGORIAS = [
   {
-    nome: PRODUCTS.project_manager.name,
-    preco: PRODUCTS.project_manager.price,
-    selo: 'Porta de entrada',
+    titulo: 'Construction Project Manager',
+    objetivo:
+      'Prepare-se para atuar como Project Manager na construção civil dos Estados Unidos: gestão de obra, plantas, permits e liderança de equipes.',
     icon: '🧭',
-    chamada:
-      'Curso preparatório para você se tornar Project Manager na construção civil dos EUA. Saia da execução pesada e aprenda a gerir a obra, ler plantas, lidar com permits, se comunicar com o cliente e liderar equipes. Aulas ao vivo, em português, com acesso por 1 ano.',
-    href: `/${PRODUCTS.project_manager.slug}`,
-    rotulo: 'Conhecer o Project Manager',
+    selo: 'Porta de entrada',
+    opcoes: [
+      {
+        nome: 'Curso Preparatório (On-line)',
+        formato: 'Curso preparatório',
+        chamada:
+          'Aulas ao vivo, em português, para você sair da execução pesada e aprender a gerir a obra, ler plantas, lidar com permits e liderar equipes. Acesso por 1 ano.',
+        href: `/${PRODUCTS.project_manager.slug}`,
+      },
+      {
+        nome: 'Wise Day — Experiência na prática (Presencial)',
+        formato: 'Presencial',
+        chamada:
+          'Um dia inteiro presencial com o David, na prática, resolvendo as suas dúvidas reais de obra, permit e código. Para quem quer acelerar com atenção direta.',
+        href: `/${PRODUCTS.wise_day.slug}`,
+      },
+    ],
   },
   {
-    nome: PRODUCTS.construtor.name,
-    preco: PRODUCTS.construtor.price,
-    selo: 'Curso principal',
+    titulo: 'Construction Supervisor License (CSL)',
+    objetivo:
+      'Prepare-se para tirar a sua licença de construtor em Massachusetts. O mesmo conteúdo nos dois formatos, mais o portal de simulados que treina você até passar.',
     icon: '🏗️',
-    chamada:
-      'Curso preparatório para você tirar a licença de Construction Supervisor License (CSL) em Massachusetts. Você escolhe o formato: turma online de segunda a sexta, das 18h às 21h, ou presencial em 4 sábados, das 7h30 às 12h. O mesmo conteúdo, mais o portal de simulados com 598 questões originais ancoradas no código. A aula te ensina; o portal te aprova.',
-    href: `/${PRODUCTS.construtor.slug}`,
-    rotulo: 'Conhecer o Curso de Construtor',
+    selo: 'Curso principal',
+    opcoes: [
+      {
+        nome: 'Curso Preparatório — 5 dias on-line',
+        formato: 'On-line',
+        chamada:
+          'Turma online de segunda a sexta, das 6 PM às 9 PM (horário de Massachusetts). Em português, mais o portal de simulados com 598 questões originais ancoradas no código.',
+        href: `/${PRODUCTS.construtor.slug}`,
+      },
+      {
+        nome: 'Curso Preparatório — 4 dias presencial',
+        formato: 'Presencial',
+        chamada:
+          'Turma presencial em 4 sábados, das 7:30 AM às 12 PM (horário de Massachusetts). O mesmo conteúdo, mais o portal de simulados que faz o aluno passar na prova de CSL.',
+        href: `/${PRODUCTS.construtor.slug}`,
+      },
+    ],
   },
 ];
 
@@ -509,28 +535,29 @@ export default function Home() {
                 color: '#fff',
               }}
             >
-              Dois cursos, um caminho claro
+              Dois caminhos, cada um com a sua opção
             </h2>
             <p style={{ fontSize: 17, lineHeight: 1.7, color: BRAND.textSoft, marginTop: 14 }}>
-              Comece pela gestão de obra ou vá direto para a sua licença de CSL. Cada curso te leva um
-              passo mais perto de crescer na construção dos Estados Unidos.
+              Escolha entre se preparar para atuar como Project Manager na construção dos EUA ou para
+              tirar a sua licença de CSL em Massachusetts. Em cada caminho você escolhe o formato que
+              combina com você.
             </p>
           </div>
 
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(330px, 1fr))',
               gap: 26,
               marginTop: 44,
-              maxWidth: 900,
+              maxWidth: 960,
               marginLeft: 'auto',
               marginRight: 'auto',
             }}
           >
-            {CURSOS.map((c) => (
+            {CATEGORIAS.map((cat) => (
               <div
-                key={c.href}
+                key={cat.titulo}
                 className="wpa-card"
                 style={{
                   display: 'flex',
@@ -561,7 +588,7 @@ export default function Home() {
                       fontSize: 22,
                     }}
                   >
-                    {c.icon}
+                    {cat.icon}
                   </span>
                   <span
                     style={{
@@ -576,76 +603,78 @@ export default function Home() {
                       textTransform: 'uppercase',
                     }}
                   >
-                    {c.selo}
+                    {cat.selo}
                   </span>
                 </div>
-                <h3 style={{ margin: '0 0 8px', fontSize: 26, fontWeight: 900, letterSpacing: '-0.02em' }}>
-                  {c.nome}
+                <h3 style={{ margin: '0 0 8px', fontSize: 24, fontWeight: 900, letterSpacing: '-0.02em' }}>
+                  {cat.titulo}
                 </h3>
-                <div style={{ color: BRAND.goldBright, fontWeight: 800, fontSize: 16, marginBottom: 16 }}>
+                <p style={{ margin: '0 0 22px', color: BRAND.textSoft, lineHeight: 1.65, fontSize: 15.5 }}>
+                  {cat.objetivo}
+                </p>
+
+                {/* Opções da categoria (mini-cards) */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 14, flexGrow: 1 }}>
+                  {cat.opcoes.map((op) => (
+                    <div
+                      key={op.nome}
+                      style={{
+                        background: 'rgba(255,255,255,0.04)',
+                        border: '1px solid rgba(255,255,255,0.12)',
+                        borderRadius: 16,
+                        padding: '18px 20px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                      }}
+                    >
+                      <span
+                        style={{
+                          alignSelf: 'flex-start',
+                          background: 'rgba(201,162,39,0.12)',
+                          color: BRAND.goldBright,
+                          border: '1px solid rgba(201,162,39,0.30)',
+                          fontSize: 11,
+                          fontWeight: 800,
+                          padding: '3px 10px',
+                          borderRadius: 999,
+                          marginBottom: 10,
+                          letterSpacing: 0.4,
+                          textTransform: 'uppercase',
+                        }}
+                      >
+                        {op.formato}
+                      </span>
+                      <div style={{ fontWeight: 800, fontSize: 16.5, color: '#fff', lineHeight: 1.35 }}>
+                        {op.nome}
+                      </div>
+                      <p style={{ margin: '8px 0 14px', color: BRAND.textSoft, lineHeight: 1.6, fontSize: 14.5 }}>
+                        {op.chamada}
+                      </p>
+                      <Link
+                        href={op.href}
+                        style={{
+                          marginTop: 'auto',
+                          alignSelf: 'flex-start',
+                          color: BRAND.goldBright,
+                          fontWeight: 800,
+                          fontSize: 14.5,
+                          textDecoration: 'none',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: 6,
+                        }}
+                      >
+                        Saber mais &rarr;
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+
+                <div style={{ color: BRAND.goldBright, fontWeight: 800, fontSize: 15, marginTop: 22 }}>
                   Valores no WhatsApp
                 </div>
-                <p style={{ margin: '0 0 28px', color: BRAND.textSoft, lineHeight: 1.7, fontSize: 16, flexGrow: 1 }}>
-                  {c.chamada}
-                </p>
-                <Link href={c.href} className="wpa-gold-cta" style={{ ...goldCta, padding: '15px 28px', fontSize: 15 }}>
-                  {c.rotulo}
-                </Link>
               </div>
             ))}
-          </div>
-
-          {/* EXPERIÊNCIA PREMIUM — Wise Day (faixa horizontal, mais discreta) */}
-          <div
-            id="wise-day"
-            style={{
-              maxWidth: 900,
-              margin: '30px auto 0',
-              background: 'rgba(255,255,255,0.03)',
-              border: '1px solid rgba(255,255,255,0.12)',
-              borderRadius: 22,
-              padding: 30,
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-              gap: 24,
-              alignItems: 'center',
-            }}
-          >
-            <div>
-              <span
-                style={{
-                  display: 'inline-block',
-                  background: 'rgba(201,162,39,0.14)',
-                  color: BRAND.goldBright,
-                  border: '1px solid rgba(201,162,39,0.35)',
-                  fontSize: 12,
-                  fontWeight: 800,
-                  padding: '5px 12px',
-                  borderRadius: 999,
-                  marginBottom: 14,
-                  letterSpacing: 0.4,
-                  textTransform: 'uppercase',
-                }}
-              >
-                Experiência premium
-              </span>
-              <h3 style={{ margin: '0 0 6px', fontSize: 25, fontWeight: 900, color: '#fff', letterSpacing: '-0.02em' }}>
-                {PRODUCTS.wise_day.name}
-              </h3>
-              <div style={{ color: BRAND.goldBright, fontWeight: 800, fontSize: 16, marginBottom: 12 }}>
-                Valores no WhatsApp
-              </div>
-              <p style={{ margin: 0, color: BRAND.textSoft, lineHeight: 1.7, fontSize: 15.5 }}>
-                Não é um curso preparatório: é a imersão. Um dia inteiro presencial com o David, na
-                prática, resolvendo as suas dúvidas reais de obra, permit e código. Para quem quer
-                acelerar com atenção direta de quem já passou por tudo isso.
-              </p>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
-              <Link href={`/${PRODUCTS.wise_day.slug}`} className="wpa-ghost-cta" style={{ ...ghostCta, fontSize: 15 }}>
-                Conhecer o Wise Day
-              </Link>
-            </div>
           </div>
         </div>
       </section>

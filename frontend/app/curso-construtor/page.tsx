@@ -17,12 +17,12 @@ export default function Page() {
       preco="US$ 597"
       selo="Curso principal"
       headline="Tire sua CSL e trabalhe legalmente na construção em Massachusetts"
-      subheadline="Curso preparatório para a CSL em português, no formato que combina com você: turma online de segunda a sexta, das 18h às 21h, ou presencial em 4 sábados, das 7h30 às 12h. O mesmo conteúdo, mais o portal de simulados que treina você até passar. A aula te ensina; o portal te aprova."
+      subheadline="Curso preparatório para a CSL em português, no formato que combina com você: turma online de segunda a sexta, das 6 PM às 9 PM (horário de Massachusetts), ou presencial em 4 sábados, das 7:30 AM às 12 PM. O mesmo conteúdo, mais o portal de simulados que treina você até passar. A aula te ensina; o portal te aprova."
       vslTitulo="Como funciona o Curso de Construtor"
       vslLegenda="David mostra como funciona o curso e por que o portal de simulados é o que faz o aluno passar na prova de CSL."
       copyBlocos={[
         'A prova de CSL é em inglês, longa e recheada de código: 780 CMR, IRC, IBC, IECC, OSHA. A maioria das pessoas estuda, faz um curso, acha que está pronta e reprova. Não por falta de inteligência, mas porque só assistir aula não prepara ninguém pra encontrar a resposta certa, no código certo, dentro do tempo da prova.',
-        'É exatamente aí que o Curso de Construtor é diferente. Em português, no formato que você escolher (turma online de segunda a sexta, das 18h às 21h, ou presencial em 4 sábados, das 7h30 às 12h), o David cobre o que realmente cai na prova e te ensina a navegar pelo código oficial. Mas o que faz o aluno passar de verdade é o que vem depois da aula: o portal de simulados da Wise Pro.',
+        'É exatamente aí que o Curso de Construtor é diferente. Em português, no formato que você escolher (turma online de segunda a sexta, das 6 PM às 9 PM no horário de Massachusetts, ou presencial em 4 sábados, das 7:30 AM às 12 PM), o David cobre o que realmente cai na prova e te ensina a navegar pelo código oficial. Mas o que faz o aluno passar de verdade é o que vem depois da aula: o portal de simulados da Wise Pro.',
         'No portal você treina com quizzes por categoria e provas completas, com questões originais ancoradas no código oficial. Cada questão traz feedback, explicação e a referência exata do código. No nível iniciante a gente te mostra a seção; no avançado, você aprende a achar sozinho e ganha velocidade. Você repete até a aprovação virar consequência, não sorte.',
       ]}
       dores={[
@@ -35,7 +35,7 @@ export default function Page() {
         {
           titulo: 'Online ou presencial',
           texto:
-            'Você escolhe: turma online de segunda a sexta, das 18h às 21h, ou presencial em 4 sábados, das 7h30 às 12h. Mesmo conteúdo, em português.',
+            'Você escolhe: turma online de segunda a sexta, das 6 PM às 9 PM (horário de Massachusetts), ou presencial em 4 sábados, das 7:30 AM às 12 PM. Mesmo conteúdo, em português.',
         },
         {
           titulo: 'Portal de simulados',
@@ -55,7 +55,7 @@ export default function Page() {
       ]}
       conteudoTitulo="Como você é preparado"
       conteudo={[
-        { titulo: 'Aulas com o David (online ou presencial)', texto: 'Online de segunda a sexta, das 18h às 21h, ou presencial em 4 sábados, das 7h30 às 12h, em português, cobrindo o que mais cai na prova de CSL.' },
+        { titulo: 'Aulas com o David (online ou presencial)', texto: 'Online de segunda a sexta, das 6 PM às 9 PM (horário de Massachusetts), ou presencial em 4 sábados, das 7:30 AM às 12 PM, em português, cobrindo o que mais cai na prova de CSL.' },
         { titulo: 'Navegação pelo código oficial', texto: 'Você aprende onde está cada resposta no 780 CMR, IRC, IBC, IECC e OSHA, e como chegar rápido.' },
         { titulo: 'Quizzes por categoria', texto: 'Treine tópico por tópico no portal, identificando seus pontos fracos antes da prova.' },
         { titulo: 'Provas completas simuladas', texto: 'Simule a prova real inteira, no formato e no ritmo da Construction Supervisor License.' },
@@ -69,12 +69,12 @@ export default function Page() {
         'Níveis iniciante e avançado para você evoluir até passar.',
         'Material de apoio focado na prova de Construction Supervisor License.',
       ]}
-      formato="Online (seg a sex, 18h às 21h) ou presencial (4 sábados, 7h30 às 12h) · portal de simulados incluso · em português"
+      formato="Online (seg a sex, 6 PM às 9 PM, horário de Massachusetts) ou presencial (4 sábados, 7:30 AM às 12 PM) · portal de simulados incluso · em português"
       garantia="Nosso diferencial não é prometer aprovação. É te dar o método e o treino que aumentam de verdade as suas chances: a aula (online ou presencial) mais simulados ilimitados ancorados no código oficial."
       faq={[
         {
           q: 'O curso é online ou presencial?',
-          a: 'Você escolhe o formato. A turma online acontece de segunda a sexta, das 18h às 21h. A turma presencial começa logo em seguida, em 4 sábados, das 7h30 às 12h. O conteúdo é o mesmo nos dois. O portal de simulados é online em qualquer caso, para você treinar de onde estiver até a data da prova.',
+          a: 'Você escolhe o formato. A turma online acontece de segunda a sexta, das 6 PM às 9 PM (horário de Massachusetts). A turma presencial começa logo em seguida, em 4 sábados, das 7:30 AM às 12 PM. O conteúdo é o mesmo nos dois. O portal de simulados é online em qualquer caso, para você treinar de onde estiver até a data da prova.',
         },
         {
           q: 'As questões do portal são confiáveis?',
