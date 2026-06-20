@@ -95,7 +95,7 @@ export default function Page() {
       ctaForm="Quero garantir minha vaga"
       upsell={{
         texto:
-          'Já decidiu que quer a licença? O Curso de Construtor é o próximo passo: 6 dias presenciais e acesso ao portal de simulados que faz você passar na prova de CSL.',
+          'Já decidiu que quer a licença? O Curso de Construtor é o próximo passo: aulas online (de segunda a sexta) ou presenciais (em 4 sábados) e acesso ao portal de simulados que faz você passar na prova de CSL.',
         href: '/curso-construtor',
         rotulo: 'Conhecer o Curso de Construtor',
       }}
