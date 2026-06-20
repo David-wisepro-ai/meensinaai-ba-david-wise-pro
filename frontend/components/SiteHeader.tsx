@@ -21,31 +21,11 @@ function Logo() {
       href="/"
       style={{ display: 'inline-flex', alignItems: 'center', gap: 11, textDecoration: 'none' }}
     >
-      <span
-        aria-hidden
-        style={{
-          width: 36,
-          height: 40,
-          display: 'inline-flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          background: BRAND.goldGradient,
-          color: BRAND.ink,
-          fontWeight: 900,
-          fontSize: 19,
-          borderRadius: '7px 7px 16px 16px',
-          boxShadow: '0 6px 18px rgba(201,162,39,0.35)',
-        }}
-      >
-        W
-      </span>
-      <span style={{ color: '#fff', fontWeight: 900, fontSize: 16, letterSpacing: 0.6, lineHeight: 1 }}>
-        WISE PRO
-        <br />
-        <span style={{ color: BRAND.goldBright, fontSize: 11.5, fontWeight: 700, letterSpacing: 2 }}>
-          ACADEMY
-        </span>
-      </span>
+      <img
+        src="/logo-wise.png"
+        alt="Wise Pro Academy"
+        style={{ height: 56, width: 'auto', display: 'block' }}
+      />
     </Link>
   );
 }

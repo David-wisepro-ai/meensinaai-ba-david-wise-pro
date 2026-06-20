@@ -82,10 +82,17 @@
     //     > copie a URL e cole aqui. Deixe "" pra desligar enquanto testa.
     ghlWebhookUrl: "",
 
-    // (3) PRECOS — placeholders de mercado MA. TROQUE pelos seus numeros.
-    //     Formula: base = sqft * tierRate * scopeMult ; + add-ons ;
-    //              faixa = base*low ate base*high
-    pricePerSqft: { essential: 350, premium: 550, luxury: 850 },
+    // (3) PRECOS — voce pensa em PRECO FINAL, nao em sqft.
+    //     Modelo: reforma completa = base + perSqft * sqft  (por acabamento).
+    //     "base" = custo fixo (demo, hidraulica, loucas) que nao encolhe;
+    //     "perSqft" = parte que cresce com o tamanho.
+    //     Calibrado pelo SEU dado: banheiro 40 sqft = $18k (basico) a $28k (alto).
+    //     A coluna ao lado mostra quanto da em 40 e 100 sqft, pra voce conferir.
+    model: {
+      essential: { base: 10000, perSqft: 200 },  // 40 sqft ~ $18k | 100 sqft ~ $30k
+      premium:   { base: 11000, perSqft: 300 },  // 40 sqft ~ $23k | 100 sqft ~ $41k
+      luxury:    { base: 12000, perSqft: 400 }   // 40 sqft ~ $28k | 100 sqft ~ $52k
+    },
     scopeMult:    { gut: 1.0, refresh: 0.7, cosmetic: 0.45 },
     addOns: {                       // valor fixo em USD por item marcado
       heated:   { label: "Piso aquecido",            usd: 2500 },
@@ -109,10 +116,13 @@
     return "$" + n;
   }
 
+  function fullPrice(tier){
+    var m = CONFIG.model[tier]; if(!m) return 0;
+    return m.base + m.perSqft * S.sqft;            // preco de reforma completa p/ esse tier+tamanho
+  }
   function calc(){
-    var rate = CONFIG.pricePerSqft[S.tier] || 0;
     var mult = CONFIG.scopeMult[S.scope] || 0;
-    var base = S.sqft * rate * mult;
+    var base = fullPrice(S.tier) * mult;
     var add = 0;
     Object.keys(S.addons).forEach(function(k){ if(S.addons[k]) add += CONFIG.addOns[k].usd; });
     var subtotal = base + add;
@@ -239,7 +249,7 @@
   function pillForTier(tier){
     // estimativa rapida pra ancorar (usa sqft e scope atuais, scope default gut se nao escolhido)
     var mult = CONFIG.scopeMult[S.scope] || CONFIG.scopeMult.gut;
-    var base = S.sqft * CONFIG.pricePerSqft[tier] * mult;
+    var base = fullPrice(tier) * mult;
     return fmtK(base*CONFIG.rangeLow)+"–"+fmtK(base*CONFIG.rangeHigh);
   }
   function field(k,label,type,val){

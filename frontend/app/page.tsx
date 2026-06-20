@@ -331,21 +331,17 @@ export default function Home() {
                 overflow: 'hidden',
               }}
             >
-              {/* IMAGEM: foto do David (retrato profissional na obra). */}
-              <div
+              <img
+                src="/david-piazzarollo.jpg"
+                alt="David Piazzarollo, fundador da Wise Pro Academy"
                 style={{
                   position: 'absolute',
-                  top: 22,
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  color: BRAND.textMute,
-                  fontSize: 13,
-                  fontWeight: 600,
-                  letterSpacing: 1,
+                  inset: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
                 }}
-              >
-                IMAGEM: foto do David
-              </div>
+              />
               <div
                 style={{
                   width: '100%',
@@ -417,21 +413,16 @@ export default function Home() {
                 position: 'relative',
                 aspectRatio: '4 / 5',
                 borderRadius: 20,
-                background:
-                  'radial-gradient(120% 80% at 30% 0%, rgba(201,162,39,0.2), transparent 60%), linear-gradient(160deg, #16335f, #0A1326)',
-                color: BRAND.goldBright,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
                 border: '1px solid rgba(201,162,39,0.4)',
                 boxShadow: '0 26px 70px rgba(0,0,0,0.5)',
-                fontWeight: 700,
-                fontSize: 14,
-                textAlign: 'center',
-                padding: 22,
+                overflow: 'hidden',
               }}
             >
-              IMAGEM: foto de David Piazzarollo
+              <img
+                src="/david-piazzarollo.jpg"
+                alt="David Piazzarollo"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
             </div>
 
             <div>
