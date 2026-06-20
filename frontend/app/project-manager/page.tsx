@@ -53,16 +53,36 @@ export default function Page() {
             'Saia preparado para dar o próximo passo: o Curso de Construtor e a conquista da sua licença de CSL.',
         },
       ]}
-      conteudoTitulo="As 8 aulas do curso"
-      conteudo={[
-        { titulo: 'Papel do PM e mentalidade profissional', texto: 'Função do project manager, postura profissional e visão estratégica na obra.' },
-        { titulo: 'Comunicação com cliente e time', texto: 'Alinhamento, clareza na comunicação e gestão do relacionamento com equipe e cliente.' },
-        { titulo: 'Sequência da obra e planejamento', texto: 'Etapas corretas da execução, organização da obra e planejamento prático.' },
-        { titulo: 'Leitura de plantas e controle de escopo', texto: 'Interpretação de plantas, definição do escopo e prevenção de erros de execução.' },
-        { titulo: 'Aplicação de permits na prefeitura', texto: 'Processo de aplicação de permits junto à prefeitura e atenção aos detalhes que evitam atraso.' },
-        { titulo: 'Subcontratos e qualidade', texto: 'Gestão de subcontractors, acompanhamento da entrega e controle de qualidade da obra.' },
-        { titulo: 'Inglês básico na construção', texto: 'Vocabulário essencial para conversação profissional no dia a dia do canteiro.' },
-        { titulo: 'Perfil forte para o mercado', texto: 'Como se posicionar melhor e montar um perfil mais forte para buscar oportunidades, com bônus de IA aplicada com Fábio Borges.' },
+      // PROFESSORES: David envia bio completa + foto de Rony, Luciana e Juliana depois
+      professoresTitulo="Quem vai te ensinar"
+      professores={[
+        {
+          nome: 'David Piazzarollo',
+          papel: 'Construção nos EUA e CSL',
+          foto: '/david-piazzarollo.jpg',
+          bio: 'Fundador da Wise Pro Academy. Mais de 10 anos no mercado americano da construção, passou na prova de CSL e construiu a própria carteira de clientes diretos.',
+        },
+        {
+          nome: 'Rony Jabour',
+          papel: 'Professor licenciado de OSHA',
+          bio: '',
+        },
+        {
+          nome: 'Fábio Borges',
+          papel: 'Inteligência Artificial e Automação',
+          foto: '/fabio-borges.jpg',
+          bio: 'Especialista em inteligência artificial aplicada a negócios e automação. Mostra como usar IA pra ganhar produtividade no dia a dia profissional.',
+        },
+        {
+          nome: 'Luciana Triplett',
+          papel: 'Arquiteta, leitura de plantas',
+          bio: '',
+        },
+        {
+          nome: 'Juliana Melo',
+          papel: 'Gestão de empresas',
+          bio: '',
+        },
       ]}
       incluso={[
         '8 aulas ao vivo em português (turma de aproximadamente 2 meses).',

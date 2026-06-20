@@ -10,6 +10,7 @@ export type Beneficio = { titulo: string; texto: string };
 export type Incluso = string;
 export type Upsell = { texto: string; href: string; rotulo: string };
 export type ConteudoItem = { titulo: string; texto: string };
+export type Professor = { nome: string; papel: string; bio?: string; foto?: string };
 export type FaqItem = { q: string; a: string };
 
 export type LandingProps = {
@@ -27,6 +28,9 @@ export type LandingProps = {
   beneficios: Beneficio[];
   conteudo?: ConteudoItem[]; // grade numerada (o que você vai aprender / como funciona)
   conteudoTitulo?: string;
+  // Se vier preenchido, a seção "Professores" substitui a grade de conteúdo.
+  professores?: Professor[];
+  professoresTitulo?: string;
   incluso: Incluso[];
   formato: string; // resumo do formato (presencial/ao vivo, duração, acesso)
   // frase de fechamento antes do formulário
@@ -39,6 +43,14 @@ export type LandingProps = {
 
 const wrap: React.CSSProperties = { maxWidth: 980, margin: '0 auto', padding: '0 20px' };
 const wrapNarrow: React.CSSProperties = { maxWidth: 760, margin: '0 auto', padding: '0 20px' };
+
+// Iniciais do nome pro placeholder de foto (ex.: "David Piazzarollo" -> "DP").
+function iniciais(nome: string): string {
+  const partes = nome.trim().split(/\s+/).filter(Boolean);
+  if (partes.length === 0) return '?';
+  if (partes.length === 1) return partes[0].slice(0, 2).toUpperCase();
+  return (partes[0][0] + partes[partes.length - 1][0]).toUpperCase();
+}
 
 // Pílula dourada (mesmo átomo da home) — usada como rótulo de seção.
 function GoldPill({ children }: { children: React.ReactNode }) {
@@ -133,6 +145,8 @@ export default function Landing(props: LandingProps) {
     beneficios,
     conteudo = [],
     conteudoTitulo = 'O que você vai aprender',
+    professores = [],
+    professoresTitulo = 'Quem vai te ensinar',
     incluso,
     formato,
     garantia,
@@ -377,8 +391,113 @@ export default function Landing(props: LandingProps) {
         </div>
       </section>
 
-      {/* CONTEÚDO / COMO FUNCIONA — grade numerada (cards glass + número dourado) */}
-      {conteudo.length > 0 && (
+      {/* PROFESSORES — cards dark premium (foto + nome + papel + bio). Substitui a grade
+          de conteúdo quando a prop "professores" é passada. */}
+      {professores.length > 0 && (
+        <section className="wpa-landing-section wpa-section-tight" style={{ padding: '20px 0 76px' }}>
+          <div style={wrap} className="wpa-wrap">
+            <div style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto' }}>
+              <GoldPill>Professores</GoldPill>
+              <div style={{ marginTop: 16 }}>
+                <SectionTitle>{professoresTitulo}</SectionTitle>
+              </div>
+              <p style={{ color: BRAND.textSoft, marginTop: 14, fontSize: 16.5, lineHeight: 1.7 }}>
+                Profissionais que já atuam no mercado e dividem com você o que aprenderam na prática.
+              </p>
+            </div>
+            <div
+              className="wpa-grid-1col"
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+                gap: 18,
+                marginTop: 34,
+              }}
+            >
+              {professores.map((p, i) => (
+                <div
+                  key={i}
+                  className="wpa-card wpa-pad-card"
+                  style={{
+                    background:
+                      'linear-gradient(165deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))',
+                    backdropFilter: 'blur(10px)',
+                    WebkitBackdropFilter: 'blur(10px)',
+                    border: '1px solid rgba(201,162,39,0.32)',
+                    borderRadius: 18,
+                    padding: 26,
+                    boxShadow: '0 18px 50px rgba(0,0,0,0.4)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    textAlign: 'center',
+                  }}
+                >
+                  {p.foto ? (
+                    // FOTO real do professor — círculo com borda dourada
+                    <img
+                      src={p.foto}
+                      alt={`Foto de ${p.nome}`}
+                      style={{
+                        width: 104,
+                        height: 104,
+                        borderRadius: '50%',
+                        objectFit: 'cover',
+                        border: '2px solid rgba(201,162,39,0.6)',
+                        boxShadow: '0 10px 30px rgba(0,0,0,0.45)',
+                      }}
+                    />
+                  ) : (
+                    // IMAGEM: foto do professor (placeholder até o David enviar) — círculo navy + iniciais douradas
+                    <div
+                      aria-hidden
+                      style={{
+                        width: 104,
+                        height: 104,
+                        borderRadius: '50%',
+                        background: 'linear-gradient(135deg, #16335f, #0A1326)',
+                        border: '2px solid rgba(201,162,39,0.45)',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        color: BRAND.goldBright,
+                        fontWeight: 900,
+                        fontSize: 34,
+                        letterSpacing: '0.02em',
+                        boxShadow: '0 10px 30px rgba(0,0,0,0.45)',
+                      }}
+                    >
+                      {iniciais(p.nome)}
+                    </div>
+                  )}
+                  <h3 style={{ margin: '18px 0 4px', fontSize: 18.5, color: '#fff', fontWeight: 800, letterSpacing: '-0.01em' }}>
+                    {p.nome}
+                  </h3>
+                  <div style={{ color: BRAND.goldBright, fontWeight: 700, fontSize: 14, lineHeight: 1.5 }}>
+                    {p.papel}
+                  </div>
+                  {p.bio ? (
+                    <p style={{ margin: '14px 0 0', color: BRAND.textSoft, lineHeight: 1.65, fontSize: 14.5 }}>
+                      {p.bio}
+                    </p>
+                  ) : (
+                    <p style={{ margin: '12px 0 0', color: BRAND.textMute, lineHeight: 1.6, fontSize: 13.5, fontStyle: 'italic' }}>
+                      Bio em breve.
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className="wpa-cta-stack" style={{ textAlign: 'center', marginTop: 36 }}>
+              <CtaInscricao>{ctaPrincipal}</CtaInscricao>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* CONTEÚDO / COMO FUNCIONA — grade numerada (cards glass + número dourado).
+          Suprimida quando há professores (a seção acima ocupa o lugar dela). */}
+      {professores.length === 0 && conteudo.length > 0 && (
         <section className="wpa-landing-section wpa-section-tight" style={{ padding: '20px 0 76px' }}>
           <div style={wrap} className="wpa-wrap">
             <div style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto' }}>
