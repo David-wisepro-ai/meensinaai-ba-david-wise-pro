@@ -102,7 +102,7 @@ export default function Portal() {
 
   return (
     <>
-      <main style={{ maxWidth: 1080, margin: '0 auto', padding: 24 }}>
+      <main className="wpa-portal-main" style={{ maxWidth: 1080, margin: '0 auto', padding: 24 }}>
         {/* Logo clicável volta pra home */}
         <Link
           href="/"

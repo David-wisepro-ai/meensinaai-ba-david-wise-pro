@@ -18,6 +18,7 @@ const linkStyle: React.CSSProperties = {
   fontSize: 14.5,
   opacity: 0.92,
   lineHeight: 1.9,
+  display: 'flex',
 };
 
 // Rodapé institucional da Wise Pro Academy — usado em todas as páginas.
@@ -31,8 +32,9 @@ export default function SiteFooter() {
         borderTop: '1px solid rgba(201,162,39,0.28)',
       }}
     >
-      <div style={wrap}>
+      <div style={wrap} className="wpa-wrap">
         <div
+          className="wpa-footer-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
@@ -49,7 +51,7 @@ export default function SiteFooter() {
               WISE PRO <span style={{ color: BRAND.goldBright }}>ACADEMY</span>
             </Link>
             <div style={{ opacity: 0.7, fontSize: 13.5, marginTop: 10 }}>{BRAND.domain}</div>
-            <p style={{ opacity: 0.78, fontSize: 13.5, lineHeight: 1.6, marginTop: 12, maxWidth: 280 }}>
+            <p style={{ opacity: 0.78, fontSize: 13.5, lineHeight: 1.6, marginTop: 12, maxWidth: 280, marginLeft: 'auto', marginRight: 'auto' }}>
               Preparação prática para brasileiros na construção civil dos Estados Unidos.
             </p>
           </div>

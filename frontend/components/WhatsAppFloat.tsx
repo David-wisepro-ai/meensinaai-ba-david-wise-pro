@@ -10,7 +10,7 @@ export default function WhatsAppFloat() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Fale no WhatsApp"
-      className="wpa-btn"
+      className="wpa-btn wpa-wa-float"
       style={{
         position: 'fixed',
         right: 18,
@@ -30,7 +30,7 @@ export default function WhatsAppFloat() {
       }}
     >
       <span aria-hidden style={{ fontSize: 18, lineHeight: 1 }}>&#9742;</span>
-      Fale no WhatsApp
+      <span className="wpa-wa-label">Fale no WhatsApp</span>
     </a>
   );
 }

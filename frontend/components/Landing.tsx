@@ -92,13 +92,14 @@ export default function Landing(props: LandingProps) {
 
       {/* HERO escuro + VSL no topo */}
       <section
+        className="wpa-landing-hero"
         style={{
           background: `linear-gradient(135deg, ${BRAND.navy} 0%, ${BRAND.royal} 100%)`,
           color: '#fff',
           padding: '52px 0 60px',
         }}
       >
-        <div style={wrap}>
+        <div style={wrap} className="wpa-wrap">
           <div style={{ textAlign: 'center' }}>
             <span
               style={{
@@ -116,10 +117,10 @@ export default function Landing(props: LandingProps) {
               {selo} &middot; {nome}
             </span>
 
-            <h1 style={{ fontSize: 40, lineHeight: 1.13, margin: '20px auto 14px', maxWidth: 820, fontWeight: 800 }}>
+            <h1 style={{ fontSize: 'clamp(28px, 6.4vw, 40px)', lineHeight: 1.13, margin: '20px auto 14px', maxWidth: 820, fontWeight: 800 }}>
               {headline}
             </h1>
-            <p style={{ fontSize: 19, opacity: 0.93, maxWidth: 700, margin: '0 auto', lineHeight: 1.55 }}>
+            <p style={{ fontSize: 'clamp(16px, 2.8vw, 19px)', opacity: 0.93, maxWidth: 700, margin: '0 auto', lineHeight: 1.55 }}>
               {subheadline}
             </p>
           </div>
@@ -139,13 +140,13 @@ export default function Landing(props: LandingProps) {
 
       {/* COPY DE VENDA — blocos narrativos */}
       {copyBlocos.length > 0 && (
-        <section style={{ background: '#fff', padding: '60px 0' }}>
-          <div style={wrapNarrow}>
+        <section className="wpa-landing-section" style={{ background: '#fff', padding: '60px 0' }}>
+          <div style={wrapNarrow} className="wpa-wrap">
             {copyBlocos.map((bloco, i) => (
               <p
                 key={i}
                 style={{
-                  fontSize: 18,
+                  fontSize: 'clamp(16px, 2.6vw, 18px)',
                   lineHeight: 1.7,
                   color: BRAND.navyLight,
                   margin: i === 0 ? '0 0 18px' : '0 0 18px',
@@ -159,9 +160,9 @@ export default function Landing(props: LandingProps) {
       )}
 
       {/* DORES — isto é pra você se */}
-      <section style={{ background: BRAND.cream, padding: '56px 0' }}>
-        <div style={wrap}>
-          <h2 style={{ fontSize: 28, marginTop: 0, fontWeight: 800, textAlign: 'center' }}>Isto é pra você se...</h2>
+      <section className="wpa-landing-section" style={{ background: BRAND.cream, padding: '56px 0' }}>
+        <div style={wrap} className="wpa-wrap">
+          <h2 style={{ fontSize: 'clamp(22px, 4.4vw, 28px)', marginTop: 0, fontWeight: 800, textAlign: 'center' }}>Isto é pra você se...</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 22, maxWidth: 720, marginLeft: 'auto', marginRight: 'auto' }}>
             {dores.map((d, i) => (
               <div
@@ -191,10 +192,11 @@ export default function Landing(props: LandingProps) {
       </section>
 
       {/* BENEFÍCIOS / TRANSFORMAÇÃO */}
-      <section style={{ background: '#fff', padding: '60px 0' }}>
-        <div style={wrap}>
-          <h2 style={{ fontSize: 28, marginTop: 0, fontWeight: 800, textAlign: 'center' }}>O que você ganha</h2>
+      <section className="wpa-landing-section" style={{ background: '#fff', padding: '60px 0' }}>
+        <div style={wrap} className="wpa-wrap">
+          <h2 style={{ fontSize: 'clamp(22px, 4.4vw, 28px)', marginTop: 0, fontWeight: 800, textAlign: 'center' }}>O que você ganha</h2>
           <div
+            className="wpa-grid-1col"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
@@ -225,10 +227,11 @@ export default function Landing(props: LandingProps) {
 
       {/* CONTEÚDO / COMO FUNCIONA — grade numerada */}
       {conteudo.length > 0 && (
-        <section style={{ background: BRAND.cream, padding: '60px 0' }}>
-          <div style={wrap}>
-            <h2 style={{ fontSize: 28, marginTop: 0, fontWeight: 800, textAlign: 'center' }}>{conteudoTitulo}</h2>
+        <section className="wpa-landing-section" style={{ background: BRAND.cream, padding: '60px 0' }}>
+          <div style={wrap} className="wpa-wrap">
+            <h2 style={{ fontSize: 'clamp(22px, 4.4vw, 28px)', marginTop: 0, fontWeight: 800, textAlign: 'center' }}>{conteudoTitulo}</h2>
             <div
+              className="wpa-grid-1col"
               style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
@@ -282,9 +285,9 @@ export default function Landing(props: LandingProps) {
       )}
 
       {/* PROVA SOCIAL — reviews do Google (placeholder pro David/gbp-escola preencher) */}
-      <section style={{ background: '#fff', padding: '60px 0' }}>
-        <div style={wrap}>
-          <h2 style={{ fontSize: 28, marginTop: 0, fontWeight: 800, textAlign: 'center' }}>O que dizem nossos alunos</h2>
+      <section className="wpa-landing-section" style={{ background: '#fff', padding: '60px 0' }}>
+        <div style={wrap} className="wpa-wrap">
+          <h2 style={{ fontSize: 'clamp(22px, 4.4vw, 28px)', marginTop: 0, fontWeight: 800, textAlign: 'center' }}>O que dizem nossos alunos</h2>
           <p style={{ color: BRAND.navyLight, marginTop: 10, textAlign: 'center' }}>
             Alunos que estudaram com a gente e cresceram na construção em Massachusetts.
           </p>
@@ -294,6 +297,7 @@ export default function Landing(props: LandingProps) {
             (nome do aluno, nota, texto). Não inventar depoimento — usar somente reviews reais.
           */}
           <div
+            className="wpa-grid-1col"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
@@ -325,14 +329,16 @@ export default function Landing(props: LandingProps) {
       {/* OFERTA + FORMULÁRIO DE CAPTURA (id=inscricao) */}
       <section
         id="inscricao"
+        className="wpa-landing-section"
         style={{
           background: `linear-gradient(135deg, ${BRAND.navy} 0%, ${BRAND.royal} 100%)`,
           color: '#fff',
           padding: '64px 0',
         }}
       >
-        <div style={wrap}>
+        <div style={wrap} className="wpa-wrap">
           <div
+            className="wpa-grid-1col"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
@@ -356,7 +362,7 @@ export default function Landing(props: LandingProps) {
               >
                 Inscrições abertas
               </span>
-              <h2 style={{ fontSize: 28, marginTop: 0, fontWeight: 800 }}>O que está incluso</h2>
+              <h2 style={{ fontSize: 'clamp(22px, 4.4vw, 28px)', marginTop: 0, fontWeight: 800 }}>O que está incluso</h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 10 }}>
                 {incluso.map((item, i) => (
                   <div key={i} style={{ display: 'flex', gap: 11, alignItems: 'flex-start', fontSize: 16.5, lineHeight: 1.5 }}>
@@ -393,9 +399,9 @@ export default function Landing(props: LandingProps) {
 
       {/* FAQ */}
       {faq.length > 0 && (
-        <section style={{ background: '#fff', padding: '60px 0' }}>
-          <div style={wrapNarrow}>
-            <h2 style={{ fontSize: 28, marginTop: 0, fontWeight: 800, textAlign: 'center' }}>Perguntas frequentes</h2>
+        <section className="wpa-landing-section" style={{ background: '#fff', padding: '60px 0' }}>
+          <div style={wrapNarrow} className="wpa-wrap">
+            <h2 style={{ fontSize: 'clamp(22px, 4.4vw, 28px)', marginTop: 0, fontWeight: 800, textAlign: 'center' }}>Perguntas frequentes</h2>
             <div style={{ marginTop: 28, display: 'flex', flexDirection: 'column', gap: 12 }}>
               {faq.map((item, i) => (
                 <details
@@ -434,8 +440,9 @@ export default function Landing(props: LandingProps) {
       {/* UPSELL SUTIL */}
       {upsell && (
         <section style={{ background: BRAND.cream, padding: '44px 0' }}>
-          <div style={wrap}>
+          <div style={wrap} className="wpa-wrap">
             <div
+              className="wpa-upsell-row"
               style={{
                 background: '#fff',
                 border: `1px solid ${BRAND.gold}`,

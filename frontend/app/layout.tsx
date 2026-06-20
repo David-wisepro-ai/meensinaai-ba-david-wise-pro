@@ -45,7 +45,102 @@ const globalCss = `
   .wpa-card:hover{transform:translateY(-4px) scale(1.012);border-color:rgba(201,162,39,0.6);box-shadow:0 22px 60px rgba(0,0,0,0.55)}
   .wpa-reveal{animation:wpa-reveal .6s ease both}
   details.wpa-faq[open] summary span.wpa-faq-plus{transform:rotate(45deg)}
-  @media (max-width:820px){.wpa-hero-grid{grid-template-columns:1fr !important;gap:34px !important}}
+
+  /* ====================== RESPONSIVIDADE ====================== */
+  /* impede scroll horizontal e estouro de largura no mobile */
+  html,body{max-width:100%;overflow-x:hidden}
+  img{max-width:100%}
+
+  /* grid genérico que vira 1 coluna no mobile */
+  @media (max-width:820px){
+    .wpa-hero-grid{grid-template-columns:1fr !important;gap:34px !important}
+  }
+
+  /* ---- HEADER (menu mobile / hamburger) ---- */
+  /* o nav desktop e o CTA do header somem no mobile; o botão hamburger aparece */
+  .wpa-nav-desktop{display:flex}
+  .wpa-header-cta{display:inline-block}
+  .wpa-burger{display:none}
+  @media (max-width:860px){
+    .wpa-nav-desktop{display:none !important}
+    .wpa-header-cta{display:none !important}
+    .wpa-burger{display:inline-flex !important}
+    .wpa-header-bar{padding:11px 16px !important}
+    .wpa-logo-img{height:44px !important}
+  }
+
+  /* ---- HERO ---- */
+  @media (max-width:820px){
+    .wpa-hero-section{padding:46px 16px 54px !important}
+    .wpa-hero-photo{max-width:380px;margin-left:auto;margin-right:auto;width:100%}
+  }
+  @media (max-width:560px){
+    .wpa-hero-section{padding:38px 16px 46px !important}
+    .wpa-hero-ctas{flex-direction:column !important;align-items:stretch !important}
+    .wpa-hero-ctas > a{width:100% !important}
+    .wpa-hero-social{justify-content:center !important;text-align:center}
+  }
+
+  /* ---- CTAs full-width no celular (genérico) ---- */
+  @media (max-width:560px){
+    .wpa-cta-stack{flex-direction:column !important;align-items:stretch !important}
+    .wpa-cta-stack > a{width:100% !important}
+  }
+
+  /* ---- STATBAND: 4 -> 2x2 -> some divisória vertical no mobile ---- */
+  @media (max-width:760px){
+    .wpa-statband{grid-template-columns:1fr 1fr !important;gap:8px}
+    .wpa-statband > div{border-left:none !important}
+  }
+  @media (max-width:380px){
+    .wpa-statband{grid-template-columns:1fr !important}
+  }
+
+  /* ---- container padding reduzido no mobile ---- */
+  @media (max-width:560px){
+    .wpa-wrap{padding-left:16px !important;padding-right:16px !important}
+    .wpa-section{padding-top:52px !important;padding-bottom:52px !important}
+    .wpa-section-tight{padding-top:14px !important;padding-bottom:52px !important}
+  }
+
+  /* ---- grids que colapsam pra 1 coluna no mobile ---- */
+  @media (max-width:680px){
+    .wpa-grid-1col{grid-template-columns:1fr !important}
+  }
+
+  /* ---- cards/painéis com padding menor no mobile ---- */
+  @media (max-width:560px){
+    .wpa-pad-card{padding:24px 20px !important}
+    .wpa-pad-panel{padding:30px 22px !important;border-radius:20px !important}
+  }
+
+  /* ---- FOOTER: colunas empilham e centralizam no mobile ---- */
+  @media (max-width:560px){
+    .wpa-footer-grid{grid-template-columns:1fr !important;gap:26px !important;text-align:center}
+    .wpa-footer-grid a{justify-content:center}
+  }
+
+  /* ---- WhatsApp float: compacto no mobile (vira pílula menor) ---- */
+  @media (max-width:560px){
+    .wpa-wa-float{right:14px !important;bottom:14px !important;padding:12px 16px !important;font-size:14px !important}
+    .wpa-wa-label{display:none}
+  }
+
+  /* ---- LANDING: hero e seções com menos padding no mobile ---- */
+  @media (max-width:560px){
+    .wpa-landing-hero{padding:40px 0 44px !important}
+    .wpa-landing-section{padding:44px 0 !important}
+    .wpa-upsell-row{flex-direction:column !important;align-items:stretch !important;text-align:center}
+    .wpa-upsell-row a{text-align:center}
+  }
+
+  /* ---- PORTAL: padding lateral menor no mobile ---- */
+  @media (max-width:560px){
+    .wpa-portal-main{padding:16px !important}
+  }
+
+  /* drawer mobile do menu */
+  body.wpa-menu-open{overflow:hidden}
 `;
 
 export default function RootLayout({ children }: { children: ReactNode }) {

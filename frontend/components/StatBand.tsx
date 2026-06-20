@@ -23,6 +23,7 @@ export default function StatBand() {
       }}
     >
       <div
+        className="wpa-wrap wpa-statband"
         style={{
           ...wrap,
           display: 'grid',
@@ -61,7 +62,7 @@ export default function StatBand() {
             >
               {s.icon}
             </span>
-            <span style={{ color: '#fff', fontWeight: 900, fontSize: 26, lineHeight: 1.1 }}>
+            <span style={{ color: '#fff', fontWeight: 900, fontSize: 'clamp(22px, 5vw, 26px)', lineHeight: 1.1 }}>
               {s.num}
             </span>
             <span style={{ color: BRAND.textSoft, fontSize: 14, lineHeight: 1.4 }}>{s.label}</span>

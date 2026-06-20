@@ -25,7 +25,7 @@
 
 window.DADOS_NEGOCIO = {
   versao: "2.0.0",
-  ultima_atualizacao: "2026-06-20T00:00:00Z",
+  ultima_atualizacao: "2026-06-20T12:00:00Z",
 
   /**
    * Identificação básica da empresa. Preenchida por /gerar-perfil-do-negocio.
@@ -98,7 +98,16 @@ window.DADOS_NEGOCIO = {
    *     cargo: "Social Media Strategist"
    *   }
    */
-  agentes: {},
+  agentes: {
+    victor: {
+      status: "ocioso",
+      plano: null,
+      task_atual: null,
+      inicio: null,
+      ultima_entrega: "2026-06-20T12:00:00Z",
+      cargo: "Full Stack Developer"
+    }
+  },
 
   /**
    * Multi-planos de ação. Cada plano é uma pasta em planos-de-acao/<slug>/.
@@ -137,6 +146,16 @@ window.DADOS_NEGOCIO = {
    */
   entregas: [
     {
+      id: "ent-victor-2026-06-20-responsividade",
+      tipo: "frontend",
+      titulo: "Passada completa de responsividade mobile: header com menu hamburger/drawer, hero empilhado, grids colapsando em 1 coluna, tipografia fluida com clamp(), CTAs full-width, footer e StatBand adaptados, sem scroll horizontal no celular",
+      caminho: "frontend/app/layout.tsx, frontend/app/page.tsx, frontend/components/SiteHeader.tsx, frontend/components/SiteFooter.tsx, frontend/components/StatBand.tsx, frontend/components/WhatsAppFloat.tsx, frontend/components/Landing.tsx, frontend/app/portal/page.tsx",
+      agente: "victor",
+      plano: null,
+      task_id: null,
+      criado_em: "2026-06-20T12:00:00Z"
+    },
+    {
       id: "ent-victor-2026-06-20-cursos",
       tipo: "frontend",
       titulo: "Home #cursos reestruturada em 2 categorias (Project Manager + CSL) e horarios corrigidos pro padrao EUA (AM/PM, Massachusetts)",
@@ -159,7 +178,7 @@ window.DADOS_NEGOCIO = {
     em_andamento: 0,
     a_fazer: 0,
     progresso_pct: 0,
-    total_entregas: 0
+    total_entregas: 2
   },
 
   /**
@@ -167,6 +186,12 @@ window.DADOS_NEGOCIO = {
    * Cada entrada: { timestamp, agente, plano (slug), acao_resumida }
    */
   atividade_recente: [
+    {
+      timestamp: "2026-06-20T12:00:00Z",
+      agente: "victor",
+      plano: null,
+      acao_resumida: "Deixou o site responsivo no celular e no computador: menu hamburger com drawer no mobile, hero empilhado, todos os grids colapsando pra 1 coluna, titulos com tipografia fluida (clamp), CTAs full-width, footer e faixa de numeros adaptados, e garantia de zero scroll horizontal no celular. Home, header, footer e paginas de venda (Landing). Portal recebeu ajuste leve de padding."
+    },
     {
       timestamp: "2026-06-20T00:00:00Z",
       agente: "victor",

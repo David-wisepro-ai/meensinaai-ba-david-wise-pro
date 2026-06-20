@@ -76,7 +76,7 @@ function SectionTitle({ children, center }: { children: React.ReactNode; center?
   return (
     <h2
       style={{
-        fontSize: 33,
+        fontSize: 'clamp(24px, 4.6vw, 33px)',
         lineHeight: 1.15,
         margin: 0,
         fontWeight: 900,
@@ -278,7 +278,7 @@ export default function Home() {
             gap: 48,
             alignItems: 'center',
           }}
-          className="wpa-hero-grid"
+          className="wpa-hero-grid wpa-hero-section"
         >
           {/* Coluna texto */}
           <div className="wpa-reveal">
@@ -296,7 +296,7 @@ export default function Home() {
 
             <h1
               style={{
-                fontSize: 50,
+                fontSize: 'clamp(30px, 7vw, 50px)',
                 lineHeight: 1.08,
                 margin: '0 0 20px',
                 fontWeight: 900,
@@ -307,12 +307,12 @@ export default function Home() {
               <span style={{ color: BRAND.goldBright }}>construção civil dos EUA</span>.
             </h1>
 
-            <p style={{ fontSize: 18.5, lineHeight: 1.7, maxWidth: 560, color: BRAND.textSoft, margin: 0 }}>
+            <p style={{ fontSize: 'clamp(16px, 2.6vw, 18.5px)', lineHeight: 1.7, maxWidth: 560, color: BRAND.textSoft, margin: 0 }}>
               Da gestão de obras à conquista da sua licença de CSL em Massachusetts. Tudo em português,
               com conteúdo prático e com quem já faz acontecer no mercado americano.
             </p>
 
-            <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 32 }}>
+            <div className="wpa-hero-ctas" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 32 }}>
               <a href="#cursos" className="wpa-gold-cta" style={goldCta}>
                 VER OS CURSOS
               </a>
@@ -328,7 +328,7 @@ export default function Home() {
             </div>
 
             {/* PROVA SOCIAL — avatares + estrelas */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginTop: 34, flexWrap: 'wrap' }}>
+            <div className="wpa-hero-social" style={{ display: 'flex', alignItems: 'center', gap: 14, marginTop: 34, flexWrap: 'wrap' }}>
               <Avatars count={5} />
               <div>
                 <Stars size={15} />
@@ -341,7 +341,7 @@ export default function Home() {
 
           {/* Coluna foto (placeholder elegante) */}
           {/* IMAGEM: foto do David — substituir o bloco com gradiente abaixo por <Image>. */}
-          <div className="wpa-reveal" style={{ position: 'relative' }}>
+          <div className="wpa-reveal wpa-hero-photo" style={{ position: 'relative' }}>
             <div
               style={{
                 position: 'relative',
@@ -419,8 +419,8 @@ export default function Home() {
       <StatBand />
 
       {/* POR QUE A ESCOLA / AUTORIDADE — David Piazzarollo */}
-      <section id="professor" style={{ padding: '80px 0' }}>
-        <div style={wrap}>
+      <section id="professor" className="wpa-section" style={{ padding: '80px 0' }}>
+        <div style={wrap} className="wpa-wrap">
           <GoldPill>Por que a Wise Pro Academy</GoldPill>
           <div
             style={{
@@ -452,7 +452,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 style={{ fontSize: 31, margin: '0 0 18px', fontWeight: 900, letterSpacing: '-0.02em' }}>
+              <h2 style={{ fontSize: 'clamp(24px, 4.4vw, 31px)', margin: '0 0 18px', fontWeight: 900, letterSpacing: '-0.02em' }}>
                 Uma escola criada por quem viveu a obra de verdade
               </h2>
               <p style={{ fontSize: 17, lineHeight: 1.7, color: BRAND.textSoft }}>
@@ -521,13 +521,13 @@ export default function Home() {
       </section>
 
       {/* NOSSOS CURSOS — 2 cards grandes (id=cursos) */}
-      <section id="cursos" style={{ padding: '80px 0' }}>
-        <div style={wrap}>
+      <section id="cursos" className="wpa-section" style={{ padding: '80px 0' }}>
+        <div style={wrap} className="wpa-wrap">
           <div style={{ textAlign: 'center', maxWidth: 760, margin: '0 auto' }}>
             <GoldPill>Nossos cursos</GoldPill>
             <h2
               style={{
-                fontSize: 34,
+                fontSize: 'clamp(24px, 4.8vw, 34px)',
                 lineHeight: 1.15,
                 margin: '18px 0 0',
                 fontWeight: 900,
@@ -545,6 +545,7 @@ export default function Home() {
           </div>
 
           <div
+            className="wpa-grid-1col"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(330px, 1fr))',
@@ -558,7 +559,7 @@ export default function Home() {
             {CATEGORIAS.map((cat) => (
               <div
                 key={cat.titulo}
-                className="wpa-card"
+                className="wpa-card wpa-pad-card"
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
@@ -680,9 +681,10 @@ export default function Home() {
       </section>
 
       {/* DIFERENCIAL — portal de simulados (item-rei) */}
-      <section style={{ padding: '20px 0 80px' }}>
-        <div style={wrapNarrow}>
+      <section className="wpa-section-tight" style={{ padding: '20px 0 80px' }}>
+        <div style={wrapNarrow} className="wpa-wrap">
           <div
+            className="wpa-grid-1col wpa-pad-panel"
             style={{
               position: 'relative',
               background:
@@ -703,7 +705,7 @@ export default function Home() {
               <GoldPill>O diferencial da escola</GoldPill>
               <h2
                 style={{
-                  fontSize: 30,
+                  fontSize: 'clamp(23px, 4.4vw, 30px)',
                   lineHeight: 1.15,
                   margin: '18px 0 12px',
                   fontWeight: 900,
@@ -759,13 +761,13 @@ export default function Home() {
       <Marquee items={MARQUEE_ITEMS} />
 
       {/* PROVA SOCIAL — reviews placeholder */}
-      <section style={{ padding: '80px 0' }}>
-        <div style={wrap}>
+      <section className="wpa-section" style={{ padding: '80px 0' }}>
+        <div style={wrap} className="wpa-wrap">
           <div style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto' }}>
             <GoldPill>Prova social</GoldPill>
             <h2
               style={{
-                fontSize: 34,
+                fontSize: 'clamp(24px, 4.8vw, 34px)',
                 lineHeight: 1.15,
                 margin: '18px 0 0',
                 fontWeight: 900,
@@ -782,6 +784,7 @@ export default function Home() {
 
           {/* REVIEWS: squad de SEO / GBP conecta os reviews reais do Google aqui. */}
           <div
+            className="wpa-grid-1col"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -838,8 +841,8 @@ export default function Home() {
       </section>
 
       {/* CLAREZA ANTES DE ENTRAR */}
-      <section style={{ padding: '20px 0 80px' }}>
-        <div style={wrap}>
+      <section className="wpa-section-tight" style={{ padding: '20px 0 80px' }}>
+        <div style={wrap} className="wpa-wrap">
           <div style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto' }}>
             <SectionTitle center>Clareza antes de entrar</SectionTitle>
             <p style={{ fontSize: 17, color: BRAND.textSoft, marginTop: 12 }}>
@@ -847,6 +850,7 @@ export default function Home() {
             </p>
           </div>
           <div
+            className="wpa-grid-1col"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -891,8 +895,8 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section style={{ padding: '20px 0 80px' }}>
-        <div style={wrapNarrow}>
+      <section className="wpa-section-tight" style={{ padding: '20px 0 80px' }}>
+        <div style={wrapNarrow} className="wpa-wrap">
           <SectionTitle center>Perguntas frequentes</SectionTitle>
           <div style={{ marginTop: 32, display: 'flex', flexDirection: 'column', gap: 12 }}>
             {FAQ.map((item, i) => (
@@ -944,9 +948,10 @@ export default function Home() {
       </section>
 
       {/* CTA FINAL */}
-      <section style={{ padding: '20px 0 90px' }}>
-        <div style={wrapNarrow}>
+      <section className="wpa-section-tight" style={{ padding: '20px 0 90px' }}>
+        <div style={wrapNarrow} className="wpa-wrap">
           <div
+            className="wpa-pad-panel"
             style={{
               position: 'relative',
               overflow: 'hidden',
@@ -959,7 +964,7 @@ export default function Home() {
               boxShadow: '0 26px 70px rgba(0,0,0,0.5)',
             }}
           >
-            <h2 style={{ fontSize: 33, lineHeight: 1.15, margin: 0, fontWeight: 900, letterSpacing: '-0.02em', color: '#fff' }}>
+            <h2 style={{ fontSize: 'clamp(24px, 4.8vw, 33px)', lineHeight: 1.15, margin: 0, fontWeight: 900, letterSpacing: '-0.02em', color: '#fff' }}>
               Dê o próximo passo na construção dos EUA
             </h2>
             <p
@@ -976,7 +981,7 @@ export default function Home() {
               Escolha o seu curso ou fale com a gente no WhatsApp. A escola está em operação e pronta
               para te receber.
             </p>
-            <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center', marginTop: 32 }}>
+            <div className="wpa-cta-stack" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center', marginTop: 32 }}>
               <a href="#cursos" className="wpa-gold-cta" style={goldCta}>
                 VER OS CURSOS
               </a>
