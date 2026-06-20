@@ -91,12 +91,6 @@ export default function Page() {
       ]}
       ctaPrincipal="Quero minha licença"
       ctaForm="Quero garantir minha vaga"
-      upsell={{
-        texto:
-          'Quer ir além da prova e ver tudo na prática? O Wise Day é um dia presencial com o David, no campo, resolvendo dúvidas reais de obra, permit e código.',
-        href: '/wise-day',
-        rotulo: 'Conhecer o Wise Day',
-      }}
     />
     </>
   );
