@@ -3,12 +3,14 @@ import { BRAND, PRODUCTS } from '../lib/brand';
 
 const wrap: React.CSSProperties = { maxWidth: 1140, margin: '0 auto', padding: '0 20px' };
 
-// Menu institucional. A escola tem 2 cursos (Project Manager e Construtor).
-// Os cursos levam às páginas de venda (next/link); âncoras existem na home.
+// Menu institucional. A escola tem 2 cursos (Project Manager e Construtor)
+// e a experiência premium Wise Day. Os cursos levam às páginas de venda (next/link);
+// âncoras existem na home.
 const MENU = [
   { label: 'CURSOS', href: '#cursos', internal: false },
   { label: 'PROJECT MANAGER', href: `/${PRODUCTS.project_manager.slug}`, internal: true },
   { label: 'CONSTRUTOR', href: `/${PRODUCTS.construtor.slug}`, internal: true },
+  { label: 'WISE DAY', href: `/${PRODUCTS.wise_day.slug}`, internal: true },
   { label: 'PROFESSOR', href: '#professor', internal: false },
 ];
 

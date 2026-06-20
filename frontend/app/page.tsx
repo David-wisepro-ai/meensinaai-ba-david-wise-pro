@@ -101,7 +101,7 @@ const CURSOS = [
     preco: PRODUCTS.project_manager.price,
     selo: 'Porta de entrada',
     chamada:
-      'O primeiro passo pra sair da execução pesada e aprender a gerir obra nos Estados Unidos. Aulas ao vivo, em português, com acesso por 1 ano.',
+      'Curso preparatório para você se tornar Project Manager na construção civil dos EUA. Saia da execução pesada e aprenda a gerir a obra, ler plantas, lidar com permits, se comunicar com o cliente e liderar equipes. Aulas ao vivo, em português, com acesso por 1 ano.',
     href: `/${PRODUCTS.project_manager.slug}`,
     rotulo: 'Conhecer o Project Manager',
   },
@@ -110,7 +110,7 @@ const CURSOS = [
     preco: PRODUCTS.construtor.price,
     selo: 'Curso principal',
     chamada:
-      'Tire a sua licença de CSL em Massachusetts com 6 dias presenciais mais o portal de simulados com 598 questões. A aula te ensina; o portal te aprova.',
+      'Curso preparatório para você tirar a licença de Construction Supervisor License (CSL) em Massachusetts. São 6 dias presenciais mais o portal de simulados com 598 questões originais ancoradas no código. A aula te ensina; o portal te aprova.',
     href: `/${PRODUCTS.construtor.slug}`,
     rotulo: 'Conhecer o Curso de Construtor',
   },
@@ -161,7 +161,7 @@ const FAQ = [
   },
   {
     q: 'Quais cursos a escola oferece?',
-    a: 'Dois cursos. O Project Manager é a porta de entrada, focado em gestão de obra. O Curso de Construtor é o principal: prepara você para a licença de CSL em Massachusetts e libera o portal de simulados.',
+    a: 'Dois cursos preparatórios e uma experiência premium. O Project Manager é a porta de entrada, focado em gestão de obra. O Curso de Construtor é o principal: prepara você para a licença de CSL em Massachusetts e libera o portal de simulados. Além deles, o Wise Day é uma imersão de 1 dia presencial com o David.',
   },
   {
     q: 'A Wise Pro Academy emite a licença de CSL?',
@@ -169,7 +169,7 @@ const FAQ = [
   },
   {
     q: 'Por qual curso eu começo?',
-    a: 'Se você está começando, o Project Manager é a porta de entrada. Se o seu objetivo é a licença, o Curso de Construtor com o portal de simulados é o caminho.',
+    a: 'Se você está começando, o Project Manager é a porta de entrada. Se o seu objetivo é a licença, o Curso de Construtor com o portal de simulados é o caminho. O Wise Day é para quem quer um dia inteiro presencial com o David, resolvendo dúvidas reais de obra.',
   },
   {
     q: 'Quem dá as aulas?',
@@ -436,6 +436,74 @@ export default function Home() {
                 </Link>
               </div>
             ))}
+          </div>
+
+          {/* EXPERIÊNCIA PREMIUM — Wise Day (faixa horizontal, depois dos 2 cursos) */}
+          <div
+            id="wise-day"
+            style={{
+              maxWidth: 880,
+              margin: '34px auto 0',
+              background: `linear-gradient(135deg, ${BRAND.cream} 0%, #fff 100%)`,
+              border: `2px solid ${BRAND.gold}`,
+              borderRadius: 22,
+              padding: 30,
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+              gap: 24,
+              alignItems: 'center',
+              boxShadow: '0 12px 32px rgba(10,31,68,0.10)',
+            }}
+          >
+            <div>
+              <span
+                style={{
+                  display: 'inline-block',
+                  background: BRAND.gold,
+                  color: BRAND.navy,
+                  fontSize: 12.5,
+                  fontWeight: 800,
+                  padding: '5px 12px',
+                  borderRadius: 999,
+                  marginBottom: 14,
+                  letterSpacing: 0.4,
+                }}
+              >
+                Experiência premium
+              </span>
+              <h3 style={{ margin: '0 0 6px', fontSize: 26, fontWeight: 800 }}>
+                {PRODUCTS.wise_day.name}
+              </h3>
+              <div style={{ color: BRAND.gold, fontWeight: 800, fontSize: 28, marginBottom: 12 }}>
+                {PRODUCTS.wise_day.price}
+              </div>
+              <p style={{ margin: 0, color: BRAND.navyLight, lineHeight: 1.6, fontSize: 16 }}>
+                Não é um curso preparatório: é a imersão. Um dia inteiro presencial com o David, na
+                prática, resolvendo as suas dúvidas reais de obra, permit e código. Para quem quer
+                acelerar com atenção direta de quem já passou por tudo isso.
+              </p>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
+              <Link
+                href={`/${PRODUCTS.wise_day.slug}`}
+                className="wpa-btn"
+                style={{
+                  display: 'inline-block',
+                  textAlign: 'center',
+                  background: BRAND.navy,
+                  color: '#fff',
+                  fontWeight: 800,
+                  fontSize: 16,
+                  padding: '15px 28px',
+                  borderRadius: 999,
+                  textDecoration: 'none',
+                  border: `1px solid ${BRAND.gold}`,
+                  boxShadow: '0 8px 22px rgba(10,31,68,0.2)',
+                }}
+              >
+                Conhecer o Wise Day
+              </Link>
+            </div>
           </div>
         </div>
       </section>

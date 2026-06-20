@@ -47,7 +47,7 @@ export default function SiteFooter() {
             </p>
           </div>
 
-          {/* Cursos — a escola tem 2 cursos */}
+          {/* Cursos — 2 cursos preparatórios + a experiência premium Wise Day */}
           <div>
             <div style={colTitle}>Cursos</div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -56,6 +56,10 @@ export default function SiteFooter() {
               </Link>
               <Link href={`/${PRODUCTS.construtor.slug}`} style={linkStyle}>
                 {PRODUCTS.construtor.name}
+              </Link>
+              <Link href={`/${PRODUCTS.wise_day.slug}`} style={linkStyle}>
+                {PRODUCTS.wise_day.name}{' '}
+                <span style={{ color: BRAND.gold, fontSize: 12, fontWeight: 700 }}>· experiência</span>
               </Link>
             </div>
           </div>
