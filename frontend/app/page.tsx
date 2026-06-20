@@ -582,8 +582,8 @@ export default function Home() {
                 <h3 style={{ margin: '0 0 8px', fontSize: 26, fontWeight: 900, letterSpacing: '-0.02em' }}>
                   {c.nome}
                 </h3>
-                <div style={{ color: BRAND.goldBright, fontWeight: 900, fontSize: 30, marginBottom: 16 }}>
-                  {c.preco}
+                <div style={{ color: BRAND.goldBright, fontWeight: 800, fontSize: 16, marginBottom: 16 }}>
+                  Valores no WhatsApp
                 </div>
                 <p style={{ margin: '0 0 28px', color: BRAND.textSoft, lineHeight: 1.7, fontSize: 16, flexGrow: 1 }}>
                   {c.chamada}
@@ -632,8 +632,8 @@ export default function Home() {
               <h3 style={{ margin: '0 0 6px', fontSize: 25, fontWeight: 900, color: '#fff', letterSpacing: '-0.02em' }}>
                 {PRODUCTS.wise_day.name}
               </h3>
-              <div style={{ color: BRAND.goldBright, fontWeight: 900, fontSize: 26, marginBottom: 12 }}>
-                {PRODUCTS.wise_day.price}
+              <div style={{ color: BRAND.goldBright, fontWeight: 800, fontSize: 16, marginBottom: 12 }}>
+                Valores no WhatsApp
               </div>
               <p style={{ margin: 0, color: BRAND.textSoft, lineHeight: 1.7, fontSize: 15.5 }}>
                 Não é um curso preparatório: é a imersão. Um dia inteiro presencial com o David, na

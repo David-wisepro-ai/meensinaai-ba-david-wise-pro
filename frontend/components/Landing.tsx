@@ -113,7 +113,7 @@ export default function Landing(props: LandingProps) {
                 borderRadius: 999,
               }}
             >
-              {selo} &middot; {nome} &middot; {preco}
+              {selo} &middot; {nome}
             </span>
 
             <h1 style={{ fontSize: 40, lineHeight: 1.13, margin: '20px auto 14px', maxWidth: 820, fontWeight: 800 }}>
@@ -365,7 +365,7 @@ export default function Landing(props: LandingProps) {
                   </div>
                 ))}
               </div>
-              <div style={{ marginTop: 24, fontSize: 34, fontWeight: 800, color: BRAND.gold }}>{preco}</div>
+              <div style={{ marginTop: 24, fontSize: 20, fontWeight: 800, color: BRAND.gold }}>Valores no WhatsApp</div>
               <div style={{ fontSize: 13.5, opacity: 0.85 }}>{formato}</div>
               {garantia && (
                 <p style={{ marginTop: 18, fontSize: 15.5, opacity: 0.92, lineHeight: 1.6, maxWidth: 420 }}>{garantia}</p>
