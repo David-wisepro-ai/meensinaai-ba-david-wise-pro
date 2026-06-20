@@ -419,8 +419,8 @@ export default function Home() {
               }}
             >
               <img
-                src="/david-piazzarollo.jpg"
-                alt="David Piazzarollo"
+                src="/david-plantas.jpg"
+                alt="David Piazzarollo analisando plantas de obra"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
