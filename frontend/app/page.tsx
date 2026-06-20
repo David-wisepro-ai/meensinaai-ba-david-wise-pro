@@ -149,7 +149,7 @@ const CURSOS = [
     selo: 'Curso principal',
     icon: '🏗️',
     chamada:
-      'Curso preparatório para você tirar a licença de Construction Supervisor License (CSL) em Massachusetts. São 6 dias presenciais mais o portal de simulados com 598 questões originais ancoradas no código. A aula te ensina; o portal te aprova.',
+      'Curso preparatório para você tirar a licença de Construction Supervisor License (CSL) em Massachusetts. Você escolhe o formato: turma online de segunda a sexta, das 18h às 21h, ou presencial em 4 sábados, das 7h30 às 12h. O mesmo conteúdo, mais o portal de simulados com 598 questões originais ancoradas no código. A aula te ensina; o portal te aprova.',
     href: `/${PRODUCTS.construtor.slug}`,
     rotulo: 'Conhecer o Curso de Construtor',
   },
