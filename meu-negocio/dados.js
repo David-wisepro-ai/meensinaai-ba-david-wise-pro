@@ -25,7 +25,7 @@
 
 window.DADOS_NEGOCIO = {
   versao: "2.0.0",
-  ultima_atualizacao: "2026-06-20T12:00:00Z",
+  ultima_atualizacao: "2026-06-20T16:00:00Z",
 
   /**
    * Identificação básica da empresa. Preenchida por /gerar-perfil-do-negocio.
@@ -104,7 +104,7 @@ window.DADOS_NEGOCIO = {
       plano: null,
       task_atual: null,
       inicio: null,
-      ultima_entrega: "2026-06-20T12:00:00Z",
+      ultima_entrega: "2026-06-20T16:00:00Z",
       cargo: "Full Stack Developer"
     }
   },
@@ -146,6 +146,16 @@ window.DADOS_NEGOCIO = {
    */
   entregas: [
     {
+      id: "ent-victor-2026-06-20-landing-dark-premium",
+      tipo: "frontend",
+      titulo: "Paginas de venda (Project Manager, Curso de Construtor e Wise Day) padronizadas no estilo dark premium da home: fundo navy escuro com brilho dourado, hero com selo pulsante, VSL em moldura dourada, cards glass-morphism nas dores/beneficios/conteudo/reviews, CTAs dourados, painel de oferta + formulario em destaque, FAQ e upsell dark. Conteudo, props, links e formulario intactos. Responsivo desktop + mobile.",
+      caminho: "frontend/components/Landing.tsx, frontend/components/Vsl.tsx, frontend/components/PandaVideo.tsx",
+      agente: "victor",
+      plano: null,
+      task_id: null,
+      criado_em: "2026-06-20T16:00:00Z"
+    },
+    {
       id: "ent-victor-2026-06-20-responsividade",
       tipo: "frontend",
       titulo: "Passada completa de responsividade mobile: header com menu hamburger/drawer, hero empilhado, grids colapsando em 1 coluna, tipografia fluida com clamp(), CTAs full-width, footer e StatBand adaptados, sem scroll horizontal no celular",
@@ -178,7 +188,7 @@ window.DADOS_NEGOCIO = {
     em_andamento: 0,
     a_fazer: 0,
     progresso_pct: 0,
-    total_entregas: 2
+    total_entregas: 3
   },
 
   /**
@@ -186,6 +196,12 @@ window.DADOS_NEGOCIO = {
    * Cada entrada: { timestamp, agente, plano (slug), acao_resumida }
    */
   atividade_recente: [
+    {
+      timestamp: "2026-06-20T16:00:00Z",
+      agente: "victor",
+      plano: null,
+      acao_resumida: "Padronizou as 3 paginas de venda (Project Manager, Curso de Construtor e Wise Day) no mesmo visual dark premium da home: fundo navy escuro com brilho dourado e textura de grid, hero com selo pulsante, VSL em moldura dourada, todas as secoes (copy de venda, dores, beneficios, conteudo, reviews, oferta, FAQ, upsell) viraram cards glass-morphism com borda dourada e texto claro, CTAs dourados levando ao formulario. Conteudo, props, links e o formulario de captura continuam funcionando. Responsivo no celular e no computador. Arquivos: Landing.tsx, Vsl.tsx, PandaVideo.tsx."
+    },
     {
       timestamp: "2026-06-20T12:00:00Z",
       agente: "victor",

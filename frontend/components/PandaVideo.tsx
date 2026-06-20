@@ -16,8 +16,8 @@ export default function PandaVideo({
     paddingTop: '56.25%',
     borderRadius: 14,
     overflow: 'hidden',
-    border: `1px solid ${BRAND.gold}`,
-    background: BRAND.navy,
+    border: `1px solid ${BRAND.glassBorder}`,
+    background: BRAND.ink2,
   };
 
   if (!embedUrl) {
@@ -42,19 +42,20 @@ export default function PandaVideo({
               width: 66,
               height: 66,
               borderRadius: '50%',
-              background: BRAND.gold,
+              background: BRAND.goldGradient,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              color: BRAND.navy,
+              color: BRAND.ink,
               fontSize: 26,
               fontWeight: 800,
+              boxShadow: '0 10px 30px rgba(201,162,39,0.4)',
             }}
           >
             &#9654;
           </div>
-          <strong style={{ fontSize: 16 }}>{titulo}</strong>
-          <span style={{ opacity: 0.72, fontSize: 13 }}>Vídeo em breve (Panda Video)</span>
+          <strong style={{ fontSize: 16, color: '#fff' }}>{titulo}</strong>
+          <span style={{ color: BRAND.textMute, fontSize: 13 }}>Vídeo em breve (Panda Video)</span>
         </div>
       </div>
     );

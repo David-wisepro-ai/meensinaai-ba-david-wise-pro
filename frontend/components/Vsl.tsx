@@ -1,4 +1,5 @@
 import PandaVideo from './PandaVideo';
+import { BRAND } from '../lib/brand';
 
 // Slot de VSL da página de vendas. Hoje é placeholder do Panda Video.
 // Quando o David subir o vídeo no Panda, basta passar a prop `embedUrl`
@@ -14,16 +15,16 @@ export default function Vsl({
   embedUrl?: string;
 }) {
   return (
-    <div style={{ maxWidth: 820, margin: '28px auto' }}>
+    <div style={{ margin: '0 auto' }}>
       <PandaVideo embedUrl={embedUrl} titulo={titulo} />
       {legenda && (
         <p
           style={{
             textAlign: 'center',
             fontSize: 13.5,
-            opacity: 0.82,
-            marginTop: 12,
-            marginBottom: 0,
+            color: BRAND.textMute,
+            marginTop: 14,
+            marginBottom: 4,
             lineHeight: 1.5,
           }}
         >
