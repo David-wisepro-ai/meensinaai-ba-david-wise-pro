@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BRAND, WHATSAPP_URL, PRODUCTS } from '../lib/brand';
+import { BRAND, WHATSAPP_URL, INSTAGRAM_URL, PRODUCTS } from '../lib/brand';
 
 const wrap: React.CSSProperties = { maxWidth: 1140, margin: '0 auto', padding: '0 20px' };
 
@@ -88,6 +88,9 @@ export default function SiteFooter() {
               {/* WhatsApp externo: usa <a>, não next/link. */}
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style={linkStyle}>
                 Fale no WhatsApp
+              </a>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                Instagram @wise_pro_academy
               </a>
             </div>
           </div>

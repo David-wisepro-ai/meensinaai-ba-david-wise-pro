@@ -43,6 +43,9 @@ export const BRAND = {
 // Link do WhatsApp da escola: +1 (774) 777-8510.
 export const WHATSAPP_URL = 'https://wa.me/17747778510';
 
+// Instagram oficial da escola.
+export const INSTAGRAM_URL = 'https://www.instagram.com/wise_pro_academy';
+
 export const PRODUCTS = {
   project_manager: { name: 'Project Manager', price: 'US$ 250', slug: 'project-manager' },
   construtor:      { name: 'Curso de Construtor', price: 'US$ 597', slug: 'curso-construtor' },
