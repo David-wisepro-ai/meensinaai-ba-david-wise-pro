@@ -28,12 +28,24 @@ const globalCss = `
   body{margin:0}
   @keyframes wpa-marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
   @keyframes wpa-pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  @keyframes wpa-glow{0%,100%{box-shadow:0 8px 28px rgba(201,162,39,0.30)}50%{box-shadow:0 8px 40px rgba(201,162,39,0.55)}}
+  @keyframes wpa-reveal{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
   .wpa-marquee-track{display:inline-flex;white-space:nowrap;animation:wpa-marquee 28s linear infinite}
   .wpa-dot-pulse{animation:wpa-pulse 1.4s ease-in-out infinite}
   a{transition:opacity .15s ease, transform .15s ease}
-  .wpa-btn:hover{opacity:.92;transform:translateY(-1px)}
+  .wpa-btn:hover{opacity:.94;transform:translateY(-1px)}
   details summary{cursor:pointer;list-style:none}
   details summary::-webkit-details-marker{display:none}
+  /* DARK PREMIUM helpers */
+  .wpa-gold-cta{transition:transform .18s ease, box-shadow .18s ease, filter .18s ease}
+  .wpa-gold-cta:hover{transform:translateY(-2px);filter:brightness(1.05);box-shadow:0 14px 40px rgba(201,162,39,0.45)}
+  .wpa-ghost-cta{transition:transform .18s ease, background .18s ease, border-color .18s ease}
+  .wpa-ghost-cta:hover{transform:translateY(-2px);background:rgba(255,255,255,0.06);border-color:rgba(201,162,39,0.7)}
+  .wpa-card{transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+  .wpa-card:hover{transform:translateY(-4px) scale(1.012);border-color:rgba(201,162,39,0.6);box-shadow:0 22px 60px rgba(0,0,0,0.55)}
+  .wpa-reveal{animation:wpa-reveal .6s ease both}
+  details.wpa-faq[open] summary span.wpa-faq-plus{transform:rotate(45deg)}
+  @media (max-width:820px){.wpa-hero-grid{grid-template-columns:1fr !important;gap:34px !important}}
 `;
 
 export default function RootLayout({ children }: { children: ReactNode }) {

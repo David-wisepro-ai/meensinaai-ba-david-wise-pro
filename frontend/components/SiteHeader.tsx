@@ -19,55 +19,78 @@ function Logo() {
   return (
     <Link
       href="/"
-      style={{ display: 'inline-flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}
+      style={{ display: 'inline-flex', alignItems: 'center', gap: 11, textDecoration: 'none' }}
     >
       <span
         aria-hidden
         style={{
-          width: 34,
-          height: 38,
+          width: 36,
+          height: 40,
           display: 'inline-flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: BRAND.gold,
-          color: BRAND.navy,
-          fontWeight: 800,
-          fontSize: 18,
-          borderRadius: '6px 6px 14px 14px',
+          background: BRAND.goldGradient,
+          color: BRAND.ink,
+          fontWeight: 900,
+          fontSize: 19,
+          borderRadius: '7px 7px 16px 16px',
+          boxShadow: '0 6px 18px rgba(201,162,39,0.35)',
         }}
       >
         W
       </span>
-      <span style={{ color: '#fff', fontWeight: 800, fontSize: 16, letterSpacing: 0.5, lineHeight: 1 }}>
+      <span style={{ color: '#fff', fontWeight: 900, fontSize: 16, letterSpacing: 0.6, lineHeight: 1 }}>
         WISE PRO
         <br />
-        <span style={{ color: BRAND.gold, fontSize: 12, fontWeight: 700 }}>ACADEMY</span>
+        <span style={{ color: BRAND.goldBright, fontSize: 11.5, fontWeight: 700, letterSpacing: 2 }}>
+          ACADEMY
+        </span>
       </span>
     </Link>
   );
 }
 
 export default function SiteHeader() {
+  const linkStyle: React.CSSProperties = {
+    color: 'rgba(255,255,255,0.86)',
+    textDecoration: 'none',
+    fontSize: 13,
+    fontWeight: 600,
+    letterSpacing: 0.4,
+  };
+
   return (
     <>
-      {/* TOPBAR fina preta */}
-      <div style={{ background: '#000', color: '#fff', fontSize: 13, padding: '8px 0', textAlign: 'center' }}>
+      {/* TOPBAR fina — faixa premium escura com fio dourado embaixo */}
+      <div
+        style={{
+          background: BRAND.ink,
+          color: 'rgba(255,255,255,0.85)',
+          fontSize: 13,
+          padding: '8px 0',
+          textAlign: 'center',
+          borderBottom: '1px solid rgba(201,162,39,0.22)',
+        }}
+      >
         <div style={wrap}>
           Construção nos EUA, em português{'  '}
-          <span style={{ opacity: 0.5 }}>&bull;</span>{'  '}
+          <span style={{ opacity: 0.4 }}>&bull;</span>{'  '}
           Do Project Manager à sua{' '}
-          <strong style={{ color: BRAND.gold }}>licença de CSL</strong>
+          <strong style={{ color: BRAND.goldBright }}>licença de CSL</strong>
         </div>
       </div>
 
-      {/* HEADER gradiente azul */}
+      {/* HEADER dark translúcido (glass + blur) — sticky */}
       <header
         style={{
-          background: BRAND.gradient,
+          background: 'rgba(8,13,26,0.72)',
+          backdropFilter: 'blur(14px)',
+          WebkitBackdropFilter: 'blur(14px)',
+          borderBottom: '1px solid rgba(255,255,255,0.08)',
           position: 'sticky',
           top: 0,
           zIndex: 50,
-          boxShadow: '0 2px 14px rgba(10,31,68,0.18)',
+          boxShadow: '0 8px 30px rgba(0,0,0,0.45)',
         }}
       >
         <div
@@ -93,44 +116,44 @@ export default function SiteHeader() {
           >
             {MENU.map((m) =>
               m.internal ? (
-                <Link
-                  key={m.label}
-                  href={m.href}
-                  style={{ color: '#fff', textDecoration: 'none', fontSize: 13, fontWeight: 600, letterSpacing: 0.4 }}
-                >
+                <Link key={m.label} href={m.href} style={linkStyle}>
                   {m.label}
                 </Link>
               ) : (
-                <a
-                  key={m.label}
-                  href={m.href}
-                  style={{ color: '#fff', textDecoration: 'none', fontSize: 13, fontWeight: 600, letterSpacing: 0.4 }}
-                >
+                <a key={m.label} href={m.href} style={linkStyle}>
                   {m.label}
                 </a>
               ),
             )}
             <Link
               href="/portal"
-              style={{ color: BRAND.gold, textDecoration: 'none', fontSize: 13, fontWeight: 700, letterSpacing: 0.4 }}
+              style={{
+                color: BRAND.goldBright,
+                textDecoration: 'none',
+                fontSize: 13,
+                fontWeight: 700,
+                letterSpacing: 0.4,
+              }}
             >
               PORTAL DO ALUNO
             </Link>
           </nav>
 
-          {/* CTA do header: leva ao curso de entrada (funciona em qualquer página). */}
+          {/* CTA do header: dourado cheio. Leva ao curso de entrada (funciona em qualquer página). */}
           <Link
             href={`/${PRODUCTS.project_manager.slug}`}
-            className="wpa-btn"
+            className="wpa-gold-cta"
             style={{
-              background: '#fff',
-              color: BRAND.royal,
-              fontWeight: 800,
-              fontSize: 13.5,
+              background: BRAND.goldGradient,
+              color: BRAND.ink,
+              fontWeight: 900,
+              fontSize: 13,
               padding: '11px 20px',
               borderRadius: 999,
               textDecoration: 'none',
               whiteSpace: 'nowrap',
+              letterSpacing: 0.4,
+              boxShadow: '0 8px 24px rgba(201,162,39,0.32)',
             }}
           >
             GARANTIR VAGA

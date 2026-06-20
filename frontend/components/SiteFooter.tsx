@@ -4,7 +4,7 @@ import { BRAND, WHATSAPP_URL, PRODUCTS } from '../lib/brand';
 const wrap: React.CSSProperties = { maxWidth: 1140, margin: '0 auto', padding: '0 20px' };
 
 const colTitle: React.CSSProperties = {
-  color: BRAND.gold,
+  color: BRAND.goldBright,
   fontWeight: 800,
   fontSize: 13,
   letterSpacing: 1,
@@ -23,7 +23,14 @@ const linkStyle: React.CSSProperties = {
 // Rodapé institucional da Wise Pro Academy — usado em todas as páginas.
 export default function SiteFooter() {
   return (
-    <footer style={{ background: BRAND.navy, color: '#fff', padding: '48px 0 36px' }}>
+    <footer
+      style={{
+        background: `linear-gradient(180deg, ${BRAND.ink2} 0%, ${BRAND.ink} 100%)`,
+        color: '#fff',
+        padding: '54px 0 38px',
+        borderTop: '1px solid rgba(201,162,39,0.28)',
+      }}
+    >
       <div style={wrap}>
         <div
           style={{
@@ -39,7 +46,7 @@ export default function SiteFooter() {
               href="/"
               style={{ color: '#fff', fontWeight: 800, fontSize: 18, letterSpacing: 0.5, textDecoration: 'none' }}
             >
-              WISE PRO <span style={{ color: BRAND.gold }}>ACADEMY</span>
+              WISE PRO <span style={{ color: BRAND.goldBright }}>ACADEMY</span>
             </Link>
             <div style={{ opacity: 0.7, fontSize: 13.5, marginTop: 10 }}>{BRAND.domain}</div>
             <p style={{ opacity: 0.78, fontSize: 13.5, lineHeight: 1.6, marginTop: 12, maxWidth: 280 }}>
@@ -59,7 +66,7 @@ export default function SiteFooter() {
               </Link>
               <Link href={`/${PRODUCTS.wise_day.slug}`} style={linkStyle}>
                 {PRODUCTS.wise_day.name}{' '}
-                <span style={{ color: BRAND.gold, fontSize: 12, fontWeight: 700 }}>· experiência</span>
+                <span style={{ color: BRAND.goldBright, fontSize: 12, fontWeight: 700 }}>· experiência</span>
               </Link>
             </div>
           </div>

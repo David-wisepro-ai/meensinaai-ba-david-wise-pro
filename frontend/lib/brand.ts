@@ -18,6 +18,26 @@ export const BRAND = {
   gradient: 'linear-gradient(135deg, #2E2ECC 0%, #4B3FE4 100%)',
   name: 'Wise Pro Academy',
   domain: 'wiseproacademy.io',
+
+  // ---------- DARK PREMIUM (estilo novo, navy quase preto + dourado) ----------
+  // Tons de fundo escuro (do mais escuro pro menos escuro)
+  ink: '#070B16',        // fundo base (quase preto, levemente azulado)
+  ink2: '#0A1326',       // navy bem escuro
+  ink3: '#0B1A30',       // navy escuro (cards, faixas)
+  // Dourado claro/vivo pro destaque sobre fundo escuro
+  goldBright: '#E7C24B',
+  // Gradiente de fundo da página inteira (dark premium)
+  pageGradient:
+    'radial-gradient(1200px 700px at 78% -8%, rgba(201,162,39,0.10), transparent 60%), radial-gradient(900px 600px at 0% 100%, rgba(75,63,228,0.14), transparent 55%), linear-gradient(180deg, #070B16 0%, #0A1326 45%, #0B1A30 100%)',
+  // Gradiente dourado pra CTAs cheios
+  goldGradient: 'linear-gradient(135deg, #E7C24B 0%, #C9A227 100%)',
+  // Vidro (glass-morphism) — fundo translúcido + borda dourada fina
+  glass: 'rgba(255,255,255,0.04)',
+  glassBorder: 'rgba(201,162,39,0.35)',
+  glassBorderSoft: 'rgba(255,255,255,0.10)',
+  // Texto sobre fundo escuro
+  textSoft: 'rgba(255,255,255,0.74)',
+  textMute: 'rgba(255,255,255,0.55)',
 };
 
 // Link do WhatsApp da escola: +1 (774) 777-8510.

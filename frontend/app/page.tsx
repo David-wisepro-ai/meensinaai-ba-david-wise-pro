@@ -3,6 +3,8 @@ import SiteHeader from '../components/SiteHeader';
 import SiteFooter from '../components/SiteFooter';
 import Marquee from '../components/Marquee';
 import WhatsAppFloat from '../components/WhatsAppFloat';
+import StatBand from '../components/StatBand';
+import Avatars, { Stars } from '../components/Avatars';
 import { BRAND, WHATSAPP_URL, PRODUCTS } from '../lib/brand';
 
 export const metadata = {
@@ -26,22 +28,24 @@ const schema = {
 const wrap: React.CSSProperties = { maxWidth: 1140, margin: '0 auto', padding: '0 20px' };
 const wrapNarrow: React.CSSProperties = { maxWidth: 960, margin: '0 auto', padding: '0 20px' };
 
-// ---------- átomos visuais ----------
+// ---------- átomos visuais (dark premium) ----------
 
-function GoldPill({ children, dark }: { children: React.ReactNode; dark?: boolean }) {
+function GoldPill({ children }: { children: React.ReactNode }) {
   return (
     <span
       style={{
         display: 'inline-flex',
         alignItems: 'center',
         gap: 8,
-        background: dark ? 'rgba(255,255,255,0.10)' : BRAND.lilac,
-        color: dark ? '#fff' : BRAND.navy,
-        border: dark ? '1px solid rgba(255,255,255,0.25)' : 'none',
-        padding: '7px 14px',
+        background: 'rgba(201,162,39,0.10)',
+        color: BRAND.goldBright,
+        border: '1px solid rgba(201,162,39,0.35)',
+        padding: '7px 15px',
         borderRadius: 999,
-        fontSize: 13.5,
-        fontWeight: 600,
+        fontSize: 13,
+        fontWeight: 700,
+        letterSpacing: 0.5,
+        textTransform: 'uppercase',
       }}
     >
       {children}
@@ -54,8 +58,9 @@ function TagPill({ children }: { children: React.ReactNode }) {
     <span
       style={{
         display: 'inline-block',
-        background: BRAND.lilac,
-        color: BRAND.navy,
+        background: 'rgba(255,255,255,0.05)',
+        color: 'rgba(255,255,255,0.88)',
+        border: '1px solid rgba(255,255,255,0.12)',
         padding: '7px 14px',
         borderRadius: 999,
         fontSize: 13.5,
@@ -71,10 +76,12 @@ function SectionTitle({ children, center }: { children: React.ReactNode; center?
   return (
     <h2
       style={{
-        fontSize: 32,
+        fontSize: 33,
         lineHeight: 1.15,
         margin: 0,
-        fontWeight: 800,
+        fontWeight: 900,
+        letterSpacing: '-0.02em',
+        color: '#fff',
         textAlign: center ? 'center' : 'left',
       }}
     >
@@ -82,6 +89,36 @@ function SectionTitle({ children, center }: { children: React.ReactNode; center?
     </h2>
   );
 }
+
+// CTA dourado cheio
+const goldCta: React.CSSProperties = {
+  display: 'inline-block',
+  textAlign: 'center',
+  background: BRAND.goldGradient,
+  color: BRAND.ink,
+  fontWeight: 900,
+  fontSize: 15.5,
+  padding: '16px 30px',
+  borderRadius: 999,
+  textDecoration: 'none',
+  letterSpacing: 0.4,
+  boxShadow: '0 10px 30px rgba(201,162,39,0.32)',
+};
+
+// CTA contorno claro
+const ghostCta: React.CSSProperties = {
+  display: 'inline-block',
+  textAlign: 'center',
+  background: 'transparent',
+  color: '#fff',
+  fontWeight: 800,
+  fontSize: 15.5,
+  padding: '16px 30px',
+  borderRadius: 999,
+  textDecoration: 'none',
+  border: '1px solid rgba(255,255,255,0.35)',
+  letterSpacing: 0.4,
+};
 
 // ---------- dados ----------
 
@@ -100,6 +137,7 @@ const CURSOS = [
     nome: PRODUCTS.project_manager.name,
     preco: PRODUCTS.project_manager.price,
     selo: 'Porta de entrada',
+    icon: '🧭',
     chamada:
       'Curso preparatório para você se tornar Project Manager na construção civil dos EUA. Saia da execução pesada e aprenda a gerir a obra, ler plantas, lidar com permits, se comunicar com o cliente e liderar equipes. Aulas ao vivo, em português, com acesso por 1 ano.',
     href: `/${PRODUCTS.project_manager.slug}`,
@@ -109,6 +147,7 @@ const CURSOS = [
     nome: PRODUCTS.construtor.name,
     preco: PRODUCTS.construtor.price,
     selo: 'Curso principal',
+    icon: '🏗️',
     chamada:
       'Curso preparatório para você tirar a licença de Construction Supervisor License (CSL) em Massachusetts. São 6 dias presenciais mais o portal de simulados com 598 questões originais ancoradas no código. A aula te ensina; o portal te aprova.',
     href: `/${PRODUCTS.construtor.slug}`,
@@ -181,154 +220,259 @@ const FAQ = [
 
 export default function Home() {
   return (
-    <main style={{ color: BRAND.navy }}>
+    <main style={{ background: BRAND.pageGradient, color: '#fff', minHeight: '100vh' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <SiteHeader />
 
-      {/* HERO institucional escuro */}
-      {/* IMAGEM: David sobe a foto de fundo (obra nos EUA + bandeira americana) — trocar o background abaixo. */}
-      <section
-        style={{
-          position: 'relative',
-          color: '#fff',
-          background: `linear-gradient(135deg, rgba(10,31,68,0.92), rgba(22,51,95,0.88)), linear-gradient(135deg, ${BRAND.navy} 0%, ${BRAND.royal} 100%)`,
-          overflow: 'hidden',
-        }}
-      >
-        <div style={{ ...wrap, padding: '64px 20px 76px', position: 'relative', zIndex: 2 }}>
-          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 22 }}>
-            <GoldPill dark>
-              <span className="wpa-dot-pulse" aria-hidden style={{ width: 9, height: 9, borderRadius: '50%', background: '#ff4d4f', display: 'inline-block' }} />
+      {/* HERO split (texto + foto). Grid pattern + glow dourado sutil ao fundo. */}
+      <section style={{ position: 'relative', overflow: 'hidden' }}>
+        {/* textura grid sutil */}
+        <div
+          aria-hidden
+          style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundImage:
+              'linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px)',
+            backgroundSize: '54px 54px',
+            maskImage: 'radial-gradient(70% 60% at 50% 30%, #000 0%, transparent 80%)',
+            WebkitMaskImage: 'radial-gradient(70% 60% at 50% 30%, #000 0%, transparent 80%)',
+            pointerEvents: 'none',
+          }}
+        />
+        <div
+          style={{
+            ...wrap,
+            padding: '70px 20px 84px',
+            position: 'relative',
+            zIndex: 2,
+            display: 'grid',
+            gridTemplateColumns: 'minmax(0, 1.15fr) minmax(0, 0.85fr)',
+            gap: 48,
+            alignItems: 'center',
+          }}
+          className="wpa-hero-grid"
+        >
+          {/* Coluna texto */}
+          <div className="wpa-reveal">
+            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 24 }}>
+              <GoldPill>
+                <span
+                  className="wpa-dot-pulse"
+                  aria-hidden
+                  style={{ width: 8, height: 8, borderRadius: '50%', background: '#4ade80', display: 'inline-block' }}
+                />
+                Escola em operação
+              </GoldPill>
+              <GoldPill>Massachusetts &middot; em português</GoldPill>
+            </div>
+
+            <h1
+              style={{
+                fontSize: 50,
+                lineHeight: 1.08,
+                margin: '0 0 20px',
+                fontWeight: 900,
+                letterSpacing: '-0.03em',
+              }}
+            >
+              A escola que prepara brasileiros para crescer na{' '}
+              <span style={{ color: BRAND.goldBright }}>construção civil dos EUA</span>.
+            </h1>
+
+            <p style={{ fontSize: 18.5, lineHeight: 1.7, maxWidth: 560, color: BRAND.textSoft, margin: 0 }}>
+              Da gestão de obras à conquista da sua licença de CSL em Massachusetts. Tudo em português,
+              com conteúdo prático e com quem já faz acontecer no mercado americano.
+            </p>
+
+            <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 32 }}>
+              <a href="#cursos" className="wpa-gold-cta" style={goldCta}>
+                VER OS CURSOS
+              </a>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="wpa-ghost-cta"
+                style={ghostCta}
+              >
+                FALAR NO WHATSAPP
+              </a>
+            </div>
+
+            {/* PROVA SOCIAL — avatares + estrelas */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginTop: 34, flexWrap: 'wrap' }}>
+              <Avatars count={5} />
+              <div>
+                <Stars size={15} />
+                <div style={{ color: BRAND.textSoft, fontSize: 14, marginTop: 3 }}>
+                  Alunos aprovados na CSL e em obras nos EUA
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Coluna foto (placeholder elegante) */}
+          {/* IMAGEM: foto do David — substituir o bloco com gradiente abaixo por <Image>. */}
+          <div className="wpa-reveal" style={{ position: 'relative' }}>
+            <div
+              style={{
+                position: 'relative',
+                aspectRatio: '4 / 5',
+                borderRadius: 24,
+                background:
+                  'radial-gradient(120% 80% at 70% 0%, rgba(201,162,39,0.22), transparent 60%), linear-gradient(160deg, #16335f 0%, #0A1326 70%)',
+                border: '1px solid rgba(201,162,39,0.4)',
+                boxShadow: '0 30px 80px rgba(0,0,0,0.5)',
+                display: 'flex',
+                alignItems: 'flex-end',
+                padding: 24,
+                overflow: 'hidden',
+              }}
+            >
+              {/* IMAGEM: foto do David (retrato profissional na obra). */}
+              <div
+                style={{
+                  position: 'absolute',
+                  top: 22,
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  color: BRAND.textMute,
+                  fontSize: 13,
+                  fontWeight: 600,
+                  letterSpacing: 1,
+                }}
+              >
+                IMAGEM: foto do David
+              </div>
+              <div
+                style={{
+                  width: '100%',
+                  background: 'rgba(8,13,26,0.55)',
+                  backdropFilter: 'blur(8px)',
+                  WebkitBackdropFilter: 'blur(8px)',
+                  border: '1px solid rgba(255,255,255,0.12)',
+                  borderRadius: 16,
+                  padding: '16px 18px',
+                }}
+              >
+                <div style={{ fontWeight: 900, fontSize: 17, color: '#fff' }}>David Piazzarollo</div>
+                <div style={{ color: BRAND.goldBright, fontSize: 13.5, fontWeight: 700, marginTop: 2 }}>
+                  +10 anos no mercado americano &middot; CSL aprovada
+                </div>
+              </div>
+            </div>
+            {/* selo flutuante */}
+            <div
+              style={{
+                position: 'absolute',
+                top: -14,
+                right: -8,
+                background: 'rgba(8,13,26,0.85)',
+                border: '1px solid rgba(201,162,39,0.45)',
+                borderRadius: 999,
+                padding: '8px 14px',
+                fontSize: 12.5,
+                fontWeight: 800,
+                color: BRAND.goldBright,
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 7,
+                boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
+              }}
+            >
+              <span
+                className="wpa-dot-pulse"
+                aria-hidden
+                style={{ width: 8, height: 8, borderRadius: '50%', background: '#4ade80', display: 'inline-block' }}
+              />
               ESCOLA EM OPERAÇÃO
-            </GoldPill>
-            <GoldPill dark>Massachusetts &middot; em português</GoldPill>
-          </div>
-
-          <h1 style={{ fontSize: 46, lineHeight: 1.1, margin: '0 0 18px', maxWidth: 880, fontWeight: 800 }}>
-            A escola que prepara brasileiros para crescer e se profissionalizar na{' '}
-            <span style={{ color: BRAND.gold }}>construção civil dos EUA</span>.
-          </h1>
-
-          <p style={{ fontSize: 18.5, lineHeight: 1.6, maxWidth: 720, opacity: 0.94, margin: 0 }}>
-            Da gestão de obras à conquista da sua licença de CSL em Massachusetts. Tudo em português,
-            com conteúdo prático e com quem já faz acontecer no mercado americano.
-          </p>
-
-          <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 30 }}>
-            <a
-              href="#cursos"
-              className="wpa-btn"
-              style={{
-                background: BRAND.gradient,
-                color: '#fff',
-                fontWeight: 800,
-                fontSize: 16,
-                padding: '16px 30px',
-                borderRadius: 999,
-                textDecoration: 'none',
-                boxShadow: '0 10px 26px rgba(75,63,228,0.4)',
-              }}
-            >
-              VER OS CURSOS
-            </a>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="wpa-btn"
-              style={{
-                background: '#fff',
-                color: BRAND.navy,
-                fontWeight: 800,
-                fontSize: 16,
-                padding: '16px 30px',
-                borderRadius: 999,
-                textDecoration: 'none',
-                border: `1px solid ${BRAND.gold}`,
-              }}
-            >
-              FALAR NO WHATSAPP
-            </a>
-          </div>
-
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 26, fontSize: 14.5, opacity: 0.92 }}>
-            <span aria-hidden style={{ color: BRAND.gold }}>&#9679;</span>
-            Aulas em português &middot; Portal de simulados &middot; Presencial em Massachusetts
+            </div>
           </div>
         </div>
       </section>
 
+      {/* FAIXA DE NÚMEROS */}
+      <StatBand />
+
       {/* POR QUE A ESCOLA / AUTORIDADE — David Piazzarollo */}
-      <section id="professor" style={{ background: BRAND.cream, padding: '72px 0' }}>
+      <section id="professor" style={{ padding: '80px 0' }}>
         <div style={wrap}>
           <GoldPill>Por que a Wise Pro Academy</GoldPill>
           <div
             style={{
               display: 'grid',
               gridTemplateColumns: 'minmax(240px, 360px) 1fr',
-              gap: 40,
+              gap: 44,
               alignItems: 'start',
-              marginTop: 22,
+              marginTop: 24,
             }}
+            className="wpa-hero-grid"
           >
             {/* Foto do David (placeholder) */}
             {/* IMAGEM: David sobe a foto dele em moldura — trocar este bloco. */}
             <div
               style={{
+                position: 'relative',
                 aspectRatio: '4 / 5',
-                borderRadius: 18,
-                background: `linear-gradient(135deg, ${BRAND.navy}, ${BRAND.royal})`,
-                color: BRAND.gold,
+                borderRadius: 20,
+                background:
+                  'radial-gradient(120% 80% at 30% 0%, rgba(201,162,39,0.2), transparent 60%), linear-gradient(160deg, #16335f, #0A1326)',
+                color: BRAND.goldBright,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                border: `3px solid ${BRAND.gold}`,
+                border: '1px solid rgba(201,162,39,0.4)',
+                boxShadow: '0 26px 70px rgba(0,0,0,0.5)',
                 fontWeight: 700,
-                fontSize: 15,
+                fontSize: 14,
                 textAlign: 'center',
-                padding: 20,
+                padding: 22,
               }}
             >
-              Foto de David Piazzarollo
+              IMAGEM: foto de David Piazzarollo
             </div>
 
             <div>
-              <h2 style={{ fontSize: 30, margin: '0 0 18px', fontWeight: 800 }}>
+              <h2 style={{ fontSize: 31, margin: '0 0 18px', fontWeight: 900, letterSpacing: '-0.02em' }}>
                 Uma escola criada por quem viveu a obra de verdade
               </h2>
-              <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight }}>
-                Quem conduz a escola é <strong style={{ color: BRAND.navy }}>David Piazzarollo</strong>,
-                com mais de 10 anos no mercado americano da construção. Ele começou como imigrante, sem
-                experiência, trabalhando na execução pesada da obra.
+              <p style={{ fontSize: 17, lineHeight: 1.7, color: BRAND.textSoft }}>
+                Quem conduz a escola é{' '}
+                <strong style={{ color: '#fff' }}>David Piazzarollo</strong>, com mais de 10 anos no
+                mercado americano da construção. Ele começou como imigrante, sem experiência,
+                trabalhando na execução pesada da obra.
               </p>
-              <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight }}>
+              <p style={{ fontSize: 17, lineHeight: 1.7, color: BRAND.textSoft }}>
                 David passou na prova de CSL, construiu a própria carteira de clientes diretos e hoje
                 ensina o caminho que ele mesmo percorreu. Por isso o conteúdo é prático, em português e
                 baseado na vida real da construção nos Estados Unidos.
               </p>
 
-              {/* Card de autoridade (Google) */}
+              {/* Card de autoridade (Google) — glass */}
               <div
                 style={{
-                  background: '#fff',
-                  border: `1px solid ${BRAND.gold}`,
+                  background: BRAND.glass,
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(201,162,39,0.35)',
                   borderRadius: 16,
                   padding: 22,
-                  margin: '20px 0',
+                  margin: '22px 0',
                   display: 'flex',
                   gap: 16,
                   alignItems: 'flex-start',
                 }}
               >
-                <span aria-hidden style={{ fontSize: 30, fontWeight: 800, lineHeight: 1 }}>
+                <span aria-hidden style={{ fontSize: 30, fontWeight: 900, lineHeight: 1 }}>
                   <span style={{ color: '#4285F4' }}>G</span>
                 </span>
                 <div>
-                  <div style={{ fontWeight: 800, fontSize: 16.5, lineHeight: 1.4 }}>
+                  <div style={{ fontWeight: 800, fontSize: 16.5, lineHeight: 1.4, color: '#fff' }}>
                     +10 anos no mercado americano e CSL aprovada.
                   </div>
-                  <div style={{ color: BRAND.navyLight, marginTop: 6, fontSize: 14.5 }}>
+                  <div style={{ color: BRAND.textSoft, marginTop: 6, fontSize: 14.5 }}>
                     Empresa de construção com mais de 86 avaliações 5 estrelas no Google.
                   </div>
                 </div>
@@ -342,13 +486,14 @@ export default function Home() {
 
               <div
                 style={{
-                  background: '#fff',
-                  borderLeft: `4px solid ${BRAND.gold}`,
+                  background: 'rgba(255,255,255,0.03)',
+                  borderLeft: `3px solid ${BRAND.goldBright}`,
                   borderRadius: 10,
                   padding: '16px 18px',
                   fontWeight: 700,
                   fontSize: 16,
                   marginTop: 8,
+                  color: '#fff',
                 }}
               >
                 Sem teoria vazia. Conteúdo baseado na vida real da construção civil americana.
@@ -359,14 +504,23 @@ export default function Home() {
       </section>
 
       {/* NOSSOS CURSOS — 2 cards grandes (id=cursos) */}
-      <section id="cursos" style={{ background: '#fff', padding: '72px 0' }}>
+      <section id="cursos" style={{ padding: '80px 0' }}>
         <div style={wrap}>
           <div style={{ textAlign: 'center', maxWidth: 760, margin: '0 auto' }}>
             <GoldPill>Nossos cursos</GoldPill>
-            <h2 style={{ fontSize: 32, lineHeight: 1.15, margin: '16px 0 0', fontWeight: 800 }}>
+            <h2
+              style={{
+                fontSize: 34,
+                lineHeight: 1.15,
+                margin: '18px 0 0',
+                fontWeight: 900,
+                letterSpacing: '-0.02em',
+                color: '#fff',
+              }}
+            >
               Dois cursos, um caminho claro
             </h2>
-            <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight, marginTop: 14 }}>
+            <p style={{ fontSize: 17, lineHeight: 1.7, color: BRAND.textSoft, marginTop: 14 }}>
               Comece pela gestão de obra ou vá direto para a sua licença de CSL. Cada curso te leva um
               passo mais perto de crescer na construção dos Estados Unidos.
             </p>
@@ -377,8 +531,8 @@ export default function Home() {
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
               gap: 26,
-              marginTop: 42,
-              maxWidth: 880,
+              marginTop: 44,
+              maxWidth: 900,
               marginLeft: 'auto',
               marginRight: 'auto',
             }}
@@ -386,121 +540,118 @@ export default function Home() {
             {CURSOS.map((c) => (
               <div
                 key={c.href}
+                className="wpa-card"
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
-                  background: BRAND.navy,
+                  background:
+                    'linear-gradient(165deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)',
                   color: '#fff',
-                  border: `2px solid ${BRAND.gold}`,
+                  border: '1px solid rgba(201,162,39,0.32)',
                   borderRadius: 22,
                   padding: 34,
-                  boxShadow: '0 12px 32px rgba(10,31,68,0.14)',
+                  boxShadow: '0 18px 50px rgba(0,0,0,0.4)',
                 }}
               >
-                <span
-                  style={{
-                    alignSelf: 'flex-start',
-                    background: BRAND.lilac,
-                    color: BRAND.navy,
-                    fontSize: 12.5,
-                    fontWeight: 700,
-                    padding: '5px 12px',
-                    borderRadius: 999,
-                    marginBottom: 18,
-                  }}
-                >
-                  {c.selo}
-                </span>
-                <h3 style={{ margin: '0 0 8px', fontSize: 26, fontWeight: 800 }}>{c.nome}</h3>
-                <div style={{ color: BRAND.gold, fontWeight: 800, fontSize: 30, marginBottom: 16 }}>{c.preco}</div>
-                <p style={{ margin: '0 0 28px', color: 'rgba(255,255,255,0.88)', lineHeight: 1.6, fontSize: 16, flexGrow: 1 }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 18 }}>
+                  <span
+                    aria-hidden
+                    style={{
+                      width: 46,
+                      height: 46,
+                      borderRadius: 12,
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      background: 'rgba(201,162,39,0.12)',
+                      border: '1px solid rgba(201,162,39,0.35)',
+                      fontSize: 22,
+                    }}
+                  >
+                    {c.icon}
+                  </span>
+                  <span
+                    style={{
+                      background: 'rgba(201,162,39,0.14)',
+                      color: BRAND.goldBright,
+                      border: '1px solid rgba(201,162,39,0.35)',
+                      fontSize: 12,
+                      fontWeight: 800,
+                      padding: '5px 12px',
+                      borderRadius: 999,
+                      letterSpacing: 0.4,
+                      textTransform: 'uppercase',
+                    }}
+                  >
+                    {c.selo}
+                  </span>
+                </div>
+                <h3 style={{ margin: '0 0 8px', fontSize: 26, fontWeight: 900, letterSpacing: '-0.02em' }}>
+                  {c.nome}
+                </h3>
+                <div style={{ color: BRAND.goldBright, fontWeight: 900, fontSize: 30, marginBottom: 16 }}>
+                  {c.preco}
+                </div>
+                <p style={{ margin: '0 0 28px', color: BRAND.textSoft, lineHeight: 1.7, fontSize: 16, flexGrow: 1 }}>
                   {c.chamada}
                 </p>
-                <Link
-                  href={c.href}
-                  className="wpa-btn"
-                  style={{
-                    display: 'inline-block',
-                    textAlign: 'center',
-                    background: BRAND.gradient,
-                    color: '#fff',
-                    fontWeight: 800,
-                    fontSize: 16,
-                    padding: '15px 28px',
-                    borderRadius: 999,
-                    textDecoration: 'none',
-                    boxShadow: '0 8px 22px rgba(75,63,228,0.35)',
-                  }}
-                >
+                <Link href={c.href} className="wpa-gold-cta" style={{ ...goldCta, padding: '15px 28px', fontSize: 15 }}>
                   {c.rotulo}
                 </Link>
               </div>
             ))}
           </div>
 
-          {/* EXPERIÊNCIA PREMIUM — Wise Day (faixa horizontal, depois dos 2 cursos) */}
+          {/* EXPERIÊNCIA PREMIUM — Wise Day (faixa horizontal, mais discreta) */}
           <div
             id="wise-day"
             style={{
-              maxWidth: 880,
-              margin: '34px auto 0',
-              background: `linear-gradient(135deg, ${BRAND.cream} 0%, #fff 100%)`,
-              border: `2px solid ${BRAND.gold}`,
+              maxWidth: 900,
+              margin: '30px auto 0',
+              background: 'rgba(255,255,255,0.03)',
+              border: '1px solid rgba(255,255,255,0.12)',
               borderRadius: 22,
               padding: 30,
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
               gap: 24,
               alignItems: 'center',
-              boxShadow: '0 12px 32px rgba(10,31,68,0.10)',
             }}
           >
             <div>
               <span
                 style={{
                   display: 'inline-block',
-                  background: BRAND.gold,
-                  color: BRAND.navy,
-                  fontSize: 12.5,
+                  background: 'rgba(201,162,39,0.14)',
+                  color: BRAND.goldBright,
+                  border: '1px solid rgba(201,162,39,0.35)',
+                  fontSize: 12,
                   fontWeight: 800,
                   padding: '5px 12px',
                   borderRadius: 999,
                   marginBottom: 14,
                   letterSpacing: 0.4,
+                  textTransform: 'uppercase',
                 }}
               >
                 Experiência premium
               </span>
-              <h3 style={{ margin: '0 0 6px', fontSize: 26, fontWeight: 800 }}>
+              <h3 style={{ margin: '0 0 6px', fontSize: 25, fontWeight: 900, color: '#fff', letterSpacing: '-0.02em' }}>
                 {PRODUCTS.wise_day.name}
               </h3>
-              <div style={{ color: BRAND.gold, fontWeight: 800, fontSize: 28, marginBottom: 12 }}>
+              <div style={{ color: BRAND.goldBright, fontWeight: 900, fontSize: 26, marginBottom: 12 }}>
                 {PRODUCTS.wise_day.price}
               </div>
-              <p style={{ margin: 0, color: BRAND.navyLight, lineHeight: 1.6, fontSize: 16 }}>
+              <p style={{ margin: 0, color: BRAND.textSoft, lineHeight: 1.7, fontSize: 15.5 }}>
                 Não é um curso preparatório: é a imersão. Um dia inteiro presencial com o David, na
                 prática, resolvendo as suas dúvidas reais de obra, permit e código. Para quem quer
                 acelerar com atenção direta de quem já passou por tudo isso.
               </p>
             </div>
             <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
-              <Link
-                href={`/${PRODUCTS.wise_day.slug}`}
-                className="wpa-btn"
-                style={{
-                  display: 'inline-block',
-                  textAlign: 'center',
-                  background: BRAND.navy,
-                  color: '#fff',
-                  fontWeight: 800,
-                  fontSize: 16,
-                  padding: '15px 28px',
-                  borderRadius: 999,
-                  textDecoration: 'none',
-                  border: `1px solid ${BRAND.gold}`,
-                  boxShadow: '0 8px 22px rgba(10,31,68,0.2)',
-                }}
-              >
+              <Link href={`/${PRODUCTS.wise_day.slug}`} className="wpa-ghost-cta" style={{ ...ghostCta, fontSize: 15 }}>
                 Conhecer o Wise Day
               </Link>
             </div>
@@ -509,46 +660,48 @@ export default function Home() {
       </section>
 
       {/* DIFERENCIAL — portal de simulados (item-rei) */}
-      <section style={{ background: BRAND.cream, padding: '72px 0' }}>
+      <section style={{ padding: '20px 0 80px' }}>
         <div style={wrapNarrow}>
           <div
             style={{
-              background: BRAND.navy,
+              position: 'relative',
+              background:
+                'radial-gradient(100% 120% at 100% 0%, rgba(201,162,39,0.16), transparent 55%), linear-gradient(160deg, #0B1A30, #0A1326)',
               color: '#fff',
-              borderRadius: 24,
-              border: `2px solid ${BRAND.gold}`,
-              padding: '44px 40px',
+              borderRadius: 26,
+              border: '1px solid rgba(201,162,39,0.4)',
+              padding: '48px 42px',
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-              gap: 32,
+              gap: 34,
               alignItems: 'center',
+              boxShadow: '0 26px 70px rgba(0,0,0,0.5)',
+              overflow: 'hidden',
             }}
           >
             <div>
-              <GoldPill dark>O diferencial da escola</GoldPill>
-              <h2 style={{ fontSize: 30, lineHeight: 1.15, margin: '16px 0 12px', fontWeight: 800 }}>
+              <GoldPill>O diferencial da escola</GoldPill>
+              <h2
+                style={{
+                  fontSize: 30,
+                  lineHeight: 1.15,
+                  margin: '18px 0 12px',
+                  fontWeight: 900,
+                  letterSpacing: '-0.02em',
+                }}
+              >
                 O portal de simulados que te aprova na CSL
               </h2>
-              <p style={{ fontSize: 16.5, lineHeight: 1.6, color: 'rgba(255,255,255,0.9)' }}>
-                Incluso no Curso de Construtor: um portal com <strong style={{ color: BRAND.gold }}>598 questões originais</strong>,
-                ancoradas no código oficial, que treinam você até a aprovação. A aula te ensina; o
-                portal te aprova.
+              <p style={{ fontSize: 16.5, lineHeight: 1.7, color: BRAND.textSoft }}>
+                Incluso no Curso de Construtor: um portal com{' '}
+                <strong style={{ color: BRAND.goldBright }}>598 questões originais</strong>, ancoradas
+                no código oficial, que treinam você até a aprovação. A aula te ensina; o portal te
+                aprova.
               </p>
               <Link
                 href={`/${PRODUCTS.construtor.slug}`}
-                className="wpa-btn"
-                style={{
-                  display: 'inline-block',
-                  marginTop: 22,
-                  background: BRAND.gradient,
-                  color: '#fff',
-                  fontWeight: 800,
-                  fontSize: 15.5,
-                  padding: '14px 26px',
-                  borderRadius: 999,
-                  textDecoration: 'none',
-                  boxShadow: '0 8px 22px rgba(75,63,228,0.35)',
-                }}
+                className="wpa-gold-cta"
+                style={{ ...goldCta, marginTop: 24, fontSize: 15, padding: '14px 26px' }}
               >
                 Ver o Curso de Construtor &rarr;
               </Link>
@@ -562,8 +715,8 @@ export default function Home() {
                 <div
                   key={desc}
                   style={{
-                    background: 'rgba(255,255,255,0.08)',
-                    border: '1px solid rgba(255,255,255,0.18)',
+                    background: 'rgba(255,255,255,0.05)',
+                    border: '1px solid rgba(255,255,255,0.12)',
                     borderRadius: 14,
                     padding: '16px 18px',
                     display: 'flex',
@@ -571,8 +724,10 @@ export default function Home() {
                     gap: 12,
                   }}
                 >
-                  <span style={{ color: BRAND.gold, fontWeight: 800, fontSize: 26, lineHeight: 1 }}>{num}</span>
-                  <span style={{ fontSize: 14.5, color: 'rgba(255,255,255,0.9)', lineHeight: 1.45 }}>{desc}</span>
+                  <span style={{ color: BRAND.goldBright, fontWeight: 900, fontSize: 26, lineHeight: 1 }}>
+                    {num}
+                  </span>
+                  <span style={{ fontSize: 14.5, color: BRAND.textSoft, lineHeight: 1.45 }}>{desc}</span>
                 </div>
               ))}
             </div>
@@ -584,14 +739,23 @@ export default function Home() {
       <Marquee items={MARQUEE_ITEMS} />
 
       {/* PROVA SOCIAL — reviews placeholder */}
-      <section style={{ background: '#fff', padding: '72px 0' }}>
+      <section style={{ padding: '80px 0' }}>
         <div style={wrap}>
           <div style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto' }}>
             <GoldPill>Prova social</GoldPill>
-            <h2 style={{ fontSize: 32, lineHeight: 1.15, margin: '16px 0 0', fontWeight: 800 }}>
+            <h2
+              style={{
+                fontSize: 34,
+                lineHeight: 1.15,
+                margin: '18px 0 0',
+                fontWeight: 900,
+                letterSpacing: '-0.02em',
+                color: '#fff',
+              }}
+            >
               Quem aprende com a gente recomenda
             </h2>
-            <p style={{ fontSize: 17, lineHeight: 1.6, color: BRAND.navyLight, marginTop: 14 }}>
+            <p style={{ fontSize: 17, lineHeight: 1.7, color: BRAND.textSoft, marginTop: 14 }}>
               Avaliações reais dos alunos e da empresa de construção do David no Google.
             </p>
           </div>
@@ -602,29 +766,51 @@ export default function Home() {
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
               gap: 22,
-              marginTop: 36,
+              marginTop: 38,
             }}
           >
             {REVIEWS.map((r, i) => (
               <div
                 key={i}
+                className="wpa-card"
                 style={{
-                  background: BRAND.cream,
-                  border: `1px solid ${BRAND.gold}`,
+                  background: BRAND.glass,
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(255,255,255,0.12)',
                   borderRadius: 18,
                   padding: 26,
                   display: 'flex',
                   flexDirection: 'column',
                 }}
               >
-                <div aria-hidden style={{ color: BRAND.gold, fontSize: 18, letterSpacing: 2, marginBottom: 12 }}>
-                  &#9733;&#9733;&#9733;&#9733;&#9733;
-                </div>
-                <p style={{ margin: '0 0 18px', color: BRAND.navyLight, lineHeight: 1.6, fontSize: 15.5, flexGrow: 1 }}>
+                <Stars size={17} />
+                <p style={{ margin: '12px 0 18px', color: BRAND.textSoft, lineHeight: 1.7, fontSize: 15.5, flexGrow: 1 }}>
                   {r.texto}
                 </p>
-                <div style={{ fontWeight: 800, fontSize: 15.5 }}>{r.nome}</div>
-                <div style={{ color: BRAND.navyLight, fontSize: 13.5 }}>{r.cidade}</div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                  <span
+                    aria-hidden
+                    style={{
+                      width: 38,
+                      height: 38,
+                      borderRadius: '50%',
+                      background: 'linear-gradient(135deg, #16335f, #2E2ECC)',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: '#fff',
+                      fontWeight: 800,
+                      fontSize: 14,
+                    }}
+                  >
+                    WP
+                  </span>
+                  <div>
+                    <div style={{ fontWeight: 800, fontSize: 15, color: '#fff' }}>{r.nome}</div>
+                    <div style={{ color: BRAND.textMute, fontSize: 13.5 }}>{r.cidade}</div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -632,34 +818,50 @@ export default function Home() {
       </section>
 
       {/* CLAREZA ANTES DE ENTRAR */}
-      <section style={{ background: BRAND.cream, padding: '72px 0' }}>
+      <section style={{ padding: '20px 0 80px' }}>
         <div style={wrap}>
           <div style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto' }}>
             <SectionTitle center>Clareza antes de entrar</SectionTitle>
-            <p style={{ fontSize: 17, color: BRAND.navyLight, marginTop: 12 }}>O que a escola é, e o que não é.</p>
+            <p style={{ fontSize: 17, color: BRAND.textSoft, marginTop: 12 }}>
+              O que a escola é, e o que não é.
+            </p>
           </div>
           <div
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
               gap: 22,
-              marginTop: 32,
+              marginTop: 34,
             }}
           >
-            <div style={{ background: '#fbf3f3', border: '1px solid #f0d4d4', borderRadius: 16, padding: 26 }}>
-              <div style={{ fontWeight: 800, color: '#b8474a', marginBottom: 14, fontSize: 17 }}>O que NÃO é</div>
+            <div
+              style={{
+                background: 'rgba(184,71,74,0.08)',
+                border: '1px solid rgba(184,71,74,0.35)',
+                borderRadius: 16,
+                padding: 26,
+              }}
+            >
+              <div style={{ fontWeight: 800, color: '#f08a8c', marginBottom: 14, fontSize: 17 }}>O que NÃO é</div>
               {NAO_E.map((t) => (
-                <div key={t} style={{ display: 'flex', gap: 10, padding: '7px 0', color: BRAND.navyLight }}>
-                  <span aria-hidden style={{ color: '#b8474a' }}>&#10007;</span>
+                <div key={t} style={{ display: 'flex', gap: 10, padding: '7px 0', color: BRAND.textSoft }}>
+                  <span aria-hidden style={{ color: '#f08a8c' }}>&#10007;</span>
                   {t}
                 </div>
               ))}
             </div>
-            <div style={{ background: '#fff', border: `1px solid ${BRAND.gold}`, borderRadius: 16, padding: 26 }}>
-              <div style={{ fontWeight: 800, color: '#1f7a4d', marginBottom: 14, fontSize: 17 }}>O que É</div>
+            <div
+              style={{
+                background: 'rgba(74,222,128,0.06)',
+                border: '1px solid rgba(201,162,39,0.35)',
+                borderRadius: 16,
+                padding: 26,
+              }}
+            >
+              <div style={{ fontWeight: 800, color: '#5ee08f', marginBottom: 14, fontSize: 17 }}>O que É</div>
               {O_QUE_E.map((t) => (
-                <div key={t} style={{ display: 'flex', gap: 10, padding: '7px 0', color: BRAND.navyLight }}>
-                  <span aria-hidden style={{ color: '#1f7a4d' }}>&#10003;</span>
+                <div key={t} style={{ display: 'flex', gap: 10, padding: '7px 0', color: BRAND.textSoft }}>
+                  <span aria-hidden style={{ color: '#5ee08f' }}>&#10003;</span>
                   {t}
                 </div>
               ))}
@@ -669,25 +871,52 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section style={{ background: '#fff', padding: '72px 0' }}>
+      <section style={{ padding: '20px 0 80px' }}>
         <div style={wrapNarrow}>
           <SectionTitle center>Perguntas frequentes</SectionTitle>
-          <div style={{ marginTop: 30, display: 'flex', flexDirection: 'column', gap: 12 }}>
+          <div style={{ marginTop: 32, display: 'flex', flexDirection: 'column', gap: 12 }}>
             {FAQ.map((item, i) => (
               <details
                 key={i}
+                className="wpa-faq"
                 style={{
-                  background: BRAND.cream,
-                  border: `1px solid ${BRAND.gold}`,
+                  background: BRAND.glass,
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(255,255,255,0.10)',
                   borderRadius: 14,
                   padding: '18px 22px',
                 }}
               >
-                <summary style={{ fontWeight: 700, fontSize: 16.5, display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
+                <summary
+                  style={{
+                    fontWeight: 700,
+                    fontSize: 16.5,
+                    color: '#fff',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    gap: 12,
+                  }}
+                >
                   {item.q}
-                  <span aria-hidden style={{ color: BRAND.gold, fontSize: 20, fontWeight: 800 }}>+</span>
+                  <span
+                    aria-hidden
+                    className="wpa-faq-plus"
+                    style={{
+                      color: BRAND.goldBright,
+                      fontSize: 22,
+                      fontWeight: 800,
+                      transition: 'transform .2s ease',
+                      display: 'inline-block',
+                    }}
+                  >
+                    +
+                  </span>
                 </summary>
-                <p style={{ color: BRAND.navyLight, lineHeight: 1.6, marginBottom: 0, fontSize: 15.5 }}>{item.a}</p>
+                <p style={{ color: BRAND.textSoft, lineHeight: 1.7, marginBottom: 0, marginTop: 12, fontSize: 15.5 }}>
+                  {item.a}
+                </p>
               </details>
             ))}
           </div>
@@ -695,54 +924,52 @@ export default function Home() {
       </section>
 
       {/* CTA FINAL */}
-      <section
-        style={{
-          background: `linear-gradient(135deg, ${BRAND.navy} 0%, ${BRAND.royal} 100%)`,
-          color: '#fff',
-          padding: '72px 0',
-        }}
-      >
-        <div style={{ ...wrapNarrow, textAlign: 'center' }}>
-          <h2 style={{ fontSize: 32, lineHeight: 1.15, margin: 0, fontWeight: 800 }}>
-            Dê o próximo passo na construção dos EUA
-          </h2>
-          <p style={{ fontSize: 17.5, lineHeight: 1.6, opacity: 0.94, marginTop: 16, maxWidth: 620, marginLeft: 'auto', marginRight: 'auto' }}>
-            Escolha o seu curso ou fale com a gente no WhatsApp. A escola está em operação e pronta para
-            te receber.
-          </p>
-          <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center', marginTop: 30 }}>
-            <a
-              href="#cursos"
-              className="wpa-btn"
+      <section style={{ padding: '20px 0 90px' }}>
+        <div style={wrapNarrow}>
+          <div
+            style={{
+              position: 'relative',
+              overflow: 'hidden',
+              textAlign: 'center',
+              borderRadius: 26,
+              border: '1px solid rgba(201,162,39,0.4)',
+              background:
+                'radial-gradient(90% 130% at 50% 0%, rgba(201,162,39,0.18), transparent 55%), linear-gradient(160deg, #0B1A30, #0A1326)',
+              padding: '60px 32px',
+              boxShadow: '0 26px 70px rgba(0,0,0,0.5)',
+            }}
+          >
+            <h2 style={{ fontSize: 33, lineHeight: 1.15, margin: 0, fontWeight: 900, letterSpacing: '-0.02em', color: '#fff' }}>
+              Dê o próximo passo na construção dos EUA
+            </h2>
+            <p
               style={{
-                background: '#fff',
-                color: BRAND.royal,
-                fontWeight: 800,
-                fontSize: 16,
-                padding: '16px 30px',
-                borderRadius: 999,
-                textDecoration: 'none',
+                fontSize: 17.5,
+                lineHeight: 1.7,
+                color: BRAND.textSoft,
+                marginTop: 16,
+                maxWidth: 620,
+                marginLeft: 'auto',
+                marginRight: 'auto',
               }}
             >
-              VER OS CURSOS
-            </a>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="wpa-btn"
-              style={{
-                background: BRAND.whatsapp,
-                color: '#fff',
-                fontWeight: 800,
-                fontSize: 16,
-                padding: '16px 30px',
-                borderRadius: 999,
-                textDecoration: 'none',
-              }}
-            >
-              FALAR NO WHATSAPP
-            </a>
+              Escolha o seu curso ou fale com a gente no WhatsApp. A escola está em operação e pronta
+              para te receber.
+            </p>
+            <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center', marginTop: 32 }}>
+              <a href="#cursos" className="wpa-gold-cta" style={goldCta}>
+                VER OS CURSOS
+              </a>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="wpa-ghost-cta"
+                style={ghostCta}
+              >
+                FALAR NO WHATSAPP
+              </a>
+            </div>
           </div>
         </div>
       </section>
