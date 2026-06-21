@@ -53,7 +53,7 @@ export default function Page() {
             'Saia preparado para dar o próximo passo: o Curso de Construtor e a conquista da sua licença de CSL.',
         },
       ]}
-      // PROFESSORES: David envia bio completa + foto de Rony, Luciana e Juliana depois
+      // PROFESSORES: fotos recortadas e no ar. Bios de Rony, Luciana e Juliana sao provisorias ate David enviar o texto completo de cada um.
       professoresTitulo="Quem vai te ensinar"
       professores={[
         {
@@ -65,7 +65,8 @@ export default function Page() {
         {
           nome: 'Rony Jabour',
           papel: 'Professor licenciado de OSHA',
-          bio: '',
+          foto: '/rony-jabour.jpg',
+          bio: 'Professor licenciado para certificação de OSHA. Ensina segurança do trabalho e os riscos que devem ser evitados no canteiro de obras nos EUA.',
         },
         {
           nome: 'Fábio Borges',
@@ -76,12 +77,14 @@ export default function Page() {
         {
           nome: 'Luciana Triplett',
           papel: 'Arquiteta, leitura de plantas',
-          bio: '',
+          foto: '/luciana-triplett.jpg',
+          bio: 'Arquiteta. Ensina leitura e interpretação de plantas de obra, do projeto à execução, com olhar prático pra realidade da construção nos EUA.',
         },
         {
           nome: 'Juliana Melo',
           papel: 'Gestão de empresas',
-          bio: '',
+          foto: '/juliana-melo.jpg',
+          bio: 'Especialista em gestão de empresas. Mostra como organizar, profissionalizar e fazer crescer um negócio de construção de forma estruturada.',
         },
       ]}
       incluso={[
