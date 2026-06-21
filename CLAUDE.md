@@ -597,7 +597,9 @@ Quando o dono aprova algo não óbvio → salvar em `wiki/operations/decisions.m
 ## CONTAS E FERRAMENTAS
 > Stack técnica e canais usados pelo negócio. Atualizada pelo CEO quando dono mencionar conta/ferramenta nova.
 
-- **Site principal:** https://wiseproacademy.io (site + landings + portal multiusuário — Vercel)
+- **Site NOVO (dark premium, Vercel):** https://wiseproacademy.vercel.app (home + 3 páginas de venda + portal). Projeto Vercel renomeado pra `wiseproacademy` (conta "Wise Pro's projects", Hobby).
+- **Site ANTIGO (azul, NÃO mexer):** https://wiseproacademy.io segue hospedado na Hostinger (DNS dns-parking.com, A records 88.223.87.120 / 147.79.79.67). Decisão do David: manter o antigo no ar e usar o link .vercel.app pro novo.
+- **Pra migrar o domínio pro site novo no futuro (só se o David pedir):** trocar 1 registro DNS na Hostinger → A `@` = `216.198.79.1` (e remover os IPs antigos). Substitui o site antigo pelo novo; email não é afetado.
 - **CRM:** Pedro (Me Ensina AI Solutions, liberado pro David)
 - **Email marketing/transacional:** Resend
 - **Ads:** Meta (Facebook Ads) — capta lead e hoje manda pro WhatsApp
