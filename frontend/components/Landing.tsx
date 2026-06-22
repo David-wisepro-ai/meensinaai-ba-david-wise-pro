@@ -22,6 +22,7 @@ export type LandingProps = {
   subheadline: string;
   vslTitulo?: string;
   vslLegenda?: string;
+  imagemTopo?: string; // imagem do tema no lugar do VSL (enquanto o David não grava o vídeo)
   // bloco narrativo de venda (parágrafos longos e persuasivos)
   copyBlocos?: string[];
   dores: string[]; // bloco "isto é pra você se..."
@@ -140,6 +141,7 @@ export default function Landing(props: LandingProps) {
     subheadline,
     vslTitulo,
     vslLegenda,
+    imagemTopo,
     copyBlocos = [],
     dores,
     beneficios,
@@ -227,7 +229,8 @@ export default function Landing(props: LandingProps) {
             </p>
           </div>
 
-          {/* VSL via Panda Video — moldura dourada com glow sutil (placeholder até o David subir o vídeo) */}
+          {/* Imagem do tema na moldura dourada. Sem VSL por enquanto (David começa sem vídeo).
+              Quando ele gravar, é só remover `imagemTopo` da página e passar o vídeo no Vsl. */}
           <div
             style={{
               maxWidth: 860,
@@ -239,7 +242,27 @@ export default function Landing(props: LandingProps) {
               boxShadow: '0 26px 70px rgba(0,0,0,0.5)',
             }}
           >
-            <Vsl titulo={vslTitulo ?? `Apresentação - ${nome}`} legenda={vslLegenda} />
+            {imagemTopo ? (
+              <div
+                style={{
+                  position: 'relative',
+                  width: '100%',
+                  paddingTop: '56.25%',
+                  borderRadius: 14,
+                  overflow: 'hidden',
+                  border: `1px solid ${BRAND.glassBorder}`,
+                  background: BRAND.ink2,
+                }}
+              >
+                <img
+                  src={imagemTopo}
+                  alt={vslTitulo ?? `Wise Pro Academy — ${nome}`}
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+            ) : (
+              <Vsl titulo={vslTitulo ?? `Apresentação - ${nome}`} legenda={vslLegenda} />
+            )}
           </div>
 
           <div className="wpa-cta-stack" style={{ textAlign: 'center', marginTop: 30 }}>
