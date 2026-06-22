@@ -356,7 +356,7 @@ export default function Home() {
               }}
             >
               <img
-                src="/david-piazzarollo.jpg"
+                src="/david-plantas.jpg"
                 alt="David Piazzarollo, fundador da Wise Pro Academy"
                 style={{
                   position: 'absolute',
@@ -443,8 +443,8 @@ export default function Home() {
               }}
             >
               <img
-                src="/david-plantas.jpg"
-                alt="David Piazzarollo analisando plantas de obra"
+                src="/david-seminario.jpg"
+                alt="David Piazzarollo apresentando um seminário da Wise Pro Academy"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
