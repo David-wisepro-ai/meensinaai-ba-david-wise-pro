@@ -433,7 +433,7 @@ export default function Home() {
 
             <div style={{ marginTop: 34 }}>
               <h2 style={{ fontSize: 'clamp(24px, 4.4vw, 31px)', margin: '0 0 22px', fontWeight: 900, letterSpacing: '-0.02em' }}>
-                Uma escola criada por quem viveu a obra de verdade
+                Uma escola criada por quem vive a obra de verdade
               </h2>
               <div
                 className="wpa-grid-1col"
