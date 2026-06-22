@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { BRAND } from '../lib/brand';
-import PandaVideo from './PandaVideo';
+import AulaVideo from './AulaVideo';
 
 // ============================================================================
 // "MINHAS AULAS" — vitrine estilo Netflix (carrossel horizontal de aulas).
@@ -10,43 +10,44 @@ import PandaVideo from './PandaVideo';
 //
 // >>> PARA O DAVID / ZUCK EDITAREM <<<
 // Basta preencher o array de config (PM_AULAS / CONSTRUTOR_AULAS abaixo):
-//   - titulo:        nome da aula (ex.: "Aula 1 — Leitura de planta")
-//   - descricao:     1-2 linhas que aparecem ao abrir a aula
-//   - pandaEmbedUrl: URL de embed do Panda Video
-//                    (ex.: https://player-vz-XXXX.tv.pandavideo.com.br/embed/?v=UUID)
-//                    Deixe VAZIO ('') enquanto o video nao subiu: o card abre o
-//                    player com um placeholder elegante (nada quebra).
+//   - titulo:     nome da aula (ex.: "Aula 1 — Leitura de planta")
+//   - descricao:  1-2 linhas que aparecem ao abrir a aula
+//   - videoUrl:   link do video. Aceita YouTube OU Panda Video:
+//                   YouTube: cole o link normal (youtube.com/watch?v=... ou youtu.be/...)
+//                   Panda:   cole a URL de embed (player-vz-XXXX.tv.pandavideo.com.br/embed/?v=UUID)
+//                 Deixe VAZIO ('') enquanto o video nao subiu: o card abre o
+//                 player com um placeholder "Vídeo em breve" (nada quebra).
 // Mantenha 8 itens em cada lista (8 slots fixos). E so trocar o texto e a URL.
 // ============================================================================
 
 export type Aula = {
   titulo: string;
   descricao: string;
-  pandaEmbedUrl: string; // '' = video em breve (placeholder do PandaVideo)
+  videoUrl: string; // '' = video em breve. Aceita link do YouTube ou do Panda Video.
 };
 
 // --- Portal PROJECT MANAGER — 8 aulas -------------------------------------
 export const PM_AULAS: Aula[] = [
-  { titulo: 'Aula 1 — título em breve', descricao: 'Descrição da aula em breve.', pandaEmbedUrl: '' },
-  { titulo: 'Aula 2 — título em breve', descricao: 'Descrição da aula em breve.', pandaEmbedUrl: '' },
-  { titulo: 'Aula 3 — título em breve', descricao: 'Descrição da aula em breve.', pandaEmbedUrl: '' },
-  { titulo: 'Aula 4 — título em breve', descricao: 'Descrição da aula em breve.', pandaEmbedUrl: '' },
-  { titulo: 'Aula 5 — título em breve', descricao: 'Descrição da aula em breve.', pandaEmbedUrl: '' },
-  { titulo: 'Aula 6 — título em breve', descricao: 'Descrição da aula em breve.', pandaEmbedUrl: '' },
-  { titulo: 'Aula 7 — título em breve', descricao: 'Descrição da aula em breve.', pandaEmbedUrl: '' },
-  { titulo: 'Aula 8 — título em breve', descricao: 'Descrição da aula em breve.', pandaEmbedUrl: '' },
+  { titulo: 'Aula 1 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'Aula 2 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'Aula 3 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'Aula 4 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'Aula 5 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'Aula 6 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'Aula 7 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'Aula 8 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
 ];
 
 // --- Portal CONSTRUTOR — 8 aulas ------------------------------------------
 export const CONSTRUTOR_AULAS: Aula[] = [
-  { titulo: 'Aula 1 — título em breve', descricao: 'Descrição da aula em breve.', pandaEmbedUrl: '' },
-  { titulo: 'Aula 2 — título em breve', descricao: 'Descrição da aula em breve.', pandaEmbedUrl: '' },
-  { titulo: 'Aula 3 — título em breve', descricao: 'Descrição da aula em breve.', pandaEmbedUrl: '' },
-  { titulo: 'Aula 4 — título em breve', descricao: 'Descrição da aula em breve.', pandaEmbedUrl: '' },
-  { titulo: 'Aula 5 — título em breve', descricao: 'Descrição da aula em breve.', pandaEmbedUrl: '' },
-  { titulo: 'Aula 6 — título em breve', descricao: 'Descrição da aula em breve.', pandaEmbedUrl: '' },
-  { titulo: 'Aula 7 — título em breve', descricao: 'Descrição da aula em breve.', pandaEmbedUrl: '' },
-  { titulo: 'Aula 8 — título em breve', descricao: 'Descrição da aula em breve.', pandaEmbedUrl: '' },
+  { titulo: 'Aula 1 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'Aula 2 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'Aula 3 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'Aula 4 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'Aula 5 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'Aula 6 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'Aula 7 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'Aula 8 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
 ];
 
 export default function PortalLessons({
@@ -75,7 +76,7 @@ export default function PortalLessons({
       >
         {aulas.map((aula, i) => {
           const numero = i + 1;
-          const disponivel = aula.pandaEmbedUrl.trim().length > 0;
+          const disponivel = aula.videoUrl.trim().length > 0;
           return (
             <button
               key={i}
@@ -225,7 +226,7 @@ function AulaModal({ aula, numero, onFechar }: { aula: Aula; numero: number; onF
         </div>
 
         <div style={{ marginTop: 14 }}>
-          <PandaVideo embedUrl={aula.pandaEmbedUrl || undefined} titulo={aula.titulo} />
+          <AulaVideo url={aula.videoUrl || undefined} titulo={aula.titulo} />
         </div>
 
         {aula.descricao && (
