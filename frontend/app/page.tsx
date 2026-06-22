@@ -420,22 +420,12 @@ export default function Home() {
       <section id="professor" className="wpa-section" style={{ padding: '80px 0' }}>
         <div style={wrap} className="wpa-wrap">
           <GoldPill>Por que a Wise Pro Academy</GoldPill>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'minmax(240px, 360px) 1fr',
-              gap: 44,
-              alignItems: 'start',
-              marginTop: 24,
-            }}
-            className="wpa-hero-grid"
-          >
-            {/* Foto do David (placeholder) */}
-            {/* IMAGEM: David sobe a foto dele em moldura — trocar este bloco. */}
+          <div style={{ marginTop: 24 }}>
+            {/* Foto horizontal do David (seminário) — topo da seção */}
             <div
               style={{
                 position: 'relative',
-                aspectRatio: '4 / 5',
+                aspectRatio: '16 / 9',
                 borderRadius: 20,
                 border: '1px solid rgba(201,162,39,0.4)',
                 boxShadow: '0 26px 70px rgba(0,0,0,0.5)',
@@ -445,25 +435,35 @@ export default function Home() {
               <img
                 src="/david-seminario.jpg"
                 alt="David Piazzarollo apresentando um seminário da Wise Pro Academy"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%' }}
               />
             </div>
 
-            <div>
-              <h2 style={{ fontSize: 'clamp(24px, 4.4vw, 31px)', margin: '0 0 18px', fontWeight: 900, letterSpacing: '-0.02em' }}>
+            <div style={{ marginTop: 34 }}>
+              <h2 style={{ fontSize: 'clamp(24px, 4.4vw, 31px)', margin: '0 0 22px', fontWeight: 900, letterSpacing: '-0.02em' }}>
                 Uma escola criada por quem viveu a obra de verdade
               </h2>
-              <p style={{ fontSize: 17, lineHeight: 1.7, color: BRAND.textSoft }}>
-                Quem conduz a escola é{' '}
-                <strong style={{ color: '#fff' }}>David Piazzarollo</strong>, com mais de 10 anos no
-                mercado americano da construção. Ele começou como imigrante, sem experiência,
-                trabalhando na execução pesada da obra.
-              </p>
-              <p style={{ fontSize: 17, lineHeight: 1.7, color: BRAND.textSoft }}>
-                David passou na prova de CSL, construiu a própria carteira de clientes diretos e hoje
-                ensina o caminho que ele mesmo percorreu. Por isso o conteúdo é prático, em português e
-                baseado na vida real da construção nos Estados Unidos.
-              </p>
+              <div
+                className="wpa-grid-1col"
+                style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 44, alignItems: 'start' }}
+              >
+                {/* Coluna esquerda: histórico do David */}
+                <div>
+                  <p style={{ fontSize: 17, lineHeight: 1.7, color: BRAND.textSoft, marginTop: 0 }}>
+                    Quem conduz a escola é{' '}
+                    <strong style={{ color: '#fff' }}>David Piazzarollo</strong>, com mais de 10 anos no
+                    mercado americano da construção. Ele começou como imigrante, sem experiência,
+                    trabalhando na execução pesada da obra.
+                  </p>
+                  <p style={{ fontSize: 17, lineHeight: 1.7, color: BRAND.textSoft, marginBottom: 0 }}>
+                    David passou na prova de CSL, construiu a própria carteira de clientes diretos e hoje
+                    ensina o caminho que ele mesmo percorreu. Por isso o conteúdo é prático, em português e
+                    baseado na vida real da construção nos Estados Unidos.
+                  </p>
+                </div>
+
+                {/* Coluna direita: prova social + tags + frase */}
+                <div>
 
               {/* Card de autoridade (Google) — glass */}
               <div
@@ -474,7 +474,7 @@ export default function Home() {
                   border: '1px solid rgba(201,162,39,0.35)',
                   borderRadius: 16,
                   padding: 22,
-                  margin: '22px 0',
+                  margin: '0 0 18px',
                   display: 'flex',
                   gap: 16,
                   alignItems: 'flex-start',
@@ -512,6 +512,8 @@ export default function Home() {
                 }}
               >
                 Sem teoria vazia. Conteúdo baseado na vida real da construção civil americana.
+              </div>
+                </div>
               </div>
             </div>
           </div>
