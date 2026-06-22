@@ -19,8 +19,8 @@ export default function Page() {
       selo="Porta de entrada"
       headline="Saia da execução pesada da obra e se torne um Project Manager valorizado na construção civil dos EUA"
       subheadline="Um treinamento ao vivo, em português, criado para brasileiros que querem parar de depender só da força física e aprender como funciona a gestão de obras no mercado americano."
-      imagemTopo="/pm-equipe-planejando.jpg"
-      vslTitulo="Equipe de gestão planejando a obra"
+      imagemTopo="/pm-planejamento.jpg"
+      vslTitulo="Profissional planejando a obra sobre a planta"
       copyBlocos={[
         'Você acorda cedo, carrega peso o dia inteiro e volta pra casa exausto. No fim do mês, o dinheiro mal cobre as contas e a sensação é sempre a mesma: você trabalha demais e ganha de menos. O problema não é falta de esforço. É falta de preparo pra ocupar as posições que realmente pagam bem na construção americana.',
         'Nos Estados Unidos, quem organiza a obra, conversa com o cliente, lê a planta, cuida dos permits e coordena os subcontratados ganha muito mais do que quem só executa. São funções de gestão, com salários que costumam variar de US$ 95 mil a US$ 138 mil por ano. E a porta de entrada pra esse mundo é entender como tudo funciona por aqui, em português, com quem já fez acontecer.',
