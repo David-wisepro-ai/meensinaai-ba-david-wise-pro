@@ -18,8 +18,8 @@ export default function Page() {
       selo="Curso principal"
       headline="Tire sua CSL e trabalhe legalmente na construção em Massachusetts"
       subheadline="Curso preparatório para a CSL em português, no formato que combina com você: turma online de segunda a sexta, das 6 PM às 9 PM (horário de Massachusetts), ou presencial em 4 sábados, das 7:30 AM às 12 PM. O mesmo conteúdo, mais o portal de simulados que treina você até passar. A aula te ensina; o portal te aprova."
-      imagemTopo="/obra-estrutura.jpg"
-      vslTitulo="Construção de estrutura residencial nos EUA"
+      imagemTopo="/obra-gerente-tablet.jpg"
+      vslTitulo="Profissional gerenciando a obra pelo tablet"
       copyBlocos={[
         'A prova de CSL é em inglês, longa e recheada de código: 780 CMR, IRC, IBC, IECC, OSHA. A maioria das pessoas estuda, faz um curso, acha que está pronta e reprova. Não por falta de inteligência, mas porque só assistir aula não prepara ninguém pra encontrar a resposta certa, no código certo, dentro do tempo da prova.',
         'É exatamente aí que o Curso de Construtor é diferente. Em português, no formato que você escolher (turma online de segunda a sexta, das 6 PM às 9 PM no horário de Massachusetts, ou presencial em 4 sábados, das 7:30 AM às 12 PM), o David cobre o que realmente cai na prova e te ensina a navegar pelo código oficial. Mas o que faz o aluno passar de verdade é o que vem depois da aula: o portal de simulados da Wise Pro.',
