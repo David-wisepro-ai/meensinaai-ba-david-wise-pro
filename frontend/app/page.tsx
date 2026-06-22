@@ -304,7 +304,7 @@ export default function Home() {
               }}
             >
               A escola que prepara brasileiros para crescer na{' '}
-              <span style={{ color: BRAND.goldBright }}>construção civil dos EUA</span>.
+              <span style={{ color: BRAND.goldBright }}>construção civil dos Estados Unidos</span>.
             </h1>
 
             <p style={{ fontSize: 'clamp(16px, 2.6vw, 18.5px)', lineHeight: 1.7, maxWidth: 560, color: BRAND.textSoft, margin: 0 }}>
