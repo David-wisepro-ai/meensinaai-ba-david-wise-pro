@@ -32,7 +32,7 @@ export const PM_AULAS: Aula[] = [
   // Aula 1: video do David (Google Drive). Titulo/descricao provisorios ate o David enviar os finais.
   { titulo: 'Funções do Project Manager e Mentalidade Profissional', descricao: 'Descrição da aula em breve.', videoUrl: 'https://drive.google.com/file/d/1UNT-zcMKM40a13CM6ms6KapL3PXYHIGH/view', capaUrl: '/capa-pm-aula1.jpg' },
   { titulo: 'Sequência da Obra e Planejamento', descricao: 'Etapas corretas da execução, organização da obra e planejamento prático.', videoUrl: 'https://drive.google.com/file/d/1KMTkPei-ZGDdOPEFPFmbsG3ly4Du19zD/view', capaUrl: '/capa-pm-aula2.jpg' },
-  { titulo: 'Aula 3 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'OSHA — Segurança do Trabalho', descricao: 'Segurança do trabalho e riscos que devem ser evitados na obra, com o professor Rony Jabour.', videoUrl: 'https://drive.google.com/file/d/1qo6RnCkbBzZzSnMO7ccc7eAlY8kiBjPX/view', capaUrl: '/capa-pm-aula3.jpg' },
   { titulo: 'Aula 4 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
   { titulo: 'Aula 5 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
   { titulo: 'Aula 6 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
