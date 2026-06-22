@@ -1,5 +1,6 @@
 import Landing from '../../components/Landing';
 import TrackView from '../../components/TrackView';
+import { WA_MSG } from '../../lib/brand';
 
 export const metadata = {
   title: 'Curso de Construtor — Tire sua CSL em Massachusetts | Wise Pro Academy',
@@ -90,7 +91,10 @@ export default function Page() {
         },
       ]}
       ctaPrincipal="Quero minha licença"
-      ctaForm="Quero garantir minha vaga"
+      whatsappOptions={[
+        { label: 'WhatsApp — CSL Online', message: WA_MSG.csl_online },
+        { label: 'WhatsApp — CSL Presencial', message: WA_MSG.csl_presencial },
+      ]}
     />
     </>
   );

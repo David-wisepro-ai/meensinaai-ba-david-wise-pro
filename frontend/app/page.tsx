@@ -5,7 +5,7 @@ import Marquee from '../components/Marquee';
 import WhatsAppFloat from '../components/WhatsAppFloat';
 import StatBand from '../components/StatBand';
 import { Stars } from '../components/Avatars';
-import { BRAND, WHATSAPP_URL, PRODUCTS } from '../lib/brand';
+import { BRAND, PRODUCTS, waLink, WA_MSG } from '../lib/brand';
 
 export const metadata = {
   title: 'Wise Pro Academy | Cursos de Construção e CSL para Brasileiros nos EUA',
@@ -105,21 +105,6 @@ const goldCta: React.CSSProperties = {
   boxShadow: '0 10px 30px rgba(201,162,39,0.32)',
 };
 
-// CTA contorno claro
-const ghostCta: React.CSSProperties = {
-  display: 'inline-block',
-  textAlign: 'center',
-  background: 'transparent',
-  color: '#fff',
-  fontWeight: 800,
-  fontSize: 15.5,
-  padding: '16px 30px',
-  borderRadius: 999,
-  textDecoration: 'none',
-  border: '1px solid rgba(255,255,255,0.35)',
-  letterSpacing: 0.4,
-};
-
 // ---------- dados ----------
 
 const MARQUEE_ITEMS = [
@@ -139,6 +124,8 @@ const CATEGORIAS = [
       'Prepare-se para atuar como Project Manager na construção civil dos Estados Unidos: gestão de obra, plantas, permits e liderança de equipes.',
     icon: '🧭',
     selo: 'Porta de entrada',
+    // Conversão do card: 1 opção (Project Manager online).
+    waOptions: [{ label: 'Falar no WhatsApp', message: WA_MSG.project_manager }],
     opcoes: [
       {
         nome: 'Curso Preparatório (On-line)',
@@ -162,6 +149,11 @@ const CATEGORIAS = [
       'Prepare-se para tirar a sua licença de construtor em Massachusetts. O mesmo conteúdo nos dois formatos, mais o portal de simulados que treina você até passar.',
     icon: '🏗️',
     selo: 'Curso principal',
+    // Conversão do card: 2 opções (CSL online e CSL presencial).
+    waOptions: [
+      { label: 'WhatsApp — CSL Online', message: WA_MSG.csl_online },
+      { label: 'WhatsApp — CSL Presencial', message: WA_MSG.csl_presencial },
+    ],
     opcoes: [
       {
         nome: 'Curso Preparatório — 5 dias on-line',
@@ -314,7 +306,7 @@ export default function Home() {
 
             <div className="wpa-hero-ctas" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 32 }}>
               <a
-                href={WHATSAPP_URL}
+                href={waLink(WA_MSG.geral)}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -671,8 +663,33 @@ export default function Home() {
                   ))}
                 </div>
 
-                <div style={{ color: BRAND.goldBright, fontWeight: 800, fontSize: 15, marginTop: 22 }}>
-                  Valores no WhatsApp
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 22 }}>
+                  {cat.waOptions.map((op) => (
+                    <a
+                      key={op.label}
+                      href={waLink(op.message)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="wpa-wa-cta"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: 9,
+                        background: '#25D366',
+                        color: '#fff',
+                        fontWeight: 900,
+                        fontSize: 15,
+                        padding: '14px 22px',
+                        borderRadius: 999,
+                        textDecoration: 'none',
+                        letterSpacing: 0.3,
+                        boxShadow: '0 10px 26px rgba(37,211,102,0.32)',
+                      }}
+                    >
+                      <span aria-hidden style={{ fontSize: 17 }}>&#9742;</span> {op.label}
+                    </a>
+                  ))}
                 </div>
               </div>
             ))}
@@ -982,17 +999,28 @@ export default function Home() {
               para te receber.
             </p>
             <div className="wpa-cta-stack" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center', marginTop: 32 }}>
-              <a href="#cursos" className="wpa-gold-cta" style={goldCta}>
-                VER OS CURSOS
-              </a>
               <a
-                href={WHATSAPP_URL}
+                href={waLink(WA_MSG.geral)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="wpa-ghost-cta"
-                style={ghostCta}
+                className="wpa-wa-cta"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: 10,
+                  background: '#25D366',
+                  color: '#fff',
+                  fontWeight: 900,
+                  fontSize: 15.5,
+                  padding: '16px 32px',
+                  borderRadius: 999,
+                  textDecoration: 'none',
+                  letterSpacing: 0.4,
+                  boxShadow: '0 12px 30px rgba(37,211,102,0.35)',
+                }}
               >
-                FALAR NO WHATSAPP
+                <span aria-hidden style={{ fontSize: 18 }}>&#9742;</span> FALAR NO WHATSAPP
               </a>
             </div>
           </div>

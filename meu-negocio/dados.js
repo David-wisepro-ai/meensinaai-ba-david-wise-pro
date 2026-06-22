@@ -25,7 +25,7 @@
 
 window.DADOS_NEGOCIO = {
   versao: "2.0.0",
-  ultima_atualizacao: "2026-06-20T16:00:00Z",
+  ultima_atualizacao: "2026-06-22T18:00:00Z",
 
   /**
    * Identificação básica da empresa. Preenchida por /gerar-perfil-do-negocio.
@@ -104,7 +104,7 @@ window.DADOS_NEGOCIO = {
       plano: null,
       task_atual: null,
       inicio: null,
-      ultima_entrega: "2026-06-20T16:00:00Z",
+      ultima_entrega: "2026-06-22T18:00:00Z",
       cargo: "Full Stack Developer"
     }
   },
@@ -145,6 +145,16 @@ window.DADOS_NEGOCIO = {
    *   }
    */
   entregas: [
+    {
+      id: "ent-victor-2026-06-22-conversao-whatsapp",
+      tipo: "frontend",
+      titulo: "Toda a conversao do site virou botao verde de WhatsApp (#25D366) com mensagem ja preenchida por produto. Removido o formulario de captura de lead das 3 paginas de venda. Helper waLink() e WA_MSG criados em brand.ts. CSL ganhou 2 opcoes (online e presencial). Home (hero, cards de curso, CTA final) e as 3 paginas de venda (Project Manager, Curso de Construtor/CSL, Wise Day) todas com a mesma logica. Todos os links target=_blank rel=noopener.",
+      caminho: "frontend/lib/brand.ts, frontend/components/Landing.tsx, frontend/app/page.tsx, frontend/app/project-manager/page.tsx, frontend/app/curso-construtor/page.tsx, frontend/app/wise-day/page.tsx",
+      agente: "victor",
+      plano: null,
+      task_id: null,
+      criado_em: "2026-06-22T18:00:00Z"
+    },
     {
       id: "ent-victor-2026-06-20-landing-dark-premium",
       tipo: "frontend",
@@ -188,7 +198,7 @@ window.DADOS_NEGOCIO = {
     em_andamento: 0,
     a_fazer: 0,
     progresso_pct: 0,
-    total_entregas: 3
+    total_entregas: 4
   },
 
   /**
@@ -196,6 +206,12 @@ window.DADOS_NEGOCIO = {
    * Cada entrada: { timestamp, agente, plano (slug), acao_resumida }
    */
   atividade_recente: [
+    {
+      timestamp: "2026-06-22T18:00:00Z",
+      agente: "victor",
+      plano: null,
+      acao_resumida: "Trocou toda a conversao do site por botoes verdes de WhatsApp com mensagem automatica ja preenchida por produto, pra atendente saber na hora o que a pessoa quer. Removeu o formulario de captura de lead das 3 paginas de venda. CSL tem 2 botoes (turma online e turma presencial). Mensagens: Project Manager, CSL Online, CSL Presencial, Wise Day e uma geral pra home. Mexeu em brand.ts, Landing.tsx, home e as 3 paginas de venda. Nao tocou no portal do aluno. Sem deploy."
+    },
     {
       timestamp: "2026-06-20T16:00:00Z",
       agente: "victor",

@@ -43,6 +43,21 @@ export const BRAND = {
 // Link do WhatsApp da escola: +1 (774) 777-8510.
 export const WHATSAPP_URL = 'https://wa.me/17747778510';
 
+// Monta um link do WhatsApp com a mensagem já preenchida (URL-encoded) no parâmetro ?text=.
+// Assim a atendente recebe a conversa já dizendo qual produto a pessoa quer.
+export function waLink(msg: string): string {
+  return `${WHATSAPP_URL}?text=${encodeURIComponent(msg)}`;
+}
+
+// Mensagens automáticas por produto. Cada link de conversão usa uma destas.
+export const WA_MSG = {
+  project_manager: 'Olá! Tenho interesse no Construction Project Manager (online) da Wise Pro Academy.',
+  csl_online:      'Olá! Tenho interesse no Construction Supervisor License (CSL) — turma online — da Wise Pro Academy.',
+  csl_presencial:  'Olá! Tenho interesse no Construction Supervisor License (CSL) — turma presencial — da Wise Pro Academy.',
+  wise_day:        'Olá! Tenho interesse no Wise Day da Wise Pro Academy.',
+  geral:           'Olá! Quero saber mais sobre os cursos da Wise Pro Academy.',
+};
+
 // Instagram oficial da escola.
 export const INSTAGRAM_URL = 'https://www.instagram.com/wise_pro_academy';
 

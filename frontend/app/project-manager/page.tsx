@@ -1,5 +1,6 @@
 import Landing from '../../components/Landing';
 import TrackView from '../../components/TrackView';
+import { WA_MSG } from '../../lib/brand';
 
 export const metadata = {
   title: 'Curso de Project Manager na Construção dos EUA | Wise Pro Academy',
@@ -115,7 +116,7 @@ export default function Page() {
         },
       ]}
       ctaPrincipal="Quero começar agora"
-      ctaForm="Quero garantir minha vaga"
+      whatsappOptions={[{ label: 'Falar no WhatsApp', message: WA_MSG.project_manager }]}
       upsell={{
         texto:
           'Já decidiu que quer a licença? O Curso de Construtor é o próximo passo: aulas online (de segunda a sexta) ou presenciais (em 4 sábados) e acesso ao portal de simulados que faz você passar na prova de CSL.',

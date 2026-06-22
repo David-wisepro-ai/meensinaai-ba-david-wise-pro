@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import Vsl from './Vsl';
-import LeadForm from './LeadForm';
 import WhatsAppFloat from './WhatsAppFloat';
 import SiteHeader from './SiteHeader';
 import SiteFooter from './SiteFooter';
-import { BRAND } from '../lib/brand';
+import { BRAND, waLink } from '../lib/brand';
+
+export type WhatsappOption = { label: string; message: string };
 
 export type Beneficio = { titulo: string; texto: string };
 export type Incluso = string;
@@ -38,7 +39,9 @@ export type LandingProps = {
   garantia?: string;
   faq?: FaqItem[];
   ctaPrincipal: string;
-  ctaForm: string;
+  ctaForm?: string; // legado: não há mais formulário; mantido opcional pra não quebrar páginas
+  // Conversão por WhatsApp. 1 opção (PM, Wise Day) ou 2 opções (CSL: online e presencial).
+  whatsappOptions: WhatsappOption[];
   upsell?: Upsell;
 };
 
@@ -96,44 +99,71 @@ function SectionTitle({ children, center = true }: { children: React.ReactNode; 
   );
 }
 
-// Botão âncora que rola até o formulário (#inscricao). Reutilizado ao longo da página.
-// 'gold' = CTA dourado cheio (texto ink). 'light' = contorno claro.
-function CtaInscricao({ children, variant = 'gold' }: { children: React.ReactNode; variant?: 'gold' | 'light' }) {
-  const base: React.CSSProperties = {
-    display: 'inline-block',
-    textAlign: 'center',
-    fontWeight: 900,
-    fontSize: 15.5,
-    padding: '16px 32px',
-    borderRadius: 999,
-    textDecoration: 'none',
-    letterSpacing: 0.4,
-    cursor: 'pointer',
-  };
-  const styles: React.CSSProperties =
-    variant === 'light'
-      ? {
-          ...base,
-          background: 'transparent',
-          color: '#fff',
-          border: '1px solid rgba(255,255,255,0.35)',
-        }
-      : {
-          ...base,
-          background: BRAND.goldGradient,
-          color: BRAND.ink,
-          boxShadow: '0 10px 30px rgba(201,162,39,0.32)',
-        };
+// Botão verde de WhatsApp (conversão única do site). Leva a mensagem do produto já preenchida.
+function WhatsAppButton({
+  label,
+  message,
+  size = 'md',
+}: {
+  label: string;
+  message: string;
+  size?: 'md' | 'lg';
+}) {
+  const pad = size === 'lg' ? '18px 34px' : '16px 32px';
+  const font = size === 'lg' ? 16.5 : 15.5;
   return (
-    <a href="#inscricao" className={variant === 'light' ? 'wpa-ghost-cta' : 'wpa-gold-cta'} style={styles}>
-      {children}
+    <a
+      href={waLink(message)}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="wpa-wa-cta"
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 10,
+        background: '#25D366',
+        color: '#fff',
+        fontWeight: 900,
+        fontSize: font,
+        padding: pad,
+        borderRadius: 999,
+        textDecoration: 'none',
+        letterSpacing: 0.3,
+        boxShadow: '0 12px 30px rgba(37,211,102,0.35)',
+        cursor: 'pointer',
+      }}
+    >
+      <span aria-hidden style={{ fontSize: 18 }}>&#9742;</span> {label}
     </a>
+  );
+}
+
+// Conversão reutilizada ao longo da página. 1 opção -> 1 botão (texto = ctaPrincipal).
+// 2 opções (CSL) -> 2 botões lado a lado, cada um com seu label e sua mensagem.
+function CtaWhats({
+  options,
+  ctaPrincipal,
+  size = 'md',
+}: {
+  options: WhatsappOption[];
+  ctaPrincipal: string;
+  size?: 'md' | 'lg';
+}) {
+  if (options.length === 1) {
+    return <WhatsAppButton label={ctaPrincipal} message={options[0].message} size={size} />;
+  }
+  return (
+    <div style={{ display: 'inline-flex', flexWrap: 'wrap', gap: 12, justifyContent: 'center' }}>
+      {options.map((op) => (
+        <WhatsAppButton key={op.label} label={op.label} message={op.message} size={size} />
+      ))}
+    </div>
   );
 }
 
 export default function Landing(props: LandingProps) {
   const {
-    product,
     nome,
     preco,
     selo,
@@ -154,7 +184,7 @@ export default function Landing(props: LandingProps) {
     garantia,
     faq = [],
     ctaPrincipal,
-    ctaForm,
+    whatsappOptions,
     upsell,
   } = props;
 
@@ -266,7 +296,7 @@ export default function Landing(props: LandingProps) {
           </div>
 
           <div className="wpa-cta-stack" style={{ textAlign: 'center', marginTop: 30 }}>
-            <CtaInscricao>{ctaPrincipal}</CtaInscricao>
+            <CtaWhats options={whatsappOptions} ctaPrincipal={ctaPrincipal} />
             <div
               style={{
                 display: 'flex',
@@ -363,7 +393,7 @@ export default function Landing(props: LandingProps) {
             ))}
           </div>
           <div className="wpa-cta-stack" style={{ textAlign: 'center', marginTop: 34 }}>
-            <CtaInscricao>{ctaPrincipal}</CtaInscricao>
+            <CtaWhats options={whatsappOptions} ctaPrincipal={ctaPrincipal} />
           </div>
         </div>
       </section>
@@ -409,7 +439,7 @@ export default function Landing(props: LandingProps) {
             ))}
           </div>
           <div className="wpa-cta-stack" style={{ textAlign: 'center', marginTop: 36 }}>
-            <CtaInscricao>{ctaPrincipal}</CtaInscricao>
+            <CtaWhats options={whatsappOptions} ctaPrincipal={ctaPrincipal} />
           </div>
         </div>
       </section>
@@ -512,7 +542,7 @@ export default function Landing(props: LandingProps) {
               ))}
             </div>
             <div className="wpa-cta-stack" style={{ textAlign: 'center', marginTop: 36 }}>
-              <CtaInscricao>{ctaPrincipal}</CtaInscricao>
+              <CtaWhats options={whatsappOptions} ctaPrincipal={ctaPrincipal} />
             </div>
           </div>
         </section>
@@ -581,7 +611,7 @@ export default function Landing(props: LandingProps) {
               ))}
             </div>
             <div className="wpa-cta-stack" style={{ textAlign: 'center', marginTop: 36 }}>
-              <CtaInscricao>{ctaPrincipal}</CtaInscricao>
+              <CtaWhats options={whatsappOptions} ctaPrincipal={ctaPrincipal} />
             </div>
           </div>
         </section>
@@ -737,15 +767,46 @@ export default function Landing(props: LandingProps) {
                 padding: 30,
                 border: `1px solid ${BRAND.glassBorder}`,
                 boxShadow: '0 18px 50px rgba(0,0,0,0.4)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 14,
+                alignItems: 'stretch',
               }}
             >
-              <h3 style={{ marginTop: 0, fontSize: 22, fontWeight: 900, letterSpacing: '-0.01em', color: '#fff' }}>
+              <h3 style={{ marginTop: 0, marginBottom: 0, fontSize: 22, fontWeight: 900, letterSpacing: '-0.01em', color: '#fff' }}>
                 Garanta sua vaga
               </h3>
-              <p style={{ color: BRAND.textSoft, marginTop: 8, fontSize: 14.5, lineHeight: 1.65 }}>
-                Preencha seus dados pra reservar sua vaga. Você recebe a confirmação e as instruções da turma.
+              <p style={{ color: BRAND.textSoft, margin: 0, fontSize: 14.5, lineHeight: 1.65 }}>
+                Fale com a nossa equipe no WhatsApp. Você recebe os valores, tira suas dúvidas e garante
+                a sua vaga na turma.
               </p>
-              <LeadForm product={product} cta={ctaForm} />
+              {whatsappOptions.map((op) => (
+                <a
+                  key={op.label}
+                  href={waLink(op.message)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="wpa-wa-cta"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: 10,
+                    background: '#25D366',
+                    color: '#fff',
+                    fontWeight: 900,
+                    fontSize: 16.5,
+                    padding: '18px 28px',
+                    borderRadius: 999,
+                    textDecoration: 'none',
+                    letterSpacing: 0.3,
+                    boxShadow: '0 12px 30px rgba(37,211,102,0.35)',
+                  }}
+                >
+                  <span aria-hidden style={{ fontSize: 18 }}>&#9742;</span>{' '}
+                  {whatsappOptions.length === 1 ? ctaPrincipal : op.label}
+                </a>
+              ))}
             </div>
           </div>
         </div>
@@ -801,7 +862,7 @@ export default function Landing(props: LandingProps) {
               ))}
             </div>
             <div className="wpa-cta-stack" style={{ textAlign: 'center', marginTop: 36 }}>
-              <CtaInscricao>{ctaPrincipal}</CtaInscricao>
+              <CtaWhats options={whatsappOptions} ctaPrincipal={ctaPrincipal} />
             </div>
           </div>
         </section>

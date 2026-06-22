@@ -1,5 +1,6 @@
 import Landing from '../../components/Landing';
 import TrackView from '../../components/TrackView';
+import { WA_MSG } from '../../lib/brand';
 
 export const metadata = {
   title: 'Wise Day — Um dia presencial com o David | Wise Pro Academy',
@@ -83,7 +84,7 @@ export default function Page() {
         },
       ]}
       ctaPrincipal="Quero o Wise Day"
-      ctaForm="Quero reservar meu Wise Day"
+      whatsappOptions={[{ label: 'Falar no WhatsApp', message: WA_MSG.wise_day }]}
     />
     </>
   );
