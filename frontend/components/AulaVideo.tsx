@@ -9,6 +9,9 @@ export function toEmbedSrc(url: string): string | null {
   // YouTube: youtu.be/ID, youtube.com/watch?v=ID, /embed/ID, /shorts/ID
   const yt = u.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/|live\/))([A-Za-z0-9_-]{6,})/);
   if (yt) return `https://www.youtube.com/embed/${yt[1]}?rel=0&modestbranding=1`;
+  // Google Drive: drive.google.com/file/d/ID/... ou ?id=ID -> player de preview do Drive.
+  const gd = u.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?(?:export=\w+&)?id=)([A-Za-z0-9_-]{10,})/);
+  if (gd) return `https://drive.google.com/file/d/${gd[1]}/preview`;
   // Panda Video (ou qualquer outra URL de embed): usa como esta.
   return u;
 }
