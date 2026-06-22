@@ -606,6 +606,8 @@ Quando o dono aprova algo não óbvio → salvar em `wiki/operations/decisions.m
 - **WhatsApp:** Stevo / Z-API (recuperação de carrinho + atendente fecha manual)
 - **Pagamento:** Stripe (USD)
 - **Infra:** Supabase + GitHub + Vercel. Claude Desktop/Code opera tudo.
+- **Portal do aluno:** acesso por produto comprado (tabela `enrollments` no Supabase): quem tem matrícula de Project Manager só vê o portal PM; quem tem de Construtor só vê o portal Construtor (mutuamente exclusivos). Player de aula aceita YouTube, Google Drive e Panda. Vídeos das aulas hoje no **Google Drive (provisório — migrar pro Panda)**.
+- **Logins de teste do portal (NÃO divulgar, senha `WisePro2026!`):** `teste@wiseproacademy.com` (só Construtor) · `teste-pm@wiseproacademy.com` (só Project Manager).
 - **Marca:** azul-marinho + dourado
 
 ---

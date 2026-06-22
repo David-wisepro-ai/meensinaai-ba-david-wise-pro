@@ -10,12 +10,15 @@
 > Mapa completo passo a passo em [[meu-negocio/SETUP-CREDENCIAIS]]. Enquanto vazias, a escola roda em "modo seguro" (não cobra/não loga/não dispara).
 
 - [x] ✅ **Supabase** — projeto criado (`grjqedhjbsvkqruylqom`), 5 tabelas criadas com RLS, **598 questões carregadas** (2026-06-15, via PostgREST). URL: `https://grjqedhjbsvkqruylqom.supabase.co`
-- [x] ✅ **Deploy na Vercel** — site NO AR em https://meensinaai-ba-david-wise-pro.vercel.app (2026-06-15, plano Hobby grátis, repo público, root `frontend/`, Next.js). Build compilou OK.
+- [x] ✅ **Deploy na Vercel** — site NO AR (2026-06-15). **Renomeado em 2026-06-22 → https://wiseproacademy.vercel.app** (sem meensinaai/david). Plano Hobby grátis, repo público, root `frontend/`, Next.js.
 - [x] ✅ **Env vars do Supabase na Vercel** — as 4 variáveis (NEXT_PUBLIC_SUPABASE_URL, SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY publishable, SUPABASE_SERVICE_ROLE_KEY secret) gravadas em Production+Preview (2026-06-15). Acordam login/leads/portal no próximo deploy.
 - [ ] 🔐 **Rotacionar a chave secreta do Supabase** — durante o setup a secret apareceu em texto numa tela da sessão. Boa prática: gerar nova secret no Supabase, atualizar a env var, apagar a antiga. — dono: David + Zuck
 - [ ] **Stripe (POR ÚLTIMO)** — criar 3 produtos/preços + chaves + webhook. Sem isso: checkout não cobra (trava em `checkout_iniciado`). — dono: David
 - [ ] **IDs de rastreamento na Vercel** — colar `NEXT_PUBLIC_GTM_ID`, `NEXT_PUBLIC_GA_ID`, `NEXT_PUBLIC_META_PIXEL_ID`, `META_PIXEL_ID`, `META_CAPI_TOKEN` (código já provisionado; degrada vazio). — dono: David
-- [ ] **Vídeos do Panda Video** — VSLs das 3 landings + 8 aulas PM + aulas Construtor. David manda link + título de cada → Zuck preenche descrição em `PortalLessons.tsx` e o embed nas landings. — dono: David + Zuck
+- [ ] 🎬 **Migrar vídeos das aulas Drive → Panda Video** — Aulas 1, 2 e 3 do Portal PM já montadas (capa + título + descrição), mas com o vídeo no **Google Drive (PROVISÓRIO)**. Drive tem risco de erro de quota no curso pago. Player já aceita YouTube/Drive/Panda — é só trocar a URL em `PortalLessons.tsx`. — dono: David + Zuck
+- [ ] 🔗 **Conferir compartilhamento dos vídeos no Drive** — cada arquivo precisa estar "qualquer pessoa com o link → leitor", senão o aluno não vê. — dono: David
+- [ ] **Aula 1 do PM sem descrição** + montar **Aulas 4 a 8** (PM) e as aulas do Construtor — David manda capa + vídeo + título de cada. — dono: David
+- [ ] **VSLs das landings** — hoje as 3 páginas de venda usam imagem de obra no lugar do VSL. Quando o David gravar, trocar a imagem pelo vídeo (campo `imagemTopo` → `Vsl`). — dono: David
 - [ ] **Cron de recuperação** rebaixado pra 1x/dia (limite do plano Hobby; era 15 min). Revisitar se subir pro Pro. — Zuck
 
 ### 🟡 Médias

@@ -4,18 +4,25 @@
 > Powered by Me Ensina AI
 
 ## Prioridades
-- 🟢 ✅ Site no ar: https://meensinaai-ba-david-wise-pro.vercel.app (Vercel Hobby grátis)
-- 🟢 ✅ Supabase com 598 questões carregadas
-- 🔴 Colar env vars do Supabase na Vercel + redeploy (liga login/leads/portal)
-- 🟡 Conectar Stripe (cobrança dos 3 produtos)
-- 🟡 Definir objetivos de 90 dias com o David
+- 🟢 ✅ Site NOVO no ar (dark premium): https://wiseproacademy.vercel.app (renomeado; sem meensinaai/david). Site antigo azul segue intocado na Hostinger.
+- 🟢 ✅ Portal do aluno funcionando: separação por produto (PM só vê PM, Construtor só vê Construtor), prova completa estilo CSL real (pular/navegar/finalizar), bug do "Carregando" corrigido.
+- 🟢 ✅ Aulas 1, 2 e 3 do Portal Project Manager no ar (capa + vídeo + título). Vídeos via Google Drive (provisório).
+- 🔴 **Migrar os vídeos das aulas pro Panda Video** (Drive tem risco de erro de quota no curso pago). David grava as próximas no Panda/YouTube.
+- 🔴 **Conferir compartilhamento dos vídeos do Drive** ("qualquer pessoa com o link") senão aluno não vê.
+- 🔴 Rotacionar a chave secreta do Supabase (apareceu em tela no setup).
+- 🟡 Stripe (cobrança dos 3 produtos) — por último.
+- 🟡 IDs de rastreamento (GTM/GA4/Pixel/CAPI) na Vercel.
 
 ## Números-Chave
 - 3 produtos: Project Manager (~US$ 250) · Curso de Construtor (US$ 597) · Wise Day (US$ 497)
-- Banco de questões: ~600 verificadas (consolidado em 2026-06-15)
+- Banco de questões: 598 verificadas (IRC 210, IBC 226, IECC 101, OSHA 36, AAB 25)
+- Portal PM: 3 de 8 aulas montadas. Portal Construtor: aulas ainda vazias.
+
+## Logins de teste do portal (senha: WisePro2026!)
+- `teste@wiseproacademy.com` → só Construtor · `teste-pm@wiseproacademy.com` → só Project Manager
 
 ## Alertas
-- (nenhum)
+- ⚠️ Vídeos das aulas estão no Google Drive (provisório) — migrar pro Panda antes de escalar.
 
 ---
 Parte de: [[clients/overview|Dashboard de Clientes]]
