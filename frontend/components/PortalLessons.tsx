@@ -30,7 +30,7 @@ export type Aula = {
 // --- Portal PROJECT MANAGER — 8 aulas -------------------------------------
 export const PM_AULAS: Aula[] = [
   // Aula 1: video do David (Google Drive). Titulo/descricao provisorios ate o David enviar os finais.
-  { titulo: 'Aula 1', descricao: 'Descrição da aula em breve.', videoUrl: 'https://drive.google.com/file/d/1UNT-zcMKM40a13CM6ms6KapL3PXYHIGH/view', capaUrl: '/capa-pm-aula1.jpg' },
+  { titulo: 'Funções do Project Manager e Mentalidade Profissional', descricao: 'Descrição da aula em breve.', videoUrl: 'https://drive.google.com/file/d/1UNT-zcMKM40a13CM6ms6KapL3PXYHIGH/view', capaUrl: '/capa-pm-aula1.jpg' },
   { titulo: 'Aula 2 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
   { titulo: 'Aula 3 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
   { titulo: 'Aula 4 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
