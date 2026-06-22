@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { BRAND } from '../../lib/brand';
-import { portalSupabase, authedFetch } from '../../lib/portal-client';
+import { portalSupabase, authedFetch, getSessionSafe } from '../../lib/portal-client';
 import { Level } from '../../components/portal-types';
 import PortalAuth from '../../components/PortalAuth';
 import PortalSimulados from '../../components/PortalSimulados';
@@ -53,8 +53,8 @@ export default function Portal() {
       setSessao('deslogado'); // sem env -> cai na tela de login com aviso
       return;
     }
-    const { data } = await sb.auth.getSession();
-    if (!data.session) {
+    const session = await getSessionSafe(sb);
+    if (!session) {
       setSessao('deslogado');
       return;
     }
@@ -81,7 +81,13 @@ export default function Portal() {
     revalidar();
     const sb = portalSupabase();
     if (!sb) return;
-    const { data: sub } = sb.auth.onAuthStateChange(() => revalidar());
+    // IMPORTANTE: nao chamar getSession() (nem revalidar direto) DENTRO do callback do
+    // onAuthStateChange — o Supabase segura o lock durante o callback e isso causa deadlock
+    // (tela travada em "Carregando"). O setTimeout(0) joga a revalidacao pra fora do callback,
+    // depois que o lock e liberado.
+    const { data: sub } = sb.auth.onAuthStateChange(() => {
+      setTimeout(() => revalidar(), 0);
+    });
     return () => sub.subscription.unsubscribe();
   }, []);
 
