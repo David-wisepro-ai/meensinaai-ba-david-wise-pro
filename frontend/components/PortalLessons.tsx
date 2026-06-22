@@ -24,12 +24,13 @@ export type Aula = {
   titulo: string;
   descricao: string;
   videoUrl: string; // '' = video em breve. Aceita link do YouTube ou do Panda Video.
+  capaUrl?: string; // imagem de capa do card (opcional). Ex.: '/capa-pm-aula1.jpg'
 };
 
 // --- Portal PROJECT MANAGER — 8 aulas -------------------------------------
 export const PM_AULAS: Aula[] = [
   // Aula 1: video do David (Google Drive). Titulo/descricao provisorios ate o David enviar os finais.
-  { titulo: 'Aula 1', descricao: 'Descrição da aula em breve.', videoUrl: 'https://drive.google.com/file/d/1UNT-zcMKM40a13CM6ms6KapL3PXYHIGH/view' },
+  { titulo: 'Aula 1', descricao: 'Descrição da aula em breve.', videoUrl: 'https://drive.google.com/file/d/1UNT-zcMKM40a13CM6ms6KapL3PXYHIGH/view', capaUrl: '/capa-pm-aula1.jpg' },
   { titulo: 'Aula 2 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
   { titulo: 'Aula 3 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
   { titulo: 'Aula 4 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
@@ -108,6 +109,14 @@ export default function PortalLessons({
                   border: `1px solid ${BRAND.gold}`,
                 }}
               >
+                {/* Capa da aula (se houver) cobre o card; senao fica so a arte navy+dourado. */}
+                {aula.capaUrl && (
+                  <img
+                    src={aula.capaUrl}
+                    alt={aula.titulo}
+                    style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                )}
                 <div
                   style={{
                     position: 'absolute',
@@ -118,20 +127,24 @@ export default function PortalLessons({
                     padding: 14,
                   }}
                 >
-                  <span
-                    style={{
-                      alignSelf: 'flex-start',
-                      fontSize: 11,
-                      fontWeight: 800,
-                      letterSpacing: 1,
-                      color: BRAND.navy,
-                      background: BRAND.gold,
-                      borderRadius: 999,
-                      padding: '3px 10px',
-                    }}
-                  >
-                    AULA {numero}
-                  </span>
+                  {aula.capaUrl ? (
+                    <span aria-hidden />
+                  ) : (
+                    <span
+                      style={{
+                        alignSelf: 'flex-start',
+                        fontSize: 11,
+                        fontWeight: 800,
+                        letterSpacing: 1,
+                        color: BRAND.navy,
+                        background: BRAND.gold,
+                        borderRadius: 999,
+                        padding: '3px 10px',
+                      }}
+                    >
+                      AULA {numero}
+                    </span>
+                  )}
                   <div
                     style={{
                       alignSelf: 'flex-end',
