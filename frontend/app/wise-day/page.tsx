@@ -19,8 +19,8 @@ export default function Page() {
       selo="Experiência premium"
       headline="Um dia inteiro com o David, na prática, acelerando a sua carreira na construção"
       subheadline="A experiência premium da Wise Pro Academy. Um dia presencial acompanhando quem já faz acontecer no ramo, com tempo dedicado pra resolver as suas dúvidas reais de obra, permit e código."
-      imagemTopo="/planta-projeto.jpg"
-      vslTitulo="Leitura e planejamento de plantas de obra"
+      imagemTopo="/wise-day-tablet.jpg"
+      vslTitulo="A construção na palma da mão: gestão, plantas e obra"
       copyBlocos={[
         'Tem um momento na sua carreira em que o que falta não é mais teoria. É ver, de perto, como o profissional que já chegou lá toma decisão no canteiro: como ele lê uma obra, como resolve um problema de permit, como interpreta o código quando o inspetor aparece. Esse aprendizado não cabe numa aula gravada. Acontece no campo.',
         'O Wise Day é exatamente isso: um dia inteiro, presencial, lado a lado com o David. Você traz as suas dúvidas reais (de obra, de permit, de código, de carreira) e sai com respostas que dá pra aplicar no dia seguinte. É a forma mais rápida de transformar o que você estudou em decisão prática e segura.',
