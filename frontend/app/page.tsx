@@ -4,7 +4,7 @@ import SiteFooter from '../components/SiteFooter';
 import Marquee from '../components/Marquee';
 import WhatsAppFloat from '../components/WhatsAppFloat';
 import StatBand from '../components/StatBand';
-import Avatars, { Stars } from '../components/Avatars';
+import { Stars } from '../components/Avatars';
 import { BRAND, WHATSAPP_URL, PRODUCTS } from '../lib/brand';
 
 export const metadata = {
@@ -313,29 +313,27 @@ export default function Home() {
             </p>
 
             <div className="wpa-hero-ctas" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 32 }}>
-              <a href="#cursos" className="wpa-gold-cta" style={goldCta}>
-                VER OS CURSOS
-              </a>
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="wpa-ghost-cta"
-                style={ghostCta}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 10,
+                  background: '#25D366',
+                  color: '#fff',
+                  fontWeight: 800,
+                  fontSize: 16,
+                  letterSpacing: 0.3,
+                  padding: '16px 32px',
+                  borderRadius: 999,
+                  textDecoration: 'none',
+                  boxShadow: '0 12px 30px rgba(37,211,102,0.35)',
+                }}
               >
-                FALAR NO WHATSAPP
+                <span aria-hidden style={{ fontSize: 18 }}>&#9742;</span> Falar no WhatsApp
               </a>
-            </div>
-
-            {/* PROVA SOCIAL — avatares + estrelas */}
-            <div className="wpa-hero-social" style={{ display: 'flex', alignItems: 'center', gap: 14, marginTop: 34, flexWrap: 'wrap' }}>
-              <Avatars count={5} />
-              <div>
-                <Stars size={15} />
-                <div style={{ color: BRAND.textSoft, fontSize: 14, marginTop: 3 }}>
-                  Alunos aprovados na CSL e em obras nos EUA
-                </div>
-              </div>
             </div>
           </div>
 
