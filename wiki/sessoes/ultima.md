@@ -4,39 +4,29 @@
 > O Protocolo de Abertura lê este arquivo pra saber onde paramos.
 > O Protocolo de Fechamento sobrescreve este arquivo com o relatório novo.
 
----
+# Sessão 2026-06-22 (noite ~20h40)
 
-# Sessão 2026-06-22 — operação (noite de 21 que entrou na madrugada)
+> Duração aproximada: ~1h | CEO: Zuck
 
-> Duração aproximada: longa | CEO: Zuck
-
-## O que rodou hoje
-- Renomeado o site na Vercel: tirado `meensinaai` e `david` da URL → link novo **https://wiseproacademy.vercel.app**. Site antigo azul intocado na Hostinger; domínio wiseproacademy.io não migrado.
-- Páginas de venda padronizadas no dark premium. VSL removido e trocado por imagens de obra (PM = equipe planejando; Construtor = dupla na planta). Seção de professores na página do PM.
-- Portal do aluno: separação por produto verificada (PM só vê PM, Construtor só vê Construtor). 2 logins de teste criados.
-- Prova completa virou formato real da CSL: pular questão, navegar livre, navegador de questões, finalizar com revisão. Novo endpoint `/api/quiz/grade`. Quiz por categoria intocado.
-- Bug corrigido: portal travava em "Carregando" (deadlock do Supabase auth).
-- Player de aula passou a aceitar YouTube e Google Drive. Montadas Aulas 1, 2 e 3 do Portal PM (capa + vídeo Drive + título + descrição).
+## O que rodou hoje (noite)
+- Trocada a frase da seção de autoridade da home: "quem viveu a obra" → "quem **vive** a obra de verdade" (presente). No ar (commit 42f5890).
+- Criados **4 PDFs de venda** pra vendedora, um por produto: Construction Project Manager, CSL Online, CSL Presencial e Wise Day. Cada um com cabeçalho de marca (logo + faixa dourada), foto do produto no topo, todo o conteúdo da landing (gancho, sobre, pra-quem, o que ganha, incluso, formato, FAQ) e CTA verde de WhatsApp com **mensagem automática por produto**.
+- Instalado reportlab + pillow no ambiente (não vinham). Gerador reproduzível em `/tmp/gerar_pdfs.py`. PDFs salvos em `~/Downloads/Wise Pro - PDFs de Venda/`.
 
 ## Decisões tomadas
-- Manter site antigo no ar; usar `.vercel.app` pro novo.
-- Portais PM e Construtor mutuamente exclusivos por compra.
-- Prova completa sem feedback no meio (só ao finalizar).
-- Vídeos via Drive são provisórios → migrar pro Panda Video.
+- PDFs de venda sem preço dentro (vendedora passa o valor no WhatsApp — mesma lógica do funil só-WhatsApp).
+- PDFs ficam no Downloads como anexo; hospedar como link público (Drive ou `/pdf` no site) ficou em aberto pro David decidir.
 
 ## Pendências geradas/atualizadas
-- 🔴 Migrar vídeos das aulas Drive → Panda — David + Zuck
-- 🔴 Conferir compartilhamento dos vídeos no Drive — David
-- 🔴 Rotacionar a chave secreta do Supabase — David + Zuck
-- 🟡 Descrição da Aula 1; Aulas 4-8; Stripe; rastreamento — David
+- 🟡 Decidir hospedagem pública dos 4 PDFs (link clicável vs anexo) — dono: David.
 
 ## Números do dia
-- 598 questões no banco. Portal PM: 3 de 8 aulas montadas. Logins de teste: teste@ (Construtor) e teste-pm@ (PM), senha WisePro2026!.
+- 4 PDFs de venda gerados (1 por produto).
+- 3 produtos ativos; 598 questões verificadas no banco; Portal PM com 3 de 8 aulas.
 
 ## Próxima sessão — onde retomar
-- Migrar os 3 vídeos pro Panda (ou confirmar compartilhamento no Drive).
-- Receber descrição da Aula 1 e próximas aulas.
-- Quando o David quiser: Stripe + rastreamento.
+- Se o David quiser, hospedar os 4 PDFs como link público (Drive ou rota `/pdf` no Vercel).
+- Seguir o backlog crítico: migrar vídeos Drive → Panda + conferir compartilhamento dos vídeos; rotacionar a secret do Supabase.
 
 ## Bloqueios
-- Vídeos, Stripe e rastreamento dependem do David.
+- Nenhum novo. Stripe e tracking seguem "por último" conforme o David.

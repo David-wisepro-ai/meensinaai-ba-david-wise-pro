@@ -23,6 +23,7 @@
 
 ### 🟡 Médias
 
+- [ ] **Decidir hospedagem pública dos 4 PDFs de venda** — hoje os PDFs (Construction Project Manager, CSL Online, CSL Presencial, Wise Day) estão só em `~/Downloads/Wise Pro - PDFs de Venda/` (arquivo local). David perguntou se quer transformá-los em link público (Google Drive ou rota `/pdf` no site Vercel) pra vendedora mandar 1 link clicável em vez do anexo. Gerador reproduzível em `/tmp/gerar_pdfs.py`. — dono: David decide
 - [ ] **Resend** (e-mail) + **WhatsApp Stevo/Z-API** — pra recuperação de carrinho disparar. — dono: David
 - [ ] **Rodar `npm install && npm run build`** no `frontend/` numa máquina com Node pra confirmar compilação (não há Node no ambiente do Cloud Code). — dono: David ou /victor
 - [ ] **Lead de WhatsApp (Facebook Ads) não entra no CRM hoje** — furo antigo da escola. Nenhuma rota escreve `lead_novo`/`atendimento` ainda. — dono: David + Zuck

@@ -2,6 +2,20 @@
 
 > Append-only. Nova entrada por dia/sessão pelo `/boa-noite`.
 
+## 2026-06-22 (segunda, sessão noturna ~20h40)
+
+### Operações principais
+- Frase da seção de autoridade da home trocada: "quem viveu a obra" → "quem **vive** a obra" (presente). Commit `42f5890`, no ar.
+- **4 PDFs de venda criados** pra vendedora, 1 por produto: Construction Project Manager, CSL Online, CSL Presencial, Wise Day. Cada PDF puxa o conteúdo da landing (gancho, sobre, pra-quem, benefícios, incluso, formato, FAQ) com cabeçalho de marca (logo + faixa dourada), foto do produto no topo e **CTA verde de WhatsApp com mensagem automática por produto** (atendente já sabe o que a pessoa quer). Sem preço dentro (vendedora passa no WhatsApp).
+- Stack do PDF: instalado `reportlab` + `pillow` (não vinham no ambiente). Imagens recortadas em banner 2.15:1 via PIL. Gerador reproduzível em `/tmp/gerar_pdfs.py`. Saída em `~/Downloads/Wise Pro - PDFs de Venda/`.
+
+### Decisões tomadas
+- PDFs de venda NÃO levam preço — a vendedora passa o valor no WhatsApp (mesma lógica do funil só-WhatsApp das landings).
+- PDFs ficam no Downloads (asset que a vendedora anexa); hospedar como link público ficou em aberto pro David decidir.
+
+### Pendências geradas
+- Decidir se hospeda os 4 PDFs como link público (Drive ou `/pdf` no site).
+
 ## 2026-06-22 (segunda, sessão noturna que entrou na madrugada)
 
 ### Operações principais
