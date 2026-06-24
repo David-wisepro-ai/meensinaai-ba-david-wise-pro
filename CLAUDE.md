@@ -600,10 +600,17 @@ Quando o dono aprova algo não óbvio → salvar em `wiki/operations/decisions.m
 - **Site NOVO (dark premium, Vercel):** https://wiseproacademy.vercel.app (home + 3 páginas de venda + portal). Projeto Vercel renomeado pra `wiseproacademy` (conta "Wise Pro's projects", Hobby).
 - **Site ANTIGO (azul, NÃO mexer):** https://wiseproacademy.io segue hospedado na Hostinger (DNS dns-parking.com, A records 88.223.87.120 / 147.79.79.67). Decisão do David: manter o antigo no ar e usar o link .vercel.app pro novo.
 - **Pra migrar o domínio pro site novo no futuro (só se o David pedir):** trocar 1 registro DNS na Hostinger → A `@` = `216.198.79.1` (e remover os IPs antigos). Substitui o site antigo pelo novo; email não é afetado.
-- **CRM:** Pedro (Me Ensina AI Solutions, liberado pro David)
+- **CRM REAL EM USO = GoHighLevel** (não é o Pedro). Agência "Wise Pro Academy" com **1 sub-conta** (location id `vEjazzVFoX9PcpilopuC`). Pipeline principal: **"Marketing Pipeline"** (id `Do7jE8RH8LcThaNPljV6`) com estágios Novo Lead → Novo Lead não respondeu → Novo Lead já respondeu → **Follow Up** → Tem interesse mas está frio → Tem interesse e está quente. Login do dono: Facebook "Dave Piazzarollo".
+  - **389 leads importados** (de planilha do Gmail) → 388 oportunidades no estágio **Follow Up**, com tags `lista-junho-2026` + `lead-frio` (286) / `lead-aquecido` (102 com nome). Smart Lists criadas: **"Leads Frios"** (286) e **"Leads Aquecidos"** (102).
+  - **Usuária da equipe:** Alessandra Freire (`alefreirecopywriter@gmail.com`, +55 21 98907-6058), papel **User (limitado)** — Conversas/Contatos/Oportunidades, sem settings/billing. Convite por email enviado (David confirma login com ela depois).
+  - ⚠️ O histórico do WhatsApp Business sincronizou ~2269 contatos pro CRM (6 meses de conversa). Normal.
 - **Email marketing/transacional:** Resend
 - **Ads:** Meta (Facebook Ads) — capta lead e hoje manda pro WhatsApp
-- **WhatsApp:** Stevo / Z-API (recuperação de carrinho + atendente fecha manual)
+- **WhatsApp = oficial Meta WhatsApp Business API, conectado DENTRO do GoHighLevel** (não é mais Z-API pra abordagem nova). Número **+1 (774) 777-8510**, modo **coexistência** (continua funcionando no app do celular). Plano LC WhatsApp **US$ 10/mês** cobrado na agência. Status: **Approved + Connected**, mas **Meta Business NÃO verificado ainda** (verificação submetida 2026-06-23, prazo até ~2026-06-25).
+  - **2 templates aprovados (Active), pt-BR, Marketing, com opt-out "SAIR":** `primeiro_contato_lead_frio` (sem variável) e `primeiro_contato_lead_quente` (variável {{1}} = primeiro nome).
+  - **Regra dura da Meta (anti-spam):** só dá pra mandar livre dentro de janela de 24h após o lead escrever; fora disso só com template aprovado. Conta nova/não verificada tem limite por país (BR bloqueado: erro "restricted from messaging users in this country") e limite de marketing por usuário (erro "Per-User Marketing Template limits"). Número americano (+1) funciona; **não disparar em massa** até verificar + aquecer.
+- **Empresa legal (pra verificação Meta):** **Wise Pro LLC** (LLC de Massachusetts, id estadual `001731898`, era "Dudley Home Investments LLC" renomeada em 2025-08-25), 151 East Street, Whitinsville, MA 01588. Agente registrado: David Dazilio Piazzarollo. Meta Business Portfolio id `1134409628126570`. EIN existe (David localizou).
+- **Z-API / Stevo:** era a recuperação de carrinho. Ao migrar o número pro Meta, saiu do Z-API → recuperação por WhatsApp **pausada**, religar por dentro do GHL.
 - **Pagamento:** Stripe (USD)
 - **Infra:** Supabase + GitHub + Vercel. Claude Desktop/Code opera tudo.
 - **Portal do aluno:** acesso por produto comprado (tabela `enrollments` no Supabase): quem tem matrícula de Project Manager só vê o portal PM; quem tem de Construtor só vê o portal Construtor (mutuamente exclusivos). Player de aula aceita YouTube, Google Drive e Panda. Vídeos das aulas hoje no **Google Drive (provisório — migrar pro Panda)**.

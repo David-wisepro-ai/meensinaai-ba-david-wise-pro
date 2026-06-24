@@ -9,6 +9,9 @@
 ### 🔴 Críticas
 > Mapa completo passo a passo em [[meu-negocio/SETUP-CREDENCIAIS]]. Enquanto vazias, a escola roda em "modo seguro" (não cobra/não loga/não dispara).
 
+- [ ] ⏳ **Verificação do Meta Business em análise** — submetida 2026-06-23 pela entidade Wise Pro LLC. Prazo até ~48h (~2026-06-25). Desbloqueia envio pra outros países (BR) + sobe limite de marketing do WhatsApp. **Conferir status dia 25/06.** — dono: David + Zuck
+- [ ] 🚫 **NÃO disparar os 389 leads até verificar + aquecer** — número novo + conta não verificada = Meta bloqueia disparo em frio. Plano: depois de verificado, aquecer 10-20/dia começando pelos aquecidos, buscando resposta. Nunca clicar "Retry" em envio falhado. — Zuck
+
 - [x] ✅ **Supabase** — projeto criado (`grjqedhjbsvkqruylqom`), 5 tabelas criadas com RLS, **598 questões carregadas** (2026-06-15, via PostgREST). URL: `https://grjqedhjbsvkqruylqom.supabase.co`
 - [x] ✅ **Deploy na Vercel** — site NO AR (2026-06-15). **Renomeado em 2026-06-22 → https://wiseproacademy.vercel.app** (sem meensinaai/david). Plano Hobby grátis, repo público, root `frontend/`, Next.js.
 - [x] ✅ **Env vars do Supabase na Vercel** — as 4 variáveis (NEXT_PUBLIC_SUPABASE_URL, SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY publishable, SUPABASE_SERVICE_ROLE_KEY secret) gravadas em Production+Preview (2026-06-15). Acordam login/leads/portal no próximo deploy.
@@ -23,6 +26,10 @@
 
 ### 🟡 Médias
 
+- [ ] **Manual rápido da vendedora (Alessandra)** — qual template usar pra qual lista (frio→Leads Frios, quente→Leads Aquecidos), como enviar em lotes pequenos, como tratar respostas e "SAIR". — Zuck
+- [ ] **Automação de follow-up no GHL** — quando o lead responder no WhatsApp, mover oportunidade de estágio e/ou avisar a vendedora. — Zuck
+- [ ] **Religar recuperação de carrinho por dentro do GHL** — saiu do Z-API quando o número migrou pra Meta. — Zuck
+- [ ] **Confirmar login da Alessandra** — convite do CRM enviado pra `alefreirecopywriter@gmail.com`; David confere com ela amanhã que chegou e que ela definiu a senha. — dono: David
 - [ ] **Decidir hospedagem pública dos 4 PDFs de venda** — hoje os PDFs (Construction Project Manager, CSL Online, CSL Presencial, Wise Day) estão só em `~/Downloads/Wise Pro - PDFs de Venda/` (arquivo local). David perguntou se quer transformá-los em link público (Google Drive ou rota `/pdf` no site Vercel) pra vendedora mandar 1 link clicável em vez do anexo. Gerador reproduzível em `/tmp/gerar_pdfs.py`. — dono: David decide
 - [ ] **Resend** (e-mail) + **WhatsApp Stevo/Z-API** — pra recuperação de carrinho disparar. — dono: David
 - [ ] **Rodar `npm install && npm run build`** no `frontend/` numa máquina com Node pra confirmar compilação (não há Node no ambiente do Cloud Code). — dono: David ou /victor

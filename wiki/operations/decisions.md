@@ -2,6 +2,15 @@
 
 > Toda decisão não-óbvia aprovada pelo dono fica aqui. Não revisitar a cada sessão.
 
+## 2026-06-23
+
+- **CRM real = GoHighLevel** (não o Pedro). 389 leads importados no estágio Follow Up do "Marketing Pipeline", separados em Smart Lists Leads Frios (286) e Leads Aquecidos (102).
+- **WhatsApp via API oficial da Meta dentro do GoHighLevel** (modo coexistência, número fica no celular), US$ 10/mês. Z-API sai dessa abordagem; recuperação de carrinho será religada por dentro do GHL.
+- **Templates de abordagem:** sempre pt-BR, categoria Marketing, com opt-out "responda SAIR", sem preço dentro. 2 criados e aprovados: frio (genérico) e quente (personaliza nome via {{1}}).
+- **Acesso da Alessandra:** User limitado (sem settings/billing) — operação de leads, não admin.
+- **Estratégia de disparo:** NÃO disparar os 389 de uma vez. Verificar Meta Business primeiro (submetido 2026-06-23) e aquecer o número aos poucos (começar pelos aquecidos, buscar resposta).
+- **Verificação Meta:** feita pela entidade legal Wise Pro LLC (EIN + registro MA) na aba "Verify yourself or an organization" → Business portfolio (a do Security Center estava com bug "Sorry, something went wrong").
+
 ## 2026-06-22
 
 - **Domínio:** manter o site antigo (azul) no ar em wiseproacademy.io (Hostinger) e usar o link `wiseproacademy.vercel.app` pro site novo. NÃO migrar o domínio agora (só se o David pedir; passo de DNS documentado no CLAUDE.md).

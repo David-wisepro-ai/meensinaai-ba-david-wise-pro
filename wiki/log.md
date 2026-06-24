@@ -2,6 +2,24 @@
 
 > Append-only. Nova entrada por dia/sessão pelo `/boa-noite`.
 
+## 2026-06-23 (terça) — WhatsApp + CRM GoHighLevel
+
+### Operações principais
+- **Importação de 389 leads** no GoHighLevel: li planilha .xls do Gmail (4 abas, frios + aquecidos), consolidei 402 → 389 únicos, normalizei telefones (+1), e importei como contatos + oportunidades no estágio **Follow Up** do Marketing Pipeline (388 criadas). Tags lista-junho-2026 + lead-frio/lead-aquecido. Notas "LIGUEI" preservadas.
+- **4 PDFs de venda** (carryover da noite anterior) confirmados; criados links/Finder pro David.
+- **WhatsApp Business conectado no GoHighLevel**: ativei plano LC US$ 10/mês, conectei o número +1 774 777-8510 via Meta API em modo coexistência (David fez login Facebook + QR + OTP). Approved + Connected. Histórico sincronizou ~2269 contatos.
+- **2 templates criados e aprovados (Active)**: primeiro_contato_lead_frio e primeiro_contato_lead_quente (pt-BR, Marketing, opt-out SAIR, {{1}}=nome no quente).
+- **Diagnóstico dos bloqueios de envio** (ver lessons): janela 24h, país BR bloqueado, limite de marketing por usuário — tudo por conta nova não verificada. Teste de envio livre (janela aberta) funcionou e foi entregue.
+- **Verificação do Meta Business submetida** pela entidade Wise Pro LLC (achamos o registro na Secretaria de Estado de MA, id 001731898; David localizou o EIN). Em análise (até 48h).
+- **Acesso criado pra Alessandra Freire** (User limitado) no CRM.
+- **2 Smart Lists** criadas: Leads Frios (286) + Leads Aquecidos (102).
+
+### Decisões tomadas
+- CRM real = GoHighLevel. WhatsApp via Meta API oficial (não Z-API) pra abordagem. Não disparar 389 de uma vez — verificar + aquecer. Templates sem preço, com opt-out. Alessandra = acesso limitado.
+
+### Pendências geradas
+- Aguardar verificação Meta (~25/06). Manual da vendedora; automação de follow-up; religar recuperação de carrinho no GHL; David confirmar login da Alessandra.
+
 ## 2026-06-22 (segunda, sessão noturna ~20h40)
 
 ### Operações principais
