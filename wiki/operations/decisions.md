@@ -2,6 +2,11 @@
 
 > Toda decisão não-óbvia aprovada pelo dono fica aqui. Não revisitar a cada sessão.
 
+## 2026-06-25
+
+- **Funil automatizado no GHL (3 workflows publicados):** (1) "Lead novo WhatsApp → Novo Lead" = Customer Replied WhatsApp cria oportunidade no estágio Novo Lead, origem "Facebook Ads", e após 24h sem nova resposta move pra "Não respondeu"; (2) "Lead respondeu → Já respondeu" = quando o lead manda a 2ª mensagem (gate por etiqueta `lead-1a-msg-recebida`) move pra "Já respondeu". Tudo com "allow move to previous stage = OFF" pra proteger a ordem e não puxar os 389 do Follow Up pra trás.
+- **Ads do Facebook ativados** (25/06) mandando lead direto pro WhatsApp; os 7 leads do dia foram pro Novo Lead manualmente (via Manage Opportunities).
+
 ## 2026-06-23
 
 - **CRM real = GoHighLevel** (não o Pedro). 389 leads importados no estágio Follow Up do "Marketing Pipeline", separados em Smart Lists Leads Frios (286) e Leads Aquecidos (102).

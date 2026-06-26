@@ -2,6 +2,14 @@
 
 > Toda regra que CEO aprende fica aqui. Lido no protocolo de abertura de toda sessão.
 
+## 2026-06-25 — Montando automação de funil no GoHighLevel (limites do builder)
+- **O quê:** montei 3 workflows pra organizar leads de ads (Novo Lead → Já respondeu / Não respondeu). Esbarrei em limites do builder e tive que achar contornos.
+- **Aprendizados / não repetir:**
+  1. A espera **"Until the contact replies"** EXIGE um passo de envio de mensagem anterior ("Reply to" obrigatório). Sem mensagem enviada antes, não dá pra usar esse tipo de espera. Como a gente não envia template automático (não verificado + atendente manual), usei **espera por tempo fixo (24h)**.
+  2. O **If/Else condition do GHL NÃO consegue checar estágio/pipeline da oportunidade** (não existe esse campo). Pra rotear por estágio, usei o truque do **"Allow move to previous stage = OFF"** + a ORDEM dos estágios (mover sempre "pra frente"; backward fica bloqueado e protege quem já avançou).
+  3. **Click-to-WhatsApp: o lead CHEGA mandando mensagem**, então "Customer Replied" dispara já na chegada. Pra diferenciar chegada (1ª msg) de resposta de verdade (2ª+), usei uma **etiqueta de controle** (`lead-1a-msg-recebida`): 1ª msg só adiciona a etiqueta; 2ª+ (já tem etiqueta) move pra "já respondeu". Isso é determinístico e evita corrida entre workflows.
+- **Também:** o classificador de auto-mode bloqueou ação em massa em contatos reais sem consentimento específico; só segui depois do "sim" explícito do David.
+
 ## 2026-06-23 — Regras do WhatsApp Business API (Meta) que travam disparo em frio
 - **O quê:** depois de conectar o WhatsApp no GoHighLevel, vários testes de envio falharam. Diagnostiquei cada erro: (1) mensagem livre fora da janela de 24h → bloqueada (precisa template); (2) número do Brasil (+55) → "Business account is restricted from messaging users in this country"; (3) template de marketing pra contato que nunca interagiu → "Message blocked... Per-User Marketing Template limits". Eu cheguei a sugerir errado que "você digitou manualmente" quando na verdade o bloqueio era de país.
 - **Não repetir / regras pra sempre:** (a) WhatsApp Business API só manda livre dentro de 24h após o lead escrever; fora disso SÓ template aprovado. (b) Conta nova **não verificada** na Meta tem limite por país (BR bloqueado) e limite de marketing por usuário. (c) Número americano (+1) funciona; nunca disparar 389 leads de uma vez num número novo — **verificar Meta Business + aquecer aos poucos** (10-20/dia, começar pelos aquecidos, buscar resposta). (d) ao diagnosticar falha de envio, SEMPRE ler o tooltip do ⚠️ na mensagem (mostra o erro exato) antes de chutar a causa.

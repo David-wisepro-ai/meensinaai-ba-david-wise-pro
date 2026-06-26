@@ -27,7 +27,7 @@
 ### 🟡 Médias
 
 - [ ] **Manual rápido da vendedora (Alessandra)** — qual template usar pra qual lista (frio→Leads Frios, quente→Leads Aquecidos), como enviar em lotes pequenos, como tratar respostas e "SAIR". — Zuck
-- [ ] **Automação de follow-up no GHL** — quando o lead responder no WhatsApp, mover oportunidade de estágio e/ou avisar a vendedora. — Zuck
+- [x] ✅ **Automação de funil no GHL** (2026-06-25) — 3 workflows publicados: lead chega → Novo Lead; responde (2ª msg) → Já respondeu; 24h sem resposta → Não respondeu. Ads do Facebook já alimentando.
 - [ ] **Religar recuperação de carrinho por dentro do GHL** — saiu do Z-API quando o número migrou pra Meta. — Zuck
 - [ ] **Confirmar login da Alessandra** — convite do CRM enviado pra `alefreirecopywriter@gmail.com`; David confere com ela amanhã que chegou e que ela definiu a senha. — dono: David
 - [ ] **Decidir hospedagem pública dos 4 PDFs de venda** — hoje os PDFs (Construction Project Manager, CSL Online, CSL Presencial, Wise Day) estão só em `~/Downloads/Wise Pro - PDFs de Venda/` (arquivo local). David perguntou se quer transformá-los em link público (Google Drive ou rota `/pdf` no site Vercel) pra vendedora mandar 1 link clicável em vez do anexo. Gerador reproduzível em `/tmp/gerar_pdfs.py`. — dono: David decide

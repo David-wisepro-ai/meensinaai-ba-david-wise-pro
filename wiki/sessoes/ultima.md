@@ -4,27 +4,25 @@
 > O Protocolo de Abertura lê este arquivo pra saber onde paramos.
 > O Protocolo de Fechamento sobrescreve este arquivo com o relatório novo.
 
-# Sessão 2026-06-23 (terça)
+# Sessão 2026-06-25 (quinta)
 
 > Duração aproximada: longa | CEO: Zuck
 
 ## O que rodou hoje
-- **389 leads importados no GoHighLevel** (planilha .xls do Gmail → 389 únicos): 388 oportunidades no estágio **Follow Up**, tags lead-frio (286) / lead-aquecido (102).
-- **WhatsApp Business conectado ao GoHighLevel** (Meta API, coexistência, +1 774 777-8510, US$ 10/mês). Approved + Connected.
-- **2 templates Active:** frio + quente (pt-BR, Marketing, opt-out SAIR).
-- **Bloqueios de envio diagnosticados** (janela 24h / país BR / limite marketing) — por conta nova não verificada. Envio livre em janela aberta funcionou.
-- **Verificação Meta Business submetida** (entidade Wise Pro LLC). Em análise até 48h.
-- **Acesso da Alessandra Freire** criado (User limitado). **2 Smart Lists** (Frios 286 / Aquecidos 102).
+- **Verificação do Meta Business**: ainda "Not Verified" (em análise). WhatsApp Approved + Connected, com limites de conta nova.
+- **Ads do Facebook no ar** trazendo leads direto pro WhatsApp (7 novos hoje).
+- **3 workflows de funil publicados no GHL:** (1) Lead chega no WhatsApp → **Novo Lead** → 24h sem resposta → **Não respondeu**; (2) Lead manda 2ª mensagem (gate por etiqueta `lead-1a-msg-recebida`) → **Já respondeu**. Tudo com "no backward move".
+- **7 leads de hoje** colocados no Novo Lead (Manage Opportunities); estágio ficou com 10.
 
 ## Decisões tomadas
-- CRM real = GoHighLevel; WhatsApp via Meta API (não Z-API); templates sem preço + opt-out; Alessandra limitada; NÃO disparar 389 de uma vez (verificar + aquecer).
+- Funil auto-organiza por responsividade; gate por etiqueta separa chegada de resposta (click-to-WhatsApp faz o lead chegar mandando msg); no-backward protege o Follow Up dos 389.
 
 ## Pendências pra amanhã
-- ⏳ Conferir verificação Meta (~25/06). 🚫 Não disparar leads até verificar+aquecer.
-- 🟡 Manual da vendedora · automação de follow-up · religar recuperação de carrinho no GHL · David confirmar login da Alessandra.
+- 🔴 Conferir verificação Meta de novo (pendente).
+- 🟡 Manual da vendedora · religar recuperação de carrinho no GHL · David confirmar login da Alessandra.
 
 ## Próxima sessão — onde retomar
-- Status da verificação Meta; montar manual da vendedora + automação de follow-up; quando aprovar, iniciar aquecimento (aquecidos primeiro).
+- Status da verificação Meta; manual da vendedora; recuperação de carrinho. Quando verificar: aquecimento + abordar os 389.
 
 ## Bloqueios
-- Verificação Meta na mão da Meta (até 48h). Security Center deu bug; usei "Verify yourself or an organization" → Business portfolio.
+- Verificação Meta na mão da Meta (pendente).

@@ -2,6 +2,21 @@
 
 > Append-only. Nova entrada por dia/sessão pelo `/boa-noite`.
 
+## 2026-06-25 (quinta) — Funil automatizado no GHL
+
+### Operações principais
+- **Conferi a verificação do Meta Business**: ainda "Not Verified" (em análise). WhatsApp Approved + Connected, mas limites de conta nova seguem.
+- **Ads do Facebook entraram no ar** trazendo leads direto pro WhatsApp (7 contatos novos no dia).
+- **Automação 1 publicada** ("Lead novo WhatsApp → Novo Lead"): Customer Replied (WhatsApp) → cria oportunidade no estágio Novo Lead (origem Facebook Ads) → espera 24h → se sem resposta, move pra "Novo Lead não respondeu".
+- **Adicionei os 7 leads de hoje ao Novo Lead** (Bulk Actions → Manage Opportunities). Novo Lead ficou com 10 oportunidades (alguns já caíram pela automação = funcionando).
+- **Automação 2 publicada** ("Lead respondeu → Já respondeu"): Customer Replied (WhatsApp) → If/Else por etiqueta de controle `lead-1a-msg-recebida` (1ª msg só etiqueta; 2ª+ move pra "Novo Lead já respondeu").
+
+### Decisões tomadas
+- Funil auto-organizado por responsividade, com proteção "no backward move" pra não bagunçar Follow Up. Gate por etiqueta pra separar chegada de resposta.
+
+### Pendências geradas
+- Conferir verificação Meta de novo. Manual da vendedora; religar recuperação de carrinho no GHL; David confirmar login da Alessandra.
+
 ## 2026-06-23 (terça) — WhatsApp + CRM GoHighLevel
 
 ### Operações principais
