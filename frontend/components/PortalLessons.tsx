@@ -32,7 +32,7 @@ export const PM_AULAS: Aula[] = [
   // Aula 1: video do David (Google Drive). Titulo/descricao provisorios ate o David enviar os finais.
   { titulo: 'Funções do Project Manager e Mentalidade Profissional', descricao: 'Descrição da aula em breve.', videoUrl: 'https://drive.google.com/file/d/1UNT-zcMKM40a13CM6ms6KapL3PXYHIGH/view', capaUrl: '/capa-pm-aula1.jpg' },
   { titulo: 'Sequência da Obra e Planejamento', descricao: 'Etapas corretas da execução, organização da obra e planejamento prático.', videoUrl: 'https://drive.google.com/file/d/1KMTkPei-ZGDdOPEFPFmbsG3ly4Du19zD/view', capaUrl: '/capa-pm-aula2.jpg' },
-  { titulo: 'OSHA — Segurança do Trabalho', descricao: 'Segurança do trabalho e riscos que devem ser evitados na obra, com o professor Rony Jabour.', videoUrl: 'https://drive.google.com/file/d/1qo6RnCkbBzZzSnMO7ccc7eAlY8kiBjPX/view', capaUrl: '/capa-pm-aula3.jpg' },
+  { titulo: 'OSHA — Segurança do Trabalho na Construção', descricao: 'Segurança do trabalho e riscos que devem ser evitados na obra, com o professor Rony Jabour.', videoUrl: 'https://drive.google.com/file/d/1qo6RnCkbBzZzSnMO7ccc7eAlY8kiBjPX/view', capaUrl: '/capa-pm-aula3.jpg' },
   { titulo: 'Leituras de Plantas para Orçamentos e Change Orders', descricao: 'Como interpretar plantas para elaborar orçamentos precisos e gerenciar change orders na obra.', videoUrl: 'https://drive.google.com/file/d/1ugAZqfNC3kE6ujw4eqGIgrpBNaizbRrc/view', capaUrl: '/capa-pm-aula4.jpg' },
   { titulo: 'Inteligência Artificial para Gestão de Projetos na Construção', descricao: 'Como usar inteligência artificial para planejar, organizar e gerenciar projetos na construção.', videoUrl: 'https://drive.google.com/file/d/1F-vNm-4EhTzfOjYX_p6QvjuhPzKLsjtz/view', capaUrl: '/capa-pm-aula5.jpg' },
   { titulo: 'Aula 6 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
@@ -69,6 +69,7 @@ export default function PortalLessons({
       <div
         style={{
           display: 'flex',
+          alignItems: 'flex-start',
           gap: 16,
           overflowX: 'auto',
           paddingBottom: 12,
