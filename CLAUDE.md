@@ -763,3 +763,10 @@ O **Dashboard-Lição** é o primeiro entregável interativo que o dono recebe n
 Esta estrutura foi criada pela Me Ensina AI (Fábio Borges).
 Dúvidas técnicas: contatar Fábio via canal de suporte BA.
 Instagram: @fabioborges_ia | Site: meensinaai.com
+
+## ENFORCEMENT v2 (adicionado pela migracao — aditivo, nada acima foi alterado)
+
+- **Hooks** (`.claude/hooks/`): pre-flight aborta commit/push com segredo/PII/`.env`/`raw/`; portao do ledger exige o guardiao antes do push. Silenciosos — so falam pra impedir desastre.
+- **`guardiao`** (`/audita`): antes de entrega pronta ou push, confere contra o `DECISOES.md` e reprova regressao com evidencia.
+- **`DECISOES.md`** (raiz): ledger append-only — regra resolvida do dono nao volta a quebrar.
+- **`.claude/rules/`**: regras path-scoped (agentes validos, seguranca de segredos, conteudo do negocio).

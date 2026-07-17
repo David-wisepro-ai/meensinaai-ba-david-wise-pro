@@ -42,3 +42,5 @@ yarn-error.log*
 # Claude
 .claude/cache/
 .claude/.tmp/
+raw/
+.migracao-v2-backup-*/

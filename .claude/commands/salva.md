@@ -38,7 +38,7 @@ REPO_NAME=$(basename "$CLAUDE_PROJECT_DIR")
 LOCKDIR="/tmp/${REPO_NAME}-backup.lock.d"
 if mkdir "$LOCKDIR" 2>/dev/null; then
   trap 'rmdir "$LOCKDIR"' EXIT
-  cd "$CLAUDE_PROJECT_DIR"
+  cd "${CLAUDE_PROJECT_DIR:?ERRO: variavel vazia — abra o Claude Code na pasta do SEU repositorio e rode de novo (nunca rode o backup fora do repo)}"
   git pull --rebase origin main
   git add -A
   if ! git diff --cached --quiet; then
