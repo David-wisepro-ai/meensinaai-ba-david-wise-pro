@@ -411,7 +411,7 @@ LOCKDIR="/tmp/${REPO_NAME}-backup.lock.d"
 if mkdir "$LOCKDIR" 2>/dev/null; then
   trap 'rmdir "$LOCKDIR"' EXIT
   cd "$CLAUDE_PROJECT_DIR"
-  git pull --rebase origin main
+  git pull --rebase --autostash origin main
   git add -A
   if ! git diff --cached --quiet; then
     git commit -m "sessao $(date +%F) — [resumo de 5-8 palavras]"
