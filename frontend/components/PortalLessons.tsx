@@ -43,8 +43,8 @@ export const PM_AULAS: Aula[] = [
 // --- Portal CONSTRUTOR — 8 aulas ------------------------------------------
 export const CONSTRUTOR_AULAS: Aula[] = [
   { titulo: 'Introdução ao Curso de CSL', descricao: 'Apresentação do curso preparatório para tirar a Construction Supervisor License (CSL).', videoUrl: 'https://drive.google.com/file/d/1Z9LerwwzfYiw88B0ikxULF1NMMaroCkh/view', capaUrl: '/capa-construtor-aula1.jpg' },
-  { titulo: 'Aula 2 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
-  { titulo: 'Aula 3 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'Marcação no Livro IRC', descricao: 'Como marcar e organizar o livro do International Residential Code (IRC) para consulta rápida na prova.', videoUrl: 'https://drive.google.com/file/d/1HMc1_6iKv8qNcmZCxDPiHJKFAxB3kEst/view', capaUrl: '/capa-construtor-aula2.jpg' },
+  { titulo: 'Marcação no Livro IBC', descricao: 'Como marcar e organizar o livro do International Building Code (IBC) para consulta rápida na prova.', videoUrl: 'https://drive.google.com/file/d/171q9gu3rr0BHMkCkoEDEelkR5C-wUxq1/view', capaUrl: '/capa-construtor-aula3.jpg' },
   { titulo: 'Aula 4 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
   { titulo: 'Aula 5 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
   { titulo: 'Aula 6 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
