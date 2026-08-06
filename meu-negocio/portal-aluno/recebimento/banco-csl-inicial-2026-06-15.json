@@ -6425,7 +6425,7 @@
     "id": "irc-038",
     "category": "IRC",
     "subtopic": "garage-separation",
-    "question": "Per Table R302.6, the garage side of a wall separating the garage from the residence (and attics) must be protected with at least what material?",
+    "question": "The garage side of a wall separating the garage from the residence (and attics) must be protected with at least what material?",
     "options": {
       "A": "1/2-inch gypsum board",
       "B": "5/8-inch Type X gypsum board",
@@ -6482,7 +6482,7 @@
     "id": "irc-041",
     "category": "IRC",
     "subtopic": "fireblocking",
-    "question": "Which of the following is a required fireblocking location under IRC R302.11?",
+    "question": "Which of the following is a required fireblocking location?",
     "options": {
       "A": "Only at the exterior corners of the building",
       "B": "At interconnections between concealed vertical and horizontal spaces such as soffits, drop ceilings and cove ceilings",
@@ -6501,7 +6501,7 @@
     "id": "irc-042",
     "category": "IRC",
     "subtopic": "fireblocking",
-    "question": "Which of the following is an approved fireblocking material under IRC R302.11.1?",
+    "question": "Which of the following is an approved fireblocking material?",
     "options": {
       "A": "Loose-fill cellulose insulation in any location",
       "B": "Nominal 2-inch lumber",
@@ -6539,7 +6539,7 @@
     "id": "irc-044",
     "category": "IRC",
     "subtopic": "draftstopping",
-    "question": "What is the minimum acceptable draftstopping material thickness for gypsum board under IRC R302.12.1?",
+    "question": "What is the minimum acceptable draftstopping material thickness for gypsum board?",
     "options": {
       "A": "1/4-inch gypsum board",
       "B": "3/8-inch gypsum board",
@@ -6558,7 +6558,7 @@
     "id": "irc-045",
     "category": "IRC",
     "subtopic": "smoke-alarms",
-    "question": "Under IRC R314, smoke alarms are required in all of the following locations EXCEPT:",
+    "question": "Smoke alarms are required in all of the following locations EXCEPT:",
     "options": {
       "A": "In each sleeping room",
       "B": "Outside each separate sleeping area in the immediate vicinity of the bedrooms",
@@ -6596,7 +6596,7 @@
     "id": "irc-047",
     "category": "IRC",
     "subtopic": "co-alarms",
-    "question": "Under IRC R315, carbon monoxide alarms are required for new dwellings under which condition?",
+    "question": "Carbon monoxide alarms are required for new dwellings under which condition?",
     "options": {
       "A": "Only in all-electric homes",
       "B": "In dwellings with fuel-fired appliances or with an attached garage",
@@ -6805,7 +6805,7 @@
     "id": "irc-058",
     "category": "IRC",
     "subtopic": "ceiling-height",
-    "question": "What is the minimum ceiling height for habitable spaces and hallways under IRC R305.1?",
+    "question": "What is the minimum ceiling height for habitable spaces and hallways?",
     "options": {
       "A": "6 feet 8 inches",
       "B": "7 feet 0 inches",
@@ -6862,7 +6862,7 @@
     "id": "irc-061",
     "category": "IRC",
     "subtopic": "window-fall-protection",
-    "question": "Window fall protection is required under IRC R312.2 when the top of an operable window sill is less than 24 inches above the finished floor AND the opening is more than what distance above the exterior finished grade?",
+    "question": "Window fall protection is required when the top of an operable window sill is less than 24 inches above the finished floor AND the opening is more than what distance above the exterior finished grade?",
     "options": {
       "A": "36 inches",
       "B": "48 inches",
@@ -6976,7 +6976,7 @@
     "id": "irc-067",
     "category": "IRC",
     "subtopic": "fasteners",
-    "question": "Per Table R602.3(1), the connection of a top or sole plate to a stud by end nailing requires how many fasteners?",
+    "question": "The connection of a top or sole plate to a stud by end nailing requires how many fasteners?",
     "options": {
       "A": "2-8d",
       "B": "2-16d",
@@ -7109,7 +7109,7 @@
     "id": "irc-074",
     "category": "IRC",
     "subtopic": "gypsum",
-    "question": "Per Table R702.3.5, what is the minimum gypsum board thickness for a ceiling with framing spaced 16 inches on center where a water-based texture is applied?",
+    "question": "What is the minimum gypsum board thickness for a ceiling with framing spaced 16 inches on center where a water-based texture is applied?",
     "options": {
       "A": "3/8 inch",
       "B": "1/2 inch",
@@ -7128,7 +7128,7 @@
     "id": "irc-075",
     "category": "IRC",
     "subtopic": "flashing",
-    "question": "Under IRC R703.4, approved corrosion-resistant flashing must be applied to exterior walls in which of the following locations?",
+    "question": "Approved corrosion-resistant flashing must be applied to exterior walls in which of the following locations?",
     "options": {
       "A": "Only at the top of the foundation",
       "B": "At exterior window and door openings, at wall and roof intersections, and where exterior porches/decks attach to walls",
@@ -7166,7 +7166,7 @@
     "id": "irc-077",
     "category": "IRC",
     "subtopic": "smoke-co-alarms",
-    "question": "In existing dwellings, when are smoke alarms required to be added even without other work, per the alterations/repairs provisions of R314?",
+    "question": "In existing dwellings undergoing alterations or repairs, when are smoke alarms required to be added even without other work?",
     "options": {
       "A": "Never; existing dwellings are fully exempt",
       "B": "When alterations, repairs, or additions requiring a permit occur, or when one or more sleeping rooms are added or created",
@@ -7983,7 +7983,7 @@
     "id": "irc-120",
     "category": "IRC",
     "subtopic": "columns-footings",
-    "question": "Per Table R407.2, what is the minimum nominal size for a steel pipe column used to support beams or girders in a dwelling?",
+    "question": "What is the minimum nominal size for a steel pipe column used to support beams or girders in a dwelling?",
     "options": {
       "A": "3-inch diameter standard pipe",
       "B": "3-1/2-inch diameter standard pipe",
@@ -8002,7 +8002,7 @@
     "id": "irc-121",
     "category": "IRC",
     "subtopic": "columns-footings",
-    "question": "Wood columns under R407.3 must not be less than what nominal size unless approved or otherwise engineered?",
+    "question": "Wood columns must not be less than what nominal size unless approved or otherwise engineered?",
     "options": {
       "A": "2x4",
       "B": "4x4 (nominal)",
@@ -8021,7 +8021,7 @@
     "id": "irc-122",
     "category": "IRC",
     "subtopic": "girder-bearing",
-    "question": "Per R502.6, the ends of each floor joist, beam or girder bearing on wood or metal must have not less than how much bearing length?",
+    "question": "The ends of each floor joist, beam or girder bearing on wood or metal must have not less than how much bearing length?",
     "options": {
       "A": "1 inch on wood or metal",
       "B": "1-1/2 inches on wood or metal",
@@ -8040,7 +8040,7 @@
     "id": "irc-123",
     "category": "IRC",
     "subtopic": "girder-bearing",
-    "question": "Under R502.6.2, joists framing into the side of a wood girder must be supported by what?",
+    "question": "Joists framing into the side of a wood girder must be supported by what?",
     "options": {
       "A": "Toe nails only",
       "B": "Approved framing anchors or ledger strips",
@@ -8059,7 +8059,7 @@
     "id": "irc-124",
     "category": "IRC",
     "subtopic": "floor-joist-spans",
-    "question": "The allowable spans for floor joists in Tables R502.3.1(1) and R502.3.1(2) are based on which design live load conditions?",
+    "question": "The allowable spans for floor joists are based on which design live load conditions?",
     "options": {
       "A": "A single 40 psf load for all rooms",
       "B": "Sleeping areas at 30 psf and all other areas at 40 psf",
@@ -8097,7 +8097,7 @@
     "id": "irc-126",
     "category": "IRC",
     "subtopic": "wood-foundation-walls",
-    "question": "Per R404.2, the materials used in the construction of permanent wood foundation walls must be what?",
+    "question": "The materials used in the construction of permanent wood foundation walls must be what?",
     "options": {
       "A": "Standard kiln-dried framing lumber",
       "B": "Preservative-treated wood and approved for ground contact",
@@ -8135,7 +8135,7 @@
     "id": "irc-128",
     "category": "IRC",
     "subtopic": "concrete-foundation-walls",
-    "question": "Per Table R404.1.2(1), the minimum thickness of a concrete foundation wall is generally determined by what factors?",
+    "question": "The minimum thickness of a concrete foundation wall is generally determined by what factors?",
     "options": {
       "A": "The roof covering material only",
       "B": "Wall height and the unbalanced backfill height",
@@ -8154,7 +8154,7 @@
     "id": "irc-129",
     "category": "IRC",
     "subtopic": "concrete-foundation-walls",
-    "question": "Per R404.1.2.3.7.4, vertical reinforcement in a concrete foundation wall, where required, must have minimum concrete cover of how much measured from the inside face?",
+    "question": "Vertical reinforcement in a concrete foundation wall, where required, must have minimum concrete cover of how much measured from the inside face?",
     "options": {
       "A": "1/2 inch",
       "B": "3/4 inch",
@@ -8173,7 +8173,7 @@
     "id": "irc-130",
     "category": "IRC",
     "subtopic": "anchor-bolts",
-    "question": "Per R403.1.6, sill plates and wall plates anchoring to a concrete or masonry foundation must have anchor bolts spaced not more than how far apart?",
+    "question": "Sill plates and wall plates anchoring to a concrete or masonry foundation must have anchor bolts spaced not more than how far apart?",
     "options": {
       "A": "4 feet on center",
       "B": "6 feet on center",
@@ -8192,7 +8192,7 @@
     "id": "irc-131",
     "category": "IRC",
     "subtopic": "anchor-bolts",
-    "question": "Per R403.1.6, anchor bolts attaching the sill plate must extend a minimum of how far into concrete or grouted masonry?",
+    "question": "Anchor bolts attaching the sill plate must extend a minimum of how far into concrete or grouted masonry?",
     "options": {
       "A": "4 inches",
       "B": "5 inches",
@@ -8211,7 +8211,7 @@
     "id": "irc-132",
     "category": "IRC",
     "subtopic": "anchor-bolts",
-    "question": "Under R403.1.6, a plate washer is required between the sill plate and the nut on each anchor bolt where required by the braced wall provisions. What is the minimum plate washer size?",
+    "question": "A plate washer is required between the sill plate and the nut on each anchor bolt where required by the braced wall provisions. What is the minimum plate washer size?",
     "options": {
       "A": "0.229 inch by 3 inches by 3 inches",
       "B": "1/8 inch by 1 inch by 1 inch",
@@ -8230,7 +8230,7 @@
     "id": "irc-133",
     "category": "IRC",
     "subtopic": "pier-column-footings",
-    "question": "Per R403, the size of a footing supporting an isolated pier or column is primarily determined by what?",
+    "question": "The size of a footing supporting an isolated pier or column is primarily determined by what?",
     "options": {
       "A": "The species of wood used in the column",
       "B": "The load on the footing and the load-bearing value of the soil",
@@ -8249,7 +8249,7 @@
     "id": "irc-134",
     "category": "IRC",
     "subtopic": "termite-protection",
-    "question": "Per R318.1, in areas where the probability of termite infestation is very heavy, which of the following is an approved method of protection?",
+    "question": "In areas where the probability of termite infestation is very heavy, which of the following is an approved method of protection?",
     "options": {
       "A": "Painting all wood with latex paint",
       "B": "Chemical soil treatment, pressure-preservative-treated wood, naturally durable wood, or physical barriers",
@@ -8268,7 +8268,7 @@
     "id": "irc-135",
     "category": "IRC",
     "subtopic": "termite-protection",
-    "question": "Per R318.4 (foam plastic protection), foam plastic insulation is generally restricted from being installed in which location in very heavy termite areas?",
+    "question": "For foam plastic protection, foam plastic insulation is generally restricted from being installed in which location in very heavy termite areas?",
     "options": {
       "A": "Inside heated interior walls",
       "B": "On the exterior face or under the interior face of a basement or crawl space wall in contact with the ground",
@@ -8287,7 +8287,7 @@
     "id": "irc-136",
     "category": "IRC",
     "subtopic": "decay-protection",
-    "question": "Per R317.1, wood floor joists closer than what distance to exposed ground in crawl spaces must be naturally durable or preservative-treated wood?",
+    "question": "Wood floor joists closer than what distance to exposed ground in crawl spaces must be naturally durable or preservative-treated wood?",
     "options": {
       "A": "Less than 6 inches",
       "B": "Less than 18 inches (joists) and less than 12 inches (girders)",
@@ -8306,7 +8306,7 @@
     "id": "irc-137",
     "category": "IRC",
     "subtopic": "decay-protection",
-    "question": "Per R317.1.2, wood in direct contact with the ground or fresh water and supporting permanent structures must be what?",
+    "question": "Wood in direct contact with the ground or fresh water and supporting permanent structures must be what?",
     "options": {
       "A": "Naturally durable heartwood only",
       "B": "Approved pressure-preservative-treated wood suitable for ground contact",
@@ -8325,7 +8325,7 @@
     "id": "irc-138",
     "category": "IRC",
     "subtopic": "decay-protection",
-    "question": "Per R317.3.1, fasteners and connectors in contact with preservative-treated and fire-retardant-treated wood must be what?",
+    "question": "Fasteners and connectors in contact with preservative-treated and fire-retardant-treated wood must be what?",
     "options": {
       "A": "Hot-dipped galvanized, stainless steel, silicon bronze or copper",
       "B": "Standard bright steel",
@@ -8344,7 +8344,7 @@
     "id": "irc-139",
     "category": "IRC",
     "subtopic": "roof-covering-metal",
-    "question": "Per R905.10.1, a lapped, nonsoldered seam metal roof panel installed WITHOUT applied lap sealant requires a minimum roof slope of what?",
+    "question": "A lapped, nonsoldered seam metal roof panel installed WITHOUT applied lap sealant requires a minimum roof slope of what?",
     "options": {
       "A": "One-quarter unit vertical in 12 (1/4:12)",
       "B": "One-half unit vertical in 12 (1/2:12)",
@@ -8363,7 +8363,7 @@
     "id": "irc-140",
     "category": "IRC",
     "subtopic": "roof-covering-metal",
-    "question": "Per R905.4, metal roof shingles shall not be installed on a roof slope less than which of the following?",
+    "question": "Metal roof shingles shall not be installed on a roof slope less than which of the following?",
     "options": {
       "A": "Two units vertical in 12 units horizontal (2:12)",
       "B": "Three units vertical in 12 units horizontal (3:12)",
@@ -8382,7 +8382,7 @@
     "id": "irc-141",
     "category": "IRC",
     "subtopic": "roof-covering-tile",
-    "question": "Per R905.3, clay and concrete roof tile shall not be installed on a roof slope less than which value (with double underlayment required for lower slopes)?",
+    "question": "Clay and concrete roof tile shall not be installed on a roof slope less than which value (with double underlayment required for lower slopes)?",
     "options": {
       "A": "2-1/2 units vertical in 12 units horizontal (2.5:12)",
       "B": "1 unit vertical in 12",
@@ -8401,7 +8401,7 @@
     "id": "irc-142",
     "category": "IRC",
     "subtopic": "roof-covering-wood-shingles",
-    "question": "Per R905.7, wood shingles shall not be installed on a roof slope less than which of the following?",
+    "question": "Wood shingles shall not be installed on a roof slope less than which of the following?",
     "options": {
       "A": "Two units vertical in 12 (2:12)",
       "B": "Three units vertical in 12 (3:12)",
@@ -8420,7 +8420,7 @@
     "id": "irc-143",
     "category": "IRC",
     "subtopic": "roof-covering-wood-shakes",
-    "question": "Per R905.8, wood shakes shall not be installed on a roof slope less than which of the following?",
+    "question": "Wood shakes shall not be installed on a roof slope less than which of the following?",
     "options": {
       "A": "Two units vertical in 12 (2:12)",
       "B": "Three units vertical in 12 (3:12)",
@@ -8439,7 +8439,7 @@
     "id": "irc-144",
     "category": "IRC",
     "subtopic": "roof-covering-slate",
-    "question": "Per R905.6, slate and slate-type shingles shall not be installed on a roof slope less than which of the following?",
+    "question": "Slate and slate-type shingles shall not be installed on a roof slope less than which of the following?",
     "options": {
       "A": "Two units vertical in 12 (2:12)",
       "B": "Three units vertical in 12 (3:12)",
@@ -8458,7 +8458,7 @@
     "id": "irc-145",
     "category": "IRC",
     "subtopic": "roof-covering-slate",
-    "question": "Per R905.6.5, slate shingles must be fastened with what type of nails?",
+    "question": "Slate shingles must be fastened with what type of nails?",
     "options": {
       "A": "Bright steel nails",
       "B": "Corrosion-resistant nails (such as copper or stainless steel)",
@@ -8477,7 +8477,7 @@
     "id": "irc-146",
     "category": "IRC",
     "subtopic": "roof-underlayment",
-    "question": "Per R905.1.1, underlayment for asphalt shingles, metal roof shingles, slate, wood shingles and wood shakes must be applied in accordance with what?",
+    "question": "Underlayment for asphalt shingles, metal roof shingles, slate, wood shingles and wood shakes must be applied in accordance with what?",
     "options": {
       "A": "There is no underlayment requirement",
       "B": "Tables R905.1.1(1), (2) and (3) based on the roof covering and slope",
@@ -8496,7 +8496,7 @@
     "id": "irc-147",
     "category": "IRC",
     "subtopic": "dwelling-sprinklers",
-    "question": "Per R313.2, an automatic residential fire sprinkler system, where adopted, is required to be installed in one- and two-family dwellings in accordance with which standard(s)?",
+    "question": "An automatic residential fire sprinkler system, where adopted, is required to be installed in one- and two-family dwellings in accordance with which standard(s)?",
     "options": {
       "A": "NFPA 72 only",
       "B": "Section P2904 or NFPA 13D",
@@ -8515,7 +8515,7 @@
     "id": "irc-148",
     "category": "IRC",
     "subtopic": "dwelling-sprinklers",
-    "question": "Per the residential sprinkler standard referenced by R313 (P2904 / NFPA 13D), sprinklers may generally be omitted from which space?",
+    "question": "Per the residential sprinkler standard, sprinklers may generally be omitted from which space?",
     "options": {
       "A": "Bedrooms",
       "B": "Bathrooms 55 sq ft or less, and clothes closets/pantries 24 sq ft or less",
@@ -8534,7 +8534,7 @@
     "id": "irc-149",
     "category": "IRC",
     "subtopic": "escape-window-wells",
-    "question": "Per R310.3.2, an emergency escape and rescue opening with a sill below grade must be provided with a window well having a minimum horizontal area of what?",
+    "question": "An emergency escape and rescue opening with a sill below grade must be provided with a window well having a minimum horizontal area of what?",
     "options": {
       "A": "5 square feet",
       "B": "9 square feet, with a minimum horizontal projection and width of 36 inches",
@@ -8553,7 +8553,7 @@
     "id": "irc-150",
     "category": "IRC",
     "subtopic": "escape-window-wells",
-    "question": "Per R310.3.2.1, a window well with a vertical depth greater than what dimension must be equipped with a permanently affixed ladder or steps?",
+    "question": "A window well with a vertical depth greater than what dimension must be equipped with a permanently affixed ladder or steps?",
     "options": {
       "A": "24 inches",
       "B": "36 inches",
@@ -8572,7 +8572,7 @@
     "id": "irc-151",
     "category": "IRC",
     "subtopic": "escape-window-wells",
-    "question": "Per R310.3.2.1, the rungs of a window well ladder must have an inside width of at least how much and be spaced no more than how far apart vertically?",
+    "question": "The rungs of a window well ladder must have an inside width of at least how much and be spaced no more than how far apart vertically?",
     "options": {
       "A": "At least 12 inches wide, spaced not more than 18 inches on center",
       "B": "At least 9 inches wide, spaced not more than 24 inches on center",
@@ -8591,7 +8591,7 @@
     "id": "irc-152",
     "category": "IRC",
     "subtopic": "siding-wall-covering",
-    "question": "Per R703.11, vinyl siding must be fastened so that what condition is met?",
+    "question": "Vinyl siding must be fastened so that what condition is met?",
     "options": {
       "A": "Fasteners driven tight to lock the panel in place",
       "B": "Fasteners centered in the slots and not driven tight, allowing for thermal movement",
@@ -8610,7 +8610,7 @@
     "id": "irc-153",
     "category": "IRC",
     "subtopic": "siding-wall-covering",
-    "question": "Per R703.3 and R703.4, exterior wall coverings such as fiber cement, wood and hardboard siding must be installed over what, in addition to the structure?",
+    "question": "Exterior wall coverings such as fiber cement, wood and hardboard siding must be installed over what, in addition to the structure?",
     "options": {
       "A": "No backing required",
       "B": "A water-resistive barrier, and to the minimum thickness/attachment listed in Table R703.3(1)",
@@ -8629,7 +8629,7 @@
     "id": "irc-154",
     "category": "IRC",
     "subtopic": "siding-wall-covering",
-    "question": "Per R703.10.1, fiber-cement lap siding having a maximum width of 12 inches must be lapped a minimum of how much?",
+    "question": "Fiber-cement lap siding having a maximum width of 12 inches must be lapped a minimum of how much?",
     "options": {
       "A": "1/2 inch",
       "B": "1-1/4 inches",
@@ -8648,7 +8648,7 @@
     "id": "irc-155",
     "category": "IRC",
     "subtopic": "weather-resistant-barrier",
-    "question": "Per R703.2, a water-resistive barrier behind the exterior wall covering must consist of at least what?",
+    "question": "A water-resistive barrier behind the exterior wall covering must consist of at least what?",
     "options": {
       "A": "Nothing, if the siding is rated water-resistant",
       "B": "One layer of No. 15 asphalt felt (ASTM D226 Type 1) or other approved water-resistive barrier",
@@ -8667,7 +8667,7 @@
     "id": "irc-156",
     "category": "IRC",
     "subtopic": "weather-resistant-barrier",
-    "question": "Per R703.2, the water-resistive barrier must be applied in what manner to properly shed water?",
+    "question": "The water-resistive barrier must be applied in what manner to properly shed water?",
     "options": {
       "A": "Vertically with side laps sealed",
       "B": "Horizontally, with upper layers lapped over lower layers (shingle fashion)",
@@ -8686,7 +8686,7 @@
     "id": "irc-157",
     "category": "IRC",
     "subtopic": "masonry-chimney-clearance",
-    "question": "Per R1003.18, the air space clearance between a masonry chimney located entirely outside the exterior walls and combustible material must be at least how much?",
+    "question": "The air space clearance between a masonry chimney located entirely outside the exterior walls and combustible material must be at least how much?",
     "options": {
       "A": "1 inch",
       "B": "2 inches",
@@ -8705,7 +8705,7 @@
     "id": "irc-158",
     "category": "IRC",
     "subtopic": "masonry-chimney-clearance",
-    "question": "Per R1003.18, the required air-space clearance between a masonry chimney and combustible trim or framing may be reduced or eliminated only when what condition is met?",
+    "question": "The required air-space clearance between a masonry chimney and combustible trim or framing may be reduced or eliminated only when what condition is met?",
     "options": {
       "A": "It is painted with fire-retardant paint",
       "B": "Noncombustible material is used at the interface, or the air space is otherwise preserved per the section",
@@ -8724,7 +8724,7 @@
     "id": "irc-159",
     "category": "IRC",
     "subtopic": "girder-beams",
-    "question": "Per R602.7, headers and girders supporting floor and roof loads over openings in load-bearing walls must be sized according to what?",
+    "question": "Headers and girders supporting floor and roof loads over openings in load-bearing walls must be sized according to what?",
     "options": {
       "A": "The exterior siding type",
       "B": "The span tables (Table R602.7) based on span, supported loads and ground snow load",
@@ -8743,7 +8743,7 @@
     "id": "irc-160",
     "category": "IRC",
     "subtopic": "wood-foundation-walls",
-    "question": "Per R404.2.3, the size, height and spacing of studs in a permanent wood foundation wall (and the thickness of supporting plywood) must be determined based on what?",
+    "question": "The size, height and spacing of studs in a permanent wood foundation wall (and the thickness of supporting plywood) must be determined based on what?",
     "options": {
       "A": "The roof covering weight only",
       "B": "The height of fill (backfill) and the applied lateral soil load",
@@ -8762,7 +8762,7 @@
     "id": "irc-161",
     "category": "IRC",
     "subtopic": "roof-covering-metal",
-    "question": "Per R905.10.3, metal roof panels and shingles must be attached so they resist what primary load?",
+    "question": "Metal roof panels and shingles must be attached so they resist what primary load?",
     "options": {
       "A": "Snow load only",
       "B": "The component and cladding wind uplift pressures for the building",
@@ -8781,7 +8781,7 @@
     "id": "irc-162",
     "category": "IRC",
     "subtopic": "columns-footings",
-    "question": "Per R407.3, columns must be restrained against what at the bottom end where they bear on a footing or pier?",
+    "question": "Columns must be restrained against what at the bottom end where they bear on a footing or pier?",
     "options": {
       "A": "Nothing; no connection is required",
       "B": "Lateral displacement, and they must be protected against corrosion (steel) or decay (wood)",
@@ -8800,7 +8800,7 @@
     "id": "irc-163",
     "category": "IRC",
     "subtopic": "escape-window-wells",
-    "question": "Per R310.3.2.1, the ladder or steps required for a deep window well are permitted to encroach into the required minimum well dimension by not more than how much?",
+    "question": "The ladder or steps required for a deep window well are permitted to encroach into the required minimum well dimension by not more than how much?",
     "options": {
       "A": "3 inches",
       "B": "6 inches",
@@ -8819,7 +8819,7 @@
     "id": "irc-164",
     "category": "IRC",
     "subtopic": "wall-bracing-methods",
-    "question": "Under Table R602.10.4, the bracing method designated 'WSP' refers to which of the following?",
+    "question": "The bracing method designated 'WSP' refers to which of the following?",
     "options": {
       "A": "Gypsum board",
       "B": "Wood structural panel",
@@ -8838,7 +8838,7 @@
     "id": "irc-165",
     "category": "IRC",
     "subtopic": "wall-bracing-methods",
-    "question": "Per Table R602.10.4, the bracing method abbreviation 'LIB' identifies which method?",
+    "question": "The bracing method abbreviation 'LIB' identifies which method?",
     "options": {
       "A": "Limited interior bracing",
       "B": "Let-in bracing (1x4 wood or metal strap let into studs)",
@@ -8857,7 +8857,7 @@
     "id": "irc-166",
     "category": "IRC",
     "subtopic": "wall-bracing-methods",
-    "question": "Under Section R602.10.4, the 'PFH' continuous method is what type of braced wall panel?",
+    "question": "The 'PFH' continuous method is what type of braced wall panel?",
     "options": {
       "A": "Portland framed header",
       "B": "Portal frame with hold-downs",
@@ -8876,7 +8876,7 @@
     "id": "irc-167",
     "category": "IRC",
     "subtopic": "braced-wall-line-spacing",
-    "question": "Per Table R602.10.1.2, what is the maximum spacing permitted between braced wall lines in most conventional light-frame construction?",
+    "question": "What is the maximum spacing permitted between braced wall lines in most conventional light-frame construction?",
     "options": {
       "A": "20 feet",
       "B": "25 feet",
@@ -8895,7 +8895,7 @@
     "id": "irc-168",
     "category": "IRC",
     "subtopic": "wall-bracing-methods",
-    "question": "Under Table R602.10.4, the minimum length of a braced wall panel using continuous wood structural panel sheathing (CS-WSP) is generally based on which factor?",
+    "question": "The minimum length of a braced wall panel using continuous wood structural panel sheathing (CS-WSP) is generally based on which factor?",
     "options": {
       "A": "A fixed 96 inches regardless of height",
       "B": "The adjacent clear opening height (with a ratio table)",
@@ -8914,7 +8914,7 @@
     "id": "irc-169",
     "category": "IRC",
     "subtopic": "stairs-winder",
-    "question": "Per R311.7.5.2.1, winder treads must have a minimum tread depth of 6 inches at any point and not less than what depth at the walkline (12 inches from the narrow edge)?",
+    "question": "Winder treads must have a minimum tread depth of 6 inches at any point and not less than what depth at the walkline?",
     "options": {
       "A": "9 inches",
       "B": "10 inches",
@@ -8933,7 +8933,7 @@
     "id": "irc-170",
     "category": "IRC",
     "subtopic": "stairs-spiral",
-    "question": "Under R311.7.10.1, a spiral stairway must have a clear walking width of at least 26 inches and a minimum tread depth of 6-3/4 inches at the walkline located what distance from the narrower edge?",
+    "question": "A spiral stairway must have a clear walking width of at least 26 inches and a minimum tread depth of 6-3/4 inches at the walkline located what distance from the narrower edge?",
     "options": {
       "A": "12 inches",
       "B": "9 inches",
@@ -8952,7 +8952,7 @@
     "id": "irc-171",
     "category": "IRC",
     "subtopic": "stairs-headroom",
-    "question": "Per R311.7.2, the minimum headroom in all parts of a stairway must not be less than which dimension, measured vertically from the sloped line of tread nosings?",
+    "question": "The minimum headroom in all parts of a stairway must not be less than which dimension, measured vertically from the sloped line of tread nosings?",
     "options": {
       "A": "6 feet 4 inches",
       "B": "6 feet 8 inches",
@@ -8971,7 +8971,7 @@
     "id": "irc-172",
     "category": "IRC",
     "subtopic": "guards-loads",
-    "question": "Per Table R301.5, guards and handrails must be designed to resist a single concentrated load of how many pounds applied in any direction along the top?",
+    "question": "Guards and handrails must be designed to resist a single concentrated load of how many pounds applied in any direction along the top?",
     "options": {
       "A": "100 pounds",
       "B": "150 pounds",
@@ -8990,7 +8990,7 @@
     "id": "irc-173",
     "category": "IRC",
     "subtopic": "footing-width",
-    "question": "Per Table R403.1(1), for a 1-story dwelling with conventional light-frame construction on soil with a load-bearing value of 1,500 psf, the minimum footing width is generally what?",
+    "question": "For a 1-story dwelling with conventional light-frame construction on soil with a load-bearing value of 1,500 psf, the minimum footing width is generally what?",
     "options": {
       "A": "12 inches",
       "B": "16 inches",
@@ -9009,7 +9009,7 @@
     "id": "irc-174",
     "category": "IRC",
     "subtopic": "footing-thickness",
-    "question": "Per R403.1, the minimum thickness for a concrete footing supporting walls of light-frame construction is generally not less than what?",
+    "question": "The minimum thickness for a concrete footing supporting walls of light-frame construction is generally not less than what?",
     "options": {
       "A": "4 inches",
       "B": "6 inches",
@@ -9028,7 +9028,7 @@
     "id": "irc-175",
     "category": "IRC",
     "subtopic": "frost-depth",
-    "question": "Per R403.1.4, footings must be placed below the frost line or otherwise protected from frost. In Massachusetts, which has a deep design frost depth, this means footings are typically placed at what minimum depth?",
+    "question": "Footings must be placed below the frost line or otherwise protected from frost. In Massachusetts, which has a deep design frost depth, this means footings are typically placed at what minimum depth?",
     "options": {
       "A": "12 inches below grade",
       "B": "Below the locally established frost line (commonly 48 inches in much of MA)",
@@ -9047,7 +9047,7 @@
     "id": "irc-176",
     "category": "IRC",
     "subtopic": "electrical-service",
-    "question": "Per E3601 (and E3602), what is the minimum service rating required for a one-family dwelling?",
+    "question": "What is the minimum electrical service rating required for a one-family dwelling?",
     "options": {
       "A": "60 amperes",
       "B": "100 amperes, 3-wire",
@@ -9066,7 +9066,7 @@
     "id": "irc-177",
     "category": "IRC",
     "subtopic": "electrical-grounding-electrode",
-    "question": "Per E3608.1.2, when a metal underground water pipe is used as a grounding electrode, it must be supplemented by an additional electrode and must be in direct contact with the earth for not less than how many feet?",
+    "question": "When a metal underground water pipe is used as a grounding electrode, it must be supplemented by an additional electrode and must be in direct contact with the earth for not less than how many feet?",
     "options": {
       "A": "5 feet",
       "B": "8 feet",
@@ -9085,7 +9085,7 @@
     "id": "irc-178",
     "category": "IRC",
     "subtopic": "electrical-grounding-electrode",
-    "question": "Per E3608.1.4, a ground rod electrode (rod and pipe type) must have a length in contact with the soil of not less than what?",
+    "question": "A ground rod electrode (rod and pipe type) must have a length in contact with the soil of not less than what?",
     "options": {
       "A": "6 feet",
       "B": "8 feet",
@@ -9104,7 +9104,7 @@
     "id": "irc-179",
     "category": "IRC",
     "subtopic": "electrical-conductor-sizing",
-    "question": "Per Table E3705.1, a 20-ampere branch circuit using copper conductors generally requires what minimum conductor size?",
+    "question": "A 20-ampere branch circuit using copper conductors generally requires what minimum conductor size?",
     "options": {
       "A": "14 AWG copper",
       "B": "12 AWG copper",
@@ -9123,7 +9123,7 @@
     "id": "irc-180",
     "category": "IRC",
     "subtopic": "electrical-box-fill",
-    "question": "Per Table E3905.12.2.1, what volume allowance (in cubic inches) is assigned to each 14 AWG conductor when calculating box fill?",
+    "question": "What volume allowance (in cubic inches) is assigned to each 14 AWG conductor when calculating box fill?",
     "options": {
       "A": "1.50 cubic inches",
       "B": "2.00 cubic inches",
@@ -9142,7 +9142,7 @@
     "id": "irc-181",
     "category": "IRC",
     "subtopic": "electrical-lighting-outlets",
-    "question": "Per E3903.2, at least one wall switch-controlled lighting outlet must be installed in which of the following spaces?",
+    "question": "At least one wall switch-controlled lighting outlet must be installed in which of the following spaces?",
     "options": {
       "A": "Only the kitchen",
       "B": "Habitable rooms, bathrooms, hallways, stairways, and attached garages",
@@ -9161,7 +9161,7 @@
     "id": "irc-182",
     "category": "IRC",
     "subtopic": "electrical-gfci",
-    "question": "Per E3902, GFCI protection is required for 125-volt, single-phase, 15- and 20-ampere receptacles in which of the following dwelling locations?",
+    "question": "GFCI protection is required for 125-volt, single-phase, 15- and 20-ampere receptacles in which of the following dwelling locations?",
     "options": {
       "A": "Only outdoors",
       "B": "Bathrooms, garages, outdoors, crawl spaces, unfinished basements, kitchens, and within 6 feet of sinks",
@@ -9180,7 +9180,7 @@
     "id": "irc-183",
     "category": "IRC",
     "subtopic": "electrical-afci",
-    "question": "Per E3902.16, AFCI (arc-fault circuit-interrupter) protection is required for 120-volt, 15- and 20-ampere branch circuits supplying outlets in which dwelling areas?",
+    "question": "AFCI (arc-fault circuit-interrupter) protection is required for 120-volt, 15- and 20-ampere branch circuits supplying outlets in which dwelling areas?",
     "options": {
       "A": "Only bedrooms",
       "B": "Kitchens, family rooms, dining rooms, living rooms, bedrooms, hallways, closets, laundry areas, and similar rooms",
@@ -9199,7 +9199,7 @@
     "id": "irc-184",
     "category": "IRC",
     "subtopic": "plumbing-dwv-sizing",
-    "question": "Per Table P3005.4.1 (drainage fixture units), a residential water closet (1.6 gpf) is assigned how many drainage fixture units (DFU)?",
+    "question": "A residential water closet (1.6 gpf) is assigned how many drainage fixture units (DFU)?",
     "options": {
       "A": "1 DFU",
       "B": "2 DFU",
@@ -9427,7 +9427,7 @@
     "id": "irc-196",
     "category": "IRC",
     "subtopic": "factory-built-fireplace",
-    "question": "Per R1004.1, factory-built fireplaces must be listed and labeled and installed in accordance with what?",
+    "question": "Factory-built fireplaces must be listed and labeled and installed in accordance with what?",
     "options": {
       "A": "Any general masonry standard",
       "B": "The conditions of the listing and the manufacturer's installation instructions",
@@ -9446,7 +9446,7 @@
     "id": "irc-197",
     "category": "IRC",
     "subtopic": "factory-built-chimney",
-    "question": "Per R1005.1, factory-built chimneys serving factory-built fireplaces must be listed and labeled and tested to which standard?",
+    "question": "Factory-built chimneys serving factory-built fireplaces must be listed and labeled and tested to which standard?",
     "options": {
       "A": "UL 103",
       "B": "UL 1777 (chimney lining)",
@@ -9465,7 +9465,7 @@
     "id": "irc-198",
     "category": "IRC",
     "subtopic": "masonry-fireplace-dimensions",
-    "question": "Per R1001.5, the firebox of a masonry fireplace must have a minimum depth (front to back) of how much for fireboxes 6 square feet or less in opening?",
+    "question": "The firebox of a masonry fireplace must have a minimum depth (front to back) of how much for fireboxes 6 square feet or less in opening?",
     "options": {
       "A": "12 inches",
       "B": "20 inches",
@@ -9484,7 +9484,7 @@
     "id": "irc-199",
     "category": "IRC",
     "subtopic": "masonry-fireplace-dimensions",
-    "question": "Per R1001.6, the firebox walls (lining) of a masonry fireplace lined with firebrick must be not less than what thickness?",
+    "question": "The firebox walls (lining) of a masonry fireplace lined with firebrick must be not less than what thickness?",
     "options": {
       "A": "1 inch firebrick (with 8 inches total wall)",
       "B": "2 inches of firebrick",
@@ -9541,7 +9541,7 @@
     "id": "irc-202",
     "category": "IRC",
     "subtopic": "accessory-detached-garage",
-    "question": "Per R309.1, the floor surface of a garage must be of approved noncombustible material, and the area of floor used for parking must be sloped to facilitate movement of liquids toward what?",
+    "question": "The floor surface of a garage must be of approved noncombustible material, and the area of floor used for parking must be sloped to facilitate movement of liquids toward what?",
     "options": {
       "A": "The interior wall",
       "B": "A drain or toward the main vehicle entry doorway",
@@ -9560,7 +9560,7 @@
     "id": "irc-203",
     "category": "IRC",
     "subtopic": "accessory-detached-garage",
-    "question": "Per R309.5, carports and garages must NOT open directly into which of the following rooms?",
+    "question": "Carports and garages must NOT open directly into which of the following rooms?",
     "options": {
       "A": "A laundry room",
       "B": "A room used for sleeping purposes",
@@ -9579,7 +9579,7 @@
     "id": "irc-204",
     "category": "IRC",
     "subtopic": "wall-bracing-methods",
-    "question": "Per Table R602.10.4, the minimum thickness of gypsum board used as a 'GB' braced wall panel applied to each face is what?",
+    "question": "The minimum thickness of gypsum board used as a 'GB' braced wall panel applied to each face is what?",
     "options": {
       "A": "1/4 inch",
       "B": "3/8 inch",
@@ -9598,7 +9598,7 @@
     "id": "irc-205",
     "category": "IRC",
     "subtopic": "stairs-spiral",
-    "question": "Per R311.7.10.1, the minimum headroom for a spiral stairway, measured vertically from the tread nosings, must be not less than what?",
+    "question": "The minimum headroom for a spiral stairway, measured vertically from the tread nosings, must be not less than what?",
     "options": {
       "A": "6 feet 0 inches",
       "B": "6 feet 4 inches",
@@ -9617,7 +9617,7 @@
     "id": "irc-206",
     "category": "IRC",
     "subtopic": "electrical-conductor-sizing",
-    "question": "Per E3705 and the small-conductor overcurrent rules, a 15-ampere branch circuit using copper conductors must be wired with at least what conductor size?",
+    "question": "Under the small-conductor overcurrent rules, a 15-ampere branch circuit using copper conductors must be wired with at least what conductor size?",
     "options": {
       "A": "16 AWG copper",
       "B": "14 AWG copper",
@@ -9636,7 +9636,7 @@
     "id": "irc-207",
     "category": "IRC",
     "subtopic": "electrical-box-fill",
-    "question": "Per E3905.12.2.1, a single yoke (strap) supporting one or more devices counts as how many conductor volume allowances, based on the largest conductor connected to the device?",
+    "question": "A single yoke (strap) supporting one or more devices counts as how many conductor volume allowances, based on the largest conductor connected to the device?",
     "options": {
       "A": "One conductor volume allowance",
       "B": "Double volume allowance (two) based on the largest conductor connected to the device",
@@ -9655,7 +9655,7 @@
     "id": "irc-208",
     "category": "IRC",
     "subtopic": "footing-width",
-    "question": "Per Table R403.1(1), increasing the number of stories on a dwelling generally has what effect on the minimum required footing width (all else equal)?",
+    "question": "Increasing the number of stories on a dwelling generally has what effect on the minimum required footing width (all else equal)?",
     "options": {
       "A": "No effect",
       "B": "Decreases the required width",
@@ -9693,7 +9693,7 @@
     "id": "irc-210",
     "category": "IRC",
     "subtopic": "guards-loads",
-    "question": "Per Table R301.5, guard in-fill components (such as balusters and panel fillers below the top rail) must be designed to resist a horizontally applied normal load of how many pounds on an area of 1 square foot?",
+    "question": "Guard in-fill components (such as balusters and panel fillers below the top rail) must be designed to resist a horizontally applied normal load of how many pounds on an area of 1 square foot?",
     "options": {
       "A": "25 pounds",
       "B": "50 pounds",
@@ -9788,7 +9788,7 @@
     "id": "irc-005",
     "category": "IRC",
     "subtopic": "live-load",
-    "question": "Per IRC Table R301.5, what is the minimum uniformly distributed live load for a habitable attic and attics served with a fixed stairway, as well as for sleeping rooms?",
+    "question": "What is the minimum uniformly distributed live load for a habitable attic and attics served with a fixed stairway, as well as for sleeping rooms?",
     "options": {
       "A": "20 psf",
       "B": "30 psf",
@@ -9807,7 +9807,7 @@
     "id": "irc-006",
     "category": "IRC",
     "subtopic": "live-load",
-    "question": "Per IRC Table R301.5, what is the minimum uniformly distributed live load for living areas (non-sleeping habitable rooms such as a living room or kitchen)?",
+    "question": "What is the minimum uniformly distributed live load for living areas (non-sleeping habitable rooms such as a living room or kitchen)?",
     "options": {
       "A": "30 psf",
       "B": "40 psf",
@@ -9940,7 +9940,7 @@
     "id": "irc-013",
     "category": "IRC",
     "subtopic": "stud-spacing",
-    "question": "Per IRC Table R602.3(5), what is the maximum stud spacing for a 2x4 stud in an exterior bearing wall supporting a roof, ceiling, and one floor above, at the common 10-foot stud height?",
+    "question": "What is the maximum stud spacing for a 2x4 stud in an exterior bearing wall supporting a roof, ceiling, and one floor above, at the common 10-foot stud height?",
     "options": {
       "A": "12 inches on center",
       "B": "16 inches on center",
@@ -10035,7 +10035,7 @@
     "id": "irc-018",
     "category": "IRC",
     "subtopic": "slab-on-grade",
-    "question": "Under IRC R506.2.3 (as adopted in the 2021 IRC), what is the minimum thickness/class of the vapor retarder required between a concrete slab-on-grade floor and the base course or subgrade?",
+    "question": "Under the 2021 IRC, what is the minimum thickness/class of the vapor retarder required between a concrete slab-on-grade floor and the base course or subgrade?",
     "options": {
       "A": "4-mil polyethylene",
       "B": "6-mil polyethylene",

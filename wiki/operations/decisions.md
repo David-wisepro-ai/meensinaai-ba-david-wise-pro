@@ -4,7 +4,7 @@
 
 ## 2026-08-06
 
-- **Enunciado do simulado NUNCA cita a seção/tabela/capítulo do código.** O texto da pergunta não pode dizer onde a resposta está (ex: "Under IBC Chapter 17...", "Per IBC Section 714...", "Under 521 CMR..."). A referência do código mora no campo `code_reference` e só aparece pro aluno DEPOIS que ele responde (e some no nível avançado) — igual o exame real, onde ele tem que achar a seção sozinho. Regra vale pra IBC, IECC, OSHA, AAB e IRC. Correção aplicada em 339 enunciados (2026-08-06) via `scripts/fix_quiz_stems.sql`; a edição do código (2018/2021 IECC) foi PRESERVADA porque a resposta depende dela — só o número da seção sai. NUNCA se altera resposta/alternativas/explicação ao limpar. **Pendência:** as 76 questões do IRC que ainda citam a seção (David disse que o IRC estava "perfeito"; confirmar se quer limpar essas também no mesmo padrão).
+- **Enunciado do simulado NUNCA cita a seção/tabela/capítulo do código.** O texto da pergunta não pode dizer onde a resposta está (ex: "Under IBC Chapter 17...", "Per IBC Section 714...", "Under 521 CMR..."). A referência do código mora no campo `code_reference` e só aparece pro aluno DEPOIS que ele responde (e some no nível avançado) — igual o exame real, onde ele tem que achar a seção sozinho. Regra vale pra IBC, IECC, OSHA, AAB e IRC. Correção aplicada em **430 enunciados** (2026-08-06): 339 nas 4 categorias via `scripts/fix_quiz_stems.sql` (+ `_p2.sql`) e 91 no IRC via `scripts/fix_quiz_stems_irc.sql`. A edição do código (2018/2021) foi PRESERVADA porque a resposta depende dela — só o número da seção sai. NUNCA se altera resposta/alternativas/explicação ao limpar. **Validado ao vivo: 598 questões verificadas nas 5 categorias, 0 ainda citam a seção.**
 
 ## 2026-06-27
 
