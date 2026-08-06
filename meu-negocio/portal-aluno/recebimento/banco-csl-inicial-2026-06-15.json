@@ -3,7 +3,7 @@
     "id": "ibc-027",
     "category": "IBC",
     "subtopic": "occupant-load",
-    "question": "Under IBC Table 1004.5, what occupant load factor (gross) is used for a business area such as an office?",
+    "question": "What occupant load factor (gross) is used for a business area such as an office?",
     "options": {
       "A": "100 square feet per occupant",
       "B": "150 square feet per occupant",
@@ -22,7 +22,7 @@
     "id": "ibc-028",
     "category": "IBC",
     "subtopic": "occupant-load",
-    "question": "For an assembly space with chairs only (concentrated, not fixed), IBC Table 1004.5 assigns which occupant load factor?",
+    "question": "For an assembly space with chairs only (concentrated, not fixed), which occupant load factor is assigned?",
     "options": {
       "A": "5 net square feet per occupant",
       "B": "7 net square feet per occupant",
@@ -41,7 +41,7 @@
     "id": "ibc-029",
     "category": "IBC",
     "subtopic": "occupant-load",
-    "question": "Under IBC Table 1004.5, the occupant load factor for a commercial kitchen is:",
+    "question": "The occupant load factor for a commercial kitchen is:",
     "options": {
       "A": "100 gross square feet per occupant",
       "B": "150 gross square feet per occupant",
@@ -60,7 +60,7 @@
     "id": "ibc-030",
     "category": "IBC",
     "subtopic": "egress",
-    "question": "A single-story Group B (business) space is being designed with one exit. Under IBC Table 1006.2.1, what is the maximum occupant load permitted before a second exit access doorway is required?",
+    "question": "A single-story Group B (business) space is being designed with one exit. What is the maximum occupant load permitted before a second exit access doorway is required?",
     "options": {
       "A": "29",
       "B": "49",
@@ -79,7 +79,7 @@
     "id": "ibc-031",
     "category": "IBC",
     "subtopic": "egress",
-    "question": "Under IBC Section 1006.2.1.1, three exits or exit access doorways are required from any space when the occupant load is:",
+    "question": "Three exits or exit access doorways are required from any space when the occupant load is:",
     "options": {
       "A": "Greater than 100",
       "B": "Greater than 250",
@@ -98,7 +98,7 @@
     "id": "ibc-032",
     "category": "IBC",
     "subtopic": "egress",
-    "question": "Under IBC Table 1017.2, the maximum exit access travel distance for a Group B occupancy that is NOT equipped with an automatic sprinkler system is:",
+    "question": "The maximum exit access travel distance for a Group B occupancy that is NOT equipped with an automatic sprinkler system is:",
     "options": {
       "A": "150 feet",
       "B": "200 feet",
@@ -117,7 +117,7 @@
     "id": "ibc-033",
     "category": "IBC",
     "subtopic": "egress",
-    "question": "Under IBC Table 1017.2, a Group F-1 or S-1 occupancy that is one story, has a minimum ceiling height of 24 feet, and is fully sprinklered may have a maximum exit access travel distance of:",
+    "question": "A Group F-1 or S-1 occupancy that is one story, has a minimum ceiling height of 24 feet, and is fully sprinklered may have a maximum exit access travel distance of:",
     "options": {
       "A": "250 feet",
       "B": "300 feet",
@@ -136,7 +136,7 @@
     "id": "ibc-034",
     "category": "IBC",
     "subtopic": "corridors",
-    "question": "Under IBC Section 1020.2, the minimum width of a corridor serving an occupant load of 50 or more in a typical commercial building is:",
+    "question": "The minimum width of a corridor serving an occupant load of 50 or more in a typical commercial building is:",
     "options": {
       "A": "36 inches",
       "B": "44 inches",
@@ -155,7 +155,7 @@
     "id": "ibc-035",
     "category": "IBC",
     "subtopic": "corridors",
-    "question": "Under IBC Table 1020.1, a corridor in a non-sprinklered building serving an occupant load greater than 30 must have a fire-resistance rating of at least:",
+    "question": "A corridor in a non-sprinklered building serving an occupant load greater than 30 must have a fire-resistance rating of at least:",
     "options": {
       "A": "0 hours",
       "B": "1 hour",
@@ -174,7 +174,7 @@
     "id": "ibc-036",
     "category": "IBC",
     "subtopic": "corridors",
-    "question": "Under IBC Section 1020.4, the maximum length of a dead-end corridor in a building that is NOT equipped throughout with an automatic sprinkler system is:",
+    "question": "The maximum length of a dead-end corridor in a building that is NOT equipped throughout with an automatic sprinkler system is:",
     "options": {
       "A": "10 feet",
       "B": "20 feet",
@@ -193,7 +193,7 @@
     "id": "ibc-037",
     "category": "IBC",
     "subtopic": "interior-finish",
-    "question": "Under IBC Table 803.13 / Section 803, an interior wall and ceiling finish with a flame spread index of 0 to 25 is classified as:",
+    "question": "An interior wall and ceiling finish with a flame spread index of 0 to 25 is classified as:",
     "options": {
       "A": "Class A",
       "B": "Class B",
@@ -212,7 +212,7 @@
     "id": "ibc-038",
     "category": "IBC",
     "subtopic": "interior-finish",
-    "question": "Under the IBC, a Class C interior wall and ceiling finish has a flame spread index in which range?",
+    "question": "A Class C interior wall and ceiling finish has a flame spread index in which range?",
     "options": {
       "A": "0 to 25",
       "B": "26 to 75",
@@ -231,7 +231,7 @@
     "id": "ibc-039",
     "category": "IBC",
     "subtopic": "fire-resistance",
-    "question": "Under IBC Table 601, the required fire-resistance rating of the primary structural frame for Type I-A construction is:",
+    "question": "The required fire-resistance rating of the primary structural frame for Type I-A construction is:",
     "options": {
       "A": "1 hour",
       "B": "2 hours",
@@ -250,7 +250,7 @@
     "id": "ibc-040",
     "category": "IBC",
     "subtopic": "fire-resistance",
-    "question": "Under IBC Table 601, which construction type permits a primary structural frame with a 0-hour (unrated) fire-resistance rating?",
+    "question": "Which construction type permits a primary structural frame with a 0-hour (unrated) fire-resistance rating?",
     "options": {
       "A": "Type I-B",
       "B": "Type II-A",
@@ -269,7 +269,7 @@
     "id": "ibc-041",
     "category": "IBC",
     "subtopic": "occupancy-separation",
-    "question": "Under IBC Table 508.4, a Group A-2 occupancy adjacent to a Group B occupancy in a fully sprinklered building requires a separation with a fire-resistance rating of:",
+    "question": "A Group A-2 occupancy adjacent to a Group B occupancy in a fully sprinklered building requires a separation with a fire-resistance rating of:",
     "options": {
       "A": "0 hours",
       "B": "1 hour",
@@ -288,7 +288,7 @@
     "id": "ibc-042",
     "category": "IBC",
     "subtopic": "occupancy-separation",
-    "question": "Under IBC Section 508.4, where separated occupancies are used, the required separation is constructed as fire barriers, horizontal assemblies, or both. The fire barriers must comply with which section?",
+    "question": "Where separated occupancies are used, the required separation is constructed as fire barriers, horizontal assemblies, or both. The fire barriers must comply with which section?",
     "options": {
       "A": "Section 705",
       "B": "Section 707",
@@ -307,7 +307,7 @@
     "id": "ibc-043",
     "category": "IBC",
     "subtopic": "fire-partitions",
-    "question": "Under IBC Section 708.3, the general minimum fire-resistance rating of a fire partition (for example, a corridor wall or tenant separation) is:",
+    "question": "The general minimum fire-resistance rating of a fire partition (for example, a corridor wall or tenant separation) is:",
     "options": {
       "A": "20 minutes",
       "B": "0.5 hour",
@@ -326,7 +326,7 @@
     "id": "ibc-044",
     "category": "IBC",
     "subtopic": "shaft-enclosures",
-    "question": "Under IBC Section 713.4, a shaft enclosure connecting four or more stories must have a fire-resistance rating of not less than:",
+    "question": "A shaft enclosure connecting four or more stories must have a fire-resistance rating of not less than:",
     "options": {
       "A": "1 hour",
       "B": "1.5 hours",
@@ -345,7 +345,7 @@
     "id": "ibc-045",
     "category": "IBC",
     "subtopic": "shaft-enclosures",
-    "question": "Under IBC Section 713.4, a shaft enclosure connecting fewer than four stories must have a fire-resistance rating of not less than:",
+    "question": "A shaft enclosure connecting fewer than four stories must have a fire-resistance rating of not less than:",
     "options": {
       "A": "0.5 hour",
       "B": "1 hour",
@@ -364,7 +364,7 @@
     "id": "ibc-046",
     "category": "IBC",
     "subtopic": "guards",
-    "question": "Under IBC Section 1015.3, the minimum height of a guard in a commercial occupancy, measured vertically, is generally:",
+    "question": "The minimum height of a guard in a commercial occupancy, measured vertically, is generally:",
     "options": {
       "A": "36 inches",
       "B": "38 inches",
@@ -383,7 +383,7 @@
     "id": "ibc-047",
     "category": "IBC",
     "subtopic": "guards",
-    "question": "Under IBC Section 1015.2, a guard is required along an open-sided walking surface where the vertical drop to the surface below is more than:",
+    "question": "A guard is required along an open-sided walking surface where the vertical drop to the surface below is more than:",
     "options": {
       "A": "24 inches",
       "B": "30 inches",
@@ -402,7 +402,7 @@
     "id": "ibc-048",
     "category": "IBC",
     "subtopic": "handrails",
-    "question": "Under IBC Section 1014.2, the height of a handrail above stair tread nosings must be uniform and within which range?",
+    "question": "The height of a handrail above stair tread nosings must be uniform and within which range?",
     "options": {
       "A": "30 to 34 inches",
       "B": "32 to 36 inches",
@@ -421,7 +421,7 @@
     "id": "ibc-049",
     "category": "IBC",
     "subtopic": "egress-illumination",
-    "question": "Under IBC Section 1008.2, the means of egress illumination level under normal power must be not less than:",
+    "question": "The means of egress illumination level under normal power must be not less than:",
     "options": {
       "A": "0.1 footcandle at the walking surface",
       "B": "1 footcandle at the walking surface",
@@ -440,7 +440,7 @@
     "id": "ibc-050",
     "category": "IBC",
     "subtopic": "exit-signs",
-    "question": "Under IBC Section 1013.1, exit signs must be placed so that no point in an exit access corridor or exit passageway is more than which distance from the nearest visible exit sign?",
+    "question": "Exit signs must be placed so that no point in an exit access corridor or exit passageway is more than which distance from the nearest visible exit sign?",
     "options": {
       "A": "50 feet",
       "B": "75 feet",
@@ -459,7 +459,7 @@
     "id": "ibc-051",
     "category": "IBC",
     "subtopic": "accessible-egress",
-    "question": "Under IBC Section 1009.6.3, an area of refuge must be sized to accommodate one wheelchair space of 30 inches by 48 inches for each how many occupants (or portion thereof) it serves?",
+    "question": "An area of refuge must be sized to accommodate one wheelchair space of 30 inches by 48 inches for each how many occupants (or portion thereof) it serves?",
     "options": {
       "A": "50",
       "B": "100",
@@ -478,7 +478,7 @@
     "id": "ibc-052",
     "category": "IBC",
     "subtopic": "live-loads",
-    "question": "Under IBC Table 1607.1, the minimum uniformly distributed live load for an office floor area in an office building is:",
+    "question": "The minimum uniformly distributed live load for an office floor area in an office building is:",
     "options": {
       "A": "40 psf",
       "B": "50 psf",
@@ -497,7 +497,7 @@
     "id": "ibc-053",
     "category": "IBC",
     "subtopic": "live-loads",
-    "question": "Under IBC Table 1607.1, the minimum uniformly distributed live load for first-floor lobbies and corridors is:",
+    "question": "The minimum uniformly distributed live load for first-floor lobbies and corridors is:",
     "options": {
       "A": "50 psf",
       "B": "80 psf",
@@ -516,7 +516,7 @@
     "id": "ibc-054",
     "category": "IBC",
     "subtopic": "plumbing-fixtures",
-    "question": "Under IBC Table 2902.1, the minimum number of water closets in a Business (B) occupancy is based on a ratio of one fixture per how many occupants for the first 50?",
+    "question": "The minimum number of water closets in a Business (B) occupancy is based on a ratio of one fixture per how many occupants for the first 50?",
     "options": {
       "A": "1 per 15",
       "B": "1 per 25",
@@ -535,7 +535,7 @@
     "id": "ibc-055",
     "category": "IBC",
     "subtopic": "plumbing-fixtures",
-    "question": "Under IBC Table 2902.1, restaurants, banquet halls, and food courts must provide water closets at a minimum ratio of:",
+    "question": "Restaurants, banquet halls, and food courts must provide water closets at a minimum ratio of:",
     "options": {
       "A": "1 per 40",
       "B": "1 per 50",
@@ -554,7 +554,7 @@
     "id": "ibc-056",
     "category": "IBC",
     "subtopic": "accessible-parking",
-    "question": "Under IBC Table 1106.1, a parking facility with a total of 26 to 50 parking spaces must provide a minimum of how many accessible parking spaces?",
+    "question": "A parking facility with a total of 26 to 50 parking spaces must provide a minimum of how many accessible parking spaces?",
     "options": {
       "A": "1",
       "B": "2",
@@ -573,7 +573,7 @@
     "id": "ibc-057",
     "category": "IBC",
     "subtopic": "accessible-parking",
-    "question": "Under IBC Section 1106.6, van-accessible parking spaces must be provided at a minimum ratio of:",
+    "question": "Van-accessible parking spaces must be provided at a minimum ratio of:",
     "options": {
       "A": "1 for every 4 accessible spaces",
       "B": "1 for every 6 accessible spaces",
@@ -592,7 +592,7 @@
     "id": "ibc-058",
     "category": "IBC",
     "subtopic": "special-inspections",
-    "question": "Under IBC Chapter 17, the statement of special inspections identifying the required inspections and tests for a project must be prepared by:",
+    "question": "The statement of special inspections identifying the required inspections and tests for a project must be prepared by:",
     "options": {
       "A": "The general contractor",
       "B": "The building official",
@@ -611,7 +611,7 @@
     "id": "ibc-059",
     "category": "IBC",
     "subtopic": "special-inspections",
-    "question": "Under IBC Section 1705.2, complete joint penetration (CJP) groove welds in structural steel generally require which type of special inspection?",
+    "question": "Complete joint penetration (CJP) groove welds in structural steel generally require which type of special inspection?",
     "options": {
       "A": "No special inspection",
       "B": "Periodic special inspection",
@@ -630,7 +630,7 @@
     "id": "ibc-060",
     "category": "IBC",
     "subtopic": "egress",
-    "question": "Under IBC Section 1006.2.1, a Group A or E space served by a single exit access doorway is generally limited to a maximum occupant load of:",
+    "question": "A Group A or E space served by a single exit access doorway is generally limited to a maximum occupant load of:",
     "options": {
       "A": "10",
       "B": "29",
@@ -649,7 +649,7 @@
     "id": "ibc-061",
     "category": "IBC",
     "subtopic": "occupant-load",
-    "question": "A 9,000-square-foot office floor is classified as Group B. Using the IBC Table 1004.5 occupant load factor for business areas, what is its calculated occupant load?",
+    "question": "A 9,000-square-foot office floor is classified as Group B. Using the occupant load factor for business areas, what is its calculated occupant load?",
     "options": {
       "A": "45",
       "B": "60",
@@ -668,7 +668,7 @@
     "id": "ibc-062",
     "category": "IBC",
     "subtopic": "opening-protectives",
-    "question": "Under IBC Table 716.1(2), a fire door assembly in a 2-hour fire barrier wall (other than enclosures of vertical exits and shafts) is generally required to have what minimum fire protection rating?",
+    "question": "A fire door assembly in a 2-hour fire barrier wall (other than enclosures of vertical exits and shafts) is generally required to have what minimum fire protection rating?",
     "options": {
       "A": "20 minutes",
       "B": "45 minutes",
@@ -687,7 +687,7 @@
     "id": "ibc-063",
     "category": "IBC",
     "subtopic": "opening-protectives",
-    "question": "Per IBC Table 716.1(2), a fire door assembly protecting an opening in a 1-hour fire partition (corridor wall) requires what minimum fire protection rating?",
+    "question": "A fire door assembly protecting an opening in a 1-hour fire partition (corridor wall) requires what minimum fire protection rating?",
     "options": {
       "A": "20 minutes",
       "B": "45 minutes (3/4 hour)",
@@ -706,7 +706,7 @@
     "id": "ibc-064",
     "category": "IBC",
     "subtopic": "opening-protectives",
-    "question": "Under IBC Table 716.1(2), a fire window assembly permitted in a 1-hour fire partition is required to have a fire protection rating of:",
+    "question": "A fire window assembly permitted in a 1-hour fire partition is required to have a fire protection rating of:",
     "options": {
       "A": "20 minutes",
       "B": "45 minutes (3/4 hour)",
@@ -744,7 +744,7 @@
     "id": "ibc-066",
     "category": "IBC",
     "subtopic": "opening-protectives",
-    "question": "Under IBC, the maximum aggregate width of openings protected by fire doors in a fire wall is limited so that the total openings do not exceed what percentage of the wall length on each story (general rule)?",
+    "question": "The maximum aggregate width of openings protected by fire doors in a fire wall is limited so that the total openings do not exceed what percentage of the wall length on each story (general rule)?",
     "options": {
       "A": "10 percent",
       "B": "15 percent",
@@ -763,7 +763,7 @@
     "id": "ibc-067",
     "category": "IBC",
     "subtopic": "firestop",
-    "question": "Under IBC Section 714, a through-penetration firestop system tested to ASTM E814 or UL 1479 must achieve which two ratings to be acceptable for a floor assembly penetration?",
+    "question": "A through-penetration firestop system tested to ASTM E814 or UL 1479 must achieve which two ratings to be acceptable for a floor assembly penetration?",
     "options": {
       "A": "F rating and T rating",
       "B": "L rating and W rating",
@@ -782,7 +782,7 @@
     "id": "ibc-068",
     "category": "IBC",
     "subtopic": "firestop",
-    "question": "Per IBC Section 714, a noncombustible penetrating item (such as a steel pipe) that penetrates a single concrete floor and is not in direct contact with combustible material may be permitted without a tested firestop system provided the annular space is filled with what, and the penetration does not exceed a specified area?",
+    "question": "A noncombustible penetrating item (such as a steel pipe) that penetrates a single concrete floor and is not in direct contact with combustible material may be permitted without a tested firestop system provided the annular space is filled with what, and the penetration does not exceed a specified area?",
     "options": {
       "A": "Spray foam insulation",
       "B": "Concrete, grout, or mortar (for the full thickness or a minimum specified depth)",
@@ -801,7 +801,7 @@
     "id": "ibc-069",
     "category": "IBC",
     "subtopic": "joint-systems",
-    "question": "Under IBC Section 715, fire-resistant joint systems (such as at the head of a wall or between floor edges and exterior walls) must be tested to which standard to confirm they maintain the fire-resistance rating of the assembly?",
+    "question": "Fire-resistant joint systems (such as at the head of a wall or between floor edges and exterior walls) must be tested to which standard to confirm they maintain the fire-resistance rating of the assembly?",
     "options": {
       "A": "ASTM E84",
       "B": "ASTM E119 or UL 263 (and ASTM E1966 / UL 2079 for joints)",
@@ -820,7 +820,7 @@
     "id": "ibc-070",
     "category": "IBC",
     "subtopic": "joint-systems",
-    "question": "An exterior curtain wall is installed with a gap between the floor slab edge and the back of the exterior wall. Under IBC Section 715, what must be installed in this voided space (the perimeter fire containment area)?",
+    "question": "An exterior curtain wall is installed with a gap between the floor slab edge and the back of the exterior wall. What must be installed in this voided space (the perimeter fire containment area)?",
     "options": {
       "A": "Nothing, because exterior walls are exempt",
       "B": "An approved perimeter (voids) fire containment system or system tested to ASTM E2307",
@@ -839,7 +839,7 @@
     "id": "ibc-071",
     "category": "IBC",
     "subtopic": "dampers",
-    "question": "Under IBC Section 717, a fire damper is generally required where an air duct or transfer opening penetrates which of the following?",
+    "question": "A fire damper is generally required where an air duct or transfer opening penetrates which of the following?",
     "options": {
       "A": "A smoke partition only",
       "B": "A fire wall, and at certain fire barriers, shaft enclosures, and fire partitions per the table",
@@ -858,7 +858,7 @@
     "id": "ibc-072",
     "category": "IBC",
     "subtopic": "dampers",
-    "question": "What is the primary difference between a fire damper and a smoke damper as regulated by IBC Section 717?",
+    "question": "What is the primary difference between a fire damper and a smoke damper?",
     "options": {
       "A": "There is no difference; the terms are interchangeable",
       "B": "A fire damper closes to resist flame/heat passage and a smoke damper closes to resist the passage of smoke (often actuated by a smoke detector)",
@@ -877,7 +877,7 @@
     "id": "ibc-073",
     "category": "IBC",
     "subtopic": "dampers",
-    "question": "Under IBC Section 717, smoke dampers are required where a duct or air transfer opening penetrates a:",
+    "question": "Smoke dampers are required where a duct or air transfer opening penetrates a:",
     "options": {
       "A": "Fire wall",
       "B": "Smoke barrier",
@@ -896,7 +896,7 @@
     "id": "ibc-074",
     "category": "IBC",
     "subtopic": "fire-walls",
-    "question": "Under IBC Section 706, a fire wall is defined primarily by which structural characteristic that distinguishes it from a fire barrier?",
+    "question": "A fire wall is defined primarily by which structural characteristic that distinguishes it from a fire barrier?",
     "options": {
       "A": "It must have a minimum 4-hour rating in all cases",
       "B": "It has sufficient structural stability to allow collapse of construction on either side without collapse of the wall",
@@ -915,7 +915,7 @@
     "id": "ibc-075",
     "category": "IBC",
     "subtopic": "fire-walls",
-    "question": "Per IBC Table 706.4, the minimum fire-resistance rating of a fire wall separating two Group B occupancies is:",
+    "question": "The minimum fire-resistance rating of a fire wall separating two Group B occupancies is:",
     "options": {
       "A": "1 hour",
       "B": "2 hours",
@@ -934,7 +934,7 @@
     "id": "ibc-076",
     "category": "IBC",
     "subtopic": "fire-walls",
-    "question": "Under IBC Section 706, a fire wall is generally required to be continuous from the foundation to or through the roof. What is the typical minimum height a parapet must extend above the roof where a parapet is required?",
+    "question": "A fire wall is generally required to be continuous from the foundation to or through the roof. What is the typical minimum height a parapet must extend above the roof where a parapet is required?",
     "options": {
       "A": "12 inches",
       "B": "18 inches",
@@ -953,7 +953,7 @@
     "id": "ibc-077",
     "category": "IBC",
     "subtopic": "fire-barriers",
-    "question": "Under IBC Section 707, a fire barrier used to enclose an exit stairway (interior exit stairway) connecting four or more stories is required to have a minimum fire-resistance rating of:",
+    "question": "A fire barrier used to enclose an exit stairway (interior exit stairway) connecting four or more stories is required to have a minimum fire-resistance rating of:",
     "options": {
       "A": "1 hour",
       "B": "1 1/2 hours",
@@ -972,7 +972,7 @@
     "id": "ibc-078",
     "category": "IBC",
     "subtopic": "fire-barriers",
-    "question": "Under IBC Section 707, fire barriers must be continuous and supported by construction having at least what fire-resistance rating relative to the barrier?",
+    "question": "Fire barriers must be continuous and supported by construction having at least what fire-resistance rating relative to the barrier?",
     "options": {
       "A": "No supporting construction rating is required",
       "B": "The supporting construction must have a fire-resistance rating at least equal to that of the fire barrier supported",
@@ -991,7 +991,7 @@
     "id": "ibc-079",
     "category": "IBC",
     "subtopic": "fire-partitions",
-    "question": "Under IBC Section 708, fire partitions (such as corridor walls, tenant separations in covered malls, and dwelling/sleeping unit separations) are generally required to have a minimum fire-resistance rating of:",
+    "question": "Fire partitions (such as corridor walls, tenant separations in covered malls, and dwelling/sleeping unit separations) are generally required to have a minimum fire-resistance rating of:",
     "options": {
       "A": "1 hour (with a 1/2-hour reduction allowed in some sprinklered conditions)",
       "B": "2 hours",
@@ -1010,7 +1010,7 @@
     "id": "ibc-080",
     "category": "IBC",
     "subtopic": "fire-partitions",
-    "question": "Under IBC Section 708, where must a fire partition extend in a building with a fire-resistance-rated floor/ceiling above?",
+    "question": "Where must a fire partition extend in a building with a fire-resistance-rated floor/ceiling above?",
     "options": {
       "A": "Only to the suspended ceiling in all cases",
       "B": "From the top of the floor/ceiling assembly below to the underside of the floor or roof sheathing/slab above, or to the underside of a fire-resistance-rated floor/ceiling or roof/ceiling above",
@@ -1029,7 +1029,7 @@
     "id": "ibc-081",
     "category": "IBC",
     "subtopic": "smoke-barriers",
-    "question": "Under IBC Section 709, a smoke barrier is required to have a minimum fire-resistance rating of:",
+    "question": "A smoke barrier is required to have a minimum fire-resistance rating of:",
     "options": {
       "A": "0 hours (smoke resistance only, no fire rating)",
       "B": "1 hour",
@@ -1048,7 +1048,7 @@
     "id": "ibc-082",
     "category": "IBC",
     "subtopic": "smoke-partitions",
-    "question": "Under IBC Section 710, a smoke partition (where not also required to be fire-resistance-rated) must be constructed to limit smoke passage and must extend:",
+    "question": "A smoke partition (where not also required to be fire-resistance-rated) must be constructed to limit smoke passage and must extend:",
     "options": {
       "A": "Only 12 inches above the floor",
       "B": "From the floor to the underside of the floor or roof deck above, or to the underside of a ceiling where the ceiling membrane is constructed to limit smoke transfer",
@@ -1067,7 +1067,7 @@
     "id": "ibc-083",
     "category": "IBC",
     "subtopic": "construction-elements",
-    "question": "Under IBC Table 601, in Type IA construction, the minimum required fire-resistance rating of the primary structural frame is:",
+    "question": "In Type IA construction, the minimum required fire-resistance rating of the primary structural frame is:",
     "options": {
       "A": "1 hour",
       "B": "2 hours",
@@ -1086,7 +1086,7 @@
     "id": "ibc-084",
     "category": "IBC",
     "subtopic": "construction-elements",
-    "question": "Per IBC Table 601, the required fire-resistance rating of the primary structural frame in Type IIB construction is:",
+    "question": "The required fire-resistance rating of the primary structural frame in Type IIB construction is:",
     "options": {
       "A": "0 hours",
       "B": "1 hour",
@@ -1105,7 +1105,7 @@
     "id": "ibc-085",
     "category": "IBC",
     "subtopic": "construction-types",
-    "question": "Under IBC Section 602, the fundamental difference between Type I/II construction and Type III/IV/V construction is:",
+    "question": "The fundamental difference between Type I/II construction and Type III/IV/V construction is:",
     "options": {
       "A": "Building height only",
       "B": "Type I and II require building elements (including structural members) to be of noncombustible materials, while Types III, IV, and V permit combustible materials in specified locations",
@@ -1124,7 +1124,7 @@
     "id": "ibc-086",
     "category": "IBC",
     "subtopic": "construction-types",
-    "question": "Under IBC Section 602.3, Type III construction is characterized by exterior walls of noncombustible materials and interior building elements of:",
+    "question": "Type III construction is characterized by exterior walls of noncombustible materials and interior building elements of:",
     "options": {
       "A": "Required noncombustible materials only",
       "B": "Any material permitted by the code (including combustible)",
@@ -1143,7 +1143,7 @@
     "id": "ibc-087",
     "category": "IBC",
     "subtopic": "construction-types",
-    "question": "Under IBC Section 602.4, Type IV-HT (Heavy Timber) construction requires solid or laminated wood structural members to meet minimum nominal dimensions. Wood columns supporting floor loads must be a minimum nominal dimension of:",
+    "question": "Type IV-HT (Heavy Timber) construction requires solid or laminated wood structural members to meet minimum nominal dimensions. Wood columns supporting floor loads must be a minimum nominal dimension of:",
     "options": {
       "A": "4 inches by 4 inches",
       "B": "6 inches by 6 inches",
@@ -1162,7 +1162,7 @@
     "id": "ibc-088",
     "category": "IBC",
     "subtopic": "construction-types",
-    "question": "Under IBC Section 602, which type of construction permits the use of any materials allowed by the code throughout the building, including combustible framing for all building elements?",
+    "question": "Which type of construction permits the use of any materials allowed by the code throughout the building, including combustible framing for all building elements?",
     "options": {
       "A": "Type I",
       "B": "Type II",
@@ -1181,7 +1181,7 @@
     "id": "ibc-089",
     "category": "IBC",
     "subtopic": "exterior-walls",
-    "question": "Under IBC Table 602, an exterior wall with a fire separation distance of less than 5 feet generally requires what minimum fire-resistance rating for a Group B occupancy (based on fire separation distance)?",
+    "question": "An exterior wall with a fire separation distance of less than 5 feet generally requires what minimum fire-resistance rating for a Group B occupancy (based on fire separation distance)?",
     "options": {
       "A": "0 hours",
       "B": "1 hour",
@@ -1200,7 +1200,7 @@
     "id": "ibc-090",
     "category": "IBC",
     "subtopic": "exterior-walls",
-    "question": "Under IBC Table 705.8 (exterior wall openings), the allowable area of unprotected openings increases as the fire separation distance increases. At a fire separation distance of 30 feet or greater, the allowable area of unprotected openings in an exterior wall of a nonsprinklered building is generally:",
+    "question": "The allowable area of unprotected openings increases as the fire separation distance increases. At a fire separation distance of 30 feet or greater, the allowable area of unprotected openings in an exterior wall of a nonsprinklered building is generally:",
     "options": {
       "A": "10 percent",
       "B": "25 percent",
@@ -1219,7 +1219,7 @@
     "id": "ibc-091",
     "category": "IBC",
     "subtopic": "atriums",
-    "question": "Under IBC Section 404, a building containing an atrium connecting more than two stories is required to be equipped throughout with what life-safety system?",
+    "question": "A building containing an atrium connecting more than two stories is required to be equipped throughout with what life-safety system?",
     "options": {
       "A": "Standpipes only",
       "B": "An automatic sprinkler system and a smoke control system",
@@ -1238,7 +1238,7 @@
     "id": "ibc-092",
     "category": "IBC",
     "subtopic": "atriums",
-    "question": "Under IBC Section 404, the fire-resistance rating of the enclosure (atrium walls) separating the atrium from adjacent spaces is generally required to be:",
+    "question": "The fire-resistance rating of the enclosure (atrium walls) separating the atrium from adjacent spaces is generally required to be:",
     "options": {
       "A": "1-hour fire barrier (with exceptions allowing a glass wall smoke partition where sprinklered)",
       "B": "Always 4 hours",
@@ -1257,7 +1257,7 @@
     "id": "ibc-093",
     "category": "IBC",
     "subtopic": "vertical-openings",
-    "question": "Under IBC Section 712, which of the following is NOT one of the methods permitted to address a vertical opening connecting two or more stories?",
+    "question": "Which of the following is NOT one of the methods permitted to address a vertical opening connecting two or more stories?",
     "options": {
       "A": "Shaft enclosure (Section 713)",
       "B": "Atrium (Section 404)",
@@ -1276,7 +1276,7 @@
     "id": "ibc-094",
     "category": "IBC",
     "subtopic": "shaft-enclosures",
-    "question": "Under IBC Section 713, a shaft enclosure that connects four or more stories is required to have a minimum fire-resistance rating of:",
+    "question": "A shaft enclosure that connects four or more stories is required to have a minimum fire-resistance rating of:",
     "options": {
       "A": "1 hour",
       "B": "1 1/2 hours",
@@ -1295,7 +1295,7 @@
     "id": "ibc-095",
     "category": "IBC",
     "subtopic": "shaft-enclosures",
-    "question": "Under IBC Section 713, at the top and bottom of a shaft, what is required to maintain the integrity of the enclosure?",
+    "question": "At the top and bottom of a shaft, what is required to maintain the integrity of the enclosure?",
     "options": {
       "A": "Nothing; shafts are open at the top and bottom",
       "B": "The shaft must be enclosed at the top and bottom with construction of the same fire-resistance rating as the shaft (with limited exceptions)",
@@ -1314,7 +1314,7 @@
     "id": "ibc-096",
     "category": "IBC",
     "subtopic": "combustibility",
-    "question": "Under IBC, a material is generally classified as noncombustible if it passes which test, or is composed of materials meeting specific criteria?",
+    "question": "A material is generally classified as noncombustible if it passes which test, or is composed of materials meeting specific criteria?",
     "options": {
       "A": "ASTM E84 (Steiner Tunnel) only",
       "B": "ASTM E136 (or is composed of materials defined as noncombustible by the code)",
@@ -1333,7 +1333,7 @@
     "id": "ibc-097",
     "category": "IBC",
     "subtopic": "concealed-spaces",
-    "question": "Under IBC Section 718, fireblocking is required in concealed spaces of combustible construction. In concealed wall spaces (stud walls and partitions), fireblocking must occur vertically at the ceiling and floor levels and horizontally at intervals not exceeding:",
+    "question": "Fireblocking is required in concealed spaces of combustible construction. In concealed wall spaces (stud walls and partitions), fireblocking must occur vertically at the ceiling and floor levels and horizontally at intervals not exceeding:",
     "options": {
       "A": "8 feet",
       "B": "10 feet",
@@ -1352,7 +1352,7 @@
     "id": "ibc-098",
     "category": "IBC",
     "subtopic": "concealed-spaces",
-    "question": "Under IBC Section 718, what is the primary purpose of draftstopping in floor/ceiling and attic concealed spaces (as distinguished from fireblocking)?",
+    "question": "What is the primary purpose of draftstopping in floor/ceiling and attic concealed spaces (as distinguished from fireblocking)?",
     "options": {
       "A": "To provide structural support",
       "B": "To subdivide large concealed combustible spaces (such as floor/ceiling assemblies and attics) to restrict the movement of air and limit fire spread within the concealed space",
@@ -1371,7 +1371,7 @@
     "id": "ibc-099",
     "category": "IBC",
     "subtopic": "opening-protectives",
-    "question": "Under IBC Section 716, a fire door assembly is required to be self-closing or automatic-closing. Where a fire door is held open, the hold-open device must release the door upon:",
+    "question": "A fire door assembly is required to be self-closing or automatic-closing. Where a fire door is held open, the hold-open device must release the door upon:",
     "options": {
       "A": "A manual key only",
       "B": "Actuation of the fire alarm/smoke detection system (the door closes automatically on detection)",
@@ -1390,7 +1390,7 @@
     "id": "ibc-100",
     "category": "IBC",
     "subtopic": "fire-barriers",
-    "question": "Under IBC Section 707.3, which of the following uses is required to be enclosed with fire barriers (or horizontal assemblies, or both)?",
+    "question": "Which of the following uses is required to be enclosed with fire barriers (or horizontal assemblies, or both)?",
     "options": {
       "A": "A nonrated tenant demising wall",
       "B": "Shaft enclosures, interior exit stairways, exit passageways, and fire areas separating different occupancies",
@@ -1409,7 +1409,7 @@
     "id": "ibc-101",
     "category": "IBC",
     "subtopic": "construction-elements",
-    "question": "Under IBC Table 601, a structural member that is part of a roof but is more than 20 feet above the floor immediately below in certain types of construction may be permitted to have what fire-resistance rating?",
+    "question": "A structural member that is part of a roof but is more than 20 feet above the floor immediately below in certain types of construction may be permitted to have what fire-resistance rating?",
     "options": {
       "A": "It must always equal the primary structural frame rating",
       "B": "It may be reduced (in some types the roof construction and associated members 20 feet or more above the floor are permitted to be unprotected / 0 hours)",
@@ -1428,7 +1428,7 @@
     "id": "ibc-102",
     "category": "IBC",
     "subtopic": "construction-types",
-    "question": "Under the IBC (2021 and later) Section 602.4, the new mass timber Type IV subtypes are designated as:",
+    "question": "The new mass timber Type IV subtypes are designated as:",
     "options": {
       "A": "Type IV-1, IV-2, IV-3",
       "B": "Type IV-A, IV-B, IV-C (in addition to IV-HT)",
@@ -1447,7 +1447,7 @@
     "id": "ibc-231",
     "category": "IBC",
     "subtopic": "exterior-walls",
-    "question": "Under IBC Chapter 14, the minimum required fire-resistance rating and the limits on openings of an exterior wall are determined primarily by what factor?",
+    "question": "The minimum required fire-resistance rating and the limits on openings of an exterior wall are determined primarily by what factor?",
     "options": {
       "A": "The roof covering class",
       "B": "The fire separation distance",
@@ -1466,7 +1466,7 @@
     "id": "ibc-103",
     "category": "IBC",
     "subtopic": "exterior-walls",
-    "question": "Per IBC Section 1403/1404, combustible materials are permitted on the exterior side of exterior walls of Type I, II, III, and IV (noncombustible) construction only when which condition is met?",
+    "question": "Combustible materials are permitted on the exterior side of exterior walls of Type I, II, III, and IV (noncombustible) construction only when which condition is met?",
     "options": {
       "A": "Never, under any circumstance",
       "B": "When permitted by Section 1405 and the applicable use, height, and area limits",
@@ -1485,7 +1485,7 @@
     "id": "ibc-104",
     "category": "IBC",
     "subtopic": "exterior-walls",
-    "question": "Under IBC Section 1404 (and referenced 1405), exterior walls are required to be covered with a what to protect against the passage of water behind the exterior veneer?",
+    "question": "Exterior walls are required to be covered with a what to protect against the passage of water behind the exterior veneer?",
     "options": {
       "A": "Vapor retarder",
       "B": "Water-resistive barrier",
@@ -1504,7 +1504,7 @@
     "id": "ibc-105",
     "category": "IBC",
     "subtopic": "exterior-walls",
-    "question": "Per IBC Section 1405, exterior wall veneer of more than 5 inches in thickness, or anchored masonry veneer in general, must be supported in what manner unless an engineered design is provided?",
+    "question": "Exterior wall veneer of more than 5 inches in thickness, or anchored masonry veneer in general, must be supported in what manner unless an engineered design is provided?",
     "options": {
       "A": "By the wall framing only",
       "B": "On noncombustible structural supports such as foundations or noncombustible corbeling",
@@ -1523,7 +1523,7 @@
     "id": "ibc-106",
     "category": "IBC",
     "subtopic": "exterior-walls",
-    "question": "Under IBC Table 705.8, when the fire separation distance is greater than or equal to 30 feet, the maximum area of unprotected openings in an exterior wall is:",
+    "question": "When the fire separation distance is greater than or equal to 30 feet, the maximum area of unprotected openings in an exterior wall is:",
     "options": {
       "A": "10 percent",
       "B": "25 percent",
@@ -1542,7 +1542,7 @@
     "id": "ibc-107",
     "category": "IBC",
     "subtopic": "roof-assemblies",
-    "question": "Under IBC Section 1505, which roof covering classification provides the highest level of fire resistance and is effective against severe fire test exposure?",
+    "question": "Which roof covering classification provides the highest level of fire resistance and is effective against severe fire test exposure?",
     "options": {
       "A": "Class A",
       "B": "Class B",
@@ -1561,7 +1561,7 @@
     "id": "ibc-108",
     "category": "IBC",
     "subtopic": "roof-assemblies",
-    "question": "Per IBC Section 1502/1503, what is the primary purpose of roof drainage provisions, including secondary (emergency overflow) drains or scuppers?",
+    "question": "What is the primary purpose of roof drainage provisions, including secondary (emergency overflow) drains or scuppers?",
     "options": {
       "A": "To reduce the roof live load by half",
       "B": "To prevent ponding and structural overload when primary drains are blocked",
@@ -1580,7 +1580,7 @@
     "id": "ibc-109",
     "category": "IBC",
     "subtopic": "roof-assemblies",
-    "question": "Under IBC Section 1503, a parapet wall and other vertical surfaces at the roof edge generally must be provided with what to protect the top of the wall and direct water?",
+    "question": "A parapet wall and other vertical surfaces at the roof edge generally must be provided with what to protect the top of the wall and direct water?",
     "options": {
       "A": "Coping",
       "B": "A gutter only",
@@ -1599,7 +1599,7 @@
     "id": "ibc-110",
     "category": "IBC",
     "subtopic": "roof-assemblies",
-    "question": "Per IBC Section 1505, a roof covering of Class B or C is allowed only when the requirements for the building's construction type permit it. Which condition most commonly forces a Class A roof?",
+    "question": "A roof covering of Class B or C is allowed only when the requirements for the building's construction type permit it. Which condition most commonly forces a Class A roof?",
     "options": {
       "A": "Any building over two stories",
       "B": "Type I and Type II (and certain other) construction or specific fire-hazard locations",
@@ -1618,7 +1618,7 @@
     "id": "ibc-111",
     "category": "IBC",
     "subtopic": "structural-loads",
-    "question": "Under IBC Table 1607.1, what is the minimum uniformly distributed live load for office buildings (offices)?",
+    "question": "What is the minimum uniformly distributed live load for office buildings (offices)?",
     "options": {
       "A": "40 psf",
       "B": "50 psf",
@@ -1637,7 +1637,7 @@
     "id": "ibc-112",
     "category": "IBC",
     "subtopic": "structural-loads",
-    "question": "Per IBC Table 1607.1, the minimum uniformly distributed live load for the first-floor lobbies and corridors of an assembly or commercial building is:",
+    "question": "The minimum uniformly distributed live load for the first-floor lobbies and corridors of an assembly or commercial building is:",
     "options": {
       "A": "50 psf",
       "B": "80 psf",
@@ -1656,7 +1656,7 @@
     "id": "ibc-113",
     "category": "IBC",
     "subtopic": "structural-loads",
-    "question": "Under IBC Section 1602, the weight of the building's permanent construction, including walls, floors, roofs, fixed equipment, and finishes, is defined as the:",
+    "question": "The weight of the building's permanent construction, including walls, floors, roofs, fixed equipment, and finishes, is defined as the:",
     "options": {
       "A": "Live load",
       "B": "Dead load",
@@ -1675,7 +1675,7 @@
     "id": "ibc-114",
     "category": "IBC",
     "subtopic": "structural-loads",
-    "question": "Per IBC Section 1608, the design snow load for a building is determined using which referenced standard?",
+    "question": "The design snow load for a building is determined using which referenced standard?",
     "options": {
       "A": "ACI 318",
       "B": "ASCE 7",
@@ -1694,7 +1694,7 @@
     "id": "ibc-115",
     "category": "IBC",
     "subtopic": "structural-loads",
-    "question": "Under IBC Section 1609, wind loads are determined using ASCE 7 and are based primarily on which input value?",
+    "question": "Wind loads are determined using ASCE 7 and are based primarily on which input value?",
     "options": {
       "A": "The ground snow load",
       "B": "The basic (ultimate) design wind speed for the site",
@@ -1713,7 +1713,7 @@
     "id": "ibc-116",
     "category": "IBC",
     "subtopic": "structural-loads",
-    "question": "Per IBC Section 1613, earthquake (seismic) loads must be determined in accordance with which standard, with the building first assigned a Seismic Design Category (SDC)?",
+    "question": "Earthquake (seismic) loads must be determined in accordance with which standard, with the building first assigned a Seismic Design Category (SDC)?",
     "options": {
       "A": "ASCE 7",
       "B": "ASTM E119",
@@ -1732,7 +1732,7 @@
     "id": "ibc-117",
     "category": "IBC",
     "subtopic": "structural-loads",
-    "question": "Under IBC Table 1604.3, the deflection limit for a floor member supporting plaster or other brittle finishes under live load (L) is commonly:",
+    "question": "The deflection limit for a floor member supporting plaster or other brittle finishes under live load (L) is commonly:",
     "options": {
       "A": "L/180",
       "B": "L/240",
@@ -1751,7 +1751,7 @@
     "id": "ibc-118",
     "category": "IBC",
     "subtopic": "structural-loads",
-    "question": "Per IBC Section 1605, structures and their components must be designed to resist the most critical effects resulting from what?",
+    "question": "Structures and their components must be designed to resist the most critical effects resulting from what?",
     "options": {
       "A": "Dead load only",
       "B": "The applicable load combinations of the referenced standard",
@@ -1770,7 +1770,7 @@
     "id": "ibc-119",
     "category": "IBC",
     "subtopic": "structural-loads",
-    "question": "Under IBC Section 1607, when a member supports a large tributary floor area, the code permits the designer to apply a what to the design live load?",
+    "question": "When a member supports a large tributary floor area, the code permits the designer to apply a what to the design live load?",
     "options": {
       "A": "Live load increase factor",
       "B": "Live load reduction",
@@ -1789,7 +1789,7 @@
     "id": "ibc-120",
     "category": "IBC",
     "subtopic": "soils-foundations",
-    "question": "Under IBC Table 1806.2, in the absence of a soils investigation, what is the presumptive allowable foundation (bearing) pressure for sandy gravel and/or gravel (GW and GP)?",
+    "question": "In the absence of a soils investigation, what is the presumptive allowable foundation (bearing) pressure for sandy gravel and/or gravel (GW and GP)?",
     "options": {
       "A": "1,500 psf",
       "B": "2,000 psf",
@@ -1808,7 +1808,7 @@
     "id": "ibc-121",
     "category": "IBC",
     "subtopic": "soils-foundations",
-    "question": "Per IBC Table 1806.2, the presumptive allowable bearing value for clay, sandy clay, silty clay, and clayey silt is:",
+    "question": "The presumptive allowable bearing value for clay, sandy clay, silty clay, and clayey silt is:",
     "options": {
       "A": "1,500 psf",
       "B": "2,000 psf",
@@ -1827,7 +1827,7 @@
     "id": "ibc-122",
     "category": "IBC",
     "subtopic": "soils-foundations",
-    "question": "Under IBC Section 1809, the bottom of exterior footings must be placed below what depth to protect against frost damage?",
+    "question": "The bottom of exterior footings must be placed below what depth to protect against frost damage?",
     "options": {
       "A": "Below the frost line for the locality",
       "B": "Always 12 inches below grade",
@@ -1846,7 +1846,7 @@
     "id": "ibc-123",
     "category": "IBC",
     "subtopic": "soils-foundations",
-    "question": "Per IBC Section 1807, retaining walls must be designed to resist what, ensuring stability against overturning, sliding, and excessive soil pressure?",
+    "question": "Retaining walls must be designed to resist what, ensuring stability against overturning, sliding, and excessive soil pressure?",
     "options": {
       "A": "Only the weight of the wall itself",
       "B": "Lateral soil loads and surcharge, with required safety factors against overturning and sliding",
@@ -1865,7 +1865,7 @@
     "id": "ibc-124",
     "category": "IBC",
     "subtopic": "soils-foundations",
-    "question": "Under IBC Section 1810, a deep foundation element (such as a driven pile or drilled shaft) is used primarily when:",
+    "question": "A deep foundation element (such as a driven pile or drilled shaft) is used primarily when:",
     "options": {
       "A": "Shallow soils cannot adequately support the loads and load must transfer to deeper, stronger strata",
       "B": "The building is under one story",
@@ -1884,7 +1884,7 @@
     "id": "ibc-125",
     "category": "IBC",
     "subtopic": "soils-foundations",
-    "question": "Per IBC Section 1808, foundations must be designed and constructed so that the allowable bearing capacity of the soil is not exceeded and that differential settlement does not do what?",
+    "question": "Foundations must be designed and constructed so that the allowable bearing capacity of the soil is not exceeded and that differential settlement does not do what?",
     "options": {
       "A": "Increase the snow load",
       "B": "Cause damage to the structure or its components",
@@ -1903,7 +1903,7 @@
     "id": "ibc-126",
     "category": "IBC",
     "subtopic": "concrete",
-    "question": "Under IBC Chapter 19, the design, materials, and construction of structural concrete must comply primarily with which referenced standard?",
+    "question": "The design, materials, and construction of structural concrete must comply primarily with which referenced standard?",
     "options": {
       "A": "AISC 360",
       "B": "ACI 318",
@@ -1922,7 +1922,7 @@
     "id": "ibc-127",
     "category": "IBC",
     "subtopic": "concrete",
-    "question": "In IBC Chapter 19 and ACI 318, the symbol f'c represents which property of concrete?",
+    "question": "The symbol f'c represents which property of concrete?",
     "options": {
       "A": "The yield strength of the reinforcing steel",
       "B": "The specified compressive strength of the concrete",
@@ -1941,7 +1941,7 @@
     "id": "ibc-128",
     "category": "IBC",
     "subtopic": "concrete",
-    "question": "Per IBC Chapter 19 and ACI 318, the minimum concrete cover over reinforcing steel is specified primarily to provide what?",
+    "question": "The minimum concrete cover over reinforcing steel is specified primarily to provide what?",
     "options": {
       "A": "A larger live load capacity",
       "B": "Protection of the reinforcement against corrosion and fire, and proper bond",
@@ -1960,7 +1960,7 @@
     "id": "ibc-129",
     "category": "IBC",
     "subtopic": "masonry",
-    "question": "Under IBC Chapter 21, the design and construction of masonry must comply principally with which referenced standard?",
+    "question": "The design and construction of masonry must comply principally with which referenced standard?",
     "options": {
       "A": "TMS 402/602",
       "B": "ACI 318",
@@ -1979,7 +1979,7 @@
     "id": "ibc-130",
     "category": "IBC",
     "subtopic": "masonry",
-    "question": "Per IBC Chapter 21, the strength of masonry assemblies is characterized by which specified value used in design?",
+    "question": "The strength of masonry assemblies is characterized by which specified value used in design?",
     "options": {
       "A": "f'm, the specified compressive strength of masonry",
       "B": "Fy, the yield strength of mortar",
@@ -1998,7 +1998,7 @@
     "id": "ibc-131",
     "category": "IBC",
     "subtopic": "steel",
-    "question": "Under IBC Chapter 22, the design, fabrication, and erection of structural steel must comply primarily with which referenced standard?",
+    "question": "The design, fabrication, and erection of structural steel must comply primarily with which referenced standard?",
     "options": {
       "A": "ACI 318",
       "B": "AISC 360 (Specification for Structural Steel Buildings)",
@@ -2017,7 +2017,7 @@
     "id": "ibc-132",
     "category": "IBC",
     "subtopic": "steel",
-    "question": "Per IBC Chapter 22, when a building is assigned to a higher Seismic Design Category, structural steel seismic-force-resisting systems generally must also comply with which standard?",
+    "question": "When a building is assigned to a higher Seismic Design Category, structural steel seismic-force-resisting systems generally must also comply with which standard?",
     "options": {
       "A": "AISC 341 (Seismic Provisions)",
       "B": "ASTM E84",
@@ -2036,7 +2036,7 @@
     "id": "ibc-133",
     "category": "IBC",
     "subtopic": "wood",
-    "question": "Under IBC Chapter 23, the allowable stress design of wood members and their connections must comply principally with which referenced standard?",
+    "question": "The allowable stress design of wood members and their connections must comply principally with which referenced standard?",
     "options": {
       "A": "AWC NDS (National Design Specification for Wood Construction)",
       "B": "ACI 318",
@@ -2055,7 +2055,7 @@
     "id": "ibc-134",
     "category": "IBC",
     "subtopic": "wood",
-    "question": "Per the NDS referenced in IBC Chapter 23, the load-duration factor (CD) recognizes that wood can carry higher loads for shorter durations. Which load duration corresponds to the highest CD among these choices?",
+    "question": "The load-duration factor (CD) recognizes that wood can carry higher loads for shorter durations. Which load duration corresponds to the highest CD among these choices?",
     "options": {
       "A": "Permanent (dead) load",
       "B": "Ten-year (normal/occupancy) load",
@@ -2074,7 +2074,7 @@
     "id": "ibc-135",
     "category": "IBC",
     "subtopic": "wood",
-    "question": "Under IBC Section 2308, conventional light-frame wood construction is permitted only when the building stays within prescribed limits, including a maximum of how many stories above grade plane (for most occupancies)?",
+    "question": "Conventional light-frame wood construction is permitted only when the building stays within prescribed limits, including a maximum of how many stories above grade plane (for most occupancies)?",
     "options": {
       "A": "One story",
       "B": "Two stories",
@@ -2093,7 +2093,7 @@
     "id": "ibc-136",
     "category": "IBC",
     "subtopic": "wood",
-    "question": "Per IBC Chapter 23, where wood is in contact with the ground or exposed to weather and decay hazard, the code requires the use of:",
+    "question": "Where wood is in contact with the ground or exposed to weather and decay hazard, the code requires the use of:",
     "options": {
       "A": "Untreated kiln-dried lumber",
       "B": "Naturally durable wood or preservative-treated wood",
@@ -2112,7 +2112,7 @@
     "id": "ibc-137",
     "category": "IBC",
     "subtopic": "safeguards-construction",
-    "question": "Under IBC Chapter 33 (Safeguards During Construction), how must the means of egress be handled in a building undergoing alteration while it remains occupied?",
+    "question": "How must the means of egress be handled in a building undergoing alteration while it remains occupied?",
     "options": {
       "A": "Egress is suspended during construction",
       "B": "The required means of egress must be maintained at all times during occupancy",
@@ -2131,7 +2131,7 @@
     "id": "ibc-138",
     "category": "IBC",
     "subtopic": "safeguards-construction",
-    "question": "Per IBC Chapter 33, before a structure is demolished, what must be addressed regarding utility service connections?",
+    "question": "Before a structure is demolished, what must be addressed regarding utility service connections?",
     "options": {
       "A": "Nothing, utilities are left in service",
       "B": "Service utility connections must be discontinued and capped, or otherwise controlled, in accordance with approved rules",
@@ -2150,7 +2150,7 @@
     "id": "ibc-139",
     "category": "IBC",
     "subtopic": "safeguards-construction",
-    "question": "Under IBC Chapter 33, a fence or barrier is required around a construction or demolition site primarily to:",
+    "question": "A fence or barrier is required around a construction or demolition site primarily to:",
     "options": {
       "A": "Reduce the wind load on the building",
       "B": "Protect the public from construction and demolition hazards",
@@ -2169,7 +2169,7 @@
     "id": "ibc-140",
     "category": "IBC",
     "subtopic": "safeguards-construction",
-    "question": "Per IBC Chapter 33, when a portion of a building is occupied during construction, the required fire protection systems serving the occupied area must be:",
+    "question": "When a portion of a building is occupied during construction, the required fire protection systems serving the occupied area must be:",
     "options": {
       "A": "Removed to allow construction access",
       "B": "Maintained in operable condition",
@@ -2188,7 +2188,7 @@
     "id": "ibc-141",
     "category": "IBC",
     "subtopic": "safeguards-construction",
-    "question": "Under IBC Chapter 31, temporary structures and uses (such as a construction trailer or a temporary tent) erected on a site are generally permitted for a limited period not to exceed how long unless extended by the building official?",
+    "question": "Temporary structures and uses (such as a construction trailer or a temporary tent) erected on a site are generally permitted for a limited period not to exceed how long unless extended by the building official?",
     "options": {
       "A": "30 days",
       "B": "90 days",
@@ -2207,7 +2207,7 @@
     "id": "ibc-142",
     "category": "IBC",
     "subtopic": "exterior-walls",
-    "question": "Per IBC Chapter 14, exterior walls and their associated weather-resistive components are required to perform what fundamental function in addition to any structural role?",
+    "question": "Exterior walls and their associated weather-resistive components are required to perform what fundamental function in addition to any structural role?",
     "options": {
       "A": "Provide the seismic-force-resisting system",
       "B": "Provide weather protection (resist water and air intrusion)",
@@ -2226,7 +2226,7 @@
     "id": "ibc-143",
     "category": "IBC",
     "subtopic": "structural-loads",
-    "question": "Under IBC Section 1604, the risk category assigned to a building (I through IV) primarily affects which aspect of structural design?",
+    "question": "The risk category assigned to a building (I through IV) primarily affects which aspect of structural design?",
     "options": {
       "A": "The roof covering class",
       "B": "The importance factors used for snow, wind, and seismic loads",
@@ -2245,7 +2245,7 @@
     "id": "ibc-144",
     "category": "IBC",
     "subtopic": "sprinkler-systems",
-    "question": "Per IBC Section 903.2.1.1, an automatic sprinkler system is required throughout a Group A-1 occupancy when which threshold is exceeded?",
+    "question": "An automatic sprinkler system is required throughout a Group A-1 occupancy when which threshold is exceeded?",
     "options": {
       "A": "The fire area exceeds 12,000 square feet, has an occupant load of 300 or more, the fire area is on a floor other than a level of exit discharge, or it is a multitheater complex",
       "B": "The fire area exceeds 5,000 square feet",
@@ -2264,7 +2264,7 @@
     "id": "ibc-145",
     "category": "IBC",
     "subtopic": "sprinkler-systems",
-    "question": "Under IBC Section 903.2.7, a Group M (mercantile) occupancy requires an automatic sprinkler system throughout the building's fire area when which condition is met?",
+    "question": "A Group M (mercantile) occupancy requires an automatic sprinkler system throughout the building's fire area when which condition is met?",
     "options": {
       "A": "The fire area exceeds 12,000 sq ft, the fire area is located more than three stories above grade plane, or the combined area of all M fire areas on all floors exceeds 24,000 sq ft",
       "B": "Only when the building exceeds four stories",
@@ -2283,7 +2283,7 @@
     "id": "ibc-146",
     "category": "IBC",
     "subtopic": "sprinkler-systems",
-    "question": "IBC Section 903.2.8 requires an automatic sprinkler system throughout all buildings containing a Group R fire area. Which statement best describes this requirement?",
+    "question": "An automatic sprinkler system is required throughout all buildings containing a Group R fire area. Which statement best describes this requirement?",
     "options": {
       "A": "It applies only to R-1 hotels over four stories",
       "B": "It applies to all Group R occupancies (R-1, R-2, R-3, R-4) regardless of fire area size",
@@ -2302,7 +2302,7 @@
     "id": "ibc-147",
     "category": "IBC",
     "subtopic": "sprinkler-systems",
-    "question": "An NFPA 13R sprinkler system, referenced in IBC Section 903.3.1.2, is permitted in Group R occupancies that meet which height limitation?",
+    "question": "An NFPA 13R sprinkler system is permitted in Group R occupancies that meet which height limitation?",
     "options": {
       "A": "Up to and including four stories above grade plane and not exceeding 60 feet in height measured to the highest occupiable floor",
       "B": "Any height with no limit",
@@ -2321,7 +2321,7 @@
     "id": "ibc-148",
     "category": "IBC",
     "subtopic": "sprinkler-systems",
-    "question": "Which sprinkler standard does IBC Section 903.3.1.3 reference for the protection of one- and two-family dwellings and townhouses?",
+    "question": "Which sprinkler standard is referenced for the protection of one- and two-family dwellings and townhouses?",
     "options": {
       "A": "NFPA 13",
       "B": "NFPA 13R",
@@ -2340,7 +2340,7 @@
     "id": "ibc-149",
     "category": "IBC",
     "subtopic": "sprinkler-systems",
-    "question": "Per IBC Section 903.4, where a required automatic sprinkler system serves a building, the valves controlling the water supply and other monitored components must be:",
+    "question": "Where a required automatic sprinkler system serves a building, the valves controlling the water supply and other monitored components must be:",
     "options": {
       "A": "Automatically shut off the building electrical service when water flows",
       "B": "Electrically supervised, and water flow must transmit an alarm signal and activate occupant notification appliances",
@@ -2359,7 +2359,7 @@
     "id": "ibc-150",
     "category": "IBC",
     "subtopic": "standpipes",
-    "question": "IBC Section 905 and NFPA 14 define standpipe classes by intended user. A Class I standpipe system is intended for use by whom and provides what hose connection size?",
+    "question": "Standpipe classes are defined by intended user. A Class I standpipe system is intended for use by whom and provides what hose connection size?",
     "options": {
       "A": "Trained building occupants, with 1-1/2 inch connections",
       "B": "Fire department personnel and trained users, with 2-1/2 inch hose connections",
@@ -2378,7 +2378,7 @@
     "id": "ibc-151",
     "category": "IBC",
     "subtopic": "standpipes",
-    "question": "Per IBC Section 905.3.1, a standpipe system is generally required in a building where the floor level of the highest story is located more than what distance above the lowest level of fire department vehicle access?",
+    "question": "A standpipe system is generally required in a building where the floor level of the highest story is located more than what distance above the lowest level of fire department vehicle access?",
     "options": {
       "A": "More than 30 feet",
       "B": "More than 75 feet",
@@ -2397,7 +2397,7 @@
     "id": "ibc-152",
     "category": "IBC",
     "subtopic": "fire-alarm-detection",
-    "question": "IBC Section 907.2 establishes where manual and/or automatic fire alarm systems are required. A manual fire alarm system is generally NOT required (pull stations may be omitted) in a Group A occupancy when which condition is satisfied?",
+    "question": "A manual fire alarm system is generally NOT required (pull stations may be omitted) in a Group A occupancy when which condition is satisfied?",
     "options": {
       "A": "Never; A occupancies always require manual pull stations regardless",
       "B": "The building has an approved automatic sprinkler system per 903.3.1.1 and the occupant notification appliances activate upon sprinkler water flow",
@@ -2416,7 +2416,7 @@
     "id": "ibc-153",
     "category": "IBC",
     "subtopic": "fire-alarm-detection",
-    "question": "Under IBC Section 907.5.2.3, where occupant notification is required, visible alarm notification appliances (strobes) must be provided in which areas to comply with accessibility requirements?",
+    "question": "Where occupant notification is required, visible alarm notification appliances (strobes) must be provided in which areas to comply with accessibility requirements?",
     "options": {
       "A": "Only in private offices",
       "B": "Public-use and common-use areas, in accordance with NFPA 72",
@@ -2435,7 +2435,7 @@
     "id": "ibc-154",
     "category": "IBC",
     "subtopic": "fire-alarm-detection",
-    "question": "Per IBC Section 907.2.3, in a Group E (educational) occupancy, manual pull stations may be limited to a single location when which conditions are met?",
+    "question": "In a Group E (educational) occupancy, manual pull stations may be limited to a single location when which conditions are met?",
     "options": {
       "A": "The occupant load is below 50, regardless of any other condition",
       "B": "The building is equipped throughout with an approved automatic sprinkler system, the notification appliances activate on sprinkler water flow, and manual activation is provided at a normally occupied location such as the main office",
@@ -2454,7 +2454,7 @@
     "id": "ibc-155",
     "category": "IBC",
     "subtopic": "smoke-control",
-    "question": "IBC Section 909 governs smoke control systems. When a smoke control system is provided to comply with the code, what is required to verify its proper operation before occupancy?",
+    "question": "When a smoke control system is provided to comply with the code, what is required to verify its proper operation before occupancy?",
     "options": {
       "A": "No testing; visual inspection of ducts only",
       "B": "Special inspections and acceptance testing in accordance with Sections 909 and 1705, of components such as fans, dampers, controls, and pressure differences",
@@ -2473,7 +2473,7 @@
     "id": "ibc-156",
     "category": "IBC",
     "subtopic": "fire-extinguishers",
-    "question": "Per IBC Section 906, the selection, installation, and distribution of portable fire extinguishers must conform to which standard?",
+    "question": "The selection, installation, and distribution of portable fire extinguishers must conform to which standard?",
     "options": {
       "A": "NFPA 13",
       "B": "NFPA 10",
@@ -2492,7 +2492,7 @@
     "id": "ibc-157",
     "category": "IBC",
     "subtopic": "fire-extinguishers",
-    "question": "Under NFPA 10 as referenced by IBC Section 906, what is the maximum travel distance to a portable fire extinguisher for a Class A hazard (ordinary combustibles)?",
+    "question": "What is the maximum travel distance to a portable fire extinguisher for a Class A hazard (ordinary combustibles)?",
     "options": {
       "A": "30 feet",
       "B": "50 feet",
@@ -2511,7 +2511,7 @@
     "id": "ibc-158",
     "category": "IBC",
     "subtopic": "fire-pump",
-    "question": "Where a fire pump is required to provide adequate water pressure or flow for a fire protection system, IBC Chapter 9 requires the fire pump installation to comply with which NFPA standard?",
+    "question": "Where a fire pump is required to provide adequate water pressure or flow for a fire protection system, the fire pump installation must comply with which NFPA standard?",
     "options": {
       "A": "NFPA 20",
       "B": "NFPA 25",
@@ -2530,7 +2530,7 @@
     "id": "ibc-159",
     "category": "IBC",
     "subtopic": "fire-command-center",
-    "question": "Per IBC Section 911, a fire command center is required for high-rise buildings and certain other structures. Which describes the minimum required size and rating of the fire command center?",
+    "question": "A fire command center is required for high-rise buildings and certain other structures. Which describes the minimum required size and rating of the fire command center?",
     "options": {
       "A": "No minimum; it can be any closet",
       "B": "A minimum of 200 square feet with a minimum dimension of 10 feet, separated from the remainder of the building by not less than a 1-hour fire barrier",
@@ -2549,7 +2549,7 @@
     "id": "ibc-160",
     "category": "IBC",
     "subtopic": "sprinkler-systems",
-    "question": "IBC Section 903.2.9 requires sprinkler protection in Group S-1 storage occupancies. Which of the following correctly states a trigger?",
+    "question": "Sprinkler protection is required in certain Group S-1 storage occupancies. Which of the following correctly states a trigger?",
     "options": {
       "A": "Storage of office paper records, in any quantity",
       "B": "A Group S-1 fire area exceeding 12,000 sq ft, a fire area more than three stories above grade plane, a combined S-1 area on all floors exceeding 24,000 sq ft, plus specific repair-garage and high-piled-storage triggers",
@@ -2568,7 +2568,7 @@
     "id": "ibc-161",
     "category": "IBC",
     "subtopic": "sprinkler-systems",
-    "question": "When an automatic sprinkler system is installed throughout a building, IBC permits various code reductions (sprinkler trade-offs). Which of the following is a recognized trade-off?",
+    "question": "When an automatic sprinkler system is installed throughout a building, the code permits various reductions (sprinkler trade-offs). Which of the following is a recognized trade-off?",
     "options": {
       "A": "Elimination of all exits",
       "B": "Increases in allowable building height and area (Tables 504 and 506) and increases in maximum exit access travel distance under Section 1017",
@@ -2587,7 +2587,7 @@
     "id": "ibc-162",
     "category": "IBC",
     "subtopic": "panic-hardware",
-    "question": "Per IBC Section 1010.1.10, panic hardware or fire exit hardware is required on latched/locked egress doors serving which occupancies?",
+    "question": "Panic hardware or fire exit hardware is required on latched/locked egress doors serving which occupancies?",
     "options": {
       "A": "All occupancies without exception",
       "B": "Group A and Group E occupancies with an occupant load of 50 or more, and all Group H occupancies regardless of occupant load",
@@ -2606,7 +2606,7 @@
     "id": "ibc-163",
     "category": "IBC",
     "subtopic": "door-operations",
-    "question": "Under IBC Section 1010.1.9, egress doors must be readily openable from the egress side without which of the following?",
+    "question": "Egress doors must be readily openable from the egress side without which of the following?",
     "options": {
       "A": "Without the use of a key, special knowledge, or effort",
       "B": "Without a door handle",
@@ -2625,7 +2625,7 @@
     "id": "ibc-164",
     "category": "IBC",
     "subtopic": "door-operations",
-    "question": "IBC Section 1010.1.9.9 permits sensor-release of electrically locked egress doors. Which condition is required for such locking arrangements?",
+    "question": "Sensor-release of electrically locked egress doors is permitted. Which condition is required for such locking arrangements?",
     "options": {
       "A": "The lock may stay engaged during a power failure",
       "B": "Loss of power to the sensor or locking device must automatically unlock the door in the direction of egress, and a manual unlocking device must be provided",
@@ -2644,7 +2644,7 @@
     "id": "ibc-165",
     "category": "IBC",
     "subtopic": "exit-signs",
-    "question": "Per IBC Section 1013.5, the word EXIT on an exit sign must use letters of what minimum height with what minimum principal stroke width?",
+    "question": "The word EXIT on an exit sign must use letters of what minimum height with what minimum principal stroke width?",
     "options": {
       "A": "Letters not less than 4 inches high with a stroke not less than 0.5 inch",
       "B": "Letters not less than 6 inches high with a principal stroke not less than 0.75 inch",
@@ -2663,7 +2663,7 @@
     "id": "ibc-166",
     "category": "IBC",
     "subtopic": "egress-illumination",
-    "question": "IBC Section 1008.2.1 requires the means of egress to be illuminated to a minimum level at the walking surface during occupancy. What is that minimum?",
+    "question": "The means of egress must be illuminated to a minimum level at the walking surface during occupancy. What is that minimum?",
     "options": {
       "A": "Not less than 1 foot-candle",
       "B": "Not less than 5 foot-candles",
@@ -2682,7 +2682,7 @@
     "id": "ibc-167",
     "category": "IBC",
     "subtopic": "stairways",
-    "question": "Per IBC Section 1011.5.2, the maximum riser height and minimum tread depth for means-of-egress (commercial) stairways are which of the following?",
+    "question": "The maximum riser height and minimum tread depth for means-of-egress (commercial) stairways are which of the following?",
     "options": {
       "A": "Maximum 8-1/4 inch riser, minimum 9 inch tread",
       "B": "Maximum 7 inch riser, minimum 11 inch tread",
@@ -2701,7 +2701,7 @@
     "id": "ibc-168",
     "category": "IBC",
     "subtopic": "stairways",
-    "question": "IBC Section 1011.2 sets the minimum width of stairways in the means of egress. What is the minimum clear width generally required where the stairway serves an occupant load of 50 or more?",
+    "question": "What is the minimum clear width of a stairway in the means of egress generally required where the stairway serves an occupant load of 50 or more?",
     "options": {
       "A": "36 inches",
       "B": "44 inches",
@@ -2720,7 +2720,7 @@
     "id": "ibc-169",
     "category": "IBC",
     "subtopic": "stairways",
-    "question": "Per IBC Section 1011.8, what is the maximum vertical rise permitted for a single stairway flight between floor levels or landings?",
+    "question": "What is the maximum vertical rise permitted for a single stairway flight between floor levels or landings?",
     "options": {
       "A": "8 feet",
       "B": "10 feet",
@@ -2739,7 +2739,7 @@
     "id": "ibc-170",
     "category": "IBC",
     "subtopic": "handrails",
-    "question": "IBC Section 1014.6 requires handrail extensions at stairway flights. At the top of a stair flight, the handrail must extend horizontally beyond the top riser nosing for what minimum distance?",
+    "question": "Handrail extensions are required at stairway flights. At the top of a stair flight, the handrail must extend horizontally beyond the top riser nosing for what minimum distance?",
     "options": {
       "A": "Not less than 6 inches",
       "B": "Not less than 12 inches horizontally beyond the top riser nosing",
@@ -2758,7 +2758,7 @@
     "id": "ibc-171",
     "category": "IBC",
     "subtopic": "handrails",
-    "question": "Per IBC Section 1014.2, the top of handrail gripping surfaces must be mounted at what height above stair tread nosings and the finished surface of ramps?",
+    "question": "The top of handrail gripping surfaces must be mounted at what height above stair tread nosings and the finished surface of ramps?",
     "options": {
       "A": "Between 30 and 34 inches",
       "B": "Between 36 and 40 inches",
@@ -2777,7 +2777,7 @@
     "id": "ibc-172",
     "category": "IBC",
     "subtopic": "exit-access-stairways",
-    "question": "IBC Section 1019 regulates exit access stairways and ramps that are NOT within an interior exit stairway enclosure. Under the general rule, unenclosed (open) exit access stairways are permitted to connect how many stories?",
+    "question": "Under the general rule for exit access stairways and ramps that are NOT within an interior exit stairway enclosure, unenclosed (open) exit access stairways are permitted to connect how many stories?",
     "options": {
       "A": "Any number of stories with no limit",
       "B": "Not more than two stories, unless an express exception applies (e.g., mezzanines or certain sprinklered conditions per 1019.3)",
@@ -2796,7 +2796,7 @@
     "id": "ibc-173",
     "category": "IBC",
     "subtopic": "exit-discharge",
-    "question": "Per IBC Section 1028.1, the exit discharge is the portion of the means of egress between the termination of an exit and a public way. What fraction of the number and capacity of exits is generally permitted to discharge through an interior element (such as a lobby) on the level of exit discharge?",
+    "question": "The exit discharge is the portion of the means of egress between the termination of an exit and a public way. What fraction of the number and capacity of exits is generally permitted to discharge through an interior element (such as a lobby) on the level of exit discharge?",
     "options": {
       "A": "100 percent",
       "B": "Not more than 50 percent of the number and capacity of the exits",
@@ -2815,7 +2815,7 @@
     "id": "ibc-174",
     "category": "IBC",
     "subtopic": "horizontal-exits",
-    "question": "IBC Section 1026 permits horizontal exits. What is the maximum percentage of the total required number of exits and exit capacity that horizontal exits are generally permitted to provide?",
+    "question": "Horizontal exits are permitted in the means of egress. What is the maximum percentage of the total required number of exits and exit capacity that horizontal exits are generally permitted to provide?",
     "options": {
       "A": "100 percent in all occupancies",
       "B": "Not more than one-half (50 percent), except up to two-thirds in Group I-2 and up to 100 percent in Group I-3",
@@ -2834,7 +2834,7 @@
     "id": "ibc-175",
     "category": "IBC",
     "subtopic": "horizontal-exits",
-    "question": "Per IBC Section 1026.2, the separation forming a horizontal exit (a fire wall or fire barrier) must have what minimum fire-resistance rating?",
+    "question": "The separation forming a horizontal exit (a fire wall or fire barrier) must have what minimum fire-resistance rating?",
     "options": {
       "A": "1 hour",
       "B": "2 hours",
@@ -2853,7 +2853,7 @@
     "id": "ibc-176",
     "category": "IBC",
     "subtopic": "assembly-egress",
-    "question": "IBC Section 1029 governs assembly seating and aisles. For rows of seating, what is the minimum clear width of the aisle accessway between rows (the clear horizontal space between the back of one row and the nearest projection of the row behind)?",
+    "question": "For rows of assembly seating, what is the minimum clear width of the aisle accessway between rows (the clear horizontal space between the back of one row and the nearest projection of the row behind)?",
     "options": {
       "A": "Not less than 6 inches",
       "B": "Not less than 12 inches",
@@ -2872,7 +2872,7 @@
     "id": "ibc-177",
     "category": "IBC",
     "subtopic": "assembly-egress",
-    "question": "Per IBC Section 1029.14.2, aisle stairs in assembly seating may use risers steeper than ordinary stairs to accommodate sightlines. What is the maximum riser height permitted for assembly aisle stairs?",
+    "question": "Aisle stairs in assembly seating may use risers steeper than ordinary stairs to accommodate sightlines. What is the maximum riser height permitted for assembly aisle stairs?",
     "options": {
       "A": "7 inches",
       "B": "8 inches",
@@ -2891,7 +2891,7 @@
     "id": "ibc-178",
     "category": "IBC",
     "subtopic": "common-path-egress",
-    "question": "IBC Section 1006.2.1 limits the common path of egress travel. In a sprinklered Group B occupancy, what is the typical maximum common path of egress travel?",
+    "question": "In a sprinklered Group B occupancy, what is the typical maximum common path of egress travel?",
     "options": {
       "A": "25 feet",
       "B": "75 feet",
@@ -2910,7 +2910,7 @@
     "id": "ibc-179",
     "category": "IBC",
     "subtopic": "common-path-egress",
-    "question": "Per IBC Table 1006.2.1, a space is permitted a single exit/exit access doorway when the occupant load is within table limits. For Group B, F, M, S, and U occupancies, what is the maximum occupant load permitted with a single exit?",
+    "question": "A space is permitted a single exit/exit access doorway when the occupant load is within table limits. For Group B, F, M, S, and U occupancies, what is the maximum occupant load permitted with a single exit?",
     "options": {
       "A": "10",
       "B": "29",
@@ -2929,7 +2929,7 @@
     "id": "ibc-180",
     "category": "IBC",
     "subtopic": "sprinkler-systems",
-    "question": "Per IBC Section 903.3.1.1, where a building is required to be equipped throughout with an automatic sprinkler system, which standard governs the design and how are small concealed spaces and closets treated?",
+    "question": "Where a building is required to be equipped throughout with an automatic sprinkler system, which standard governs the design and how are small concealed spaces and closets treated?",
     "options": {
       "A": "NFPA 13; full coverage is required, and limited omissions (such as certain small closets or concealed spaces) are permitted only where NFPA 13 expressly allows",
       "B": "NFPA 13D; only living areas need coverage",
@@ -2948,7 +2948,7 @@
     "id": "ibc-186",
     "category": "IBC",
     "subtopic": "high-rise",
-    "question": "Under IBC Section 403, a building is classified as a high-rise building requiring the special provisions of that section when it has an occupied floor located what distance above the lowest level of fire department vehicle access?",
+    "question": "A building is classified as a high-rise building requiring the special provisions of that section when it has an occupied floor located what distance above the lowest level of fire department vehicle access?",
     "options": {
       "A": "More than 55 feet",
       "B": "More than 60 feet",
@@ -2967,7 +2967,7 @@
     "id": "ibc-187",
     "category": "IBC",
     "subtopic": "high-rise",
-    "question": "Per IBC Section 403.6.1, a fire service access elevator must be provided in high-rise buildings having an occupied floor more than what height above the lowest level of fire department vehicle access?",
+    "question": "A fire service access elevator must be provided in high-rise buildings having an occupied floor more than what height above the lowest level of fire department vehicle access?",
     "options": {
       "A": "75 feet",
       "B": "100 feet",
@@ -2986,7 +2986,7 @@
     "id": "ibc-188",
     "category": "IBC",
     "subtopic": "high-rise",
-    "question": "In a high-rise building over 420 feet in building height, IBC Section 403 requires which of the following additional structural/fire measures beyond the baseline high-rise provisions?",
+    "question": "In a high-rise building over 420 feet in building height, which of the following additional structural/fire measures is required beyond the baseline high-rise provisions?",
     "options": {
       "A": "A second, redundant fire pump and water supply (riser redundancy) and enhanced structural fire resistance",
       "B": "Elimination of the standpipe system",
@@ -3005,7 +3005,7 @@
     "id": "ibc-189",
     "category": "IBC",
     "subtopic": "covered-mall",
-    "question": "Under IBC Section 402, a covered mall building is limited to how many stories above grade plane and floor levels at any point (for the special mall provisions to apply)?",
+    "question": "A covered mall building is limited to how many stories above grade plane and floor levels at any point (for the special mall provisions to apply)?",
     "options": {
       "A": "Two stories / two floor levels",
       "B": "Three stories / three floor levels",
@@ -3024,7 +3024,7 @@
     "id": "ibc-190",
     "category": "IBC",
     "subtopic": "covered-mall",
-    "question": "In a covered mall building, IBC Section 402 establishes a maximum travel distance within a tenant space to an exit or to the mall (which then serves as a pedestrian way) of how many feet?",
+    "question": "In a covered mall building, what is the maximum travel distance within a tenant space to an exit or to the mall (which then serves as a pedestrian way), in feet?",
     "options": {
       "A": "100 feet",
       "B": "150 feet",
@@ -3043,7 +3043,7 @@
     "id": "ibc-191",
     "category": "IBC",
     "subtopic": "atrium",
-    "question": "IBC Section 404 generally requires that an atrium be separated from adjacent spaces by a fire barrier of what minimum fire-resistance rating?",
+    "question": "An atrium generally must be separated from adjacent spaces by a fire barrier of what minimum fire-resistance rating?",
     "options": {
       "A": "No separation is ever required",
       "B": "1-hour fire barrier",
@@ -3062,7 +3062,7 @@
     "id": "ibc-192",
     "category": "IBC",
     "subtopic": "atrium",
-    "question": "Which fire protection feature does IBC Section 404 require throughout a building containing an atrium?",
+    "question": "Which fire protection feature is required throughout a building containing an atrium?",
     "options": {
       "A": "Only standpipes",
       "B": "An automatic sprinkler system throughout the building",
@@ -3081,7 +3081,7 @@
     "id": "ibc-193",
     "category": "IBC",
     "subtopic": "atrium",
-    "question": "Per IBC Section 404, a smoke control system is required for an atrium EXCEPT when the atrium connects only how many stories?",
+    "question": "A smoke control system is required for an atrium EXCEPT when the atrium connects only how many stories?",
     "options": {
       "A": "Two stories",
       "B": "Three stories",
@@ -3100,7 +3100,7 @@
     "id": "ibc-194",
     "category": "IBC",
     "subtopic": "underground-buildings",
-    "question": "IBC Section 405 special provisions for underground buildings apply where the floor surface used for human occupancy is located how far below the lowest level of exit discharge?",
+    "question": "The special provisions for underground buildings apply where the floor surface used for human occupancy is located how far below the lowest level of exit discharge?",
     "options": {
       "A": "More than 15 feet",
       "B": "More than 20 feet",
@@ -3119,7 +3119,7 @@
     "id": "ibc-195",
     "category": "IBC",
     "subtopic": "underground-buildings",
-    "question": "Where an underground building under IBC Section 405 has occupied floor levels more than 30 feet below the lowest level of exit discharge, the code requires those levels to be divided into a minimum of how many smoke compartments?",
+    "question": "Where an underground building has occupied floor levels more than 30 feet below the lowest level of exit discharge, the code requires those levels to be divided into a minimum of how many smoke compartments?",
     "options": {
       "A": "One compartment (no division)",
       "B": "Two compartments of approximately equal size",
@@ -3138,7 +3138,7 @@
     "id": "ibc-196",
     "category": "IBC",
     "subtopic": "motor-vehicle-occupancies",
-    "question": "Under IBC Section 406, an open parking garage is distinguished from an enclosed parking garage primarily by which characteristic?",
+    "question": "An open parking garage is distinguished from an enclosed parking garage primarily by which characteristic?",
     "options": {
       "A": "It is fully sprinklered",
       "B": "It has uniformly distributed openings in the exterior walls for natural ventilation meeting the area requirements",
@@ -3157,7 +3157,7 @@
     "id": "ibc-197",
     "category": "IBC",
     "subtopic": "institutional-i2",
-    "question": "In a Group I-2 occupancy (such as a hospital or nursing home), IBC Section 407 requires that each smoke compartment containing sleeping rooms not exceed what maximum area?",
+    "question": "In a Group I-2 occupancy (such as a hospital or nursing home), each smoke compartment containing sleeping rooms must not exceed what maximum area?",
     "options": {
       "A": "10,000 square feet",
       "B": "22,500 square feet",
@@ -3176,7 +3176,7 @@
     "id": "ibc-198",
     "category": "IBC",
     "subtopic": "institutional-i3",
-    "question": "IBC establishes five occupancy conditions for Group I-3 (detention and correctional). These conditions are based primarily on what?",
+    "question": "Five occupancy conditions are established for Group I-3 (detention and correctional). These conditions are based primarily on what?",
     "options": {
       "A": "The number of inmates housed",
       "B": "The degree of restraint and the ability of occupants to evacuate (e.g., free movement vs. locked/restrained)",
@@ -3195,7 +3195,7 @@
     "id": "ibc-199",
     "category": "IBC",
     "subtopic": "stages-platforms",
-    "question": "Under IBC Section 410, what is the dividing dimension that distinguishes a 'stage' from a 'platform' (which carries the proscenium and stage-specific requirements)?",
+    "question": "What is the dividing dimension that distinguishes a 'stage' from a 'platform' (which carries the proscenium and stage-specific requirements)?",
     "options": {
       "A": "Stage height (floor to roof/gridiron) greater than 50 feet",
       "B": "Stage area greater than 500 square feet",
@@ -3214,7 +3214,7 @@
     "id": "ibc-200",
     "category": "IBC",
     "subtopic": "special-amusement",
-    "question": "Per IBC Section 411, a special amusement building (such as a haunted house or enclosed dark ride) is required to have which feature regardless of occupant load?",
+    "question": "A special amusement building (such as a haunted house or enclosed dark ride) is required to have which feature regardless of occupant load?",
     "options": {
       "A": "Only exit signs",
       "B": "An automatic sprinkler system and an automatic smoke detection system tied to the alarm/lighting",
@@ -3233,7 +3233,7 @@
     "id": "ibc-201",
     "category": "IBC",
     "subtopic": "high-hazard-h",
-    "question": "Under IBC Section 415, Group H high-hazard occupancies storing or using hazardous materials in excess of the maximum allowable quantities (MAQ) are subdivided into how many H subdivisions?",
+    "question": "Group H high-hazard occupancies storing or using hazardous materials in excess of the maximum allowable quantities (MAQ) are subdivided into how many H subdivisions?",
     "options": {
       "A": "Two (H-1 and H-2)",
       "B": "Three (H-1 through H-3)",
@@ -3252,7 +3252,7 @@
     "id": "ibc-202",
     "category": "IBC",
     "subtopic": "high-hazard-h",
-    "question": "IBC permits hazardous materials below the maximum allowable quantity (MAQ) to be stored in a non-H occupancy by dividing the building into 'control areas.' At the first story above grade, what is the maximum number of control areas permitted (before further reduction at upper stories)?",
+    "question": "Hazardous materials below the maximum allowable quantity (MAQ) may be stored in a non-H occupancy by dividing the building into 'control areas.' At the first story above grade, what is the maximum number of control areas permitted (before further reduction at upper stories)?",
     "options": {
       "A": "1 control area",
       "B": "2 control areas",
@@ -3271,7 +3271,7 @@
     "id": "ibc-203",
     "category": "IBC",
     "subtopic": "flammable-finishes",
-    "question": "IBC Section 416 (application of flammable finishes) applies to which type of operation?",
+    "question": "The provisions for the application of flammable finishes apply to which type of operation?",
     "options": {
       "A": "Routine office painting with brushes",
       "B": "Spray application of flammable or combustible finishing materials (spray booths and spray rooms)",
@@ -3290,7 +3290,7 @@
     "id": "ibc-204",
     "category": "IBC",
     "subtopic": "interior-environment-ventilation",
-    "question": "Where a space is naturally ventilated under IBC Section 1203, the minimum openable area of openings to the outdoors must be not less than what percentage of the floor area being ventilated?",
+    "question": "Where a space is naturally ventilated, the minimum openable area of openings to the outdoors must be not less than what percentage of the floor area being ventilated?",
     "options": {
       "A": "2 percent",
       "B": "4 percent",
@@ -3309,7 +3309,7 @@
     "id": "ibc-205",
     "category": "IBC",
     "subtopic": "interior-environment-temperature",
-    "question": "Under IBC Section 1204, interior occupied spaces served by a heating system must be capable of maintaining a minimum indoor temperature of what value, measured at a point 3 feet above the floor on the design heating day?",
+    "question": "Interior occupied spaces served by a heating system must be capable of maintaining a minimum indoor temperature of what value, measured at a point 3 feet above the floor on the design heating day?",
     "options": {
       "A": "60 degrees F",
       "B": "65 degrees F",
@@ -3328,7 +3328,7 @@
     "id": "ibc-206",
     "category": "IBC",
     "subtopic": "interior-environment-sound",
-    "question": "IBC sound transmission provisions require walls, partitions, and floor-ceiling assemblies separating dwelling units (or sleeping units) from each other and from public/service areas to provide an airborne sound transmission class (STC) of not less than what value (laboratory tested)?",
+    "question": "Sound transmission provisions require walls, partitions, and floor-ceiling assemblies separating dwelling units (or sleeping units) from each other and from public/service areas to provide an airborne sound transmission class (STC) of not less than what value (laboratory tested)?",
     "options": {
       "A": "STC 35",
       "B": "STC 45",
@@ -3347,7 +3347,7 @@
     "id": "ibc-207",
     "category": "IBC",
     "subtopic": "interior-environment-sound",
-    "question": "For structure-borne (impact) sound, IBC requires floor-ceiling assemblies separating dwelling units to provide an impact insulation class (IIC) of not less than what value when laboratory tested?",
+    "question": "For structure-borne (impact) sound, floor-ceiling assemblies separating dwelling units must provide an impact insulation class (IIC) of not less than what value when laboratory tested?",
     "options": {
       "A": "IIC 40",
       "B": "IIC 45",
@@ -3366,7 +3366,7 @@
     "id": "ibc-208",
     "category": "IBC",
     "subtopic": "interior-environment-dimensions",
-    "question": "Per IBC Section 1208, occupiable spaces, habitable spaces, and corridors must have a minimum ceiling height of how much?",
+    "question": "Occupiable spaces, habitable spaces, and corridors must have a minimum ceiling height of how much?",
     "options": {
       "A": "7 feet 0 inches",
       "B": "7 feet 6 inches",
@@ -3385,7 +3385,7 @@
     "id": "ibc-209",
     "category": "IBC",
     "subtopic": "interior-environment-materials",
-    "question": "Under IBC Section 1210 (toilet and bathroom requirements), walls within 2 feet of the front and sides of urinals and water closets must have a smooth, hard, nonabsorbent surface to what minimum height above the floor?",
+    "question": "Walls within 2 feet of the front and sides of urinals and water closets must have a smooth, hard, nonabsorbent surface to what minimum height above the floor?",
     "options": {
       "A": "2 feet",
       "B": "4 feet",
@@ -3404,7 +3404,7 @@
     "id": "ibc-210",
     "category": "IBC",
     "subtopic": "interior-finish-trim",
-    "question": "IBC limits combustible trim (excluding handrails and guardrails) to what maximum percentage of the aggregate wall and ceiling area of any room or space?",
+    "question": "Combustible trim (excluding handrails and guardrails) is limited to what maximum percentage of the aggregate wall and ceiling area of any room or space?",
     "options": {
       "A": "5 percent",
       "B": "10 percent",
@@ -3423,7 +3423,7 @@
     "id": "ibc-211",
     "category": "IBC",
     "subtopic": "elevators-hoistway",
-    "question": "Under IBC Section 3002, elevator hoistway enclosures must be constructed as shaft enclosures complying with which IBC section?",
+    "question": "Elevator hoistway enclosures must be constructed as shaft enclosures complying with which requirements?",
     "options": {
       "A": "Section 705 (exterior walls)",
       "B": "Section 713 (shaft enclosures)",
@@ -3442,7 +3442,7 @@
     "id": "ibc-212",
     "category": "IBC",
     "subtopic": "elevators-stretcher",
-    "question": "IBC Section 3002.4 requires that buildings with how many or more stories above or below grade plane provide at least one elevator car sized to accommodate an ambulance stretcher 24 inches by 84 inches?",
+    "question": "Buildings with how many or more stories above or below grade plane must provide at least one elevator car sized to accommodate an ambulance stretcher 24 inches by 84 inches?",
     "options": {
       "A": "2 or more stories",
       "B": "3 or more stories",
@@ -3461,7 +3461,7 @@
     "id": "ibc-213",
     "category": "IBC",
     "subtopic": "elevators-fire-service",
-    "question": "IBC Section 3007 requires the fire service access elevator lobby to have a minimum floor area of not less than 150 square feet, with a least dimension of not less than how many feet?",
+    "question": "A fire service access elevator lobby must have a minimum floor area of not less than 150 square feet, with a least dimension of not less than how many feet?",
     "options": {
       "A": "6 feet",
       "B": "8 feet",
@@ -3480,7 +3480,7 @@
     "id": "ibc-214",
     "category": "IBC",
     "subtopic": "elevators-fire-service",
-    "question": "A fire service access elevator under IBC Section 3007 requires the building to be provided with what fire protection feature?",
+    "question": "A fire service access elevator requires the building to be provided with what fire protection feature?",
     "options": {
       "A": "Standpipes only, no sprinklers",
       "B": "An automatic sprinkler system throughout (except where prohibited in hoistway and machine room)",
@@ -3499,7 +3499,7 @@
     "id": "ibc-215",
     "category": "IBC",
     "subtopic": "elevators-evacuation",
-    "question": "Where occupant evacuation elevators are provided under IBC Section 3008, they must be installed in relation to the required egress stairways in what way?",
+    "question": "Where occupant evacuation elevators are provided, they must be installed in relation to the required egress stairways in what way?",
     "options": {
       "A": "They replace the required exit stairways",
       "B": "They are provided in addition to the required number and capacity of exit stairways",
@@ -3518,7 +3518,7 @@
     "id": "ibc-216",
     "category": "IBC",
     "subtopic": "elevators-machine-room",
-    "question": "Under IBC Chapter 30, an elevator machine room or machinery space generally must NOT be used for which purpose?",
+    "question": "An elevator machine room or machinery space generally must NOT be used for which purpose?",
     "options": {
       "A": "Housing the elevator controllers and drive equipment",
       "B": "Storage of building maintenance supplies or other non-elevator equipment/uses",
@@ -3537,7 +3537,7 @@
     "id": "ibc-217",
     "category": "IBC",
     "subtopic": "accessible-route",
-    "question": "Under IBC Section 1104, an accessible route is required to connect which of the following?",
+    "question": "An accessible route is required to connect which of the following?",
     "options": {
       "A": "Only the main entrance to the elevator",
       "B": "Accessible building or facility entrances with all accessible spaces and elements within the building or facility",
@@ -3556,7 +3556,7 @@
     "id": "ibc-218",
     "category": "IBC",
     "subtopic": "accessible-entrances",
-    "question": "Per IBC Section 1105, at least what percentage of public entrances to a building must be accessible?",
+    "question": "At least what percentage of public entrances to a building must be accessible?",
     "options": {
       "A": "50 percent",
       "B": "60 percent",
@@ -3575,7 +3575,7 @@
     "id": "ibc-219",
     "category": "IBC",
     "subtopic": "accessible-parking",
-    "question": "Under IBC Table 1106.1, a parking facility with a total of 1 to 25 spaces must provide a minimum of how many accessible parking spaces?",
+    "question": "A parking facility with a total of 1 to 25 spaces must provide a minimum of how many accessible parking spaces?",
     "options": {
       "A": "0",
       "B": "1",
@@ -3594,7 +3594,7 @@
     "id": "ibc-220",
     "category": "IBC",
     "subtopic": "accessible-parking",
-    "question": "IBC Section 1106 requires that at least one in every how many accessible parking spaces (but not fewer than one) be van accessible?",
+    "question": "At least one in every how many accessible parking spaces (but not fewer than one) must be van accessible?",
     "options": {
       "A": "1 in every 4",
       "B": "1 in every 6",
@@ -3613,7 +3613,7 @@
     "id": "ibc-221",
     "category": "IBC",
     "subtopic": "accessible-units",
-    "question": "Under IBC Section 1107, in a Group R-2 occupancy (e.g., apartments) containing more than 20 dwelling units, what is the minimum scoping for Accessible (Type A) units?",
+    "question": "In a Group R-2 occupancy (e.g., apartments) containing more than 20 dwelling units, what is the minimum scoping for Accessible (Type A) units?",
     "options": {
       "A": "No Type A units are ever required",
       "B": "At least 2 percent, but not fewer than one, of the units must be Type A",
@@ -3632,7 +3632,7 @@
     "id": "ibc-222",
     "category": "IBC",
     "subtopic": "accessible-signage",
-    "question": "Per IBC Section 1111, which entrances/elements must be identified by the International Symbol of Accessibility (ISA)?",
+    "question": "Which entrances/elements must be identified by the International Symbol of Accessibility (ISA)?",
     "options": {
       "A": "All entrances, accessible or not",
       "B": "Accessible parking spaces, accessible passenger loading zones, and accessible entrances when not all entrances are accessible",
@@ -3651,7 +3651,7 @@
     "id": "ibc-223",
     "category": "IBC",
     "subtopic": "encroachments",
-    "question": "Under IBC Section 3202, an awning projecting from a building wall over a public right-of-way and located less than 8 feet above grade must maintain a vertical clearance of not less than how many feet?",
+    "question": "An awning projecting from a building wall over a public right-of-way and located less than 8 feet above grade must maintain a vertical clearance of not less than how many feet?",
     "options": {
       "A": "6 feet",
       "B": "7 feet",
@@ -3670,7 +3670,7 @@
     "id": "ibc-224",
     "category": "IBC",
     "subtopic": "encroachments",
-    "question": "IBC Section 3202 limits below-grade structural footings of street walls (located not less than 8 feet below grade) to a maximum projection beyond the street lot line of how much?",
+    "question": "Below-grade structural footings of street walls (located not less than 8 feet below grade) are limited to a maximum projection beyond the street lot line of how much?",
     "options": {
       "A": "4 inches",
       "B": "8 inches",
@@ -3689,7 +3689,7 @@
     "id": "ibc-225",
     "category": "IBC",
     "subtopic": "encroachments",
-    "question": "For encroachments above grade and 8 feet or more above the sidewalk under IBC Section 3202.3, windows, balconies, architectural features, and mechanical equipment may encroach how much for each additional 1 inch of clearance above 8 feet, up to a maximum encroachment?",
+    "question": "For encroachments above grade and 8 feet or more above the sidewalk, windows, balconies, architectural features, and mechanical equipment may encroach how much for each additional 1 inch of clearance above 8 feet, up to a maximum encroachment?",
     "options": {
       "A": "1 inch per inch, maximum 4 feet",
       "B": "2 inches per inch, maximum 2 feet",
@@ -3708,7 +3708,7 @@
     "id": "ibc-226",
     "category": "IBC",
     "subtopic": "encroachments-pedestrian-walkway",
-    "question": "An above-grade pedestrian walkway (skybridge) that encroaches over a public right-of-way under IBC Section 3202.3 must maintain a minimum vertical clearance over the sidewalk/roadway of how many feet?",
+    "question": "An above-grade pedestrian walkway (skybridge) that encroaches over a public right-of-way must maintain a minimum vertical clearance over the sidewalk/roadway of how many feet?",
     "options": {
       "A": "8 feet",
       "B": "10 feet",
@@ -3727,7 +3727,7 @@
     "id": "ibc-227",
     "category": "IBC",
     "subtopic": "encroachments-temporary",
-    "question": "Under IBC Section 3202.4, temporary encroachments (such as construction protection or seasonal features) into the public right-of-way are limited to a maximum projection of 3 feet or what fraction of the sidewalk width, whichever is less, while maintaining a minimum 7-foot clearance?",
+    "question": "Temporary encroachments (such as construction protection or seasonal features) into the public right-of-way are limited to a maximum projection of 3 feet or what fraction of the sidewalk width, whichever is less, while maintaining a minimum 7-foot clearance?",
     "options": {
       "A": "One-half the sidewalk width",
       "B": "One-third the sidewalk width",
@@ -3746,7 +3746,7 @@
     "id": "ibc-228",
     "category": "IBC",
     "subtopic": "covered-mall",
-    "question": "IBC Section 402 requires a covered mall building (and its anchor buildings, as applicable) to be equipped throughout with which system?",
+    "question": "A covered mall building (and its anchor buildings, as applicable) must be equipped throughout with which system?",
     "options": {
       "A": "Standpipes only",
       "B": "An automatic sprinkler system in accordance with Section 903.3.1.1",
@@ -3765,7 +3765,7 @@
     "id": "ibc-229",
     "category": "IBC",
     "subtopic": "institutional-i2",
-    "question": "In a Group I-2 occupancy, IBC Section 407 limits the travel distance from any point in a smoke compartment to a smoke barrier door to a maximum of how many feet?",
+    "question": "In a Group I-2 occupancy, the travel distance from any point in a smoke compartment to a smoke barrier door is limited to a maximum of how many feet?",
     "options": {
       "A": "75 feet",
       "B": "150 feet",
@@ -3784,7 +3784,7 @@
     "id": "ibc-230",
     "category": "IBC",
     "subtopic": "elevators-conveying",
-    "question": "Under IBC Chapter 30, escalator floor openings (that are not within an enclosed shaft) connecting more than the permitted number of stories must be protected by which means where required?",
+    "question": "Escalator floor openings (that are not within an enclosed shaft) connecting more than the permitted number of stories must be protected by which means where required?",
     "options": {
       "A": "Left completely unprotected in all cases",
       "B": "An approved power-operated automatic shutter or by sprinkler/draft-curtain protection where permitted",
@@ -3841,7 +3841,7 @@
     "id": "ibc-003",
     "category": "IBC",
     "subtopic": "egress",
-    "question": "Under the IBC, the minimum height of an egress door opening is:",
+    "question": "The minimum height of an egress door opening is:",
     "options": {
       "A": "78 inches",
       "B": "80 inches",
@@ -3860,7 +3860,7 @@
     "id": "ibc-004",
     "category": "IBC",
     "subtopic": "use-groups",
-    "question": "A restaurant, tavern, or nightclub intended for the consumption of food and drink is classified under which IBC occupancy group?",
+    "question": "A restaurant, tavern, or nightclub intended for the consumption of food and drink is classified under which occupancy group?",
     "options": {
       "A": "Group A-1",
       "B": "Group A-2",
@@ -3993,7 +3993,7 @@
     "id": "ibc-011",
     "category": "IBC",
     "subtopic": "permits",
-    "question": "Which of the following work generally does NOT require a building permit under the IBC?",
+    "question": "Which of the following work generally does NOT require a building permit?",
     "options": {
       "A": "A one-story detached storage shed with a floor area of 120 square feet or less",
       "B": "A retaining wall 6 feet high measured from the bottom of the footing",
@@ -4012,7 +4012,7 @@
     "id": "ibc-012",
     "category": "IBC",
     "subtopic": "permits",
-    "question": "Under the IBC, a fence (other than a swimming pool barrier) does NOT require a building permit when it is not over what height?",
+    "question": "A fence (other than a swimming pool barrier) does NOT require a building permit when it is not over what height?",
     "options": {
       "A": "4 feet",
       "B": "6 feet",
@@ -4031,7 +4031,7 @@
     "id": "ibc-013",
     "category": "IBC",
     "subtopic": "certificate-of-occupancy",
-    "question": "Under the IBC, when may a newly constructed building be lawfully occupied?",
+    "question": "When may a newly constructed building be lawfully occupied?",
     "options": {
       "A": "As soon as the building permit is issued",
       "B": "After the foundation inspection passes",
@@ -4126,7 +4126,7 @@
     "id": "ibc-018",
     "category": "IBC",
     "subtopic": "masonry-glass-block",
-    "question": "Under the IBC, the maximum area of a single exterior standard-unit glass-block (glass unit masonry) panel, at a design wind pressure of 20 psf, is:",
+    "question": "The maximum area of a single exterior standard-unit glass-block (glass unit masonry) panel, at a design wind pressure of 20 psf, is:",
     "options": {
       "A": "85 square feet",
       "B": "100 square feet",
@@ -4164,7 +4164,7 @@
     "id": "ibc-020",
     "category": "IBC",
     "subtopic": "marquee",
-    "question": "Under the IBC, the maximum vertical height (thickness) of a marquee, measured from its lowest to highest point, where it projects more than two-thirds of the distance from the lot line to the curb line, is:",
+    "question": "The maximum vertical height (thickness) of a marquee, measured from its lowest to highest point, where it projects more than two-thirds of the distance from the lot line to the curb line, is:",
     "options": {
       "A": "3 feet",
       "B": "6 feet",
@@ -4202,7 +4202,7 @@
     "id": "ibc-022",
     "category": "IBC",
     "subtopic": "temporary-structures",
-    "question": "A permit for a temporary structure (such as an event tent) under the IBC is limited to a maximum service period of:",
+    "question": "A permit for a temporary structure (such as an event tent) is limited to a maximum service period of:",
     "options": {
       "A": "30 days",
       "B": "90 days",
@@ -4278,7 +4278,7 @@
     "id": "ibc-026",
     "category": "IBC",
     "subtopic": "fire-separation",
-    "question": "Under the IBC, the fire-resistance-rated separation (or sprinkler protection) for an incidental use such as a furnace room, an incinerator room, or a laundry room over 100 square feet is governed by which provision?",
+    "question": "The fire-resistance-rated separation (or sprinkler protection) for an incidental use such as a furnace room, an incinerator room, or a laundry room over 100 square feet is governed by which provision?",
     "options": {
       "A": "Section 509 / Table 509, Incidental Uses",
       "B": "Section 706, Fire Walls",
@@ -4297,7 +4297,7 @@
     "id": "iecc-019",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R402.4.1.2), what is the maximum allowable building air leakage rate, by blower-door test, for a new dwelling in Massachusetts (Climate Zone 5)?",
+    "question": "Under the 2021 IECC, what is the maximum allowable building air leakage rate, by blower-door test, for a new dwelling in Massachusetts (Climate Zone 5)?",
     "options": {
       "A": "5.0 air changes per hour at 50 Pa (5 ACH50)",
       "B": "3.0 air changes per hour at 50 Pa (3 ACH50)",
@@ -4316,7 +4316,7 @@
     "id": "iecc-020",
     "category": "IECC",
     "subtopic": "",
-    "question": "The blower-door air leakage test required by IECC R402.4.1.2 must be conducted at what reference pressure?",
+    "question": "The blower-door air leakage test must be conducted at what reference pressure?",
     "options": {
       "A": "0.2 inch w.g. (50 Pascals)",
       "B": "1.0 inch w.g. (250 Pascals)",
@@ -4335,7 +4335,7 @@
     "id": "iecc-021",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC postconstruction duct test (R403.3.6), what is the maximum total duct leakage allowed for a system with ducts located partly outside the building thermal envelope?",
+    "question": "Under the 2021 IECC postconstruction duct test, what is the maximum total duct leakage allowed for a system with ducts located partly outside the building thermal envelope?",
     "options": {
       "A": "8.0 cfm per 100 sq ft of conditioned floor area",
       "B": "4.0 cfm per 100 sq ft of conditioned floor area",
@@ -4354,7 +4354,7 @@
     "id": "iecc-022",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R403.3.5), duct leakage testing is NOT required when which of the following is true?",
+    "question": "Under the 2021 IECC, duct leakage testing is NOT required when which of the following is true?",
     "options": {
       "A": "The ducts and air handler are located entirely within the building thermal envelope",
       "B": "The home is smaller than 2,000 square feet",
@@ -4373,7 +4373,7 @@
     "id": "iecc-023",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R404.1), what portion of permanently installed lighting in a new dwelling must use high-efficacy light sources?",
+    "question": "Under the 2021 IECC, what portion of permanently installed lighting in a new dwelling must use high-efficacy light sources?",
     "options": {
       "A": "75 percent of the fixtures",
       "B": "90 percent of the fixtures",
@@ -4411,7 +4411,7 @@
     "id": "iecc-025",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R403.1.1), where the primary heating/cooling system is a forced-air furnace or heat pump, the installed thermostat must be capable of what?",
+    "question": "Under the 2021 IECC, where the primary heating/cooling system is a forced-air furnace or heat pump, the installed thermostat must be capable of what?",
     "options": {
       "A": "Controlling the system on a daily schedule with different setpoints at different times and days (programmable)",
       "B": "Connecting to the internet for remote monitoring",
@@ -4430,7 +4430,7 @@
     "id": "iecc-026",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R403.5.2), service hot-water piping 3/4 inch and larger in nominal diameter must be insulated to a minimum thermal resistance of what R-value?",
+    "question": "Under the 2021 IECC, service hot-water piping 3/4 inch and larger in nominal diameter must be insulated to a minimum thermal resistance of what R-value?",
     "options": {
       "A": "R-2",
       "B": "R-3",
@@ -4449,7 +4449,7 @@
     "id": "iecc-027",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R403.6), a new dwelling built to the tight air-leakage requirement must be provided with what?",
+    "question": "Under the 2021 IECC, a new dwelling built to the tight air-leakage requirement must be provided with what?",
     "options": {
       "A": "A whole-house mechanical ventilation system",
       "B": "Operable windows in every room only",
@@ -4468,7 +4468,7 @@
     "id": "iecc-028",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R402.4.1.1), the building thermal envelope must be sealed and the installation verified against which document?",
+    "question": "Under the 2021 IECC, the building thermal envelope must be sealed and the installation verified against which document?",
     "options": {
       "A": "Table R402.4.1.1 (Air Barrier and Insulation Installation)",
       "B": "The manufacturer's window warranty",
@@ -4487,7 +4487,7 @@
     "id": "iecc-029",
     "category": "IECC",
     "subtopic": "",
-    "question": "On the IECC fenestration air-leakage requirement, the maximum allowable air leakage for site-built or manufactured windows and sliding doors is generally:",
+    "question": "For the fenestration air-leakage requirement, the maximum allowable air leakage for site-built or manufactured windows and sliding doors is generally:",
     "options": {
       "A": "0.3 cfm per square foot of window area",
       "B": "1.5 cfm per square foot of window area",
@@ -4544,7 +4544,7 @@
     "id": "iecc-032",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC COMMERCIAL provisions (C406), commercial buildings must demonstrate additional energy efficiency by accumulating a required number of 'efficiency credits.' Approximately how many credits are required?",
+    "question": "Under the 2021 IECC COMMERCIAL provisions, commercial buildings must demonstrate additional energy efficiency by accumulating a required number of 'efficiency credits.' Approximately how many credits are required?",
     "options": {
       "A": "1 credit",
       "B": "3 credits",
@@ -4677,7 +4677,7 @@
     "id": "iecc-039",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC COMMERCIAL lighting controls (C405.2), most interior spaces are required to have which control to shut lights off automatically?",
+    "question": "Under the 2021 IECC COMMERCIAL lighting controls, most interior spaces are required to have which control to shut lights off automatically?",
     "options": {
       "A": "Automatic time-switch and/or occupant-sensor (automatic shutoff) controls",
       "B": "A single manual switch by the entrance only",
@@ -4696,7 +4696,7 @@
     "id": "iecc-040",
     "category": "IECC",
     "subtopic": "",
-    "question": "The 2021 IECC residential whole-house mechanical ventilation system (R403.6) must, in the coldest climate zones (7 and 8), incorporate which feature?",
+    "question": "The 2021 IECC residential whole-house mechanical ventilation system must, in the coldest climate zones (7 and 8), incorporate which feature?",
     "options": {
       "A": "Heat- or energy-recovery ventilation (HRV/ERV)",
       "B": "An open window timer",
@@ -4734,7 +4734,7 @@
     "id": "iecc-042",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC duct-sealing requirements (R403.3.2), ducts, air handlers and filter boxes must be sealed. Which joints are specifically required to be sealed?",
+    "question": "Under the 2021 IECC duct-sealing requirements, ducts, air handlers and filter boxes must be sealed. Which joints are specifically required to be sealed?",
     "options": {
       "A": "Joints and seams, sealed per the IMC (mastic, mastic-and-mesh, or listed tape)",
       "B": "Only the joints visible from the floor",
@@ -4753,7 +4753,7 @@
     "id": "iecc-043",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R403.5.1), a hot-water circulation or heat-trace system must have which type of control?",
+    "question": "Under the 2021 IECC, a hot-water circulation or heat-trace system must have which type of control?",
     "options": {
       "A": "An automatic control (e.g., demand, timer, temperature, or occupancy) that can turn the pump/heat trace off",
       "B": "A control that runs the pump continuously 24/7",
@@ -4867,7 +4867,7 @@
     "id": "iecc-049",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R503), when an existing dwelling undergoes an alteration, the new and replaced portions must generally comply with the code for new construction. Which of the following alterations is EXEMPT from requiring the full new-construction energy provisions?",
+    "question": "Under the 2021 IECC, when an existing dwelling undergoes an alteration, the new and replaced portions must generally comply with the code for new construction. Which of the following alterations is EXEMPT from requiring the full new-construction energy provisions?",
     "options": {
       "A": "Storm windows installed over an existing fenestration assembly",
       "B": "A complete tear-off and replacement of all exterior walls",
@@ -4886,7 +4886,7 @@
     "id": "iecc-050",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R502), an ADDITION to an existing building must comply with the code. Which option correctly describes the compliance path the code allows for an addition?",
+    "question": "Under the 2021 IECC, an ADDITION to an existing building must comply with the code. Which option correctly describes the compliance path the code allows for an addition?",
     "options": {
       "A": "The addition alone must comply, OR the existing building plus the addition together may be treated as a single building meeting the code",
       "B": "Additions are always exempt from the energy code",
@@ -4905,7 +4905,7 @@
     "id": "iecc-051",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R501.6), a 'repair' to an existing building component is treated how with respect to the energy code?",
+    "question": "Under the 2021 IECC, a 'repair' to an existing building component is treated how with respect to the energy code?",
     "options": {
       "A": "Repairs may use like materials and are not required to bring the component up to new-construction energy levels",
       "B": "Every repair triggers a full energy upgrade of the whole building",
@@ -4924,7 +4924,7 @@
     "id": "iecc-052",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R402.2.13), a sunroom that is thermally isolated from the rest of the dwelling and built as an addition may use which relaxed envelope requirement in Climate Zones 4 through 8?",
+    "question": "Under the 2021 IECC, a sunroom that is thermally isolated from the rest of the dwelling and built as an addition may use which relaxed envelope requirement in Climate Zones 4 through 8?",
     "options": {
       "A": "A minimum ceiling insulation of R-19 and a minimum wall insulation of R-13 (relaxed from the main-house values)",
       "B": "No insulation at all",
@@ -4943,7 +4943,7 @@
     "id": "iecc-053",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC mass wall provision (R402.2.5), when at least 50 percent of the wall insulation is on the EXTERIOR (outside) of a mass wall, the required R-value is treated how compared to a mass wall with insulation on the interior?",
+    "question": "Under the 2021 IECC mass wall provision, when at least 50 percent of the wall insulation is on the EXTERIOR (outside) of a mass wall, the required R-value is treated how compared to a mass wall with insulation on the interior?",
     "options": {
       "A": "The lower (less stringent) R-value in the second column of Table R402.1.3 may be used",
       "B": "The R-value must be doubled",
@@ -4962,7 +4962,7 @@
     "id": "iecc-054",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R402.2.9), basement walls of conditioned basements in Climate Zone 5 (Massachusetts) require continuous/cavity insulation of at least which value?",
+    "question": "Under the 2021 IECC, basement walls of conditioned basements in Climate Zone 5 (Massachusetts) require continuous/cavity insulation of at least which value?",
     "options": {
       "A": "R-15 continuous insulation or R-19 cavity insulation",
       "B": "No insulation is required",
@@ -4981,7 +4981,7 @@
     "id": "iecc-055",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R402.2.11), crawl-space wall insulation in an UNVENTED crawl space (used as the thermal boundary) in Climate Zone 5 must be at least what value, and how far must it extend?",
+    "question": "Under the 2021 IECC, crawl-space wall insulation in an UNVENTED crawl space (used as the thermal boundary) in Climate Zone 5 must be at least what value, and how far must it extend?",
     "options": {
       "A": "R-15 continuous or R-19 cavity, extending from the top of the wall down to the floor and then 24 inches horizontally or vertically",
       "B": "R-3 continuous only, no extension required",
@@ -5000,7 +5000,7 @@
     "id": "iecc-056",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC Table R402.1.2 (Insulation and Fenestration Requirements by Component), what is the maximum vertical fenestration U-factor allowed in Climate Zone 5 (most of Massachusetts)?",
+    "question": "Under the 2021 IECC (Insulation and Fenestration Requirements by Component), what is the maximum vertical fenestration U-factor allowed in Climate Zone 5 (most of Massachusetts)?",
     "options": {
       "A": "U-0.30",
       "B": "U-0.50",
@@ -5019,7 +5019,7 @@
     "id": "iecc-057",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R402.2.6), STEEL-FRAME ceilings, walls and floors must meet the insulation requirements using which approach?",
+    "question": "Under the 2021 IECC, STEEL-FRAME ceilings, walls and floors must meet the insulation requirements using which approach?",
     "options": {
       "A": "Table R402.2.6 values (which add continuous insulation to offset thermal bridging through the steel framing)",
       "B": "The same cavity-only R-value used for wood framing",
@@ -5038,7 +5038,7 @@
     "id": "iecc-058",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (Table R402.1.2), what is the prescriptive minimum ceiling insulation R-value for a new dwelling in Climate Zone 5 (Massachusetts)?",
+    "question": "Under the 2021 IECC, what is the prescriptive minimum ceiling insulation R-value for a new dwelling in Climate Zone 5 (Massachusetts)?",
     "options": {
       "A": "R-49",
       "B": "R-30",
@@ -5057,7 +5057,7 @@
     "id": "iecc-059",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R402.2.1, Ceilings with attic spaces), what allowance lets a builder use R-38 instead of R-49 over the exterior wall plates in Climate Zone 5?",
+    "question": "Under the 2021 IECC, what allowance lets a builder use R-38 instead of R-49 over the exterior wall plates in Climate Zone 5?",
     "options": {
       "A": "Where R-38 is installed and extends over the wall top plate at the eaves without compression, it may be deemed to satisfy R-49 (the reduced-thickness-at-eaves allowance)",
       "B": "Whenever the attic is unventilated",
@@ -5076,7 +5076,7 @@
     "id": "iecc-060",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R402.2.4), an attic access hatch, scuttle hole, or knee-wall door that opens into unconditioned space must be insulated to what level?",
+    "question": "Under the 2021 IECC, an attic access hatch, scuttle hole, or knee-wall door that opens into unconditioned space must be insulated to what level?",
     "options": {
       "A": "Not less than the insulation R-value of the surrounding surface (e.g., the ceiling or wall it penetrates)",
       "B": "No insulation is required on access hatches",
@@ -5095,7 +5095,7 @@
     "id": "iecc-061",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R403.4), mechanical system piping carrying fluids above 105 degrees F or below 55 degrees F must be insulated to at least what R-value?",
+    "question": "Under the 2021 IECC, mechanical system piping carrying fluids above 105 degrees F or below 55 degrees F must be insulated to at least what R-value?",
     "options": {
       "A": "R-3",
       "B": "R-1",
@@ -5114,7 +5114,7 @@
     "id": "iecc-062",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R403.10), snow-melt and ice-melt systems (heated driveways, walkways) must include which control to limit energy waste?",
+    "question": "Under the 2021 IECC, snow-melt and ice-melt systems (heated driveways, walkways) must include which control to limit energy waste?",
     "options": {
       "A": "An automatic control that shuts the system off when the pavement temperature is above 50 F and no precipitation is falling, plus an automatic or manual control to shut off when the outdoor temperature is above 40 F",
       "B": "A simple on/off switch with no automatic control",
@@ -5133,7 +5133,7 @@
     "id": "iecc-063",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R403.11), a heated swimming pool or permanent spa must be equipped with what energy-saving feature, with limited exceptions?",
+    "question": "Under the 2021 IECC, a heated swimming pool or permanent spa must be equipped with what energy-saving feature, with limited exceptions?",
     "options": {
       "A": "A vapor-retardant cover, except where more than 70 percent of the heating energy is from site-recovered or solar energy",
       "B": "A continuously running pump with no timer",
@@ -5152,7 +5152,7 @@
     "id": "iecc-064",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (R403.11), heaters for pools and permanent spas must be equipped with which control?",
+    "question": "Under the 2021 IECC, heaters for pools and permanent spas must be equipped with which control?",
     "options": {
       "A": "A readily accessible on/off switch mounted outside the heater that allows shutting off the heater without adjusting the thermostat setting",
       "B": "A locked thermostat that the owner cannot change",
@@ -5190,7 +5190,7 @@
     "id": "iecc-066",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (C405.2.1), interior lighting in most commercial spaces must be controlled by what type of control to reduce energy when spaces are unoccupied?",
+    "question": "Under the 2021 IECC, interior lighting in most commercial spaces must be controlled by what type of control to reduce energy when spaces are unoccupied?",
     "options": {
       "A": "Occupant-sensor controls that automatically turn lighting off (or reduce it) within 20 minutes of all occupants leaving the space",
       "B": "A single master switch at the building entrance only",
@@ -5209,7 +5209,7 @@
     "id": "iecc-067",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (C405.2.3), daylight-responsive controls are generally required in which situation?",
+    "question": "Under the 2021 IECC, daylight-responsive controls are generally required in which situation?",
     "options": {
       "A": "In daylight zones under skylights and adjacent to vertical fenestration where the connected lighting load in the daylight zone exceeds the code threshold",
       "B": "In every windowless interior room",
@@ -5228,7 +5228,7 @@
     "id": "iecc-068",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (C405.2.2), what is the purpose of a required time-switch (scheduling) control in a commercial building?",
+    "question": "Under the 2021 IECC, what is the purpose of a required time-switch (scheduling) control in a commercial building?",
     "options": {
       "A": "To automatically turn interior lighting off during scheduled unoccupied periods, with a manual override that reverts after no more than a set time",
       "B": "To keep lights on a fixed schedule that cannot be overridden",
@@ -5247,7 +5247,7 @@
     "id": "iecc-069",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (C405.3), interior lighting power may be determined by either the Building Area Method or the Space-by-Space Method. What is the key difference?",
+    "question": "Under the 2021 IECC, interior lighting power may be determined by either the Building Area Method or the Space-by-Space Method. What is the key difference?",
     "options": {
       "A": "The Building Area Method assigns one lighting power density (LPD) per overall building type, while the Space-by-Space Method sums allowances calculated for each individual space type",
       "B": "The Building Area Method requires no LPD limit at all",
@@ -5266,7 +5266,7 @@
     "id": "iecc-070",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (C405.4), EXTERIOR lighting is regulated how?",
+    "question": "Under the 2021 IECC, EXTERIOR lighting is regulated how?",
     "options": {
       "A": "By a total exterior lighting power allowance (base allowance plus per-area/per-feature allowances for facades, parking, walkways, etc.) and required automatic controls such as photocells and scheduling",
       "B": "Exterior lighting has no power limit and no controls",
@@ -5285,7 +5285,7 @@
     "id": "iecc-071",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (C403.7.4), an energy recovery ventilation (ERV/HRV) system is required when the supply air system meets which condition?",
+    "question": "Under the 2021 IECC, an energy recovery ventilation (ERV/HRV) system is required when the supply air system meets which condition?",
     "options": {
       "A": "When the system's supply airflow rate and the percentage of outdoor air exceed the thresholds in Table C403.7.4(1)/(2) for the given climate zone and operating hours",
       "B": "Only in single-family homes",
@@ -5304,7 +5304,7 @@
     "id": "iecc-072",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (C403.5), economizers are generally required on larger cooling systems. Which of the following is a recognized EXCEPTION that exempts a system from the economizer requirement?",
+    "question": "Under the 2021 IECC, economizers are generally required on larger cooling systems. Which of the following is a recognized EXCEPTION that exempts a system from the economizer requirement?",
     "options": {
       "A": "Systems below the cooling-capacity threshold for the climate zone, or systems where the economizer would be infeasible (e.g., certain high-humidity, process, or 100-percent-outdoor-air systems)",
       "B": "All systems are exempt; economizers are never required",
@@ -5323,7 +5323,7 @@
     "id": "iecc-073",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (C408), commercial buildings require 'commissioning' of mechanical and lighting systems. What does commissioning primarily verify?",
+    "question": "Under the 2021 IECC, commercial buildings require 'commissioning' of mechanical and lighting systems. What does commissioning primarily verify?",
     "options": {
       "A": "That the installed HVAC, service water heating, and lighting control systems are calibrated, function as designed, and that a commissioning report and O&M documentation are provided to the owner",
       "B": "Only the color of the paint on the walls",
@@ -5342,7 +5342,7 @@
     "id": "iecc-074",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (C407), the 'Total Building Performance' compliance path demonstrates compliance by what means?",
+    "question": "Under the 2021 IECC, the 'Total Building Performance' compliance path demonstrates compliance by what means?",
     "options": {
       "A": "Energy modeling showing the proposed design's annual energy cost is no greater than that of a code-defined standard reference design",
       "B": "A simple checklist with no calculations",
@@ -5361,7 +5361,7 @@
     "id": "iecc-075",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (C402.4.1), the prescriptive path limits the total vertical fenestration (window) area to what percentage of the gross above-grade wall area?",
+    "question": "Under the 2021 IECC, the prescriptive path limits the total vertical fenestration (window) area to what percentage of the gross above-grade wall area?",
     "options": {
       "A": "30 percent, which may be increased up to 40 percent if specified daylighting conditions are met",
       "B": "Unlimited; there is no window-area cap",
@@ -5380,7 +5380,7 @@
     "id": "iecc-076",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (C402.5.7), a vestibule (an enclosed entrance space with two sets of doors) is required at building entrances. What is the primary energy purpose of the vestibule?",
+    "question": "Under the 2021 IECC, a vestibule (an enclosed entrance space with two sets of doors) is required at building entrances. What is the primary energy purpose of the vestibule?",
     "options": {
       "A": "To limit air infiltration/exfiltration by preventing conditioned air from being directly lost when the entrance door is opened",
       "B": "To provide additional retail display space",
@@ -5399,7 +5399,7 @@
     "id": "iecc-077",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (C402.5.7), which of the following building entrances is EXEMPT from the vestibule requirement?",
+    "question": "Under the 2021 IECC, which of the following building entrances is EXEMPT from the vestibule requirement?",
     "options": {
       "A": "Doors that open directly from a space less than 3,000 square feet in area, and entrances not intended to be used by the public (such as service/loading doors)",
       "B": "Every door in every commercial building must have a vestibule with no exceptions",
@@ -5418,7 +5418,7 @@
     "id": "iecc-078",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2021 IECC (C405.3 and Table C405.3.2(2)), the Space-by-Space Method also permits 'additional lighting power allowances' for which type of feature?",
+    "question": "Under the 2021 IECC, the Space-by-Space Method also permits 'additional lighting power allowances' for which type of feature?",
     "options": {
       "A": "Decorative/display lighting and certain specialized tasks (e.g., retail display), provided that wattage is used only for that purpose",
       "B": "General ambient lighting in corridors only",
@@ -5437,7 +5437,7 @@
     "id": "iecc-079",
     "category": "IECC",
     "subtopic": "prescriptive-residential-cz4",
-    "question": "Under the 2021 IECC prescriptive Table R402.1.2 (component R-values), what is the minimum ceiling insulation R-value required in Climate Zone 4 (which in Massachusetts applies to Dukes and Nantucket counties)?",
+    "question": "Under the 2021 IECC, what is the minimum ceiling insulation R-value required in Climate Zone 4 (which in Massachusetts applies to Dukes and Nantucket counties)?",
     "options": {
       "A": "R-60",
       "B": "R-49",
@@ -5456,7 +5456,7 @@
     "id": "iecc-080",
     "category": "IECC",
     "subtopic": "prescriptive-residential-cz6",
-    "question": "Per the 2021 IECC prescriptive Table R402.1.2, what is the minimum wood-frame WALL cavity insulation R-value in Climate Zone 6 (which in Massachusetts covers the Berkshires and hill towns)?",
+    "question": "Per the 2021 IECC, what is the minimum wood-frame WALL cavity insulation R-value in Climate Zone 6 (which in Massachusetts covers the Berkshires and hill towns)?",
     "options": {
       "A": "R-13",
       "B": "R-20 or R-13+5ci",
@@ -5475,7 +5475,7 @@
     "id": "iecc-081",
     "category": "IECC",
     "subtopic": "fenestration-shgc-residential",
-    "question": "Under the 2021 IECC Table R402.1.2, in which residential climate zones is a maximum glazed-fenestration SHGC (Solar Heat Gain Coefficient) of 0.25 prescribed, while colder zones (including Massachusetts CZ5-6) have NO SHGC requirement?",
+    "question": "Under the 2021 IECC, in which residential climate zones is a maximum glazed-fenestration SHGC (Solar Heat Gain Coefficient) of 0.25 prescribed, while colder zones (including Massachusetts CZ5-6) have NO SHGC requirement?",
     "options": {
       "A": "All zones equally",
       "B": "Climate Zones 6, 7 and 8",
@@ -5494,7 +5494,7 @@
     "id": "iecc-082",
     "category": "IECC",
     "subtopic": "slab-edge-residential",
-    "question": "Per the 2021 IECC Table R402.1.2, the prescriptive slab-edge insulation for a heated slab differs from an unheated slab. For an UNHEATED slab-on-grade floor in Climate Zone 5 (most of Massachusetts), what is the required slab insulation?",
+    "question": "Per the 2021 IECC, the prescriptive slab-edge insulation for a heated slab differs from an unheated slab. For an UNHEATED slab-on-grade floor in Climate Zone 5 (most of Massachusetts), what is the required slab insulation?",
     "options": {
       "A": "No slab insulation required",
       "B": "R-10 to a depth of 2 feet",
@@ -5513,7 +5513,7 @@
     "id": "iecc-083",
     "category": "IECC",
     "subtopic": "u-factor-alternative-residential",
-    "question": "The 2021 IECC R402.1.3 offers a U-factor alternative to the R-value table. Under this path, the building's fenestration, ceiling, wall, floor and other assemblies must meet maximum assembly U-factors. Which statement best describes this compliance path?",
+    "question": "The 2021 IECC offers a U-factor alternative to the R-value table. Under this path, the building's fenestration, ceiling, wall, floor and other assemblies must meet maximum assembly U-factors. Which statement best describes this compliance path?",
     "options": {
       "A": "Each assembly's overall U-factor must not exceed the value in Table R402.1.3, allowing trade-offs in how the R-value is achieved",
       "B": "It eliminates all insulation requirements",
@@ -5532,7 +5532,7 @@
     "id": "iecc-084",
     "category": "IECC",
     "subtopic": "total-ua-alternative-residential",
-    "question": "Under the 2021 IECC R402.1.5 (Total UA alternative), a proposed building's combined thermal envelope complies if its total UA is less than or equal to what reference value?",
+    "question": "Under the 2021 IECC (Total UA alternative), a proposed building's combined thermal envelope complies if its total UA is less than or equal to what reference value?",
     "options": {
       "A": "The UA required only for fenestration",
       "B": "Zero",
@@ -5551,7 +5551,7 @@
     "id": "iecc-085",
     "category": "IECC",
     "subtopic": "ducts-conditioned-space",
-    "question": "The 2021 IECC R403.3.1 requires supply and return ducts in attics to be insulated, but provides an exception. Ducts are exempt from the duct insulation requirement when they are located where?",
+    "question": "The 2021 IECC requires supply and return ducts in attics to be insulated, but provides an exception. Ducts are exempt from the duct insulation requirement when they are located where?",
     "options": {
       "A": "Inside an exterior wall cavity",
       "B": "In any unvented attic",
@@ -5589,7 +5589,7 @@
     "id": "iecc-087",
     "category": "IECC",
     "subtopic": "high-efficacy-lighting-residential",
-    "question": "How did the residential high-efficacy lighting requirement change in the 2021 IECC (R404.1) compared with the 2018 IECC's 90% threshold?",
+    "question": "How did the residential high-efficacy lighting requirement change in the 2021 IECC compared with the 2018 IECC's 90% threshold?",
     "options": {
       "A": "It was reduced to 50%",
       "B": "It was retained at not less than 90% of permanently installed lighting fixtures using high-efficacy lamps",
@@ -5608,7 +5608,7 @@
     "id": "iecc-088",
     "category": "IECC",
     "subtopic": "crawl-space-insulation-tradeoff",
-    "question": "The 2021 IECC (R402.2.11) gives two ways to insulate a vented vs. unvented crawl space. For an UNVENTED crawl space treated as part of the conditioned envelope, the insulation is installed where?",
+    "question": "The 2021 IECC gives two ways to insulate a vented vs. unvented crawl space. For an UNVENTED crawl space treated as part of the conditioned envelope, the insulation is installed where?",
     "options": {
       "A": "Both wall and floor must be fully insulated",
       "B": "Only on the floor joists above the crawl space",
@@ -5627,7 +5627,7 @@
     "id": "iecc-089",
     "category": "IECC",
     "subtopic": "fenestration-u-factor-residential",
-    "question": "Under the 2021 IECC Table R402.1.2, what is the maximum vertical-fenestration (window) U-factor required in Climate Zones 3 through 8, including Massachusetts CZ5 and CZ6?",
+    "question": "Under the 2021 IECC, what is the maximum vertical-fenestration (window) U-factor required in Climate Zones 3 through 8, including Massachusetts CZ5 and CZ6?",
     "options": {
       "A": "0.40",
       "B": "0.35",
@@ -5646,7 +5646,7 @@
     "id": "iecc-090",
     "category": "IECC",
     "subtopic": "skylight-u-factor-residential",
-    "question": "Per the 2021 IECC Table R402.1.2, the prescriptive maximum SKYLIGHT U-factor in Climate Zones 4 through 8 is which value?",
+    "question": "Per the 2021 IECC, the prescriptive maximum SKYLIGHT U-factor in Climate Zones 4 through 8 is which value?",
     "options": {
       "A": "0.30",
       "B": "0.55",
@@ -5703,7 +5703,7 @@
     "id": "iecc-093",
     "category": "IECC",
     "subtopic": "commercial-economizer-c403",
-    "question": "Under the 2021 IECC C403.5, an air-economizer is generally required on individual cooling systems above what capacity threshold (with climate-zone-based exceptions)?",
+    "question": "Under the 2021 IECC, an air-economizer is generally required on individual cooling systems above what capacity threshold (with climate-zone-based exceptions)?",
     "options": {
       "A": "54,000 Btu/h",
       "B": "90,000 Btu/h",
@@ -5760,7 +5760,7 @@
     "id": "iecc-096",
     "category": "IECC",
     "subtopic": "commercial-exterior-lighting-c405",
-    "question": "The 2021 IECC C405.4.2 limits exterior lighting power using a base allowance plus a per-application allowance that varies by 'lighting zone.' What determines a site's exterior lighting zone?",
+    "question": "The 2021 IECC limits exterior lighting power using a base allowance plus a per-application allowance that varies by 'lighting zone.' What determines a site's exterior lighting zone?",
     "options": {
       "A": "The development context of the site (e.g., LZ1 developed rural areas through LZ4 high-activity commercial districts), which sets stricter or looser exterior power allowances",
       "B": "The building's floor area only",
@@ -5779,7 +5779,7 @@
     "id": "iecc-097",
     "category": "IECC",
     "subtopic": "commercial-c406-credits",
-    "question": "The 2021 IECC C406 requires commercial buildings to achieve additional efficiency credits. How does the 2021 edition's C406 differ structurally from earlier editions that required choosing 'one of six' measures?",
+    "question": "The 2021 IECC requires commercial buildings to achieve additional efficiency credits. How does the 2021 edition's additional-efficiency-credit requirement differ structurally from earlier editions that required choosing 'one of six' measures?",
     "options": {
       "A": "It requires all six measures on every building",
       "B": "It eliminated all additional efficiency requirements",
@@ -5798,7 +5798,7 @@
     "id": "iecc-098",
     "category": "IECC",
     "subtopic": "commercial-c406-renewable",
-    "question": "Under the 2021 IECC C406, which of the following is one of the available additional-efficiency CREDIT options a commercial building may use to earn its required points?",
+    "question": "Under the 2021 IECC, which of the following is one of the available additional-efficiency CREDIT options a commercial building may use to earn its required points?",
     "options": {
       "A": "Using larger structural beams",
       "B": "Removing all windows",
@@ -5836,7 +5836,7 @@
     "id": "iecc-100",
     "category": "IECC",
     "subtopic": "commercial-fenestration-shgc-c402",
-    "question": "Per the 2021 IECC Table C402.4, how does the COMMERCIAL fenestration SHGC requirement in Climate Zone 5 differ from the RESIDENTIAL requirement in the same zone?",
+    "question": "Per the 2021 IECC, how does the COMMERCIAL fenestration SHGC requirement in Climate Zone 5 differ from the RESIDENTIAL requirement in the same zone?",
     "options": {
       "A": "Commercial buildings have no SHGC limit anywhere",
       "B": "Commercial buildings DO have an SHGC maximum in CZ5, whereas residential CZ4-8 has no SHGC requirement",
@@ -5855,7 +5855,7 @@
     "id": "iecc-101",
     "category": "IECC",
     "subtopic": "commercial-swh-c404",
-    "question": "The 2021 IECC C404.5 requires insulation on service hot-water piping under defined conditions. What is the minimum pipe insulation R-value generally required for the circulating or heat-traced portions of a commercial service hot-water system?",
+    "question": "The 2021 IECC requires insulation on service hot-water piping under defined conditions. What is the minimum pipe insulation R-value generally required for the circulating or heat-traced portions of a commercial service hot-water system?",
     "options": {
       "A": "R-1",
       "B": "R-2",
@@ -5874,7 +5874,7 @@
     "id": "iecc-102",
     "category": "IECC",
     "subtopic": "commercial-swh-c404",
-    "question": "Under the 2021 IECC C404.6, automatic controls are required on circulating service hot-water pumps and heat-trace systems so that the system does what?",
+    "question": "Under the 2021 IECC, automatic controls are required on circulating service hot-water pumps and heat-trace systems so that the system does what?",
     "options": {
       "A": "Can be turned off automatically when hot water is not required",
       "B": "Runs continuously at all times",
@@ -5893,7 +5893,7 @@
     "id": "iecc-103",
     "category": "IECC",
     "subtopic": "commercial-erv-c403",
-    "question": "The 2021 IECC C403.7.4 requires energy (heat) recovery on certain ventilation systems. The requirement is generally triggered based on which two factors?",
+    "question": "The 2021 IECC requires energy (heat) recovery on certain ventilation systems. The requirement is generally triggered based on which two factors?",
     "options": {
       "A": "The number of stories only",
       "B": "The color of the ductwork",
@@ -5912,7 +5912,7 @@
     "id": "iecc-104",
     "category": "IECC",
     "subtopic": "commercial-hvac-efficiency-c403",
-    "question": "The 2021 IECC C403.3.2 (Tables C403.3.2) establishes minimum equipment efficiencies for HVAC equipment. These tables are largely harmonized with which standard?",
+    "question": "The 2021 IECC establishes minimum equipment efficiencies for HVAC equipment in its equipment tables. These tables are largely harmonized with which standard?",
     "options": {
       "A": "ANSI/ASHRAE/IES Standard 90.1 minimum equipment efficiencies (and federal appliance standards)",
       "B": "The National Electrical Code",
@@ -5931,7 +5931,7 @@
     "id": "iecc-105",
     "category": "IECC",
     "subtopic": "commercial-steel-frame-c402",
-    "question": "Under the 2021 IECC commercial envelope table (C402.1.3), why does a STEEL-framed wall require a higher cavity-plus-continuous insulation value than a wood-framed wall of the same nominal depth?",
+    "question": "Under the 2021 IECC commercial envelope table, why does a STEEL-framed wall require a higher cavity-plus-continuous insulation value than a wood-framed wall of the same nominal depth?",
     "options": {
       "A": "Wood walls never need insulation",
       "B": "Steel walls are taller",
@@ -5950,7 +5950,7 @@
     "id": "iecc-106",
     "category": "IECC",
     "subtopic": "commercial-c402-fenestration-area",
-    "question": "Under the 2021 IECC C402.4.1, the vertical fenestration area of a commercial building is generally limited to what maximum percentage of the gross above-grade wall area for the prescriptive compliance path?",
+    "question": "Under the 2021 IECC, the vertical fenestration area of a commercial building is generally limited to what maximum percentage of the gross above-grade wall area for the prescriptive compliance path?",
     "options": {
       "A": "30 percent",
       "B": "50 percent",
@@ -5969,7 +5969,7 @@
     "id": "iecc-107",
     "category": "IECC",
     "subtopic": "commercial-total-building-performance-c407",
-    "question": "Under the 2021 IECC C407 (Total Building Performance), a proposed commercial building complies if its annual energy cost (or energy use) is no greater than that of which reference?",
+    "question": "Under the 2021 IECC (Total Building Performance), a proposed commercial building complies if its annual energy cost (or energy use) is no greater than that of which reference?",
     "options": {
       "A": "A 'standard reference design' building of the same configuration built to the prescriptive requirements of the code",
       "B": "Any LEED Platinum building",
@@ -6007,7 +6007,7 @@
     "id": "iecc-109",
     "category": "IECC",
     "subtopic": "commercial-lighting-controls-c405",
-    "question": "Under the 2021 IECC C405.2.1, occupant-sensor lighting controls are required in many space types. In an enclosed space such as a private office or conference room, the control must automatically do what?",
+    "question": "Under the 2021 IECC, occupant-sensor lighting controls are required in many space types. In an enclosed space such as a private office or conference room, the control must automatically do what?",
     "options": {
       "A": "Lock the door",
       "B": "Increase brightness when empty",
@@ -6026,7 +6026,7 @@
     "id": "iecc-110",
     "category": "IECC",
     "subtopic": "commercial-vestibule-c402",
-    "question": "Under the 2021 IECC C402.5.7, building entrances that separate conditioned space from the exterior generally require an enclosed vestibule, but the code lists exceptions. Which of the following is an EXEMPTED door that does NOT require a vestibule?",
+    "question": "Under the 2021 IECC, building entrances that separate conditioned space from the exterior generally require an enclosed vestibule, but the code lists exceptions. Which of the following is an EXEMPTED door that does NOT require a vestibule?",
     "options": {
       "A": "All doors in Climate Zone 5",
       "B": "The main public entrance of a large department store",
@@ -6064,7 +6064,7 @@
     "id": "iecc-002",
     "category": "IECC",
     "subtopic": "",
-    "question": "On the IECC climate zone map, locations such as Helena, Montana and Big Horn County, Wyoming fall into which climate zone?",
+    "question": "On the climate zone map, locations such as Helena, Montana and Big Horn County, Wyoming fall into which climate zone?",
     "options": {
       "A": "Climate Zone 4",
       "B": "Climate Zone 5",
@@ -6083,7 +6083,7 @@
     "id": "iecc-003",
     "category": "IECC",
     "subtopic": "",
-    "question": "Per the IECC prescriptive insulation table (Table R402.1.2, 2018 IECC), what is the minimum ceiling (attic) R-value required in Climate Zone 5?",
+    "question": "Per the 2018 IECC prescriptive insulation table, what is the minimum ceiling (attic) R-value required in Climate Zone 5?",
     "options": {
       "A": "R-30",
       "B": "R-38",
@@ -6102,7 +6102,7 @@
     "id": "iecc-004",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2018 IECC prescriptive table (R402.1.2), the wood-frame wall insulation requirement for Climate Zone 5 is listed as \"20 or 13+5.\" What does the \"13+5\" option mean?",
+    "question": "Under the 2018 IECC prescriptive table, the wood-frame wall insulation requirement for Climate Zone 5 is listed as \"20 or 13+5.\" What does the \"13+5\" option mean?",
     "options": {
       "A": "R-13 cavity insulation plus R-5 continuous insulating sheathing",
       "B": "R-13 in the attic plus R-5 in the wall",
@@ -6121,7 +6121,7 @@
     "id": "iecc-005",
     "category": "IECC",
     "subtopic": "",
-    "question": "Per the 2018 IECC prescriptive table (R402.1.2), what is the slab-edge insulation requirement (R-value and depth) for a slab-on-grade floor in Climate Zone 5?",
+    "question": "Per the 2018 IECC prescriptive table, what is the slab-edge insulation requirement (R-value and depth) for a slab-on-grade floor in Climate Zone 5?",
     "options": {
       "A": "R-5 to a depth of 2 ft",
       "B": "R-10 to a depth of 2 ft",
@@ -6140,7 +6140,7 @@
     "id": "iecc-006",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under the 2018 IECC Table R402.1.2, the slab-edge insulation DEPTH requirement increases from Climate Zone 5 to Climate Zone 6. What is the required depth in Climate Zone 6?",
+    "question": "Under the 2018 IECC, the slab-edge insulation DEPTH requirement increases from Climate Zone 5 to Climate Zone 6. What is the required depth in Climate Zone 6?",
     "options": {
       "A": "1 ft",
       "B": "2 ft",
@@ -6159,7 +6159,7 @@
     "id": "iecc-007",
     "category": "IECC",
     "subtopic": "",
-    "question": "Per the 2018 IECC prescriptive table (R402.1.2), what is the maximum allowed fenestration (window) U-factor in Climate Zone 5?",
+    "question": "Per the 2018 IECC prescriptive table, what is the maximum allowed fenestration (window) U-factor in Climate Zone 5?",
     "options": {
       "A": "0.27",
       "B": "0.30",
@@ -6178,7 +6178,7 @@
     "id": "iecc-008",
     "category": "IECC",
     "subtopic": "",
-    "question": "Per the 2018 IECC prescriptive table (R402.1.2), what is the maximum allowed SKYLIGHT U-factor in Climate Zone 5 for residential construction?",
+    "question": "Per the 2018 IECC prescriptive table, what is the maximum allowed SKYLIGHT U-factor in Climate Zone 5 for residential construction?",
     "options": {
       "A": "0.30",
       "B": "0.50",
@@ -6197,7 +6197,7 @@
     "id": "iecc-009",
     "category": "IECC",
     "subtopic": "",
-    "question": "Per the 2018 IECC prescriptive table (R402.1.2), what is the minimum floor insulation R-value required in Climate Zone 5?",
+    "question": "Per the 2018 IECC prescriptive table, what is the minimum floor insulation R-value required in Climate Zone 5?",
     "options": {
       "A": "R-19",
       "B": "R-25",
@@ -6216,7 +6216,7 @@
     "id": "iecc-010",
     "category": "IECC",
     "subtopic": "",
-    "question": "Per the 2018 IECC prescriptive table (R402.1.2), the basement-wall insulation for Climate Zone 5 is listed as \"15/19.\" What does that fraction represent?",
+    "question": "Per the 2018 IECC prescriptive table, the basement-wall insulation for Climate Zone 5 is listed as \"15/19.\" What does that fraction represent?",
     "options": {
       "A": "R-15 continuous insulation OR R-19 cavity (framed) insulation",
       "B": "R-15 minimum, R-19 maximum",
@@ -6235,7 +6235,7 @@
     "id": "iecc-011",
     "category": "IECC",
     "subtopic": "",
-    "question": "The IECC offers three compliance paths for residential energy: prescriptive (R-value/U-factor tables), performance (R405 simulated energy cost), and the Energy Rating Index path. Which best describes the PRESCRIPTIVE path?",
+    "question": "The IECC offers three compliance paths for residential energy: prescriptive (R-value/U-factor tables), performance (simulated energy cost), and the Energy Rating Index path. Which best describes the PRESCRIPTIVE path?",
     "options": {
       "A": "Meeting each listed component R-value and U-factor in Table R402.1.2",
       "B": "Showing the home costs less to operate than a reference design via software",
@@ -6292,7 +6292,7 @@
     "id": "iecc-014",
     "category": "IECC",
     "subtopic": "",
-    "question": "In the commercial provisions of the 2018 IECC (Section C405), automatic daylight-responsive lighting controls are required in a primary sidelit daylight zone when the general lighting in that zone exceeds:",
+    "question": "In the commercial provisions of the 2018 IECC, automatic daylight-responsive lighting controls are required in a primary sidelit daylight zone when the general lighting in that zone exceeds:",
     "options": {
       "A": "25 watts",
       "B": "75 watts",
@@ -6311,7 +6311,7 @@
     "id": "iecc-015",
     "category": "IECC",
     "subtopic": "",
-    "question": "Under IECC C405.2.4, how is the PRIMARY sidelit daylight zone defined relative to a window in the wall?",
+    "question": "How is the PRIMARY sidelit daylight zone defined relative to a window in the wall?",
     "options": {
       "A": "It extends out from the window up to 1.0 times the head height of the window, and along the window wall to the window edges (limited by full-height walls)",
       "B": "It extends out 3.0 times the window height in every direction",
@@ -10377,7 +10377,7 @@
     "id": "osha-011",
     "category": "OSHA",
     "subtopic": "Excavations - Protective Systems",
-    "question": "Under OSHA excavation standards, at what trench or excavation depth must employees generally be protected from cave-ins by an adequate protective system (such as sloping, shoring, or shielding)?",
+    "question": "At what trench or excavation depth must employees generally be protected from cave-ins by an adequate protective system (such as sloping, shoring, or shielding)?",
     "options": {
       "A": "Any excavation 3 feet or more in depth",
       "B": "Excavations 4 feet or more in depth",
@@ -10396,7 +10396,7 @@
     "id": "osha-012",
     "category": "OSHA",
     "subtopic": "Excavations - Spoil Pile / Materials",
-    "question": "Under OSHA, excavated materials (spoil), equipment, and other materials must be kept at least how far back from the edge of an excavation?",
+    "question": "Excavated materials (spoil), equipment, and other materials must be kept at least how far back from the edge of an excavation?",
     "options": {
       "A": "At least 1 foot from the edge",
       "B": "At least 2 feet from the edge",
@@ -10434,7 +10434,7 @@
     "id": "osha-014",
     "category": "OSHA",
     "subtopic": "Excavations - Soil Classification",
-    "question": "Under OSHA's soil classification system in Appendix A to Subpart P, which soil type is the MOST stable?",
+    "question": "Which soil type is the MOST stable?",
     "options": {
       "A": "Type C",
       "B": "Type B",
@@ -10453,7 +10453,7 @@
     "id": "osha-015",
     "category": "OSHA",
     "subtopic": "Scaffolding - Capacity",
-    "question": "Under OSHA scaffold standards, each scaffold and scaffold component must be capable of supporting, without failure, its own weight and at least how many times the maximum intended load applied or transmitted to it?",
+    "question": "Each scaffold and scaffold component must be capable of supporting, without failure, its own weight and at least how many times the maximum intended load applied or transmitted to it?",
     "options": {
       "A": "2 times the maximum intended load",
       "B": "3 times the maximum intended load",
@@ -10510,7 +10510,7 @@
     "id": "osha-018",
     "category": "OSHA",
     "subtopic": "Scaffolding - Access",
-    "question": "Under OSHA scaffold rules, when scaffold platforms are more than how many feet above or below a point of access, must a safe means of access (ladder, stair tower, ramp, etc.) be provided?",
+    "question": "When scaffold platforms are more than how many feet above or below a point of access, must a safe means of access (ladder, stair tower, ramp, etc.) be provided?",
     "options": {
       "A": "More than 2 feet",
       "B": "More than 4 feet",
@@ -10529,7 +10529,7 @@
     "id": "osha-019",
     "category": "OSHA",
     "subtopic": "Electrical / Lockout-Tagout",
-    "question": "Under OSHA construction electrical standards, controls that are deactivated during the course of work on energized or de-energized equipment or circuits must be:",
+    "question": "Controls that are deactivated during the course of work on energized or de-energized equipment or circuits must be:",
     "options": {
       "A": "Left as found so other crews can re-energize quickly",
       "B": "Tagged with a label, and the tags must remain in place until the work is completed",
@@ -10567,7 +10567,7 @@
     "id": "osha-021",
     "category": "OSHA",
     "subtopic": "PPE - Head Protection",
-    "question": "Under OSHA construction PPE rules, employees working in areas where there is a possible danger of head injury from impact, falling or flying objects, or electrical shock and burns must be protected by:",
+    "question": "Employees working in areas where there is a possible danger of head injury from impact, falling or flying objects, or electrical shock and burns must be protected by:",
     "options": {
       "A": "A cloth cap or bandana",
       "B": "Protective helmets (hard hats)",
@@ -10586,7 +10586,7 @@
     "id": "osha-022",
     "category": "OSHA",
     "subtopic": "PPE - Eye and Face Protection",
-    "question": "Under OSHA, eye and face protective equipment must be provided when:",
+    "question": "Eye and face protective equipment must be provided when:",
     "options": {
       "A": "Only when the employee specifically requests it",
       "B": "Machines or operations present potential eye or face injury from physical, chemical, or radiation agents",
@@ -10605,7 +10605,7 @@
     "id": "osha-023",
     "category": "OSHA",
     "subtopic": "PPE - Hearing Protection",
-    "question": "Under OSHA construction noise standards, feasible administrative or engineering controls must be used to reduce noise exposure when sound levels exceed which 8-hour permissible exposure level?",
+    "question": "Feasible administrative or engineering controls must be used to reduce noise exposure when sound levels exceed which 8-hour permissible exposure level?",
     "options": {
       "A": "75 dBA",
       "B": "85 dBA",
@@ -10624,7 +10624,7 @@
     "id": "osha-024",
     "category": "OSHA",
     "subtopic": "Hazard Communication / SDS",
-    "question": "Under the OSHA Hazard Communication standard as applied to construction, what must an employer ensure is readily accessible to employees for each hazardous chemical they may be exposed to?",
+    "question": "What must an employer ensure is readily accessible to employees for each hazardous chemical they may be exposed to?",
     "options": {
       "A": "A purchase receipt for the chemical",
       "B": "The chemical manufacturer's phone number only",
@@ -10643,7 +10643,7 @@
     "id": "osha-025",
     "category": "OSHA",
     "subtopic": "Cranes - Signals",
-    "question": "Under OSHA's cranes and derricks in construction standard, when a signal person is required and visual contact cannot be maintained, which of the following is true?",
+    "question": "When a signal person is required and visual contact cannot be maintained, which of the following is true?",
     "options": {
       "A": "Signaling may stop entirely until visibility returns",
       "B": "The operator may continue the lift without any signaling method",
@@ -10662,7 +10662,7 @@
     "id": "osha-026",
     "category": "OSHA",
     "subtopic": "Stairways",
-    "question": "Under OSHA construction stairway rules, a stairrail system must be installed along each unprotected side or edge of stairways having how many or more risers, or rising more than 30 inches, whichever is less?",
+    "question": "A stairrail system must be installed along each unprotected side or edge of stairways having how many or more risers, or rising more than 30 inches, whichever is less?",
     "options": {
       "A": "2 or more risers",
       "B": "3 or more risers",
@@ -10681,7 +10681,7 @@
     "id": "osha-027",
     "category": "OSHA",
     "subtopic": "Stairways - Riser/Tread Uniformity",
-    "question": "Under OSHA, riser height and tread depth on temporary construction stairways must be uniform within each flight of stairs, with variations not to exceed:",
+    "question": "Riser height and tread depth on temporary construction stairways must be uniform within each flight of stairs, with variations not to exceed:",
     "options": {
       "A": "1/8 inch",
       "B": "1/4 inch",
@@ -10700,7 +10700,7 @@
     "id": "osha-028",
     "category": "OSHA",
     "subtopic": "Concrete and Masonry - Limited Access Zone",
-    "question": "Under OSHA's masonry construction rules, when a masonry wall is being constructed, a limited access zone must be established prior to the start of construction. How wide must this zone be?",
+    "question": "When a masonry wall is being constructed, a limited access zone must be established prior to the start of construction. How wide must this zone be?",
     "options": {
       "A": "Equal to the height of the wall to be constructed plus 4 feet",
       "B": "A fixed 6 feet regardless of wall height",
@@ -10719,7 +10719,7 @@
     "id": "osha-029",
     "category": "OSHA",
     "subtopic": "Concrete - Vertical Shoring / Rebar",
-    "question": "Under OSHA concrete and masonry construction rules, all protruding reinforcing steel (rebar), onto and into which employees could fall, must be:",
+    "question": "All protruding reinforcing steel (rebar), onto and into which employees could fall, must be:",
     "options": {
       "A": "Painted a bright color",
       "B": "Guarded to eliminate the hazard of impalement",
@@ -10738,7 +10738,7 @@
     "id": "osha-030",
     "category": "OSHA",
     "subtopic": "Demolition - Engineering Survey",
-    "question": "Under OSHA demolition rules, prior to permitting employees to start demolition operations, what must be conducted by a competent person?",
+    "question": "Prior to permitting employees to start demolition operations, what must be conducted by a competent person?",
     "options": {
       "A": "A cost estimate of the demolition",
       "B": "An engineering survey of the structure, including condition of the structure and possibility of unplanned collapse",
@@ -10757,7 +10757,7 @@
     "id": "osha-031",
     "category": "OSHA",
     "subtopic": "Welding and Cutting - Fire Watch",
-    "question": "Under OSHA welding and cutting rules, when must a fire watch be required during welding or cutting operations?",
+    "question": "When must a fire watch be required during welding or cutting operations?",
     "options": {
       "A": "Only when welding outdoors",
       "B": "Where appreciable combustible material, in building construction or contents, is closer than 35 feet to the point of operation (or in other specified high-hazard conditions)",
@@ -10776,7 +10776,7 @@
     "id": "osha-032",
     "category": "OSHA",
     "subtopic": "Recordkeeping - Reporting",
-    "question": "Under current OSHA reporting requirements, within what time frame must an employer report a work-related fatality to OSHA?",
+    "question": "Within what time frame must an employer report a work-related fatality to OSHA?",
     "options": {
       "A": "Within 4 hours",
       "B": "Within 8 hours",
@@ -10814,7 +10814,7 @@
     "id": "osha-034",
     "category": "OSHA",
     "subtopic": "Excavations - Inspections",
-    "question": "Under OSHA excavation standards, daily inspections of excavations, adjacent areas, and protective systems must be made by:",
+    "question": "Daily inspections of excavations, adjacent areas, and protective systems must be made by:",
     "options": {
       "A": "Any available employee",
       "B": "A competent person, before the start of work and as needed throughout the shift",
@@ -10833,7 +10833,7 @@
     "id": "osha-035",
     "category": "OSHA",
     "subtopic": "Fall Protection - General Trigger",
-    "question": "Under OSHA Subpart M, each employee on a walking/working surface with an unprotected side or edge that is how many feet or more above a lower level must be protected from falling?",
+    "question": "Each employee on a walking/working surface with an unprotected side or edge that is how many feet or more above a lower level must be protected from falling?",
     "options": {
       "A": "4 feet or more",
       "B": "6 feet or more",
@@ -10852,7 +10852,7 @@
     "id": "osha-036",
     "category": "OSHA",
     "subtopic": "Scaffolding - Supervision/Erection",
-    "question": "Under OSHA scaffold rules, the erection, moving, dismantling, or alteration of scaffolds must be done under the supervision and direction of:",
+    "question": "The erection, moving, dismantling, or alteration of scaffolds must be done under the supervision and direction of:",
     "options": {
       "A": "Any two employees working together",
       "B": "A competent person qualified in scaffold erection",
@@ -10871,7 +10871,7 @@
     "id": "aab-010",
     "category": "AAB",
     "subtopic": "Accessible Parking - Count by Lot Size",
-    "question": "Under 521 CMR, in a parking lot with a total of 100 spaces, what is the minimum number of accessible (handicap) parking spaces required?",
+    "question": "In a parking lot with a total of 100 spaces, what is the minimum number of accessible (handicap) parking spaces required?",
     "options": {
       "A": "2 accessible spaces",
       "B": "3 accessible spaces",
@@ -10890,7 +10890,7 @@
     "id": "aab-011",
     "category": "AAB",
     "subtopic": "Accessible Parking - Minimum Count",
-    "question": "Under 521 CMR, a parking lot with 1 to 25 total spaces must provide at least how many accessible parking spaces?",
+    "question": "A parking lot with 1 to 25 total spaces must provide at least how many accessible parking spaces?",
     "options": {
       "A": "0 (none required for small lots)",
       "B": "1 accessible space",
@@ -10909,7 +10909,7 @@
     "id": "aab-012",
     "category": "AAB",
     "subtopic": "Accessible Parking - Van-Accessible",
-    "question": "Under 521 CMR accessible parking requirements, which of the following best describes the van-accessible space requirement?",
+    "question": "Which of the following best describes the van-accessible space requirement?",
     "options": {
       "A": "Van-accessible spaces are never required",
       "B": "At least one in every eight accessible spaces (but always at least one) must be van-accessible and identified by a sign reading 'Van Accessible'",
@@ -10928,7 +10928,7 @@
     "id": "aab-013",
     "category": "AAB",
     "subtopic": "Doors - Clear Width",
-    "question": "Under 521 CMR, the minimum clear opening width of an accessible doorway, measured with the door open 90 degrees between the face of the door and the stop, must be at least:",
+    "question": "The minimum clear opening width of an accessible doorway, measured with the door open 90 degrees between the face of the door and the stop, must be at least:",
     "options": {
       "A": "28 inches",
       "B": "30 inches",
@@ -10947,7 +10947,7 @@
     "id": "aab-014",
     "category": "AAB",
     "subtopic": "Doors - Maneuvering Clearance",
-    "question": "Under 521 CMR, for a front (forward) approach to a swinging door on the PULL side, the minimum maneuvering clearance includes how much space beyond the latch side of the door?",
+    "question": "For a front (forward) approach to a swinging door on the PULL side, the minimum maneuvering clearance includes how much space beyond the latch side of the door?",
     "options": {
       "A": "6 inches beyond the latch side",
       "B": "12 inches beyond the latch side",
@@ -10966,7 +10966,7 @@
     "id": "aab-015",
     "category": "AAB",
     "subtopic": "Ramps - Maximum Rise and Landings",
-    "question": "Under 521 CMR, what is the maximum rise for any single ramp run before a level landing is required?",
+    "question": "What is the maximum rise for any single ramp run before a level landing is required?",
     "options": {
       "A": "12 inches",
       "B": "24 inches",
@@ -10985,7 +10985,7 @@
     "id": "aab-016",
     "category": "AAB",
     "subtopic": "Ramps - Landing Width",
-    "question": "Under 521 CMR, a level landing at the top and bottom of an accessible ramp must have a minimum length, in the direction of travel, of:",
+    "question": "A level landing at the top and bottom of an accessible ramp must have a minimum length, in the direction of travel, of:",
     "options": {
       "A": "36 inches",
       "B": "48 inches",
@@ -11004,7 +11004,7 @@
     "id": "aab-017",
     "category": "AAB",
     "subtopic": "Ramps - Handrails",
-    "question": "Under 521 CMR, ramps with a rise greater than how many inches must have handrails on both sides?",
+    "question": "Ramps with a rise greater than how many inches must have handrails on both sides?",
     "options": {
       "A": "Greater than 3 inches",
       "B": "Greater than 6 inches",
@@ -11023,7 +11023,7 @@
     "id": "aab-018",
     "category": "AAB",
     "subtopic": "Accessible Route - Width",
-    "question": "Under 521 CMR, the minimum clear width of an accessible route (for a single wheelchair) is generally:",
+    "question": "The minimum clear width of an accessible route (for a single wheelchair) is generally:",
     "options": {
       "A": "30 inches",
       "B": "32 inches at a point and 36 inches continuously",
@@ -11042,7 +11042,7 @@
     "id": "aab-019",
     "category": "AAB",
     "subtopic": "Accessible Toilet Rooms - Grab Bars",
-    "question": "Under 521 CMR, in an accessible water closet (toilet) compartment, grab bars must be mounted with their top gripping surface at what height above the finished floor?",
+    "question": "In an accessible water closet (toilet) compartment, grab bars must be mounted with their top gripping surface at what height above the finished floor?",
     "options": {
       "A": "24 to 28 inches",
       "B": "30 to 32 inches",
@@ -11061,7 +11061,7 @@
     "id": "aab-020",
     "category": "AAB",
     "subtopic": "Accessible Toilet Rooms - Water Closet Centerline",
-    "question": "Under 521 CMR, in an accessible toilet compartment, the centerline of the water closet (toilet) must be located what distance from the adjacent side wall?",
+    "question": "In an accessible toilet compartment, the centerline of the water closet (toilet) must be located what distance from the adjacent side wall?",
     "options": {
       "A": "12 inches from the side wall",
       "B": "16 to 18 inches from the side wall",
@@ -11080,7 +11080,7 @@
     "id": "aab-021",
     "category": "AAB",
     "subtopic": "Signage - International Symbol of Access",
-    "question": "Under 521 CMR, accessible facilities and elements required to be identified must display which symbol?",
+    "question": "Accessible facilities and elements required to be identified must display which symbol?",
     "options": {
       "A": "A green cross",
       "B": "The International Symbol of Access (ISA), a white wheelchair figure on a blue background",
@@ -11099,7 +11099,7 @@
     "id": "aab-022",
     "category": "AAB",
     "subtopic": "Signage - Mounting Height",
-    "question": "Under 521 CMR, permanent room and space identification signs (such as restroom signs with raised characters and Braille) must be mounted so the centerline of the sign is at what height above the finished floor?",
+    "question": "Permanent room and space identification signs (such as restroom signs with raised characters and Braille) must be mounted so the centerline of the sign is at what height above the finished floor?",
     "options": {
       "A": "48 inches",
       "B": "54 inches",
@@ -11118,7 +11118,7 @@
     "id": "aab-023",
     "category": "AAB",
     "subtopic": "Elevators - When Required",
-    "question": "Under 521 CMR, in a newly constructed multi-story public building, when is at least one accessible elevator (or other approved vertical access) generally required?",
+    "question": "In a newly constructed multi-story public building, when is at least one accessible elevator (or other approved vertical access) generally required?",
     "options": {
       "A": "Only in buildings over 10 stories",
       "B": "Never; ramps always substitute for elevators",
@@ -11137,7 +11137,7 @@
     "id": "aab-024",
     "category": "AAB",
     "subtopic": "Curb Cuts / Curb Ramps",
-    "question": "Under 521 CMR, the maximum running slope of a curb cut (curb ramp) is:",
+    "question": "The maximum running slope of a curb cut (curb ramp) is:",
     "options": {
       "A": "1:8",
       "B": "1:10",
@@ -11156,7 +11156,7 @@
     "id": "aab-025",
     "category": "AAB",
     "subtopic": "Accessible Parking - Sign Mounting",
-    "question": "Under 521 CMR, accessible parking spaces must be identified by a sign showing the symbol of access. To remain visible (not obscured by a parked vehicle), the bottom of the sign should be mounted approximately how high?",
+    "question": "Accessible parking spaces must be identified by a sign showing the symbol of access. To remain visible (not obscured by a parked vehicle), the bottom of the sign should be mounted approximately how high?",
     "options": {
       "A": "About 24 inches above grade",
       "B": "About 36 inches above grade",
@@ -11175,7 +11175,7 @@
     "id": "osha-001",
     "category": "OSHA",
     "subtopic": "OSHA",
-    "question": "Under OSHA construction standards, which of the following BEST describes a \"competent person\"?",
+    "question": "Which of the following BEST describes a \"competent person\"?",
     "options": {
       "A": "An employee who has completed a 10-hour OSHA outreach course",
       "B": "One who is capable of identifying existing and predictable hazards and is authorized to take prompt corrective measures to eliminate them",
@@ -11232,7 +11232,7 @@
     "id": "osha-004",
     "category": "OSHA",
     "subtopic": "OSHA",
-    "question": "Under the OSHA lead in construction standard, the permissible exposure limit (PEL) for airborne lead, averaged over an 8-hour time-weighted average, is:",
+    "question": "The permissible exposure limit (PEL) for airborne lead, averaged over an 8-hour time-weighted average, is:",
     "options": {
       "A": "30 micrograms per cubic meter of air",
       "B": "50 micrograms per cubic meter of air",
@@ -11327,7 +11327,7 @@
     "id": "osha-009",
     "category": "OSHA",
     "subtopic": "OSHA",
-    "question": "According to OSHA, a DANGER sign must use which color scheme?",
+    "question": "A DANGER sign must use which color scheme?",
     "options": {
       "A": "Yellow predominating, with black panel and borders",
       "B": "Red as the predominating color on the upper panel, black outline borders, and a white lower panel for wording",
@@ -11346,7 +11346,7 @@
     "id": "osha-010",
     "category": "OSHA",
     "subtopic": "OSHA",
-    "question": "Under OSHA housekeeping requirements for construction, how must combustible scrap and debris be handled during the course of construction?",
+    "question": "How must combustible scrap and debris be handled during the course of construction?",
     "options": {
       "A": "Left in place until the project is complete, then removed all at once",
       "B": "Removed at regular intervals during the course of construction",
@@ -11365,7 +11365,7 @@
     "id": "aab-001",
     "category": "AAB",
     "subtopic": "AAB",
-    "question": "Under 521 CMR (Massachusetts Architectural Access Board), if alteration, reconstruction, or remodeling work on an existing public building equals or exceeds 30% of the full and fair cash value of the building, what is required?",
+    "question": "If alteration, reconstruction, or remodeling work on an existing public building equals or exceeds 30% of the full and fair cash value of the building, what is required?",
     "options": {
       "A": "Only the work being performed must comply",
       "B": "Only an accessible entrance must be added",
@@ -11384,7 +11384,7 @@
     "id": "aab-002",
     "category": "AAB",
     "subtopic": "AAB",
-    "question": "Under 521 CMR 3.3, when work on an existing building is LESS than 30% of full and fair cash value but the cost of the work is $100,000 or more, what must be provided in addition to making the work comply?",
+    "question": "When work on an existing building is LESS than 30% of full and fair cash value but the cost of the work is $100,000 or more, what must be provided in addition to making the work comply?",
     "options": {
       "A": "Nothing additional; only the work performed must comply",
       "B": "An accessible public entrance and, if provided, an accessible toilet room, telephone, and drinking fountain",
@@ -11403,7 +11403,7 @@
     "id": "aab-003",
     "category": "AAB",
     "subtopic": "AAB",
-    "question": "Under 521 CMR, the minimum clear floor or ground space required to accommodate a single, stationary wheelchair and occupant is:",
+    "question": "The minimum clear floor or ground space required to accommodate a single, stationary wheelchair and occupant is:",
     "options": {
       "A": "24 inches by 36 inches",
       "B": "30 inches by 48 inches",
@@ -11422,7 +11422,7 @@
     "id": "aab-004",
     "category": "AAB",
     "subtopic": "AAB",
-    "question": "Under 521 CMR, when the clear floor space only allows a forward approach to an object, the maximum high forward reach permitted is:",
+    "question": "When the clear floor space only allows a forward approach to an object, the maximum high forward reach permitted is:",
     "options": {
       "A": "42 inches",
       "B": "48 inches",
@@ -11441,7 +11441,7 @@
     "id": "aab-005",
     "category": "AAB",
     "subtopic": "AAB",
-    "question": "Under 521 CMR, when the clear floor space allows a parallel approach by a person in a wheelchair, the maximum high side reach permitted is:",
+    "question": "When the clear floor space allows a parallel approach by a person in a wheelchair, the maximum high side reach permitted is:",
     "options": {
       "A": "48 inches",
       "B": "52 inches",
@@ -11460,7 +11460,7 @@
     "id": "aab-006",
     "category": "AAB",
     "subtopic": "AAB",
-    "question": "Under 521 CMR, the maximum slope allowed for an accessible ramp is:",
+    "question": "The maximum slope allowed for an accessible ramp is:",
     "options": {
       "A": "1:8",
       "B": "1:10",
@@ -11479,7 +11479,7 @@
     "id": "aab-007",
     "category": "AAB",
     "subtopic": "AAB",
-    "question": "Under 521 CMR, which of the following is correct regarding houses of worship?",
+    "question": "Which of the following is correct regarding houses of worship?",
     "options": {
       "A": "Houses of worship are fully exempt from 521 CMR",
       "B": "Only new construction of houses of worship must comply; existing ones never do",
@@ -11498,7 +11498,7 @@
     "id": "aab-008",
     "category": "AAB",
     "subtopic": "AAB",
-    "question": "Under 521 CMR 19.00 (Recreational Facilities), which statement about courts (such as tennis, racquet, and squash courts) in a recreation facility is correct?",
+    "question": "Which statement about courts (such as tennis, racquet, and squash courts) in a recreation facility is correct?",
     "options": {
       "A": "Courts are explicitly exempt from accessibility requirements",
       "B": "Areas open to and used by the public, including tennis, racquet, and squash courts, must be accessible",
@@ -11517,7 +11517,7 @@
     "id": "aab-009",
     "category": "AAB",
     "subtopic": "AAB",
-    "question": "Under 521 CMR, when drinking fountains (water bubblers) are provided, which statement is correct?",
+    "question": "When drinking fountains (water bubblers) are provided, which statement is correct?",
     "options": {
       "A": "Drinking fountains are exempt from accessibility requirements",
       "B": "Where only one drinking fountain is provided on a floor, it must be accessible; where more than one is provided, one in each location must be accessible and on an accessible route",
