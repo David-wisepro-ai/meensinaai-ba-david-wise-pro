@@ -42,7 +42,7 @@ export const PM_AULAS: Aula[] = [
 
 // --- Portal CONSTRUTOR — 8 aulas ------------------------------------------
 export const CONSTRUTOR_AULAS: Aula[] = [
-  { titulo: 'Aula 1 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'Introdução ao Curso de CSL', descricao: 'Apresentação do curso preparatório para tirar a Construction Supervisor License (CSL).', videoUrl: 'https://drive.google.com/file/d/1Z9LerwwzfYiw88B0ikxULF1NMMaroCkh/view', capaUrl: '/capa-construtor-aula1.jpg' },
   { titulo: 'Aula 2 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
   { titulo: 'Aula 3 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
   { titulo: 'Aula 4 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
