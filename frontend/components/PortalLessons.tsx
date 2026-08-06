@@ -46,7 +46,7 @@ export const CONSTRUTOR_AULAS: Aula[] = [
   { titulo: 'Marcação no Livro IRC', descricao: 'Como marcar e organizar o livro do International Residential Code (IRC) para consulta rápida na prova.', videoUrl: 'https://drive.google.com/file/d/1HMc1_6iKv8qNcmZCxDPiHJKFAxB3kEst/view', capaUrl: '/capa-construtor-aula2.jpg' },
   { titulo: 'Marcação no Livro IBC', descricao: 'Como marcar e organizar o livro do International Building Code (IBC) para consulta rápida na prova.', videoUrl: 'https://drive.google.com/file/d/171q9gu3rr0BHMkCkoEDEelkR5C-wUxq1/view', capaUrl: '/capa-construtor-aula3.jpg' },
   { titulo: 'Aula 4 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
-  { titulo: 'Aula 5 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
+  { titulo: 'Aplicação da HIC — Home Improvement Contractor', descricao: 'Passo a passo da aplicação da HIC: documentos necessários, preenchimento online e dicas para aprovação.', videoUrl: 'https://drive.google.com/file/d/1Rdzrgp2JDlzdAFlN_hZhRTj7o6wmSmSu/view', capaUrl: '/capa-construtor-aula5.jpg' },
   { titulo: 'Aula 6 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
   { titulo: 'Aula 7 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
   { titulo: 'Aula 8 — título em breve', descricao: 'Descrição da aula em breve.', videoUrl: '' },
