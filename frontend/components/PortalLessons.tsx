@@ -47,7 +47,7 @@ export const CONSTRUTOR_AULAS: Aula[] = [
   { titulo: 'Marcação no Livro IBC', descricao: 'Como marcar e organizar o livro do International Building Code (IBC) para consulta rápida na prova.', videoUrl: 'https://drive.google.com/file/d/171q9gu3rr0BHMkCkoEDEelkR5C-wUxq1/view', capaUrl: '/capa-construtor-aula3.jpg' },
   { titulo: 'Marcação nos Livros IECC, 780 CMR e OSHA', descricao: 'Como marcar os códigos IECC (energia), 780 CMR (Código de Construção de Massachusetts, com AAB) e OSHA 1926 (segurança) para consulta rápida na prova.', videoUrl: '', capaUrl: '/capa-construtor-aula4.jpg' },
   { titulo: 'Aplicação da HIC — Home Improvement Contractor', descricao: 'Passo a passo da aplicação da HIC: documentos necessários, preenchimento online e dicas para aprovação.', videoUrl: 'https://drive.google.com/file/d/1Rdzrgp2JDlzdAFlN_hZhRTj7o6wmSmSu/view', capaUrl: '/capa-construtor-aula5.jpg' },
-  { titulo: 'Aplicação da CSL — Construction Supervisor License', descricao: 'O passo a passo para aplicar, ser aprovado e conquistar a sua CSL em Massachusetts: documentos, preenchimento online e dicas para aprovação.', videoUrl: '', capaUrl: '/capa-construtor-aula6.jpg' },
+  { titulo: 'Aplicação da CSL — Construction Supervisor License', descricao: 'O passo a passo para aplicar, ser aprovado e conquistar a sua CSL em Massachusetts: documentos, preenchimento online e dicas para aprovação.', videoUrl: 'https://drive.google.com/file/d/19njpJj1wE8RyByVxt5BYhUBGsYuiOTSv/view', capaUrl: '/capa-construtor-aula6.jpg' },
 ];
 
 export default function PortalLessons({
