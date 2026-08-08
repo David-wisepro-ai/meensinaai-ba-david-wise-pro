@@ -20,11 +20,19 @@ import AulaVideo from './AulaVideo';
 // Mantenha 8 itens em cada lista (8 slots fixos). E so trocar o texto e a URL.
 // ============================================================================
 
+// Material de apoio (PDF) que aparece abaixo do video no player da aula.
+// url: link do PDF (Google Drive "qualquer pessoa com o link", ou arquivo em /public).
+export type Material = {
+  nome: string; // rotulo que o aluno ve. Ex.: 'Checklist de documentos da CSL'
+  url: string;
+};
+
 export type Aula = {
   titulo: string;
   descricao: string;
   videoUrl: string; // '' = video em breve. Aceita link do YouTube ou do Panda Video.
   capaUrl?: string; // imagem de capa do card (opcional). Ex.: '/capa-pm-aula1.jpg'
+  materiais?: Material[]; // PDFs de apoio (opcional). Aparecem abaixo do video no player.
 };
 
 // --- Portal PROJECT MANAGER — 8 aulas -------------------------------------
@@ -45,7 +53,7 @@ export const CONSTRUTOR_AULAS: Aula[] = [
   { titulo: 'Introdução ao Curso de CSL', descricao: 'Apresentação do curso preparatório para tirar a Construction Supervisor License (CSL).', videoUrl: 'https://drive.google.com/file/d/1Z9LerwwzfYiw88B0ikxULF1NMMaroCkh/view', capaUrl: '/capa-construtor-aula1.jpg' },
   { titulo: 'Marcação no Livro IRC', descricao: 'Como marcar e organizar o livro do International Residential Code (IRC) para consulta rápida na prova.', videoUrl: 'https://drive.google.com/file/d/1HMc1_6iKv8qNcmZCxDPiHJKFAxB3kEst/view', capaUrl: '/capa-construtor-aula2.jpg' },
   { titulo: 'Marcação no Livro IBC', descricao: 'Como marcar e organizar o livro do International Building Code (IBC) para consulta rápida na prova.', videoUrl: 'https://drive.google.com/file/d/171q9gu3rr0BHMkCkoEDEelkR5C-wUxq1/view', capaUrl: '/capa-construtor-aula3.jpg' },
-  { titulo: 'Marcação nos Livros IECC, 780 CMR e OSHA', descricao: 'Como marcar os códigos IECC (energia), 780 CMR (Código de Construção de Massachusetts, com AAB) e OSHA 1926 (segurança) para consulta rápida na prova.', videoUrl: '', capaUrl: '/capa-construtor-aula4.jpg' },
+  { titulo: 'Marcação nos Livros IECC, 780 CMR e OSHA', descricao: 'Como marcar os códigos IECC (energia), 780 CMR (Código de Construção de Massachusetts, com AAB) e OSHA 1926 (segurança) para consulta rápida na prova.', videoUrl: 'https://drive.google.com/file/d/19McWqMtWAMzP7hCTI39J_YaUswpkpwHC/view', capaUrl: '/capa-construtor-aula4.jpg' },
   { titulo: 'Aplicação da HIC — Home Improvement Contractor', descricao: 'Passo a passo da aplicação da HIC: documentos necessários, preenchimento online e dicas para aprovação.', videoUrl: 'https://drive.google.com/file/d/1Rdzrgp2JDlzdAFlN_hZhRTj7o6wmSmSu/view', capaUrl: '/capa-construtor-aula5.jpg' },
   { titulo: 'Aplicação da CSL — Construction Supervisor License', descricao: 'O passo a passo para aplicar, ser aprovado e conquistar a sua CSL em Massachusetts: documentos, preenchimento online e dicas para aprovação.', videoUrl: 'https://drive.google.com/file/d/19njpJj1wE8RyByVxt5BYhUBGsYuiOTSv/view', capaUrl: '/capa-construtor-aula6.jpg' },
 ];
@@ -246,6 +254,67 @@ function AulaModal({ aula, numero, onFechar }: { aula: Aula; numero: number; onF
           <p style={{ color: BRAND.navy, opacity: 0.85, fontSize: 14, marginTop: 14, marginBottom: 0 }}>
             {aula.descricao}
           </p>
+        )}
+
+        {aula.materiais && aula.materiais.length > 0 && (
+          <div style={{ marginTop: 18 }}>
+            <div
+              style={{
+                fontSize: 12,
+                fontWeight: 800,
+                letterSpacing: 1,
+                textTransform: 'uppercase',
+                color: BRAND.gold,
+                marginBottom: 10,
+              }}
+            >
+              Material de apoio
+            </div>
+            <div style={{ display: 'grid', gap: 8 }}>
+              {aula.materiais.map((m, i) => (
+                <a
+                  key={i}
+                  href={m.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 10,
+                    textDecoration: 'none',
+                    padding: '11px 14px',
+                    borderRadius: 10,
+                    border: `1.5px solid ${BRAND.navy}`,
+                    background: '#fff',
+                    color: BRAND.navy,
+                    fontWeight: 600,
+                    fontSize: 14,
+                  }}
+                >
+                  <span
+                    aria-hidden
+                    style={{
+                      flex: '0 0 auto',
+                      width: 28,
+                      height: 28,
+                      borderRadius: 7,
+                      background: BRAND.navy,
+                      color: BRAND.gold,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: 12,
+                      fontWeight: 800,
+                    }}
+                  >
+                    PDF
+                  </span>
+                  <span style={{ flex: 1 }}>{m.nome}</span>
+                  <span aria-hidden style={{ opacity: 0.55, fontSize: 13 }}>Abrir &#8599;</span>
+                </a>
+              ))}
+            </div>
+          </div>
         )}
       </div>
     </div>
